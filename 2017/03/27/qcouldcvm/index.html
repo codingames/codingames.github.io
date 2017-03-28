@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="腾讯云服务器CVM 30天体验">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DkZhIly1fe198u9s9aj30yw0f6dha.jpg">
-<meta property="og:updated_time" content="2017-03-28T09:56:06.000Z">
+<meta property="og:updated_time" content="2017-03-28T10:10:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="体验腾讯云服务器">
 <meta name="twitter:description" content="腾讯云服务器CVM 30天体验">
@@ -93,7 +93,7 @@
       
         <p>腾讯云服务器CVM 30天体验</p>
 <p><img src="http://ww1.sinaimg.cn/large/006DkZhIly1fe198u9s9aj30yw0f6dha.jpg" alt=""><br><a id="more"></a></p>
-<h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><p>64位   </p>
+<h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><p>系统选的64位的CentOS 7.2   </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># cat /etc/redhat-release </div><div class="line">CentOS Linux release 7.2.1511 (Core) </div><div class="line"># uname -a</div><div class="line">Linux VM_143_20_centos 3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</div></pre></td></tr></table></figure>
 <p>速度还可以，在terminal中长时间不操作会断开，不知道是网络稳定问题还是设置问题。</p>
 <h3 id="快捷登录"><a href="#快捷登录" class="headerlink" title="快捷登录"></a>快捷登录</h3><p>把命令封装脚本，在terminal中敲qc即可登录到云服务器：</p>
@@ -101,9 +101,9 @@
 <p>把上面存成脚本，加可执行权限，然后编辑.bash_profile，增加下述即可：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias qc=/Users/xxx/xxx/xxx.sh</div></pre></td></tr></table></figure>
 <p>另外也可以使用ssh免密码登录，有时间google下试试。</p>
-<h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>终端MacOS的terminal，系统语言英文，utf-8, 连上云服务器后，ls 中文文件名乱码，显示成????(按Tab键自动补全时中文文件名却可以正常显示)，尝试了网上一些解决方案还是乱码，后来修改登录服务器后这个提示问题时，乱码问题也消失了。</p>
+<h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>终端MacOS的terminal，系统语言英文，utf-8, 连上云服务器后，ls 中文文件名乱码，显示成????(按Tab键自动补全时中文文件名却可以正常显示)，登录服务器后也有下面这个提示问题：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory</div></pre></td></tr></table></figure>
-<p>解决方案  </p>
+<p>解决方案：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/environment</div></pre></td></tr></table></figure>
 <p>输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">LANG=en_US.utf-8</div><div class="line">LC_ALL=en_US.utf-8</div></pre></td></tr></table></figure>
@@ -118,14 +118,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu /xxx/xxx/xxx/filename</div></pre></td></tr></table></figure>
 <p>上传文件夹</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu -r /xxx/xxx/xxx/directory</div></pre></td></tr></table></figure>
-<p>也可以省去全路径，如上传当前文件夹内的文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu filename</div></pre></td></tr></table></figure>
+<p>也可以省去全路径，如上传当前文件夹内的文件fileA</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu fileA</div></pre></td></tr></table></figure>
 <p>脚本比较简陋，仅仅实现了“能用”。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/03/27/qcouldcvm/" data-id="cj0tdchau00056gfy2rssyab3" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/03/27/qcouldcvm/" data-id="cj0te0yx000058hfyqw9hguck" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/云服务器/">云服务器</a></li></ul>
