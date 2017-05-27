@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>支付问题 | tracenote</title>
+  <title>Tag: appium | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="支付问题">
-<meta property="og:url" content="http://tracenote.com/2017/05/21/payissue/index.html">
+  <meta name="description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tracenote">
+<meta property="og:url" content="http://tracenote.com/tags/appium/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
-<meta property="og:updated_time" content="2017-05-22T09:45:51.000Z">
+<meta property="og:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="支付问题">
-<meta name="twitter:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
+<meta name="twitter:title" content="tracenote">
+<meta name="twitter:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -66,71 +62,39 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-payissue" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/21/payissue/" class="article-date">
-  <time datetime="2017-05-21T04:50:00.000Z" itemprop="datePublished">2017-05-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/issue/">issue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      支付问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2017/05/22/appiumAndroidIssues/" class="archive-article-date">
+  <time datetime="2017-05-22T06:23:25.000Z" itemprop="datePublished">May 22</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/05/22/appiumAndroidIssues/">Appium Android 简记</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）</p>
-<p>微信开发者文档说明：<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">支付结果回调</div><div class="line">参照微信SDK Sample，在net.sourceforge.simcpux.wxapi包路径中  </div><div class="line">实现WXPayEntryActivity类(包名或类名不一致会造成无法回调)，    </div><div class="line">在WXPayEntryActivity类中实现onResp函数，支付完成后，微信APP会返回  </div><div class="line">到商户APP并回调onResp函数，开发者需要在该函数中接收通知，判断返回错误码，  </div><div class="line">如果支付成功则去后台查询支付结果再展示用户实际支付结果。  </div><div class="line">注意一定不能以客户端返回作为用户支付的结果，  </div><div class="line">应以服务器端的接收的支付通知或查询API返回的结果为准。</div></pre></td></tr></table></figure>
-<p>显然，点微信的返回商户通过回调函数处理了支付状态，而从系统返回或者后台打开则没有。</p>
-<p>这里应该主动拉取服务端查询支付结果。网上搜到一个解决方案仅供参考：<br><a href="http://www.jianshu.com/p/9744c53b5498" target="_blank" rel="external">http://www.jianshu.com/p/9744c53b5498</a><br>简单总结就是，App发起支付时做标记，在App出现在前台的方法中检查若有支付标记则主动询问服务端支付结果，并解决从微信返回时客户端服务端两次重复支付结果。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/21/payissue/" data-id="cj371oraf000s42fyccjd8xpy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pay/">pay</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/05/22/appiumAndroidIssues/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Appium Android 简记
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/04/ioshttps/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">iOS 10.3 Charles https 问题</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
