@@ -5,19 +5,16 @@
   
   <title>支付问题 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
+  <meta name="description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="支付问题">
 <meta property="og:url" content="http://tracenote.com/2017/05/21/payissue/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
-<meta property="og:updated_time" content="2017-05-22T09:45:51.000Z">
+<meta property="og:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）">
+<meta property="og:updated_time" content="2017-06-01T03:27:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="支付问题">
-<meta name="twitter:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）
-微信开发者文档说明：">
+<meta name="twitter:description" content="目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -92,8 +89,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）</p>
-<p>微信开发者文档说明：<br><a id="more"></a></p>
+        <p>目前很多App点击跳转微信支付（等第三方支付），在微信中支付成功之后，点左上角系统返回键返回App，或者按home键然后再打开App，仍是支付页面，没有刷成支付成功页面。（如果支付完成之后点击微信的返回商户按钮打开App则没有此问题）<br><a id="more"></a><br>微信开发者文档说明：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">支付结果回调</div><div class="line">参照微信SDK Sample，在net.sourceforge.simcpux.wxapi包路径中  </div><div class="line">实现WXPayEntryActivity类(包名或类名不一致会造成无法回调)，    </div><div class="line">在WXPayEntryActivity类中实现onResp函数，支付完成后，微信APP会返回  </div><div class="line">到商户APP并回调onResp函数，开发者需要在该函数中接收通知，判断返回错误码，  </div><div class="line">如果支付成功则去后台查询支付结果再展示用户实际支付结果。  </div><div class="line">注意一定不能以客户端返回作为用户支付的结果，  </div><div class="line">应以服务器端的接收的支付通知或查询API返回的结果为准。</div></pre></td></tr></table></figure>
 <p>显然，点微信的返回商户通过回调函数处理了支付状态，而从系统返回或者后台打开则没有。</p>
 <p>这里应该主动拉取服务端查询支付结果。网上搜到一个解决方案仅供参考：<br><a href="http://www.jianshu.com/p/9744c53b5498" target="_blank" rel="external">http://www.jianshu.com/p/9744c53b5498</a><br>简单总结就是，App发起支付时做标记，在App出现在前台的方法中检查若有支付标记则主动询问服务端支付结果，并解决从微信返回时客户端服务端两次重复支付结果。</p>
@@ -101,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/21/payissue/" data-id="cj371oraf000s42fyccjd8xpy" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/05/21/payissue/" data-id="cj39loi2a0009xbfy9gu8yl16" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pay/">pay</a></li></ul>
@@ -116,7 +112,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Appium Android 简记
+          Appium Android 坎坷
         
       </div>
     </a>
@@ -140,7 +136,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -150,7 +146,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -160,7 +156,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/appium/" style="font-size: 10px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 15px;">issue</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 15px;">server</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 15px;">工具</a>
+      <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/appium/" style="font-size: 13.33px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/iOS/" style="font-size: 13.33px;">iOS</a> <a href="/tags/issue/" style="font-size: 16.67px;">issue</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a>
     </div>
   </div>
 
@@ -169,7 +165,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -182,7 +178,11 @@
       <ul>
         
           <li>
-            <a href="/2017/05/22/appiumAndroidIssues/">Appium Android 简记</a>
+            <a href="/2017/06/01/appiumNotes/">Appium 资料摘抄</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/22/appiumAndroidIssues/">Appium Android 坎坷</a>
           </li>
         
           <li>
@@ -197,10 +197,6 @@
             <a href="/2017/03/28/blogissues/">折腾琐记：编辑器篇</a>
           </li>
         
-          <li>
-            <a href="/2017/03/27/qcouldcvm/">体验腾讯云服务器</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -213,7 +209,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Z<br>
+      &copy; 2017 tracenote<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
