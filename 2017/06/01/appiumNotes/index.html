@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="升级Appium版本，借机重读官方文档等, Appium 不建议参考中文文档，中英文文档仔细比对一下就知道原因了，甚至参考中文文档调试半天不通结果一查英文文档api已变。">
 <meta property="og:image" content="http://appium.io/slate/images/animation_off.png">
-<meta property="og:updated_time" content="2017-06-02T09:12:50.000Z">
+<meta property="og:updated_time" content="2017-06-06T12:28:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appium 资料摘抄">
 <meta name="twitter:description" content="升级Appium版本，借机重读官方文档等, Appium 不建议参考中文文档，中英文文档仔细比对一下就知道原因了，甚至参考中文文档调试半天不通结果一查英文文档api已变。">
@@ -94,7 +94,7 @@
         <p>升级Appium版本，借机重读官方文档等, Appium 不建议参考中文文档，中英文文档仔细比对一下就知道原因了，甚至参考中文文档调试半天不通结果一查英文文档api已变。</p>
 <a id="more"></a>
 <p><em>(↓↓ 官方tutorial <a href="http://appium.io/slate/en/master/?java#" target="_blank" rel="external">http://appium.io/slate/en/master/?java#</a>)</em></p>
-<h4 id="Client-Server-Architecture"><a href="#Client-Server-Architecture" class="headerlink" title="Client/Server Architecture"></a>Client/Server Architecture</h4><p>Appium is at its heart a webserver that exposes a REST API. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution. The fact that we have a client/server architecture opens up a lot of possibilities: we can write our test code in any language that has a http client API, but it is easier to use one of the Appium client libraries. We can put the server on a different machine than our tests are running on. We can write test code and rely on a cloud service like Sauce Labs to receive and interpret the commands.  </p>
+<h4 id="Client-Server-Architecture"><a href="#Client-Server-Architecture" class="headerlink" title="Client/Server Architecture"></a>Client/Server Architecture</h4><p>Appium is at its heart a webserver that exposes a REST API. It receives connections from a client, listens for commands, executes those commands on a mobile device, and responds with an HTTP response representing the result of the command execution. The fact that we have a client/server architecture opens up a lot of possibilities: we can write our test code in any language that has a http client API, but it is easier to use one of the Appium client libraries. We can put the server on a different machine than our tests are running on. We can write test code and rely on a cloud service like Sauce Labs to receive and interpret the commands.<br>The Appium server itself defines custom extensions to the official protocols, giving Appium users helpful access to various device behaviors (such as installing/uninstalling apps during the course of a test session). This is why we need Appium-specific clients, not just the ‘vanilla’ Selenium clients. Of course, Appium client libraries only add functionality (in fact, they simply extend the standard Selenium clients), so they can still be used to run regular Selenium sessions.  </p>
 <h4 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h4><p>Automation is always performed in the context of a session. Clients initiate a session with a server in ways specific to each library, but they all end up sending a POST /session request to the server, with a JSON object called the ‘desired capabilities’ object. At this point the server will start up the automation session and respond with a session ID which is used for sending further commands.  </p>
 <p><em>(↓↓ <a href="http://appium.io/slate/en/tutorial/android.html?java#" target="_blank" rel="external">http://appium.io/slate/en/tutorial/android.html?java#</a>)</em></p>
 <h4 id="Ending-the-session"><a href="#Ending-the-session" class="headerlink" title="Ending the session"></a>Ending the session</h4><p>Once we’re done with a testing session, it’s very important to cleanly quit. If a session is not terminated properly then appium will consider the session to still be in progress. This blocks all future sessions from working.<br>All the selenium bindings offer a quit method. This should be invoked once the testing session is over.  </p>
@@ -102,7 +102,80 @@
 <h4 id="disabling-animations"><a href="#disabling-animations" class="headerlink" title="disabling animations"></a>disabling animations</h4><p>After that we’re returning to the home page by using back();. The back method will return even though the app hasn’t finished transitioning. I recommend disabling animations under in Dev Settings. This can also be done programmatically.<br><img src="http://appium.io/slate/images/animation_off.png" alt="DevSettings-animation"></p>
 <h4 id="wait-for"><a href="#wait-for" class="headerlink" title="wait for"></a>wait for</h4><p>The driver.manage().timeouts() line of Java code requested that appium wait 30 seconds for elements to appear before giving up.</p>
 <p><code>driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);</code></p>
-<h4 id="Searching-the-Source-Code"><a href="#Searching-the-Source-Code" class="headerlink" title="Searching the Source Code"></a>Searching the Source Code</h4><p>appium is composed of modules. The module related to uiautomator is appium-uiautomator. To find out what happens on Android when we request the page source, search for dumpWindowHierarchy. From there we can tell what uiautomator method appium is using to get the source code.<br>Android is open source and so are the testing tools. This is helpful to identify how methods are implemented. UiDevice.java contains a dumpWindowHierarchy method. The JavaDoc says the data is saved to /data/local/tmp. However upon looking at the actual code, the location is dynamically defined depending on where the device has it’s data directory. Open source is wonderful for quickly understanding the best way to automate on Android.</p>
+<h4 id="Searching-the-Source-Code"><a href="#Searching-the-Source-Code" class="headerlink" title="Searching the Source Code"></a>Searching the Source Code</h4><p>appium is composed of modules. The module related to uiautomator is appium-uiautomator. To find out what happens on Android when we request the page source, search for dumpWindowHierarchy. From there we can tell what uiautomator method appium is using to get the source code.<br>Android is open source and so are the testing tools. This is helpful to identify how methods are implemented. UiDevice.java contains a dumpWindowHierarchy method. The JavaDoc says the data is saved to /data/local/tmp. However upon looking at the actual code, the location is dynamically defined depending on where the device has it’s data directory. Open source is wonderful for quickly understanding the best way to automate on Android.  </p>
+<p><em>(↓↓ <a href="http://appium.io/slate/en/master/?java#" target="_blank" rel="external">http://appium.io/slate/en/master/?java#</a>)</em></p>
+<h4 id="setUp"><a href="#setUp" class="headerlink" title="setUp"></a>setUp</h4><p>Make sure you have not installed Node or Appium with sudo, otherwise you’ll run into problems).<br>If you’ve installed Node from the Node website, it requires that you use sudo for <code>npm</code>. This is not ideal. Try to get node with <code>nvm</code>, <code>n</code> or <code>brew install node</code> instead!<br>如何检查node是否root安装？<br><code>which node</code> 找到node路径，再 <code>ls -l</code> 该路径即可查看安装用户。</p>
+<p>To verify that all of Appium’s dependencies are met</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">appium-doctor --android</div><div class="line">appium-doctor --ios</div></pre></td></tr></table></figure>
+<h4 id="Android-support"><a href="#Android-support" class="headerlink" title="Android support"></a>Android support</h4><ul>
+<li>Support for automating multiple apps in one session: Yes (but not when using the Selendroid backend)</li>
+<li>Support for <strong>automating multiple devices simultaneously</strong>: Yes, though Appium must be started using different ports for the server parameters <code>--port</code>, <code>--bootstrap-port</code> (or <code>--selendroid-port</code>) and/or <code>--chromedriver-port</code>. See the server args doc for more information on these parameters.   </li>
+</ul>
+<h6 id="Parallel-Android-Tests"><a href="#Parallel-Android-Tests" class="headerlink" title="Parallel Android Tests"></a>Parallel Android Tests</h6><p>Appium provides a way for users to automate multiple Android sessions on a single machine. All it involves is starting multiple Appium servers with different flags.</p>
+<p>The important flags for automating multiple Android sessions are:</p>
+<ul>
+<li>-p the main Appium port</li>
+<li>-U the device id</li>
+<li>-bp the Appium bootstrap port</li>
+<li>–chromedriver-port the chromedriver port (if using webviews or chrome)</li>
+<li>–selendroid-port the selendroid port (if using selendroid)<br>More information on these flags can be found <a href="#http://appium.io/slate/en/master/?java#appium-server-capabilities">here</a>.<br>If we had two devices with the ID’s 43364 and 32456, we would start two different Appium servers with the following commands:<br><code>node . -p 4492 -bp 2251 -U 32456</code><br><code>node . -p 4491 -bp 2252 -U 43364</code>   </li>
+</ul>
+<p>As long as your Appium and Appium bootstrap ports are between 0 and 65536, all they have to be is different so that two Appium servers aren’t trying to listen on the same port. Be sure that your -u flag corresponds with the correct device ID. This is how Appium knows which device to communicate with, so it must be accurate.<br><strong><em>(running local parallel iOS tests aren’t possible. )</em></strong></p>
+<h4 id="Appium-on-real-iOS-devices"><a href="#Appium-on-real-iOS-devices" class="headerlink" title="Appium on real iOS devices"></a>Appium on real iOS devices</h4><h6 id="To-get-started-on-a-real-device-you-will-need-the-following"><a href="#To-get-started-on-a-real-device-you-will-need-the-following" class="headerlink" title="To get started on a real device, you will need the following:"></a>To get started on a real device, you will need the following:</h6><ul>
+<li>An Apple Developer ID and a valid Developer Account with a configured distribution certificate and provisioning profile.</li>
+<li>An iPad or iPhone. Make sure this has been set up for development in Xcode. See this article for more information.</li>
+<li>A signed .ipa file of your app, or the source code to build one.</li>
+<li>A Mac with Xcode and the Xcode Command Line Developer Tools.  </li>
+</ul>
+<h6 id="TROUBLESHOOTING-IDEAS"><a href="#TROUBLESHOOTING-IDEAS" class="headerlink" title="TROUBLESHOOTING IDEAS"></a>TROUBLESHOOTING IDEAS</h6><ul>
+<li>Make sure UDID is correct by checking it in Xcode Organizer or iTunes. It is a long string (20+ chars).</li>
+<li>Make sure that you can run your tests against the Simulator.</li>
+<li>Double check that you can invoke your automation from Instruments.</li>
+<li>Make sure Instruments is not already running.</li>
+<li>Make sure UI Automation is enabled on your device. Settings -&gt; Developer -&gt; Enable UI Automation  </li>
+</ul>
+<h6 id="AUTHORIZING-IOS-ON-THE-COMPUTER"><a href="#AUTHORIZING-IOS-ON-THE-COMPUTER" class="headerlink" title="AUTHORIZING IOS ON THE COMPUTER"></a>AUTHORIZING IOS ON THE COMPUTER</h6><p>ou need to authorize use of the iOS Simulator by running the <code>authorize-ios</code> binary made available through <code>npm</code>. Install the program by running<br><code>npm install -g authorize-ios</code><br>You need to do this every time you install a new version of Xcode. <code>sudo authorize-ios</code></p>
+<h6 id="FILES-GENERATED-BY-IOS-TEST-RUNS"><a href="#FILES-GENERATED-BY-IOS-TEST-RUNS" class="headerlink" title="FILES GENERATED BY IOS TEST RUNS"></a>FILES GENERATED BY IOS TEST RUNS</h6><p>Testing on iOS generates files that can sometimes get large. These include logs, temporary files, and derived data from Xcode runs. Generally the following locations are where they are found, should they need to be deleted:<br><code>$HOME/Library/Logs/CoreSimulator/*</code><br>For Instruments-based tests (iOS not using XCUITest as automationName):<br><code>/Library/Caches/com.apple.dt.instruments/*</code><br>For XCUITest-based tests:<br><code>$HOME/Library/Developer/Xcode/DerivedData/*</code>  </p>
+<h6 id="Known-issues"><a href="#Known-issues" class="headerlink" title="Known issues"></a>Known issues</h6><ul>
+<li>Sometimes iOS UI elements become invalidated milliseconds after they are found. This results in an error that looks like (null) cannot be tapped. Sometimes the only solution is to put the finding-and-clicking code in a retry block.</li>
+</ul>
+<h4 id="版本更新"><a href="#版本更新" class="headerlink" title="版本更新"></a>版本更新</h4><p>Migrating your tests from Appium 0.18.x to Appium 1.x  </p>
+<h6 id="New-Client-Libraries"><a href="#New-Client-Libraries" class="headerlink" title="New Client Libraries"></a>New Client Libraries</h6><p>you’ll be doing something like (to use Python as an example):<br><code>from appium import webdriver</code><br>Instead of:<br><code>from selenium import webdriver</code><br>(不过java包里面没找到appium下的webdriver，仍在selenium中)</p>
+<h6 id="capabilities"><a href="#capabilities" class="headerlink" title="capabilities"></a>capabilities</h6><ul>
+<li><p>no longer used:  </p>
+<ul>
+<li><del><code>device</code></del>  </li>
+<li><del><code>version</code></del></li>
+</ul>
+</li>
+<li><p><code>app</code> 和 <code>browserName</code> 互斥<br>  appium旧版本带横线的capabilities已经改成camelCase格式，如<code>appPackage</code>  </p>
+</li>
+</ul>
+<h6 id="New-Locator-Strategies"><a href="#New-Locator-Strategies" class="headerlink" title="New Locator Strategies"></a>New Locator Strategies</h6><ul>
+<li><p>removed:  </p>
+<ul>
+<li><del><code>name</code></del></li>
+<li><del><code>tag name</code></del> (被<code>class name</code>代替)</li>
+</ul>
+</li>
+<li><p>added</p>
+<ul>
+<li><code>accessibility_id</code> : to do what <code>name</code> used to do</li>
+</ul>
+</li>
+</ul>
+<p>Note about class name and xpath strategies: these now require the fully-qualified class name for your element.<br>also added the following locator strategies:</p>
+<ul>
+<li>-android uiautomator</li>
+<li>-ios uiautomation<br>  注意：-IOS UIAUTOMATION LOCATOR STRATEGY，This locator strategy was specifically built on UIAutomation, so it is not included in the XCUITest automation backend. We will be working on a similar “native”-type locator strategy in coming releases.</li>
+</ul>
+<h6 id="HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW"><a href="#HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW" class="headerlink" title="HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW"></a>HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW</h6><p>To get all of the available contexts, or the particular context the application is is, you use</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Set&lt;String&gt; contextNames = driver.getContextHandles();</div><div class="line">String context = driver.getContext();</div></pre></td></tr></table></figure>
+<p>to switch between them:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">driver.context(contextName);</div></pre></td></tr></table></figure>
+<h6 id="NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”"><a href="#NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”" class="headerlink" title="NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)"></a>NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)</h6><p>All the mobile: methods have been removed, and have been replaced by native methods in the Appium client libraries. This means that a method call like <code>driver.execute(&quot;mobile: lock&quot;, [5])</code> will now look something more like <code>driver.lock(5)</code> (where <code>lock</code> has been turned into a native client method). Of course, the details on calling these methods will differ by client.</p>
+<p>Of particular note, the gesture methods have been replaced by the new TouchAction / MultiAction API which allows for a much more powerful and general way of putting gestural automation together. Refer to your Appium client for usage notes on TouchAction / MultiAction.</p>
+<h6 id="Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up"><a href="#Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up" class="headerlink" title="Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)"></a>Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)</h6><p>For iOS automation, Appium relies on system frameworks provided by Apple. For iOS 9.2 and below, Apple’s only automation technology was called UIAutomation, and it ran in the context of a process called “Instruments”. As of iOS 10, Apple has completely removed the UIAutomation instrument, thus making it impossible for Appium to allow testing in the way it used to. Fortunately, Apple introduced a new automation technology, called XCUITest, beginning with iOS 9.3. For iOS 10 and up, this will be the only supported automation framework from Apple.</p>
 <hr>
 <h4 id="adb-无线连接手机"><a href="#adb-无线连接手机" class="headerlink" title="adb 无线连接手机"></a>adb 无线连接手机</h4><ol>
 <li>usb连接手机，<code>adb tcpip 5555</code></li>
@@ -115,11 +188,12 @@
 <li>切回usb连接，<code>adb usb</code></li>
 <li>注意无线连接时，adb devices 是获取不到udid的，若是appium程序中指定了设备udid，则会找不到  </li>
 </ul>
+<p>实际使用发现，有时候间隔一些时间，<code>adb devices</code> 会找不到设备，需要重新 <code>adb connect</code> 才可以，网络不稳定？</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj3iqiswc000bd3fye8p9ir7n" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj3llygfn000172fye0egiodj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摘抄/">摘抄</a></li></ul>
