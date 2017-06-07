@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="升级Appium版本，借机重读官方文档等, Appium 不建议参考中文文档，中英文文档仔细比对一下就知道原因了，甚至参考中文文档调试半天不通结果一查英文文档api已变。">
 <meta property="og:image" content="http://appium.io/slate/images/animation_off.png">
-<meta property="og:updated_time" content="2017-06-06T12:28:08.000Z">
+<meta property="og:updated_time" content="2017-06-07T11:03:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appium 资料摘抄">
 <meta name="twitter:description" content="升级Appium版本，借机重读官方文档等, Appium 不建议参考中文文档，中英文文档仔细比对一下就知道原因了，甚至参考中文文档调试半天不通结果一查英文文档api已变。">
@@ -168,6 +168,11 @@
 <ul>
 <li>-android uiautomator</li>
 <li>-ios uiautomation<br>  注意：-IOS UIAUTOMATION LOCATOR STRATEGY，This locator strategy was specifically built on UIAutomation, so it is not included in the XCUITest automation backend. We will be working on a similar “native”-type locator strategy in coming releases.</li>
+<li>备注：<sup id="to1"><a href="#from1">[1]</a></sup><br>  谷歌官方的UIAutomation在Android4.3更新了版本。<ul>
+<li>Android4.3之前：使用inputManager或者更早的WindowsManager来注入KeyEvent</li>
+<li>Android4.3之后：使用Accessibility APIs来注入事件。（AccessibilityService本来是做一些辅助功能的，提供了一系列的事件回调，帮助我们指示一些用户及界面的状态变化，主要给残障人群提供帮助。）</li>
+</ul>
+</li>
 </ul>
 <h6 id="HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW"><a href="#HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW" class="headerlink" title="HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW"></a>HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW</h6><p>To get all of the available contexts, or the particular context the application is is, you use</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Set&lt;String&gt; contextNames = driver.getContextHandles();</div><div class="line">String context = driver.getContext();</div></pre></td></tr></table></figure>
@@ -176,6 +181,30 @@
 <h6 id="NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”"><a href="#NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”" class="headerlink" title="NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)"></a>NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)</h6><p>All the mobile: methods have been removed, and have been replaced by native methods in the Appium client libraries. This means that a method call like <code>driver.execute(&quot;mobile: lock&quot;, [5])</code> will now look something more like <code>driver.lock(5)</code> (where <code>lock</code> has been turned into a native client method). Of course, the details on calling these methods will differ by client.</p>
 <p>Of particular note, the gesture methods have been replaced by the new TouchAction / MultiAction API which allows for a much more powerful and general way of putting gestural automation together. Refer to your Appium client for usage notes on TouchAction / MultiAction.</p>
 <h6 id="Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up"><a href="#Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up" class="headerlink" title="Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)"></a>Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)</h6><p>For iOS automation, Appium relies on system frameworks provided by Apple. For iOS 9.2 and below, Apple’s only automation technology was called UIAutomation, and it ran in the context of a process called “Instruments”. As of iOS 10, Apple has completely removed the UIAutomation instrument, thus making it impossible for Appium to allow testing in the way it used to. Fortunately, Apple introduced a new automation technology, called XCUITest, beginning with iOS 9.3. For iOS 10 and up, this will be the only supported automation framework from Apple.</p>
+<h4 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h4><h6 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h6><ul>
+<li>If you get this error after upgrading to Android SDK 22: </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;ANDROID_HOME&#125;/tools/ant/uibuild.xml:155: SDK does not have any Build Tools installed.</div></pre></td></tr></table></figure>
+<p>In the Android SDK 22, the platform and build tools are split up into their own items in the SDK manager. Make sure you install the build-tools and platform-tools.</p>
+<ul>
+<li>It’s sometimes useful to run<br>  <code>adb kill-server &amp;&amp; adb devices</code></li>
+</ul>
+<h6 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h6><ul>
+<li>Make sure Instruments.app is not open</li>
+<li>If you’re running the simulator, make sure your actual device is not plugged in</li>
+<li>Make sure the accessibility helper is turned off in your Settings app</li>
+<li>Make sure the app is compiled for the version of the simulator that’s being run</li>
+<li>Make sure the app is compiled for the simulator (or real device) as appropriate (e.g., in debug mode for the simulator), or you might get a <code>posix spawn</code> error.</li>
+<li>If you’ve ever run Appium with sudo, you might need to <code>sudo rm /tmp/instruments_sock</code> and try again as not-sudo.</li>
+<li>If this is the first time you’ve run Appium, make sure to authorize the use of Instruments. See running on OSX documentation.</li>
+<li>If Instruments is crashing when running against a physical device (“exited with code 253”), ensure Xcode has downloaded device symbols. Go to Window -&gt; Devices, and it should start automatically. This is needed after iOS version upgrades.</li>
+<li>If you see <code>iOS Simulator failed to install the application.</code> and the paths are correct, try restarting the computer.</li>
+<li><p>If you have custom elements in your app, they will not be automatable by UIAutomation (and therefore Appium) by default. You need to set the accessibility status to ‘enabled’ on them. The way to do this in code is:<br><code>[myCustomView setAccessibilityEnabled:YES];</code></p>
+</li>
+<li><p>Tests on iOS may exhibit symptoms similar to a memory leak including sluggish performance or hangs. If you experience this problem, it’s likely due to a known issue with NSLog. One option is to remove NSLog from your code. However, there are several more nuanced approaches that may also help without requiring that you refactor.</p>
+</li>
+</ul>
+<h4 id="API-文档"><a href="#API-文档" class="headerlink" title="API 文档"></a>API 文档</h4><p><a href="http://appium.github.io/java-client/" target="_blank" rel="external">http://appium.github.io/java-client/</a></p>
 <hr>
 <h4 id="adb-无线连接手机"><a href="#adb-无线连接手机" class="headerlink" title="adb 无线连接手机"></a>adb 无线连接手机</h4><ol>
 <li>usb连接手机，<code>adb tcpip 5555</code></li>
@@ -189,11 +218,12 @@
 <li>注意无线连接时，adb devices 是获取不到udid的，若是appium程序中指定了设备udid，则会找不到  </li>
 </ul>
 <p>实际使用发现，有时候间隔一些时间，<code>adb devices</code> 会找不到设备，需要重新 <code>adb connect</code> 才可以，网络不稳定？</p>
+<p><text id="from1"><a href="#to1">[1]</a> <em>摘自<a href="http://www.cnblogs.com/liuyuxuan/p/5614923.html" target="_blank" rel="external">博客</a></em></text></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj3llz72700057qfymaivkra6" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj3mx3uid00041qfyafvfwvsl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摘抄/">摘抄</a></li></ul>
