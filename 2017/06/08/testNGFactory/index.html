@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: env | tracenote</title>
+  <title>TestNG @Factory | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/categories/env/index.html">
+  <meta name="description" content="遇到TestNG不能正常执行@Test，加@Factory解决了，简记如下：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TestNG @Factory">
+<meta property="og:url" content="http://tracenote.com/2017/06/08/testNGFactory/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="遇到TestNG不能正常执行@Test，加@Factory解决了，简记如下：">
+<meta property="og:updated_time" content="2017-06-08T07:43:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="TestNG @Factory">
+<meta name="twitter:description" content="遇到TestNG不能正常执行@Test，加@Factory解决了，简记如下：">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -62,96 +63,62 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/04/ioshttps/" class="archive-article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">May 4</time>
+        <section id="main"><article id="post-testNGFactory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/08/testNGFactory/" class="article-date">
+  <time datetime="2017-06-08T05:39:06.000Z" itemprop="datePublished">2017-06-08</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Test/">Test</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/04/ioshttps/">iOS 10.3 Charles https 问题</a>
+    <h1 class="article-title" itemprop="name">
+      TestNG @Factory
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/28/blogissues/" class="archive-article-date">
-  <time datetime="2017-03-27T23:51:42.000Z" itemprop="datePublished">Mar 28</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/28/blogissues/">折腾琐记：编辑器篇</a>
-    </h1>
-  
+        <p>遇到TestNG不能正常执行<code>@Test</code>，加<code>@Factory</code>解决了，简记如下：<br><a id="more"></a>   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestA</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestA</span><span class="params">(String s)</span></span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">	</div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>@Test</code>无法执行，加<code>@Factory</code>如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestA</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 有参构造方法</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestA</span><span class="params">(String s)</span></span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">	</div><div class="line">    <span class="meta">@Factory</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object[] create() <span class="keyword">throws</span> IOException&#123;</div><div class="line">        List&lt;TestA&gt; result = <span class="keyword">new</span> ArrayList&lt;TestA&gt;();</div><div class="line">        TestA te = <span class="keyword">new</span> TestTest(<span class="string">"hi"</span>);</div><div class="line">        result.add(te);</div><div class="line">        <span class="keyword">return</span> result.toArray();</div><div class="line">    &#125;</div><div class="line">	</div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个例子抽象得不够好，有时间再总结一下@Factory。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/27/qcouldcvm/" class="archive-article-date">
-  <time datetime="2017-03-27T13:55:24.000Z" itemprop="datePublished">Mar 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/27/qcouldcvm/">体验腾讯云服务器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/19/aboutDns/" class="archive-article-date">
-  <time datetime="2017-03-19T12:18:25.000Z" itemprop="datePublished">Mar 19</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/06/08/testNGFactory/" data-id="cj3o4b3w0000nqefyiaqu1350" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/aboutDns/">DNSPod解析Godaddy域名</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testng/">testng</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/04/DesignPattern_Template/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">设计模式——模板方法模式</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
