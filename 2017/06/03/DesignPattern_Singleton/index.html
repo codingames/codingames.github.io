@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracenote.com/2017/06/03/DesignPattern_Singleton/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="适用于只需要一个唯一对象时。">
-<meta property="og:updated_time" content="2017-06-14T03:04:13.000Z">
+<meta property="og:updated_time" content="2017-06-14T03:07:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式——单例模式">
 <meta name="twitter:description" content="适用于只需要一个唯一对象时。">
@@ -109,14 +109,14 @@
 <p>枚举可以有自己的属性和方法，实质是功能齐全的类。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton &#123;</div><div class="line">    AAA;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getA</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"AAAAAA"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestS</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Singleton s = Singleton.AAA;</div><div class="line">        s.getA();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="警惕单例模式的滥用2"><a href="#警惕单例模式的滥用2" class="headerlink" title="警惕单例模式的滥用2"></a>警惕单例模式的滥用<sup id="f2"><a href="#t2">2</a></sup></h3><p>单例模式是最基本的设计模式之一，也是程序员最喜欢用的设计模式之一，面试的时候也经常遇到。在先前的项目中，我非常喜欢使用单例模式，只要我认为同一个进程中，某个类只应该有一份唯一的实例，那么我就会毫不犹豫地使用单例模式。但是最近在实践中也慢慢发现单例模式的一些问题，暂且记下：<br>第一，由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。另外类的构造函数通常也是私有的，所以无法被继承。尤其在单元测试的时候，我们常常需要继承原始的类，并覆写一些方法以达到打桩的目的。<br>第二，对需要多例的集成测试不友好。虽然类A在正常情况下，一个进程中只应该有一个实例，但是在集成测试的时候，我们可能需要在同一个进程里构造出两个A的实例，以方便测试。<br>第三，代码模块之间的依赖不清晰。举例，当模块B需要使用类A的实例，它通常可以A.getInstance()来获取A的唯一实例，这样会造成整个项目代码中，到处都有A.getInstance()这样的使用，于是很难看出到底哪些模块真正依赖A。而如果B的构造函数是B（A a），那么就可以很直观地看出B对A的依赖。</p>
+<h3 id="警惕单例模式的滥用-2"><a href="#警惕单例模式的滥用-2" class="headerlink" title="警惕单例模式的滥用 [2]"></a>警惕单例模式的滥用 <sup id="f2"><a href="#t2">[2]</a></sup></h3><p>单例模式是最基本的设计模式之一，也是程序员最喜欢用的设计模式之一，面试的时候也经常遇到。在先前的项目中，我非常喜欢使用单例模式，只要我认为同一个进程中，某个类只应该有一份唯一的实例，那么我就会毫不犹豫地使用单例模式。但是最近在实践中也慢慢发现单例模式的一些问题，暂且记下：<br>第一，由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。另外类的构造函数通常也是私有的，所以无法被继承。尤其在单元测试的时候，我们常常需要继承原始的类，并覆写一些方法以达到打桩的目的。<br>第二，对需要多例的集成测试不友好。虽然类A在正常情况下，一个进程中只应该有一个实例，但是在集成测试的时候，我们可能需要在同一个进程里构造出两个A的实例，以方便测试。<br>第三，代码模块之间的依赖不清晰。举例，当模块B需要使用类A的实例，它通常可以A.getInstance()来获取A的唯一实例，这样会造成整个项目代码中，到处都有A.getInstance()这样的使用，于是很难看出到底哪些模块真正依赖A。而如果B的构造函数是B（A a），那么就可以很直观地看出B对A的依赖。</p>
 <p><text id="from1"><a href="#to1">[1]</a> <em>摘自《设计模式之禅（第2版）》</em>  </text></p>
-<p><text id="f2"><a href="#t2">[2]</a> <em>摘自<a href="http://blog.sina.com.cn/s/blog_3fe961ae0102xr9f.html" target="_blank" rel="external">阿涵-_-的博客</a></em></text></p>
+<p><text id="t2"><a href="#f2">[2]</a> <em>摘自<a href="http://blog.sina.com.cn/s/blog_3fe961ae0102xr9f.html" target="_blank" rel="external">阿涵-_-的博客</a></em></text></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/03/DesignPattern_Singleton/" data-id="cj3wey6hb0000kefyhneg74u1" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/03/DesignPattern_Singleton/" data-id="cj3wf1zrx0000l3fyf4ezau8a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
