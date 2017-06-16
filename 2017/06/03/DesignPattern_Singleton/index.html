@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracenote.com/2017/06/03/DesignPattern_Singleton/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="适用于只需要一个唯一对象时。">
-<meta property="og:updated_time" content="2017-06-14T03:07:36.000Z">
+<meta property="og:updated_time" content="2017-06-14T08:31:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式——单例模式">
 <meta name="twitter:description" content="适用于只需要一个唯一对象时。">
@@ -93,7 +93,7 @@
 <h4 id="饿汉模式"><a href="#饿汉模式" class="headerlink" title="饿汉模式"></a>饿汉模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingleSample</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingleSample</span><span class="params">()</span></span>&#123;&#125;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingleSample singleSample = <span class="keyword">new</span> SingleSample();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingleSample <span class="title">getSingleSample</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> singleSample;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="懒汉模式"><a href="#懒汉模式" class="headerlink" title="懒汉模式"></a>懒汉模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingleSample2</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingleSample2</span><span class="params">()</span></span>&#123;&#125;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingleSample2 singleSample2;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingleSample2 <span class="title">getSingleSample2</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == singleSample2)&#123;</div><div class="line">            singleSample2 = <span class="keyword">new</span> SingleSample2();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> singleSample2;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>总之，单例模式是一种非常简单的设计模式。靠私有化构造方法禁止new对象，其唯一的对象是一个静态对象。</p>
-<h3 id="单例模式的使用场景-1"><a href="#单例模式的使用场景-1" class="headerlink" title="单例模式的使用场景 [1]"></a>单例模式的使用场景 <sup id="to1"><a href="#from1">[1]</a></sup></h3><ul>
+<h3 id="单例模式的使用场景-1"><a href="#单例模式的使用场景-1" class="headerlink" title="单例模式的使用场景 [1]"></a>单例模式的使用场景 <em><sup id="to1"><a href="#from1">[1]</a></sup></em></h3><ul>
 <li>要求生成唯一序列号的环境；</li>
 <li>在整个项目中需要一个共享访问点或共享数据，例如在一个Web页面上的计数器，可以不用把每次刷新都记录到数据库中，使用单例模式保持计数器的值，并确保是线程安全的；</li>
 <li>创建一个对象需要消耗的资源过多，如要访问IO和数据库等资源；</li>
@@ -106,17 +106,32 @@
 </ul>
 <p><strong>两私有一公开（私有构造方法、私有静态实例（懒实例化／直接实例化）、公开静态获取方法）</strong></p>
 <h2 id="枚举实现单例"><a href="#枚举实现单例" class="headerlink" title="枚举实现单例"></a>枚举实现单例</h2><p>上述示例，涉及线程安全问题（即使有多重检查锁也可以通过反射破坏单例）。<br>枚举是实现单例模式的最佳方法。<br>《Effective Java》：“使用enum关键字来实现单例模式的好处是这样非常简洁，并且无偿地提供了序列化机制，绝对防止多次实例化，即使是在面对复杂的序列化或者反射攻击的时候（JVM保证）。”  </p>
-<p>枚举可以有自己的属性和方法，实质是功能齐全的类。</p>
+<p>枚举可以有自己的属性和方法，实质是功能齐全的类。正因为枚举本身是单例的，所以两个枚举值作比较可以直接用 == 而不是 equals() 方法，事实上，Enum类重写了 equals() 方法，也是用 == 来比较的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object other)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>==other;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton &#123;</div><div class="line">    AAA;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getA</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"AAAAAA"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestS</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Singleton s = Singleton.AAA;</div><div class="line">        s.getA();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>*枚举和类  </p>
+<ul>
+<li>声明关键字和类不同，enum ／  class</li>
+<li>在声明任何类成员（或初始化块）之前，枚举必须首先声明其所有的枚举常量。</li>
+<li>枚举的构造器只能是private，默认也是private。</li>
+<li>枚举不能声明为扩展自另一个类型，所有的枚举都隐式地扩展自java.lang.Enum（但任何类都不能直接扩展Enum）。所有其它类型（包括另一个枚举）都不能扩展枚举，因为所有的枚举类型的行为就好像它们隐式是final一样。枚举不能声明为 abstract 的，但枚举可以声明抽象方法。</li>
+<li>枚举可以声明它实现了一个或多个接口。事实上，所有的枚举都隐式是Serializable和Comparable。</li>
+<li>枚举类型不允许覆盖Object的finalize方法，因为枚举实例永远都不能被终结。</li>
+<li>每个枚举都具有两个静态方法，是由编译器自动生成的。<ul>
+<li>public static E[] values()</li>
+<li>public static E[] valueOf(String name)</li>
+</ul>
+</li>
+<li>枚举也不能显示地声明为final的，尽管它的行为看起来就是final的。</li>
+</ul>
 <hr>
-<h3 id="警惕单例模式的滥用-2"><a href="#警惕单例模式的滥用-2" class="headerlink" title="警惕单例模式的滥用 [2]"></a>警惕单例模式的滥用 <sup id="f2"><a href="#t2">[2]</a></sup></h3><p>单例模式是最基本的设计模式之一，也是程序员最喜欢用的设计模式之一，面试的时候也经常遇到。在先前的项目中，我非常喜欢使用单例模式，只要我认为同一个进程中，某个类只应该有一份唯一的实例，那么我就会毫不犹豫地使用单例模式。但是最近在实践中也慢慢发现单例模式的一些问题，暂且记下：<br>第一，由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。另外类的构造函数通常也是私有的，所以无法被继承。尤其在单元测试的时候，我们常常需要继承原始的类，并覆写一些方法以达到打桩的目的。<br>第二，对需要多例的集成测试不友好。虽然类A在正常情况下，一个进程中只应该有一个实例，但是在集成测试的时候，我们可能需要在同一个进程里构造出两个A的实例，以方便测试。<br>第三，代码模块之间的依赖不清晰。举例，当模块B需要使用类A的实例，它通常可以A.getInstance()来获取A的唯一实例，这样会造成整个项目代码中，到处都有A.getInstance()这样的使用，于是很难看出到底哪些模块真正依赖A。而如果B的构造函数是B（A a），那么就可以很直观地看出B对A的依赖。</p>
-<p><text id="from1"><a href="#to1">[1]</a> <em>摘自《设计模式之禅（第2版）》</em>  </text></p>
-<p><text id="t2"><a href="#f2">[2]</a> <em>摘自<a href="http://blog.sina.com.cn/s/blog_3fe961ae0102xr9f.html" target="_blank" rel="external">阿涵-_-的博客</a></em></text></p>
+<h3 id="警惕单例模式的滥用-2"><a href="#警惕单例模式的滥用-2" class="headerlink" title="警惕单例模式的滥用 [2]"></a>警惕单例模式的滥用 <em><sup id="f2"><a href="#t2">[2]</a></sup></em></h3><p>单例模式是最基本的设计模式之一，也是程序员最喜欢用的设计模式之一，面试的时候也经常遇到。在先前的项目中，我非常喜欢使用单例模式，只要我认为同一个进程中，某个类只应该有一份唯一的实例，那么我就会毫不犹豫地使用单例模式。但是最近在实践中也慢慢发现单例模式的一些问题，暂且记下：<br>第一，由于单利模式中没有抽象层，因此单例类的扩展有很大的困难。另外类的构造函数通常也是私有的，所以无法被继承。尤其在单元测试的时候，我们常常需要继承原始的类，并覆写一些方法以达到打桩的目的。<br>第二，对需要多例的集成测试不友好。虽然类A在正常情况下，一个进程中只应该有一个实例，但是在集成测试的时候，我们可能需要在同一个进程里构造出两个A的实例，以方便测试。<br>第三，代码模块之间的依赖不清晰。举例，当模块B需要使用类A的实例，它通常可以A.getInstance()来获取A的唯一实例，这样会造成整个项目代码中，到处都有A.getInstance()这样的使用，于是很难看出到底哪些模块真正依赖A。而如果B的构造函数是B（A a），那么就可以很直观地看出B对A的依赖。</p>
+<p><em><text id="from1"><a href="#to1">[1]</a> 摘自《设计模式之禅（第2版）》</text></em><br><em><text id="t2"><a href="#f2">[2]</a> 摘自<a href="http://blog.sina.com.cn/s/blog_3fe961ae0102xr9f.html" target="_blank" rel="external">阿涵-_-的博客</a></text></em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/03/DesignPattern_Singleton/" data-id="cj3wf1zrx0000l3fyf4ezau8a" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/03/DesignPattern_Singleton/" data-id="cj3zgkx950000ryfyicmia8sb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
@@ -155,7 +170,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -165,7 +180,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -175,7 +190,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/appium/" style="font-size: 13.33px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 13.33px;">iOS</a> <a href="/tags/issue/" style="font-size: 16.67px;">issue</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 13.33px;">设计模式</a>
+      <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/appium/" style="font-size: 13.33px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 13.33px;">iOS</a> <a href="/tags/issue/" style="font-size: 20px;">issue</a> <a href="/tags/java/" style="font-size: 16.67px;">java</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 13.33px;">设计模式</a>
     </div>
   </div>
 
@@ -184,7 +199,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -195,6 +210,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/16/issueJava8Lambda/">Java8环境不支持Lambda？</a>
+          </li>
         
           <li>
             <a href="/2017/06/08/unityFromInstall2Uninstall/">Unity 从安装到卸载</a>
@@ -210,10 +229,6 @@
         
           <li>
             <a href="/2017/06/03/DesignPattern_Singleton/">设计模式——单例模式</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/01/appiumNotes/">Appium 资料摘抄</a>
           </li>
         
       </ul>

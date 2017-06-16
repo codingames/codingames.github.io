@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/5 | tracenote</title>
+  <title>Java8环境不支持Lambda？ | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/2017/05/index.html">
+  <meta name="description" content="在Java 8的项目中写Lambda，提示“lambda expressions not supported at this language level”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java8环境不支持Lambda？">
+<meta property="og:url" content="http://tracenote.com/2017/06/16/issueJava8Lambda/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="在Java 8的项目中写Lambda，提示“lambda expressions not supported at this language level”">
+<meta property="og:updated_time" content="2017-06-16T02:24:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Java8环境不支持Lambda？">
+<meta name="twitter:description" content="在Java 8的项目中写Lambda，提示“lambda expressions not supported at this language level”">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -62,77 +63,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/22/appiumAndroidIssues/" class="archive-article-date">
-  <time datetime="2017-05-22T06:23:25.000Z" itemprop="datePublished">May 22</time>
+        <section id="main"><article id="post-issueJava8Lambda" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/16/issueJava8Lambda/" class="article-date">
+  <time datetime="2017-06-16T01:10:02.000Z" itemprop="datePublished">2017-06-16</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/issue/">issue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/appiumAndroidIssues/">Appium Android 坎坷</a>
+    <h1 class="article-title" itemprop="name">
+      Java8环境不支持Lambda？
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/21/payissue/" class="archive-article-date">
-  <time datetime="2017-05-21T04:50:00.000Z" itemprop="datePublished">May 21</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/21/payissue/">支付问题</a>
-    </h1>
-  
+        <p>在Java 8的项目中写Lambda，提示“lambda expressions not supported at this language level”<br><a id="more"></a><br>环境背景：IntelliJ IDEA，Maven  </p>
+<h3 id="解决："><a href="#解决：" class="headerlink" title="解决："></a>解决：</h3><ul>
+<li>IntelliJ IDEA: File - Porject Structure, 确保Project和Modules中的SDK、language是Java 8的。</li>
+<li><p>pom.xml中添加：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;3.6.0&lt;/version&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">                &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/04/ioshttps/" class="archive-article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">May 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/04/ioshttps/">iOS 10.3 Charles https 问题</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/06/16/issueJava8Lambda/" data-id="cj3zgkxa2000lryfybs5ujlic" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/08/unityFromInstall2Uninstall/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Unity 从安装到卸载</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
