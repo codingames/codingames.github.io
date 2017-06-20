@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracenote.com/2017/06/18/java8Lambda/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="Java 8发布于2014年3月18日，核心特性即，lambda表达式、函数式接口、流API、默认方法和新的Date以及Time API。学习和掌握lambda表达式的最佳方法就是勇于尝试，尽可能多练习lambda表达式例子。鉴于受Java 8发布的影响最大的是Java集合框架（Java Collections framework），所以最好练习流API和lambda表达式，用于对列表（Lists">
-<meta property="og:updated_time" content="2017-06-19T10:07:41.000Z">
+<meta property="og:updated_time" content="2017-06-20T01:36:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lambda学习笔记">
 <meta name="twitter:description" content="Java 8发布于2014年3月18日，核心特性即，lambda表达式、函数式接口、流API、默认方法和新的Date以及Time API。学习和掌握lambda表达式的最佳方法就是勇于尝试，尽可能多练习lambda表达式例子。鉴于受Java 8发布的影响最大的是Java集合框架（Java Collections framework），所以最好练习流API和lambda表达式，用于对列表（Lists">
@@ -114,6 +114,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">default</span> Predicate&lt;T&gt; <span class="title">or</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; other)</span> </span>&#123;</div><div class="line">     Objects.requireNonNull(other);</div><div class="line">     <span class="keyword">return</span> (t) -&gt; test(t) || other.test(t);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Java 8中在接口中增加了默认实现这种函数，其实在很大程序上违背了接口具有抽象这种特征的，增加default实现主要原因是因为考虑兼容及代码的更改成本，例如，在Java 8中向iterator这种接口增加一个方法，那么实现这个接口的所有类都要需实现一遍这个方法，那么Java 8需要更改的类就太多的，因此在Iterator接口里增加一个default实现，那么实现这个接口的所有类就都具有了这种实现，说白了，就是一个模板设计模式吧</p>
+<h6 id="使用lambda表达式和函数式接口Predicate"><a href="#使用lambda表达式和函数式接口Predicate" class="headerlink" title="使用lambda表达式和函数式接口Predicate"></a>使用lambda表达式和函数式接口Predicate</h6><p>Java 8添加了一个包java.util.function，包含很多类，用来支持Java的函数式编程。其中一个便是Predicate，使用java.util.function.Predicate 函数式接口以及lambda表达式，可以向API方法添加逻辑，用更少的代码支持更多的动态行为。<br>Predicate接口非常适用于做过滤。过滤集合数据的多种常用方法示例：  </p>
 <h5 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h5><p>若需要执行的代码在某些类中已经存在，就没必要再去写Lambda表达式，可以直接使用该方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Stream.of(datas).forEach(System.out::println);</div></pre></td></tr></table></figure>
 <p>相当于</p>
@@ -135,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/18/java8Lambda/" data-id="cj43zbx2p000hx6fy6hggbk1g" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/18/java8Lambda/" data-id="cj44yut9q000mmefye1ryhna8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li></ul>
@@ -145,6 +146,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/06/20/360jiagu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          所谓的360加固
+        
+      </div>
+    </a>
   
   
     <a href="/2017/06/16/issueJava8Lambda/" id="article-nav-older" class="article-nav-link-wrap">
@@ -165,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -175,7 +185,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -185,7 +195,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/appium/" style="font-size: 13.33px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 13.33px;">iOS</a> <a href="/tags/issue/" style="font-size: 20px;">issue</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 13.33px;">设计模式</a>
+      <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.67px;">android</a> <a href="/tags/app/" style="font-size: 10px;">app</a> <a href="/tags/appium/" style="font-size: 13.33px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 13.33px;">iOS</a> <a href="/tags/issue/" style="font-size: 20px;">issue</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/server/" style="font-size: 13.33px;">server</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 13.33px;">设计模式</a>
     </div>
   </div>
 
@@ -194,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -205,6 +215,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/20/360jiagu/">所谓的360加固</a>
+          </li>
         
           <li>
             <a href="/2017/06/18/java8Lambda/">Lambda学习笔记</a>
@@ -220,10 +234,6 @@
         
           <li>
             <a href="/2017/06/08/testNGFactory/">TestNG @Factory</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/04/DesignPattern_Template/">设计模式——模板方法模式</a>
           </li>
         
       </ul>
