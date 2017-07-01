@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Appium Android 坎坷 | tracenote</title>
+  <title>Tag: finance | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Appium Android 坎坷">
-<meta property="og:url" content="http://tracenote.com/2017/05/22/appiumAndroidIssues/index.html">
+  <meta name="description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tracenote">
+<meta property="og:url" content="http://tracenote.com/tags/finance/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
-<meta property="og:updated_time" content="2017-06-02T07:42:26.000Z">
+<meta property="og:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Appium Android 坎坷">
-<meta name="twitter:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
+<meta name="twitter:title" content="tracenote">
+<meta name="twitter:description" content="好记性不如烂笔头，宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,85 +62,39 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-appiumAndroidIssues" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/22/appiumAndroidIssues/" class="article-date">
-  <time datetime="2017-05-22T06:23:25.000Z" itemprop="datePublished">2017-05-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/appium/">appium</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      Appium Android 坎坷
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2017/07/02/housingLoan/" class="archive-article-date">
+  <time datetime="2017-07-01T16:15:00.000Z" itemprop="datePublished">Jul 2</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/02/housingLoan/">关于房贷计算</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。<br><a id="more"></a></p>
-<h4 id="A-new-session-could-not-be-created"><a href="#A-new-session-could-not-be-created" class="headerlink" title="A new session could not be created"></a>A new session could not be created</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)</div></pre></td></tr></table></figure>
-<p>解决方案，在Appium的General Settings里面勾选:<br>Override Existing Sessions</p>
-<h4 id="java-client-版本号"><a href="#java-client-版本号" class="headerlink" title="java client 版本号"></a>java client 版本号</h4><p>官方说明，直接去maven仓库中搜索<br><a href="http://mvnrepository.com/artifact/io.appium/java-client" target="_blank" rel="external">http://mvnrepository.com/artifact/io.appium/java-client</a></p>
-<h4 id="Maven-依赖冲突"><a href="#Maven-依赖冲突" class="headerlink" title="Maven 依赖冲突"></a>Maven 依赖冲突</h4><p>Appium java-client 用的selenium是3.4版本，而项目Maven Dependencies中的selenium-api等还是2.x版本（来自于包含Web测试的测试框架包），解决方案，调整pom.xml文件的依赖顺序，java-client写在前面即可。这里靠上优先加载，是有一个从上到下的顺序的。<br>温习，官方文档说明：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Appium 服务端定义了官方协议的扩展，为Appium 用户提供了方便的接口来执行各种设备动作，例如在测试过程中</div><div class="line">安装/卸载app。这就是为什么我们需要Appium 特定的客户端，而不是通用的Selenium 客户端。当然，Appium 客</div><div class="line">户端类库只是增加了一些功能，而实际上这些功能就是简单的扩展了Selenium 客户端，所以他们仍然可以用来运行通</div><div class="line">用的selenium会话。</div></pre></td></tr></table></figure>
-<h4 id="TestNG"><a href="#TestNG" class="headerlink" title="TestNG"></a>TestNG</h4><p>运行@Test方法提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Could not find or load main class org.testng.remote.RemoteTestNG</div></pre></td></tr></table></figure></p>
-<p>程序引用TestNG jar包版本升级到了6.11，而eclipse TestNG插件仍是6.9，升级eclipse TestNG插件解决。</p>
-<h4 id="DDMS定位"><a href="#DDMS定位" class="headerlink" title="DDMS定位"></a>DDMS定位</h4><p>对应DDMS属性  </p>
-<ul>
-<li>id: resrouce-id  </li>
-<li>name: text  </li>
-<li>ClassName: class  </li>
-<li>AccessibilityId：content-desc  </li>
-<li>xpath执行效率较低，尽量不要用。<br>AndroidUiAutomator定位方式也是很强大，例如  <pre><code>driver.findElementByAndroidUIAutomator(&quot;new UiSelector().resourceId(\&quot;com.tencent.mm:id/do\&quot;)&quot;);
-</code></pre></li>
-</ul>
-<h4 id="Android-Virtual-Device"><a href="#Android-Virtual-Device" class="headerlink" title="Android Virtual Device"></a>Android Virtual Device</h4><p>appium官方tutorial建议模拟器设置：<br>Ensure Use Host GPU is checked. Set VM Heap to 64. 32 is too small.</p>
-<h4 id="有时候找不到设备"><a href="#有时候找不到设备" class="headerlink" title="有时候找不到设备"></a>有时候找不到设备</h4><p>Run the following commands a few times until it’s listed.<br><code>adb kill-server; adb devices</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/22/appiumAndroidIssues/" data-id="cj4ll66k00009jnfylhbyzveq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/06/01/appiumNotes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Appium 资料摘抄
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/21/payissue/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">支付问题</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
