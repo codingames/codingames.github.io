@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    <lastmod>2017-08-11T12:28:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>画蛇添足的小米</title>
+        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>android</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-08-11T07:43:27.000Z</lastmod>
     <data>
@@ -11,9 +33,9 @@
         <title>adb获取安卓手机厂商型号</title>
         <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>android</tag>
          
          
            
@@ -121,9 +143,9 @@
         <title>华为刷机踩坑</title>
         <pubTime>2017-07-05T04:15:00.000Z</pubTime>
         
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>android</tag>
          
          
            
@@ -437,9 +459,9 @@
         <title>体验腾讯云服务器</title>
         <pubTime>2017-03-27T13:55:24.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>server</tag>
+         
+        <tag>env</tag>
          
         <tag>linux</tag>
          
@@ -515,11 +537,11 @@
         <title>DNSPod解析Godaddy域名</title>
         <pubTime>2017-03-19T12:18:25.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>domain</tag>
          
         <tag>server</tag>
+         
+        <tag>env</tag>
          
          
            
