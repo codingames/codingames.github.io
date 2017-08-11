@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: server | tracenote</title>
+  <title>adb获取安卓手机厂商型号 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/server/index.html">
+  <meta name="description" content="某些时候需要获取安卓手机厂商型号等信息，运行adb命令即可。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="adb获取安卓手机厂商型号">
+<meta property="og:url" content="http://tracenote.com/2017/08/11/adbdevicesinfo/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="某些时候需要获取安卓手机厂商型号等信息，运行adb命令即可。">
+<meta property="og:updated_time" content="2017-08-11T07:43:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="adb获取安卓手机厂商型号">
+<meta name="twitter:description" content="某些时候需要获取安卓手机厂商型号等信息，运行adb命令即可。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -62,58 +63,63 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/27/qcouldcvm/" class="archive-article-date">
-  <time datetime="2017-03-27T13:55:24.000Z" itemprop="datePublished">Mar 27</time>
+        <section id="main"><article id="post-adbdevicesinfo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/11/adbdevicesinfo/" class="article-date">
+  <time datetime="2017-08-11T04:30:00.000Z" itemprop="datePublished">2017-08-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/env/">env</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/27/qcouldcvm/">体验腾讯云服务器</a>
+    <h1 class="article-title" itemprop="name">
+      adb获取安卓手机厂商型号
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/19/aboutDns/" class="archive-article-date">
-  <time datetime="2017-03-19T12:18:25.000Z" itemprop="datePublished">Mar 19</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/aboutDns/">DNSPod解析Godaddy域名</a>
-    </h1>
-  
+        <p>某些时候需要获取安卓手机厂商型号等信息，运行adb命令即可。<br><a id="more"></a></p>
+<p><code>adb shell getprop ro.product.model</code> </p>
+<p><code>adb devices -l</code>  </p>
+<p><code>adb shell getprop | grep product</code></p>
+<p>Java示例代码：  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">runCommand</span><span class="params">(String command)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">	String str = <span class="string">""</span>;</div><div class="line">	Runtime runtime = Runtime.getRuntime();</div><div class="line">	Process proc = runtime.exec(command);</div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		<span class="keyword">if</span> (proc.waitFor() != <span class="number">0</span>) &#123;</div><div class="line">			System.err.println(<span class="string">"exit value = "</span> + proc.exitValue());</div><div class="line">		&#125;</div><div class="line">		BufferedReader in = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(</div><div class="line">				proc.getInputStream()));</div><div class="line">		StringBuffer stringBuffer = <span class="keyword">new</span> StringBuffer();</div><div class="line">		String line = <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">while</span> ((line = in.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">			stringBuffer.append(line + <span class="string">" "</span>);</div><div class="line">		&#125;</div><div class="line">		str = stringBuffer.toString();</div><div class="line">	&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">		System.err.println(e);</div><div class="line">	&#125; <span class="keyword">finally</span> &#123;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			proc.destroy();</div><div class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> str;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Test</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Test</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</div><div class="line">	System.out.println(runCommand(<span class="string">"adb shell getprop ro.product.model"</span>));</div><div class="line">	System.out.println(runCommand(<span class="string">"adb devices -l"</span>));</div><div class="line">	System.out.println(runCommand(<span class="string">"adb shell getprop | grep product"</span>));</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="comment">//输出：</span></div><div class="line">HUAWEI MT7-TL00 </div><div class="line">List of devices attached P4M7N15411025011       device usb:<span class="number">336723968</span>X product:MT7-TL00 model:HUAWEI_MT7_TL00 device:hwmt7  </div><div class="line">[ro.boardid.product]: [<span class="number">41031</span>] [ro.build.product]: [hi3630] [ro.config.browser_useragent1]: [HUAWEI_productName_TD/<span class="number">5.0</span> Android/androidVersion (Linux; U; Android androidVersion; zh-cn] [ro.product.CustCVersion]: [C01] [ro.product.CustDVersion]: [D570] [ro.product.board]: [MT7-TL00] [ro.product.brand]: [Huawei] [ro.product.canplaypause]: [<span class="keyword">true</span>] [ro.product.cmcc.rtspcon]: [<span class="keyword">true</span>] [ro.product.cpu.abi]: [armeabi-v7a] [ro.product.cpu.abi2]: [armeabi] [ro.product.cpu.abilist]: [armeabi-v7a,armeabi] [ro.product.cpu.abilist32]: [armeabi-v7a,armeabi] [ro.product.cpu.abilist64]: [] [ro.product.cucc.rtsplive]: [<span class="keyword">true</span>] [ro.product.device]: [hwmt7] [ro.product.hardwareversion]: [HL1TGRACEM] [ro.product.locale.language]: [zh] [ro.product.locale.region]: [CN] [ro.product.manufacturer]: [HUAWEI] [ro.product.member.level]: [<span class="number">10011</span>] [ro.product.model]: [HUAWEI MT7-TL00] [ro.product.name]: [MT7-TL00] [ro.product.only_2Gnetwork]: [<span class="keyword">false</span>] [ro.product.platform.pseudonym]: [<span class="number">1</span>ARB9CV] [ro.product.playreq.range]: [<span class="keyword">true</span>] [ro.product.rtsp.startTime]: [<span class="keyword">true</span>] [ro.product.streaming.custom]: [<span class="keyword">true</span>]</div></pre></td></tr></table></figure>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/08/11/adbdevicesinfo/" data-id="cj67khqig00063mqj4efzh40v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/30/javaGetSubClassName/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">父类获取子类名字</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
