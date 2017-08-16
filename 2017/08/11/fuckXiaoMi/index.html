@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="同事用红米手机执行appium，一直闪退，去帮忙查找原因，原来是被小米坑了。">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006DkZhIly1fig1zycu8lj30u01hcq6n.jpg">
-<meta property="og:updated_time" content="2017-08-11T12:28:30.000Z">
+<meta property="og:updated_time" content="2017-08-16T16:51:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="画蛇添足的小米">
 <meta name="twitter:description" content="同事用红米手机执行appium，一直闪退，去帮忙查找原因，原来是被小米坑了。">
@@ -92,14 +92,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>同事用红米手机执行appium，一直闪退，去帮忙查找原因，原来是被小米坑了。<br><a id="more"></a><br>爬appium日志，发现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[debug] [ADB] Getting install status for io.appium.settings</div><div class="line">...</div><div class="line">[debug] [ADB] App is not installed</div></pre></td></tr></table></figure>
+<blockquote><p>[debug] [ADB] Getting install status for io.appium.settings<br>…<br>[debug] [ADB] App is not installed</p>
+</blockquote>
 <p>手动adb安装，失败。仔细去看手机的开发者设置，发现小米比正常手机多了允许USB安装开关，而且必须装sim卡才能打开：</p>
 <p><img src="http://ww1.sinaimg.cn/mw690/006DkZhIly1fig1zycu8lj30u01hcq6n.jpg" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/11/fuckXiaoMi/" data-id="cj6dvk06m000mtefyqcg491ex" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/11/fuckXiaoMi/" data-id="cj6f9upd0000mknfyj8e1vbo1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>

@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="命令行安装.app包到Simulator（不能直接装.ipa的包）。">
 <meta property="og:image" content="http://ww1.sinaimg.cn/mw690/006DkZhIly1fi1rqjj8ryj30u202s74x.jpg">
-<meta property="og:updated_time" content="2017-07-30T04:22:11.000Z">
+<meta property="og:updated_time" content="2017-08-16T16:56:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS安装app到Simulator">
 <meta name="twitter:description" content="命令行安装.app包到Simulator（不能直接装.ipa的包）。">
@@ -95,7 +95,8 @@
 <h4 id="查看模拟器列表"><a href="#查看模拟器列表" class="headerlink" title="查看模拟器列表:"></a>查看模拟器列表:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">instruments -s devices</div></pre></td></tr></table></figure>
 <h4 id="启动模拟器："><a href="#启动模拟器：" class="headerlink" title="启动模拟器："></a>启动模拟器：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcrun instruments -w &apos;iPhone 7&apos;</div></pre></td></tr></table></figure>
 <p>若遇到如下错误：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Instruments Usage Error: Ambiguous device name/identifier &apos;iPhone 7&apos;:</div><div class="line">iPhone 7 (10.3.1) [BAACF4D1-9405-4E6F-9B2F-2958CAA82745]</div><div class="line">iPhone 7 Plus (10.3.1) [BCA2A32C-EE02-4DB3-B4E7-814583AE60B2]</div><div class="line">iPhone 7 Plus (10.3.1) + Apple Watch Series 2 - 42mm (3.2) [1D7FF757-387C-47F1-9565-DD4C5D911AEB]</div><div class="line">iPhone 7 (10.3.1) + Apple Watch Series 2 - 38mm (3.2) [6FA79326-DB3A-42FE-B387-2697C4925057]</div></pre></td></tr></table></figure>
+<blockquote><p>Instruments Usage Error: Ambiguous device name/identifier ‘iPhone 7’:<br>iPhone 7 (10.3.1) [BAACF4D1-9405-4E6F-9B2F-2958CAA82745]<br>iPhone 7 Plus (10.3.1) [BCA2A32C-EE02-4DB3-B4E7-814583AE60B2]<br>iPhone 7 Plus (10.3.1) + Apple Watch Series 2 - 42mm (3.2) [1D7FF757-387C-47F1-9565-DD4C5D911AEB]<br>iPhone 7 (10.3.1) + Apple Watch Series 2 - 38mm (3.2) [6FA79326-DB3A-42FE-B387-2697C4925057]</p>
+</blockquote>
 <p>可以直接用udid启动，<code>xcrun instruments -w &#39;BAACF4D1-9405-4E6F-9B2F-2958CAA82745&#39;</code> </p>
 <h4 id="安装目标app"><a href="#安装目标app" class="headerlink" title="安装目标app"></a>安装目标app</h4><p>这里不能直接装.ipa的包，只能装.app包，可以在xcode工程的Products下找到。<strong>注意必须是simulator下的app包（真机对应app包是基于arm的，装到电脑模拟器打开会闪退）。</strong><br><img src="http://ww1.sinaimg.cn/mw690/006DkZhIly1fi1rqjj8ryj30u202s74x.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcrun simctl install booted /PathToTheApp/test.app</div></pre></td></tr></table></figure>
@@ -106,7 +107,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/29/simulatorAppInstall/" data-id="cj6dvk079001htefykw3sreq8" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/07/29/simulatorAppInstall/" data-id="cj6f9updm001hknfyefdpv7su" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>

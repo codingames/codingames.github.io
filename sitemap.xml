@@ -2,23 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
-    <lastmod>2017-08-11T12:28:30.000Z</lastmod>
+    <lastmod>2017-08-16T17:04:36.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     
-    <lastmod>2017-08-11T07:43:27.000Z</lastmod>
+    <lastmod>2017-08-16T17:02:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/20/360jiagu/</loc>
+    
+    <lastmod>2017-08-16T16:57:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/29/simulatorAppInstall/</loc>
+    
+    <lastmod>2017-08-16T16:56:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
     
-    <lastmod>2017-07-30T16:36:24.000Z</lastmod>
+    <lastmod>2017-08-16T16:55:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    
+    <lastmod>2017-08-16T16:53:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    
+    <lastmod>2017-08-16T16:51:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    
+    <lastmod>2017-08-16T16:48:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    
+    <lastmod>2017-08-16T16:46:22.000Z</lastmod>
     
   </url>
   
@@ -37,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/29/simulatorAppInstall/</loc>
-    
-    <lastmod>2017-07-30T04:22:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     
     <lastmod>2017-07-05T06:30:21.000Z</lastmod>
@@ -58,23 +93,9 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
-    
-    <lastmod>2017-06-25T15:06:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     
     <lastmod>2017-06-25T15:05:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/20/360jiagu/</loc>
-    
-    <lastmod>2017-06-20T06:59:54.000Z</lastmod>
     
   </url>
   
@@ -128,30 +149,9 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    
-    <lastmod>2017-06-03T16:43:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    
-    <lastmod>2017-06-02T07:42:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
     
     <lastmod>2017-06-01T03:37:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
-    
-    <lastmod>2017-06-01T03:27:50.000Z</lastmod>
     
   </url>
   

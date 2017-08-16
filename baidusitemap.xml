@@ -4,21 +4,113 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
-    <lastmod>2017-08-11T12:28:30.000Z</lastmod>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-08-16T17:04:36.000Z</lastmod>
     <data>
         <display>
-        <title>画蛇添足的小米</title>
-        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
         
         <tag>android</tag>
          
-        <tag>env</tag>
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <lastmod>2017-08-16T17:02:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Lambda 学习笔记</title>
+        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>java8</tag>
+         
+        <tag>lambda</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/20/360jiagu/</loc>
+    <lastmod>2017-08-16T16:57:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>所谓的360加固</title>
+        <pubTime>2017-06-20T02:00:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>3rd</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/29/simulatorAppInstall/</loc>
+    <lastmod>2017-08-16T16:56:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS安装app到Simulator</title>
+        <pubTime>2017-07-29T15:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    <lastmod>2017-08-16T16:55:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>父类获取子类名字</title>
+        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -27,7 +119,7 @@
     
   <url>
     <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
-    <lastmod>2017-08-11T07:43:27.000Z</lastmod>
+    <lastmod>2017-08-16T16:53:09.000Z</lastmod>
     <data>
         <display>
         <title>adb获取安卓手机厂商型号</title>
@@ -48,19 +140,65 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
-    <lastmod>2017-07-30T16:36:24.000Z</lastmod>
+    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    <lastmod>2017-08-16T16:51:52.000Z</lastmod>
     <data>
         <display>
-        <title>父类获取子类名字</title>
-        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
+        <title>画蛇添足的小米</title>
+        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
         
-        <tag>java</tag>
+        <tag>android</tag>
+         
+        <tag>env</tag>
          
          
            
              
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <lastmod>2017-08-16T16:48:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>支付问题</title>
+        <pubTime>2017-05-21T04:50:00.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>pay</tag>
+         
+         
+           
+             
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <lastmod>2017-08-16T16:46:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="1st" url="http://tracenote.com/categories/1st/"/>
           
         </display>
     </data>
@@ -112,30 +250,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/29/simulatorAppInstall/</loc>
-    <lastmod>2017-07-30T04:22:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS安装app到Simulator</title>
-        <pubTime>2017-07-29T15:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>iOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     <lastmod>2017-07-05T06:30:21.000Z</lastmod>
     <data>
@@ -180,30 +294,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
-    <lastmod>2017-06-25T15:06:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Lambda 学习笔记</title>
-        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>lambda</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     <lastmod>2017-06-25T15:05:50.000Z</lastmod>
     <data>
@@ -221,28 +311,6 @@
            
              
               <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/06/20/360jiagu/</loc>
-    <lastmod>2017-06-20T06:59:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>所谓的360加固</title>
-        <pubTime>2017-06-20T02:00:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>3rd</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -410,48 +478,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-06-03T16:43:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="1st" url="http://tracenote.com/categories/1st/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-06-02T07:42:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
     <lastmod>2017-06-01T03:37:07.000Z</lastmod>
     <data>
@@ -471,32 +497,6 @@
            
              
               <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
-    <lastmod>2017-06-01T03:27:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>支付问题</title>
-        <pubTime>2017-05-21T04:50:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>pay</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
