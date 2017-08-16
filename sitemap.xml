@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    
+    <lastmod>2017-08-16T17:11:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-08-16T17:04:36.000Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     
     <lastmod>2017-08-16T16:46:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    
-    <lastmod>2017-07-30T14:50:07.000Z</lastmod>
     
   </url>
   
