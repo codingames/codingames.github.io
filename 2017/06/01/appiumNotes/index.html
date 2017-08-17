@@ -24,6 +24,8 @@
     <link rel="icon" href="/favicon.png">
   
   
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
   <link rel="stylesheet" href="/css/style.css">
   
 
@@ -54,7 +56,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
@@ -104,9 +106,7 @@
 <p><em>(↓↓ <a href="http://appium.io/slate/en/master/?java#" target="_blank" rel="external">http://appium.io/slate/en/master/?java#</a>)</em></p>
 <h4 id="setUp"><a href="#setUp" class="headerlink" title="setUp"></a>setUp</h4><p>Make sure you have not installed Node or Appium with sudo, otherwise you’ll run into problems).<br>If you’ve installed Node from the Node website, it requires that you use sudo for <code>npm</code>. This is not ideal. Try to get node with <code>nvm</code>, <code>n</code> or <code>brew install node</code> instead!<br>如何检查node是否root安装？<br><code>which node</code> 找到node路径，再 <code>ls -l</code> 该路径即可查看安装用户。</p>
 <p>To verify that all of Appium’s dependencies are met</p>
-<pre><code class="shell">appium-doctor --android
-appium-doctor --ios
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">appium-doctor --android</div><div class="line">appium-doctor --ios</div></pre></td></tr></table></figure>
 <h4 id="Android-support"><a href="#Android-support" class="headerlink" title="Android support"></a>Android support</h4><ul>
 <li>Support for automating multiple apps in one session: Yes (but not when using the Selendroid backend)</li>
 <li>Support for <strong>automating multiple devices simultaneously</strong>: Yes, though Appium must be started using different ports for the server parameters <code>--port</code>, <code>--bootstrap-port</code> (or <code>--selendroid-port</code>) and/or <code>--chromedriver-port</code>. See the server args doc for more information on these parameters.   </li>
@@ -175,12 +175,9 @@ appium-doctor --ios
 </li>
 </ul>
 <h6 id="HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW"><a href="#HYBRID-SUPPORT-THROUGH-CONTEXT-NOT-WINDOW" class="headerlink" title="HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW"></a>HYBRID SUPPORT THROUGH CONTEXT, NOT WINDOW</h6><p>To get all of the available contexts, or the particular context the application is is, you use</p>
-<pre><code class="java">Set&lt;String&gt; contextNames = driver.getContextHandles();
-String context = driver.getContext();
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Set&lt;String&gt; contextNames = driver.getContextHandles();</div><div class="line">String context = driver.getContext();</div></pre></td></tr></table></figure>
 <p>to switch between them:</p>
-<pre><code class="java">driver.context(contextName);
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">driver.context(contextName);</div></pre></td></tr></table></figure>
 <h6 id="NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”"><a href="#NO-MORE-EXECUTE-SCRIPT-“MOBILE-XXX”" class="headerlink" title="NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)"></a>NO MORE EXECUTE_SCRIPT(“MOBILE: XXX”)</h6><p>All the mobile: methods have been removed, and have been replaced by native methods in the Appium client libraries. This means that a method call like <code>driver.execute(&quot;mobile: lock&quot;, [5])</code> will now look something more like <code>driver.lock(5)</code> (where <code>lock</code> has been turned into a native client method). Of course, the details on calling these methods will differ by client.</p>
 <p>Of particular note, the gesture methods have been replaced by the new TouchAction / MultiAction API which allows for a much more powerful and general way of putting gestural automation together. Refer to your Appium client for usage notes on TouchAction / MultiAction.</p>
 <h6 id="Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up"><a href="#Migrating-your-iOS-tests-from-UIAutomation-iOS-9-2-and-below-to-XCUITest-iOS-9-3-and-up" class="headerlink" title="Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)"></a>Migrating your iOS tests from UIAutomation (iOS 9.2 and below) to XCUITest (iOS 9.3 and up)</h6><p>For iOS automation, Appium relies on system frameworks provided by Apple. For iOS 9.2 and below, Apple’s only automation technology was called UIAutomation, and it ran in the context of a process called “Instruments”. As of iOS 10, Apple has completely removed the UIAutomation instrument, thus making it impossible for Appium to allow testing in the way it used to. Fortunately, Apple introduced a new automation technology, called XCUITest, beginning with iOS 9.3. For iOS 10 and up, this will be the only supported automation framework from Apple.</p>
@@ -225,7 +222,7 @@ String context = driver.getContext();
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj6fwxoyd000ntkqjue3dna63" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/06/01/appiumNotes/" data-id="cj6fwyvtt000nufqjpgm678io" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摘抄/">摘抄</a></li></ul>
@@ -262,7 +259,7 @@ String context = driver.getContext();
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">2</span></li></ul>
     </div>
@@ -272,7 +269,7 @@ String context = driver.getContext();
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
@@ -282,7 +279,7 @@ String context = driver.getContext();
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.33px;">android</a> <a href="/tags/app/" style="font-size: 13.33px;">app</a> <a href="/tags/appium/" style="font-size: 15px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 15px;">issue</a> <a href="/tags/java/" style="font-size: 16.67px;">java</a> <a href="/tags/java8/" style="font-size: 11.67px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 11.67px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.67px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a>
     </div>
@@ -291,7 +288,7 @@ String context = driver.getContext();
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
@@ -301,7 +298,7 @@ String context = driver.getContext();
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
