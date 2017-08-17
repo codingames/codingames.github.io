@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | tracenote</title>
+  <title>iOS命令行安装ipa到真机 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/index.html">
+  <meta name="description" content="命令行安装.ipa包到iOS真机:1ideviceinstaller -i /PathTo/xxx.ipa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS命令行安装ipa到真机">
+<meta property="og:url" content="http://tracenote.com/2017/08/16/appInstallRealDevice/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="命令行安装.ipa包到iOS真机:1ideviceinstaller -i /PathTo/xxx.ipa">
+<meta property="og:updated_time" content="2017-08-17T02:53:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="iOS命令行安装ipa到真机">
+<meta name="twitter:description" content="命令行安装.ipa包到iOS真机:1ideviceinstaller -i /PathTo/xxx.ipa">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -62,405 +63,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/16/appInstallRealDevice/" class="archive-article-date">
-  <time datetime="2017-08-16T14:30:00.000Z" itemprop="datePublished">Aug 16</time>
+        <section id="main"><article id="post-appInstallRealDevice" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/16/appInstallRealDevice/" class="article-date">
+  <time datetime="2017-08-16T14:30:00.000Z" itemprop="datePublished">2017-08-16</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/app/">app</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/16/appInstallRealDevice/">iOS命令行安装ipa到真机</a>
+    <h1 class="article-title" itemprop="name">
+      iOS命令行安装ipa到真机
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/fuckXiaoMi/" class="archive-article-date">
-  <time datetime="2017-08-11T12:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/fuckXiaoMi/">画蛇添足的小米</a>
-    </h1>
-  
+        <h4 id="命令行安装-ipa包到iOS真机"><a href="#命令行安装-ipa包到iOS真机" class="headerlink" title="命令行安装.ipa包到iOS真机:"></a>命令行安装.ipa包到iOS真机:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ideviceinstaller -i /PathTo/xxx.ipa</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="卸载："><a href="#卸载：" class="headerlink" title="卸载："></a>卸载：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ideviceinstaller -u com.xxx.here-is-bundle-id</div></pre></td></tr></table></figure>
+<h4 id="查看bundle-id："><a href="#查看bundle-id：" class="headerlink" title="查看bundle id："></a>查看bundle id：</h4><p>该设备上已安装app的bundle id：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ideviceinstaller -l</div></pre></td></tr></table></figure></p>
+<h4 id="查看设备udid"><a href="#查看设备udid" class="headerlink" title="查看设备udid"></a>查看设备udid</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">idevice_id -l</div></pre></td></tr></table></figure>
+<h4 id="若遇到错误："><a href="#若遇到错误：" class="headerlink" title="若遇到错误："></a>若遇到错误：</h4><blockquote><p>Could not connect to lockdownd. Exiting.</p>
+</blockquote>
+<p>解决办法：<br><code>sudo chmod -R 777 /var/db/lockdown/</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcrun simctl install booted /PathToTheApp/test.app</div></pre></td></tr></table></figure>
+<blockquote><p>updates to macOS, iTunes, and probably other Apple software will (correctly) reset the permissions on /var/db/lockdown.</p>
+<p>The best solution here is to get the latest libimobiledevice, which has a fix for this particular issue:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew uninstall ideviceinstaller</div><div class="line">brew uninstall libimobiledevice</div><div class="line">brew install --HEAD libimobiledevice</div><div class="line">brew link --overwrite libimobiledevice</div><div class="line">brew install ideviceinstaller</div><div class="line">brew link --overwrite ideviceinstaller</div></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/adbdevicesinfo/" class="archive-article-date">
-  <time datetime="2017-08-11T04:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/adbdevicesinfo/">adb获取安卓手机厂商型号</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/30/javaGetSubClassName/" class="archive-article-date">
-  <time datetime="2017-07-30T15:30:00.000Z" itemprop="datePublished">Jul 30</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/08/16/appInstallRealDevice/" data-id="cj6fuvl1a000epeqjrfv8wj70" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/30/javaGetSubClassName/">父类获取子类名字</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/30/switchInputIssue/" class="archive-article-date">
-  <time datetime="2017-07-30T14:30:00.000Z" itemprop="datePublished">Jul 30</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/30/switchInputIssue/">caps lock切换输入法失效问题</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/11/fuckXiaoMi/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">画蛇添足的小米</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/29/appInstallSimulator/" class="archive-article-date">
-  <time datetime="2017-07-29T15:30:00.000Z" itemprop="datePublished">Jul 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/29/appInstallSimulator/">iOS安装app到Simulator</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/05/HuaWeiBrush/" class="archive-article-date">
-  <time datetime="2017-07-05T04:15:00.000Z" itemprop="datePublished">Jul 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/05/HuaWeiBrush/">华为刷机踩坑</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/02/housingLoan/" class="archive-article-date">
-  <time datetime="2017-07-01T16:15:00.000Z" itemprop="datePublished">Jul 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/02/housingLoan/">房贷博弈误区</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/28/androidPerformanceCpuInfo/" class="archive-article-date">
-  <time datetime="2017-06-28T14:57:00.000Z" itemprop="datePublished">Jun 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/28/androidPerformanceCpuInfo/">Android dumpsys cpuinfo大于100％解释</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/25/java8Stream/" class="archive-article-date">
-  <time datetime="2017-06-25T14:57:23.000Z" itemprop="datePublished">Jun 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/25/java8Stream/">Java 8 Stream 学习笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/20/360jiagu/" class="archive-article-date">
-  <time datetime="2017-06-20T02:00:00.000Z" itemprop="datePublished">Jun 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/20/360jiagu/">所谓的360加固</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/18/java8Lambda/" class="archive-article-date">
-  <time datetime="2017-06-18T06:51:45.000Z" itemprop="datePublished">Jun 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/18/java8Lambda/">Java 8 Lambda 学习笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/16/issueJava8Lambda/" class="archive-article-date">
-  <time datetime="2017-06-16T01:10:02.000Z" itemprop="datePublished">Jun 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/16/issueJava8Lambda/">Java8环境不支持Lambda？</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/08/unityFromInstall2Uninstall/" class="archive-article-date">
-  <time datetime="2017-06-08T14:17:29.000Z" itemprop="datePublished">Jun 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/08/unityFromInstall2Uninstall/">Unity 从安装到卸载</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/08/testNGFactory/" class="archive-article-date">
-  <time datetime="2017-06-08T05:39:06.000Z" itemprop="datePublished">Jun 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/08/testNGFactory/">TestNG @Factory</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/04/DesignPattern_Template/" class="archive-article-date">
-  <time datetime="2017-06-04T11:54:21.000Z" itemprop="datePublished">Jun 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/04/DesignPattern_Template/">设计模式——模板方法模式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/03/DesignPattern_Singleton/" class="archive-article-date">
-  <time datetime="2017-06-03T13:28:15.000Z" itemprop="datePublished">Jun 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/03/DesignPattern_Singleton/">设计模式——单例模式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/01/appiumNotes/" class="archive-article-date">
-  <time datetime="2017-06-01T04:33:36.000Z" itemprop="datePublished">Jun 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/appiumNotes/">Appium 资料摘抄</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/22/appiumAndroidIssues/" class="archive-article-date">
-  <time datetime="2017-05-22T06:23:25.000Z" itemprop="datePublished">May 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/appiumAndroidIssues/">Appium Android 坎坷</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/21/payissue/" class="archive-article-date">
-  <time datetime="2017-05-21T04:50:00.000Z" itemprop="datePublished">May 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/21/payissue/">支付问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">

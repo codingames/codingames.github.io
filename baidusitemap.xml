@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/08/16/appInstallRealDevice/</loc>
+    <lastmod>2017-08-17T02:53:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS命令行安装ipa到真机</title>
+        <pubTime>2017-08-16T14:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
     <lastmod>2017-08-16T17:11:20.000Z</lastmod>
     <data>
@@ -96,7 +120,7 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/29/simulatorAppInstall/</loc>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     <lastmod>2017-08-16T16:56:26.000Z</lastmod>
     <data>
         <display>
@@ -105,9 +129,9 @@
         
         <tag>app</tag>
          
-        <tag>appium</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
@@ -193,9 +217,9 @@
         
         <tag>android</tag>
          
-        <tag>issue</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>issue</tag>
          
         <tag>pay</tag>
          
@@ -513,9 +537,9 @@
         
         <tag>env</tag>
          
-        <tag>工具</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>工具</tag>
          
         <tag>charles</tag>
          
