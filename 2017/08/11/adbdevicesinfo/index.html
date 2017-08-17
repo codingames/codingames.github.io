@@ -22,8 +22,6 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   <link rel="stylesheet" href="/css/style.css">
   
 
@@ -54,7 +52,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
@@ -94,14 +92,48 @@
 <p><code>adb devices -l</code>  </p>
 <p><code>adb shell getprop | grep product</code></p>
 <p>Java示例代码：  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">runCommand</span><span class="params">(String command)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">	String str = <span class="string">""</span>;</div><div class="line">	Runtime runtime = Runtime.getRuntime();</div><div class="line">	Process proc = runtime.exec(command);</div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		<span class="keyword">if</span> (proc.waitFor() != <span class="number">0</span>) &#123;</div><div class="line">			System.err.println(<span class="string">"exit value = "</span> + proc.exitValue());</div><div class="line">		&#125;</div><div class="line">		BufferedReader in = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(</div><div class="line">				proc.getInputStream()));</div><div class="line">		StringBuffer stringBuffer = <span class="keyword">new</span> StringBuffer();</div><div class="line">		String line = <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">while</span> ((line = in.readLine()) != <span class="keyword">null</span>) &#123;</div><div class="line">			stringBuffer.append(line + <span class="string">" "</span>);</div><div class="line">		&#125;</div><div class="line">		str = stringBuffer.toString();</div><div class="line">	&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">		System.err.println(e);</div><div class="line">	&#125; <span class="keyword">finally</span> &#123;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			proc.destroy();</div><div class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> str;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Test</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Test</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</div><div class="line">	System.out.println(runCommand(<span class="string">"adb shell getprop ro.product.model"</span>));</div><div class="line">	System.out.println(runCommand(<span class="string">"adb devices -l"</span>));</div><div class="line">	System.out.println(runCommand(<span class="string">"adb shell getprop | grep product"</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code class="java">public String runCommand(String command) throws IOException {
+    String str = &quot;&quot;;
+    Runtime runtime = Runtime.getRuntime();
+    Process proc = runtime.exec(command);
+    try {
+        if (proc.waitFor() != 0) {
+            System.err.println(&quot;exit value = &quot; + proc.exitValue());
+        }
+        BufferedReader in = new BufferedReader(new InputStreamReader(
+                proc.getInputStream()));
+        StringBuffer stringBuffer = new StringBuffer();
+        String line = null;
+        while ((line = in.readLine()) != null) {
+            stringBuffer.append(line + &quot; &quot;);
+        }
+        str = stringBuffer.toString();
+    } catch (InterruptedException e) {
+        System.err.println(e);
+    } finally {
+        try {
+            proc.destroy();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    return str;
+}
+
+@Test
+public void Test() throws IOException{
+    System.out.println(runCommand(&quot;adb shell getprop ro.product.model&quot;));
+    System.out.println(runCommand(&quot;adb devices -l&quot;));
+    System.out.println(runCommand(&quot;adb shell getprop | grep product&quot;));
+}
+</code></pre>
 <p>输出：<br><blockquote><p>HUAWEI MT7-TL00<br>List of devices attached P4M7N15411025011       device usb:336723968X product:MT7-TL00 model:HUAWEI_MT7_TL00 device:hwmt7<br>[ro.boardid.product]: [41031] [ro.build.product]: [hi3630] [ro.config.browser_useragent1]: [HUAWEI_productName_TD/5.0 Android/androidVersion (Linux; U; Android androidVersion; zh-cn] [ro.product.CustCVersion]: [C01] [ro.product.CustDVersion]: [D570] [ro.product.board]: [MT7-TL00] [ro.product.brand]: [Huawei] [ro.product.canplaypause]: [true] [ro.product.cmcc.rtspcon]: [true] [ro.product.cpu.abi]: [armeabi-v7a] [ro.product.cpu.abi2]: [armeabi] [ro.product.cpu.abilist]: [armeabi-v7a,armeabi] [ro.product.cpu.abilist32]: [armeabi-v7a,armeabi] [ro.product.cpu.abilist64]: [] [ro.product.cucc.rtsplive]: [true] [ro.product.device]: [hwmt7] [ro.product.hardwareversion]: [HL1TGRACEM] [ro.product.locale.language]: [zh] [ro.product.locale.region]: [CN] [ro.product.manufacturer]: [HUAWEI] [ro.product.member.level]: [10011] [ro.product.model]: [HUAWEI MT7-TL00] [ro.product.name]: [MT7-TL00] [ro.product.only_2Gnetwork]: [false] [ro.product.platform.pseudonym]: [1ARB9CV] [ro.product.playreq.range]: [true] [ro.product.rtsp.startTime]: [true] [ro.product.streaming.custom]: [true] </p>
 </blockquote></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/11/adbdevicesinfo/" data-id="cj6fuyus10009qbqjmk7klwnc" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/11/adbdevicesinfo/" data-id="cj6fwxoy30009tkqjnjc1a7sr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>
@@ -138,7 +170,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">2</span></li></ul>
     </div>
@@ -148,7 +180,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
@@ -158,7 +190,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.33px;">android</a> <a href="/tags/app/" style="font-size: 13.33px;">app</a> <a href="/tags/appium/" style="font-size: 15px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 15px;">issue</a> <a href="/tags/java/" style="font-size: 16.67px;">java</a> <a href="/tags/java8/" style="font-size: 11.67px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 11.67px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.67px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a>
     </div>
@@ -167,7 +199,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
@@ -177,7 +209,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         

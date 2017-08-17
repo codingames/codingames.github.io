@@ -24,8 +24,6 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   <link rel="stylesheet" href="/css/style.css">
   
 
@@ -56,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
@@ -93,41 +91,82 @@
       
         <p>腾讯云服务器CVM 30天体验<br><a id="more"></a><br><img src="http://ww1.sinaimg.cn/large/006DkZhIly1fe198u9s9aj30yw0f6dha.jpg" alt=""></p>
 <h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><p>系统选的64位的CentOS 7.2   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># cat /etc/redhat-release </div><div class="line">CentOS Linux release 7.2.1511 (Core) </div><div class="line"># uname -a</div><div class="line">Linux VM_143_20_centos 3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux</div></pre></td></tr></table></figure>
+<pre><code class="shell"># cat /etc/redhat-release 
+CentOS Linux release 7.2.1511 (Core) 
+# uname -a
+Linux VM_143_20_centos 3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
 <p>速度还可以，在terminal中长时间不操作会断开，不知道是网络稳定问题还是设置问题。</p>
 <h3 id="快捷登录"><a href="#快捷登录" class="headerlink" title="快捷登录"></a>快捷登录</h3><p>把命令封装脚本，在terminal中敲qc即可登录到云服务器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#! /usr/bin/expect</div><div class="line">set timeout 5</div><div class="line">spawn ssh root@123.2xx.1xx.1xx</div><div class="line">expect &quot;*password: &quot;</div><div class="line">send &quot;PASSWORD\r&quot;</div><div class="line">interact</div></pre></td></tr></table></figure>
+<pre><code class="shell">#! /usr/bin/expect
+set timeout 5
+spawn ssh root@123.2xx.1xx.1xx
+expect &quot;*password: &quot;
+send &quot;PASSWORD\r&quot;
+interact
+</code></pre>
 <p>把上面存成脚本，加可执行权限，然后编辑.bash_profile，增加下述即可：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias qc=/Users/xxx/xxx/xxx.sh</div></pre></td></tr></table></figure>
+<pre><code class="shell">alias qc=/Users/xxx/xxx/xxx.sh
+</code></pre>
 <p>另外也可以使用ssh免密码登录，有时间google下试试。</p>
 <h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h3><p>终端MacOS的terminal，系统语言英文，utf-8, 连上云服务器后，ls 中文文件名乱码，显示成????(按Tab键自动补全时中文文件名却可以正常显示)，登录服务器后也有下面这个提示问题：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory</div></pre></td></tr></table></figure>
+<pre><code class="shell">-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+</code></pre>
 <p>解决方案：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/environment</div></pre></td></tr></table></figure>
-<p>输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">LANG=en_US.utf-8</div><div class="line">LC_ALL=en_US.utf-8</div></pre></td></tr></table></figure>
-<h3 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h3><p>可以用FTP，也可以用scp，写了个上传文件或文件夹到云服务器的scp脚本，  </p>
+<pre><code>vi /etc/environment
+</code></pre><p>输入：</p>
+<pre><code>LANG=en_US.utf-8
+LC_ALL=en_US.utf-8
+</code></pre><h3 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h3><p>可以用FTP，也可以用scp，写了个上传文件或文件夹到云服务器的scp脚本，  </p>
 <p>scpu.sh</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">tmp=$@</div><div class="line">if [ $&#123;tmp:-1&#125;=&quot;/&quot; ]; then</div><div class="line">	tmp=$&#123;tmp%/*&#125;</div><div class="line">	echo &quot;rm last &apos;/&apos;, now it is &quot;$tmp</div><div class="line">fi</div><div class="line">if [[ $tmp =~ &quot;/&quot; ]]; then</div><div class="line">	file_path=$tmp &amp;&amp; echo &quot;d&quot;</div><div class="line">elif [[ $tmp =~ &quot;-r&quot; ]]; then</div><div class="line">	file_path=&quot;-r &quot;`pwd`/$2 &amp;&amp; echo &quot;r&quot;</div><div class="line">else</div><div class="line">	file_path=`pwd`/$tmp &amp;&amp; echo &quot;it is not r&quot;</div><div class="line">fi</div><div class="line">echo $file_path</div><div class="line">./scpue.sh $file_path</div></pre></td></tr></table></figure>
+<pre><code class="shell">tmp=$@
+if [ ${tmp:-1}=&quot;/&quot; ]; then
+    tmp=${tmp%/*}
+    echo &quot;rm last &#39;/&#39;, now it is &quot;$tmp
+fi
+if [[ $tmp =~ &quot;/&quot; ]]; then
+    file_path=$tmp &amp;&amp; echo &quot;d&quot;
+elif [[ $tmp =~ &quot;-r&quot; ]]; then
+    file_path=&quot;-r &quot;`pwd`/$2 &amp;&amp; echo &quot;r&quot;
+else
+    file_path=`pwd`/$tmp &amp;&amp; echo &quot;it is not r&quot;
+fi
+echo $file_path
+./scpue.sh $file_path
+</code></pre>
 <p>scpue.sh</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#! /usr/bin/expect</div><div class="line">set timeout -1</div><div class="line">set file [lindex $argv 0 ]</div><div class="line">set files [lindex $argv 1 ]</div><div class="line">spawn scp $file $files root@1xx.2xx.1xx.1xx:/root/Downloads/.</div><div class="line">expect &quot;*password*&quot;</div><div class="line">send &quot;PASSWORD\r&quot;</div><div class="line">interact</div></pre></td></tr></table></figure>
+<pre><code class="shell">#! /usr/bin/expect
+set timeout -1
+set file [lindex $argv 0 ]
+set files [lindex $argv 1 ]
+spawn scp $file $files root@1xx.2xx.1xx.1xx:/root/Downloads/.
+expect &quot;*password*&quot;
+send &quot;PASSWORD\r&quot;
+interact
+</code></pre>
 <p>在.bash_profile增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias scpu=/Users/xxx/xxx/scpue.sh</div></pre></td></tr></table></figure>
+<pre><code class="shell">alias scpu=/Users/xxx/xxx/scpue.sh
+</code></pre>
 <p>这样使用<br>上传文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu /xxx/xxx/xxx/filename</div></pre></td></tr></table></figure>
+<pre><code class="shell">scpu /xxx/xxx/xxx/filename
+</code></pre>
 <p>上传文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu -r /xxx/xxx/xxx/directory</div></pre></td></tr></table></figure>
+<pre><code class="shell">scpu -r /xxx/xxx/xxx/directory
+</code></pre>
 <p>也可以省去全路径，如上传当前文件夹内的文件fileA</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scpu fileA</div></pre></td></tr></table></figure>
+<pre><code class="shell">scpu fileA
+</code></pre>
 <p>脚本比较简陋，仅仅实现了“能用”。</p>
 <h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>房东突然通知房子不租了，最近10天忙于找房，没有登录，今天登录后有如下提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Last failed login: Mon Apr 10 08:02:08 CST 2017 from 112.64.76.231 on ssh:notty</div><div class="line">There were 1378 failed login attempts since the last successful login.</div></pre></td></tr></table></figure>
+<pre><code class="shell">Last failed login: Mon Apr 10 08:02:08 CST 2017 from 112.64.76.231 on ssh:notty
+There were 1378 failed login attempts since the last successful login.
+</code></pre>
 <p>Todo 采取措施：禁止 root 登录，或用 ssh keys 登录，改 ssh 默认端口，对恶意登录IP加黑名单，使用fail2ban</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/03/27/qcouldcvm/" data-id="cj6fuyusz001mqbqjqytr1mzo" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/03/27/qcouldcvm/" data-id="cj6fwxoyw001mtkqj5xr36gqd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/云服务器/">云服务器</a></li></ul>
@@ -164,7 +203,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">分类</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1st/">1st</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">2</span></li></ul>
     </div>
@@ -174,7 +213,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
@@ -184,7 +223,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.33px;">android</a> <a href="/tags/app/" style="font-size: 13.33px;">app</a> <a href="/tags/appium/" style="font-size: 15px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 15px;">issue</a> <a href="/tags/java/" style="font-size: 16.67px;">java</a> <a href="/tags/java8/" style="font-size: 11.67px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/macOS/" style="font-size: 10px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 11.67px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.67px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.67px;">设计模式</a>
     </div>
@@ -193,7 +232,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
@@ -203,7 +242,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
