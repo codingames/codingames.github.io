@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://tracenote.com/2017/08/16/appInstallRealDevice/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="命令行安装.ipa包到iOS真机:1ideviceinstaller -i /PathTo/xxx.ipa">
-<meta property="og:updated_time" content="2017-08-17T02:53:32.000Z">
+<meta property="og:updated_time" content="2017-08-17T02:59:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS命令行安装ipa到真机">
 <meta name="twitter:description" content="命令行安装.ipa包到iOS真机:1ideviceinstaller -i /PathTo/xxx.ipa">
@@ -96,17 +96,14 @@
 <h4 id="查看设备udid"><a href="#查看设备udid" class="headerlink" title="查看设备udid"></a>查看设备udid</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">idevice_id -l</div></pre></td></tr></table></figure>
 <h4 id="若遇到错误："><a href="#若遇到错误：" class="headerlink" title="若遇到错误："></a>若遇到错误：</h4><blockquote><p>Could not connect to lockdownd. Exiting.</p>
 </blockquote>
-<p>解决办法：<br><code>sudo chmod -R 777 /var/db/lockdown/</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcrun simctl install booted /PathToTheApp/test.app</div></pre></td></tr></table></figure>
-<blockquote><p>updates to macOS, iTunes, and probably other Apple software will (correctly) reset the permissions on /var/db/lockdown.</p>
+<p>解决办法：<br><code>sudo chmod -R 777 /var/db/lockdown/</code><br><blockquote><p>updates to macOS, iTunes, and probably other Apple software will (correctly) reset the permissions on /var/db/lockdown.</p>
 <p>The best solution here is to get the latest libimobiledevice, which has a fix for this particular issue:</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew uninstall ideviceinstaller</div><div class="line">brew uninstall libimobiledevice</div><div class="line">brew install --HEAD libimobiledevice</div><div class="line">brew link --overwrite libimobiledevice</div><div class="line">brew install ideviceinstaller</div><div class="line">brew link --overwrite ideviceinstaller</div></pre></td></tr></table></figure>
+</blockquote><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">brew uninstall ideviceinstaller</div><div class="line">brew uninstall libimobiledevice</div><div class="line">brew install --HEAD libimobiledevice</div><div class="line">brew link --overwrite libimobiledevice</div><div class="line">brew install ideviceinstaller</div><div class="line">brew link --overwrite ideviceinstaller</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/16/appInstallRealDevice/" data-id="cj6fuvl1a000epeqjrfv8wj70" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/16/appInstallRealDevice/" data-id="cj6fuyus3000bqbqjyxn4n9r2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
