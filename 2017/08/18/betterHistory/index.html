@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: env | tracenote</title>
+  <title>优化history | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/env/index.html">
+  <meta name="description" content="macOS命令行history默认是500，优化一下，将下述追加到.bash_profile">
+<meta name="keywords" content="env,linux,macOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化history">
+<meta property="og:url" content="http://tracenote.com/2017/08/18/betterHistory/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="macOS命令行history默认是500，优化一下，将下述追加到.bash_profile">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2017-08-18T06:47:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="优化history">
+<meta name="twitter:description" content="macOS命令行history默认是500，优化一下，将下述追加到.bash_profile">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,191 +65,59 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/18/betterHistory/" class="archive-article-date">
-  <time datetime="2017-08-18T04:30:00.000Z" itemprop="datePublished">Aug 18</time>
+        <section id="main"><article id="post-betterHistory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/18/betterHistory/" class="article-date">
+  <time datetime="2017-08-18T04:30:00.000Z" itemprop="datePublished">2017-08-18</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/env/">env</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/18/betterHistory/">优化history</a>
+    <h1 class="article-title" itemprop="name">
+      优化history
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/fuckXiaoMi/" class="archive-article-date">
-  <time datetime="2017-08-11T12:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/fuckXiaoMi/">画蛇添足的小米</a>
-    </h1>
-  
+        <p>macOS命令行history默认是500，优化一下，将下述追加到.bash_profile<br><a id="more"></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">###########history###########</span></div><div class="line">HISTSIZE=10000 <span class="comment">#history 命令输出的记录数</span></div><div class="line">HISTFILESIZE=10000 <span class="comment">#.bash_history 中保存命令的记录总数</span></div><div class="line"><span class="comment">#HISTCONTROL=ignoredups #剔除连续的重复条目</span></div><div class="line">HISTCONTROL=erasedups <span class="comment">#剔除整个命令历史中的重复条目</span></div><div class="line"><span class="built_in">shopt</span> <span class="_">-s</span> histappend <span class="comment">#多个终端不覆盖而是追加</span></div><div class="line">PROMPT_COMMAND=<span class="string">"history -a"</span> <span class="comment">#实时追加history，不必等用户退出才将内存中的history记录到文件</span></div><div class="line"><span class="comment">###########end history###########</span></div></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/adbdevicesinfo/" class="archive-article-date">
-  <time datetime="2017-08-11T04:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/adbdevicesinfo/">adb获取安卓手机厂商型号</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/30/switchInputIssue/" class="archive-article-date">
-  <time datetime="2017-07-30T14:30:00.000Z" itemprop="datePublished">Jul 30</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/08/18/betterHistory/" data-id="cj6jjve4w000s7ufygydqve5d" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/30/switchInputIssue/">caps lock切换输入法失效问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/05/HuaWeiBrush/" class="archive-article-date">
-  <time datetime="2017-07-05T04:15:00.000Z" itemprop="datePublished">Jul 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/05/HuaWeiBrush/">华为刷机踩坑</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/04/ioshttps/" class="archive-article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">May 4</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/04/ioshttps/">iOS 10.3 Charles https 问题</a>
-    </h1>
   
+    <a href="/2017/08/16/appInstallRealDevice/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS命令行安装ipa到真机</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/28/blogissues/" class="archive-article-date">
-  <time datetime="2017-03-27T23:51:42.000Z" itemprop="datePublished">Mar 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/28/blogissues/">折腾琐记：编辑器篇</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/27/qcouldcvm/" class="archive-article-date">
-  <time datetime="2017-03-27T13:55:24.000Z" itemprop="datePublished">Mar 27</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/27/qcouldcvm/">体验腾讯云服务器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/19/aboutDns/" class="archive-article-date">
-  <time datetime="2017-03-19T12:18:25.000Z" itemprop="datePublished">Mar 19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/aboutDns/">DNSPod解析Godaddy域名</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         
