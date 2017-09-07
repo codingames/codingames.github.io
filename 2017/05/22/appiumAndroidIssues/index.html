@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-08-16T17:04:36.000Z">
+<meta property="og:updated_time" content="2017-09-07T13:25:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appium Android 坎坷">
 <meta name="twitter:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
@@ -107,16 +107,23 @@
 <li>name: text  </li>
 <li>ClassName: class  </li>
 <li>AccessibilityId：content-desc  </li>
-<li>xpath执行效率较低，尽量不要用。<br>AndroidUiAutomator定位方式也是很强大，例如  <pre><code>driver.findElementByAndroidUIAutomator(&quot;new UiSelector().resourceId(\&quot;com.tencent.mm:id/do\&quot;)&quot;);
-</code></pre></li>
+<li>xpath执行效率较低，尽量不要用。<br>AndroidUiAutomator定位方式也是很强大，例如</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">driver.findElementByAndroidUIAutomator(<span class="string">"new UiSelector().resourceId(\"com.tencent.mm:id/do\")"</span>);</div></pre></td></tr></table></figure>
 <h4 id="Android-Virtual-Device"><a href="#Android-Virtual-Device" class="headerlink" title="Android Virtual Device"></a>Android Virtual Device</h4><p>appium官方tutorial建议模拟器设置：<br>Ensure Use Host GPU is checked. Set VM Heap to 64. 32 is too small.</p>
 <h4 id="有时候找不到设备"><a href="#有时候找不到设备" class="headerlink" title="有时候找不到设备"></a>有时候找不到设备</h4><p>Run the following commands a few times until it’s listed.<br><code>adb kill-server; adb devices</code></p>
+<h4 id="结束后没有键盘"><a href="#结束后没有键盘" class="headerlink" title="结束后没有键盘"></a>结束后没有键盘</h4><p>结束后使用手机，发现该输入时无键盘，去手机设置中或直接使用adb命令检查输入法<code>adb shell settings get secure default_input_method</code>, 发现还是<code>io.appium.android.ime/.UnicodeIME</code>。尝试在driver.quit()之前重置键盘：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">driver.manage().ime().activateEngine( driver.manage().ime().getAvailableEngines()</div><div class="line">                .stream().filter(x -&gt; !x.contains(<span class="string">"appium"</span>)).collect(Collectors.toList()).get(<span class="number">0</span>));</div></pre></td></tr></table></figure>
+<p>结果发现appium在driver.quit()方法中又设置回去了，<br><blockquote><p>[debug] [AndroidDriver] Resetting IME to io.appium.android.ime/.UnicodeIME</p>
+</blockquote><br>无奈，结束前直接跑一遍adb命令进行恢复设置，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">androidTools.runCommand(adb + <span class="string">" shell ime set "</span> </div><div class="line">                        + androidTools.runCommand(adb </div><div class="line">                            + <span class="string">" shell ime list -s|grep -v appium -m 1"</span>));</div></pre></td></tr></table></figure>
+<blockquote><p>注意androidTools.runCommand是自行封装的执行adb命令的方法，adb使用变量是因为macOS的Java虚拟机找不到系统adb命令，需要指定全路径。</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/22/appiumAndroidIssues/" data-id="cj7afidgx000ocpqj9sruz87k" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/05/22/appiumAndroidIssues/" data-id="cj7aiwb70000ohgqjvl0w4t8n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
