@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <lastmod>2017-09-07T12:25:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>grep color与重定向</title>
+        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>grep</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    <lastmod>2017-09-07T09:48:24.000Z</lastmod>
+    <lastmod>2017-09-07T10:18:10.000Z</lastmod>
     <data>
         <display>
         <title>Appium启动关闭App过程的adb命令</title>

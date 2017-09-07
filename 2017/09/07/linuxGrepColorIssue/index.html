@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: performance | tracenote</title>
+  <title>grep color与重定向 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/performance/index.html">
+  <meta name="description" content="今天打开grep重定向输出的文件发现，显示成^[[1;34m^[[Kkeyword^[[m^[[K这样的了。">
+<meta name="keywords" content="env,linux,grep">
+<meta property="og:type" content="article">
+<meta property="og:title" content="grep color与重定向">
+<meta property="og:url" content="http://tracenote.com/2017/09/07/linuxGrepColorIssue/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="今天打开grep重定向输出的文件发现，显示成^[[1;34m^[[Kkeyword^[[m^[[K这样的了。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2017-09-07T12:25:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="grep color与重定向">
+<meta name="twitter:description" content="今天打开grep重定向输出的文件发现，显示成^[[1;34m^[[Kkeyword^[[m^[[K这样的了。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,39 +65,60 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/28/androidPerformanceCpuInfo/" class="archive-article-date">
-  <time datetime="2017-06-28T14:57:00.000Z" itemprop="datePublished">Jun 28</time>
+        <section id="main"><article id="post-linuxGrepColorIssue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/07/linuxGrepColorIssue/" class="article-date">
+  <time datetime="2017-09-07T09:30:00.000Z" itemprop="datePublished">2017-09-07</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/env/">env</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/28/androidPerformanceCpuInfo/">Android dumpsys cpuinfo大于100％解释</a>
+    <h1 class="article-title" itemprop="name">
+      grep color与重定向
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天打开grep重定向输出的文件发现，显示成<code>^[[1;34m^[[Kkeyword^[[m^[[K</code>这样的了。<br><a id="more"></a><br>查看<code>.bash_profile</code>，原来有如下设置，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> GREP_OPTIONS=<span class="string">'--color=always'</span> GREP_COLOR=<span class="string">'1;34'</span></div></pre></td></tr></table></figure>
+<p>改成auto解决，auto是指只有在输出到终端时才显示颜色。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/09/07/linuxGrepColorIssue/" data-id="cj7afidhi001ucpqjokbdvnlg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/07/appiumAdb/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Appium启动关闭App过程的adb命令</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
