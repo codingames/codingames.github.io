@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android dumpsys cpuinfo大于100％解释 | tracenote</title>
+  <title>Appium启动关闭App过程的adb命令 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
-<meta name="keywords" content="android,performance">
+  <meta name="description" content="从日志分析Appium启动、关闭Android App过程用调用的adb命令，如下：">
+<meta name="keywords" content="android,appium,adb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta property="og:url" content="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/index.html">
+<meta property="og:title" content="Appium启动关闭App过程的adb命令">
+<meta property="og:url" content="http://tracenote.com/2017/09/07/appiumAdb/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta property="og:description" content="从日志分析Appium启动、关闭Android App过程用调用的adb命令，如下：">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-06-28T16:37:29.000Z">
+<meta property="og:updated_time" content="2017-09-07T09:22:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta name="twitter:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta name="twitter:title" content="Appium启动关闭App过程的adb命令">
+<meta name="twitter:description" content="从日志分析Appium启动、关闭Android App过程用调用的adb命令，如下：">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-androidPerformanceCpuInfo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-appiumAdb" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/28/androidPerformanceCpuInfo/" class="article-date">
-  <time datetime="2017-06-28T14:57:00.000Z" itemprop="datePublished">2017-06-28</time>
+    <a href="/2017/09/07/appiumAdb/" class="article-date">
+  <time datetime="2017-09-07T04:30:00.000Z" itemprop="datePublished">2017-09-07</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Test/">Test</a>
+    <a class="article-category-link" href="/categories/appium/">appium</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android dumpsys cpuinfo大于100％解释
+      Appium启动关闭App过程的adb命令
     </h1>
   
 
@@ -91,15 +91,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%</p>
+        <p>从日志分析Appium启动、关闭Android App过程用调用的adb命令，如下：</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">adb shell pm list packages com.tracenote.test</div><div class="line">检查目标App有没有安装</div><div class="line"></div><div class="line">adb <span class="built_in">wait</span>-for-device </div><div class="line">阻塞，等待目标设备连接成功</div><div class="line"></div><div class="line">adb shell <span class="built_in">echo</span> ping</div><div class="line">测试 adb shell?</div><div class="line"></div><div class="line">adb install /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-ime/bin/UnicodeIME-debug.apk</div><div class="line">安装Appium输入法App</div><div class="line"></div><div class="line">adb shell settings get secure default_input_method </div><div class="line">获取当前默认输入法</div><div class="line"></div><div class="line">adb shell ime <span class="built_in">enable</span> io.appium.android.ime/.UnicodeIME</div><div class="line">使Appium输入法可用</div><div class="line"></div><div class="line">adb shell ime <span class="built_in">set</span> io.appium.android.ime/.UnicodeIME</div><div class="line">设置输入法为Appium输入法</div><div class="line"></div><div class="line">adb shell pm list packages io.appium.settings</div><div class="line">检查Appium Settings App是否安装</div><div class="line"></div><div class="line">adb shell dumpsys package io.appium.settings </div><div class="line">获取Appium Settings App包信息（这里是为取版本号）</div><div class="line"></div><div class="line">adb shell getprop ro.build.version.sdk </div><div class="line">获取Android系统API版本号，比如返回23表明是Android 6.0</div><div class="line"></div><div class="line">adb shell dumpsys package io.appium.settings </div><div class="line">获取Appium Settings App包信息（这里是为取权限?）</div><div class="line"></div><div class="line">adb shell pm dump io.appium.settings </div><div class="line">获取Appium Settings App包系统状态信息</div><div class="line"></div><div class="line">adb shell pm grant io.appium.settings android.permission.CHANGE_NETWORK_STATE ; pm grant io.appium.settings android.permission.WRITE_SETTINGS ; pm grant io.appium.settings android.permission.ACCESS_MOCK_LOCATION ; </div><div class="line">获取相应权限</div><div class="line"></div><div class="line">adb install /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-unlock/bin/unlock_apk-debug.apk</div><div class="line">安装 unlock app</div><div class="line"></div><div class="line">adb shell appops <span class="built_in">set</span> io.appium.settings android:mock_location allow </div><div class="line">允许 mock location</div><div class="line"></div><div class="line">adb shell getprop ro.build.version.release </div><div class="line">获取系统版本，如返回：6.0</div><div class="line"></div><div class="line">adb shell wm size </div><div class="line">获取屏幕分辨率，如返回：Physical size: 1080x1920</div><div class="line"></div><div class="line">adb shell getprop ro.product.model </div><div class="line">获取设备产品型号，如返回：HUAWEI MT7-TL00</div><div class="line"></div><div class="line">adb shell getprop ro.product.manufacturer </div><div class="line">获取设备厂商，如返回：HUAWEI</div><div class="line"></div><div class="line">adb forward tcp:4724 tcp:4724 </div><div class="line">重定向tcp端口（由于使用的默认端口，这里是时机没有变化）</div><div class="line"></div><div class="line">adb push /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-bootstrap/bootstrap/bin/AppiumBootstrap.jar /data/<span class="built_in">local</span>/tmp/ </div><div class="line">上传AppiumBootstrap.jar到手机data目录（Appium Bootstrap在手机上会启动一个socket server, 接受PC命令并解析给UiAutomator）</div><div class="line"></div><div class="line">adb shell ps </div><div class="line">用来检查uiautomator process，有则<span class="built_in">kill</span></div><div class="line"></div><div class="line">adb shell dumpsys window </div><div class="line">此处是appium用来判断是否锁屏的，检查返回的mShowingLockscreen（mShowingLockscreen=<span class="literal">true</span>，锁屏，需要解锁）</div><div class="line"></div><div class="line">adb shell am force-stop io.appium.unlock</div><div class="line">强制关闭unlock App</div><div class="line"></div><div class="line">adb shell am start -W -n io.appium.unlock/.Unlock <span class="_">-a</span> android.intent.action.MAIN -c android.intent.category.LAUNCHER <span class="_">-f</span> 0x10200000</div><div class="line">解锁屏幕</div><div class="line"></div><div class="line">adb shell dumpsys window </div><div class="line">确认解锁成功</div><div class="line"></div><div class="line">adb shell am start -W -n com.tracenote.test/com.tracenote.test.activity.GuideActivity -S</div><div class="line">启动目标App的目标Activity</div><div class="line"></div><div class="line">… … …</div><div class="line"></div><div class="line">adb shell ime <span class="built_in">set</span> com.nuance.swype.emui/com.nuance.swype.input.HuaweiIME </div><div class="line">恢复设备输入法</div><div class="line"></div><div class="line">adb shell am force-stop com.tracenote.test </div><div class="line">停止目标App</div><div class="line"></div><div class="line">adb shell input keyevent 3 </div><div class="line">按home键（4是back键）</div><div class="line">adb shell ps </div><div class="line">用来检查是否有uiautomator process需要<span class="built_in">kill</span></div><div class="line"></div><div class="line">adb shell am force-stop io.appium.unlock </div><div class="line">强制关闭unlock App</div></pre></td></tr></table></figure>
+<p>备注：</p>
+<ul>
+<li>省略”-P”,5037,”-s”,”P4M7N15411025011”端口号和设备等信息</li>
+<li>Appium版本号：Version 1.2.0-beta.3 (1.2.0-beta.3)<br>Server: v1.6.5</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/" data-id="cj7a9oyk5000eccqj3aqzmodw" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/07/appiumAdb/" data-id="cj7a9oyk4000bccqj82xyvoy0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance/">performance</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb/">adb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li></ul>
 
     </footer>
   </div>
@@ -107,19 +114,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/02/housingLoan/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          房贷博弈误区
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/25/java8Stream/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/28/appiumSwipe/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java 8 Stream 学习笔记</div>
+      <div class="article-nav-title">appium swipe</div>
     </a>
   
 </nav>

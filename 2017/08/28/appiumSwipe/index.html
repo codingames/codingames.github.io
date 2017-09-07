@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android dumpsys cpuinfo大于100％解释 | tracenote</title>
+  <title>appium swipe | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
-<meta name="keywords" content="android,performance">
+  <meta name="description" content="appium的driver.swipe(…)在新版本中已经Deprecated，官方文档推荐使用TouchAction，实际应用中发现这也是个坑。">
+<meta name="keywords" content="app,android,appium,iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta property="og:url" content="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/index.html">
+<meta property="og:title" content="appium swipe">
+<meta property="og:url" content="http://tracenote.com/2017/08/28/appiumSwipe/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta property="og:description" content="appium的driver.swipe(…)在新版本中已经Deprecated，官方文档推荐使用TouchAction，实际应用中发现这也是个坑。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-06-28T16:37:29.000Z">
+<meta property="og:updated_time" content="2017-09-07T09:44:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta name="twitter:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta name="twitter:title" content="appium swipe">
+<meta name="twitter:description" content="appium的driver.swipe(…)在新版本中已经Deprecated，官方文档推荐使用TouchAction，实际应用中发现这也是个坑。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-androidPerformanceCpuInfo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-appiumSwipe" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/28/androidPerformanceCpuInfo/" class="article-date">
-  <time datetime="2017-06-28T14:57:00.000Z" itemprop="datePublished">2017-06-28</time>
+    <a href="/2017/08/28/appiumSwipe/" class="article-date">
+  <time datetime="2017-08-27T17:08:07.000Z" itemprop="datePublished">2017-08-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Test/">Test</a>
+    <a class="article-category-link" href="/categories/appium/">appium</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android dumpsys cpuinfo大于100％解释
+      appium swipe
     </h1>
   
 
@@ -91,15 +91,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%</p>
+        <p>appium的<del>driver.swipe(…)</del>在新版本中已经Deprecated，官方文档推荐使用TouchAction，实际应用中发现这也是个坑。<br><a id="more"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">action.press(startx, starty).waitAction(Duration.ofMillis(<span class="number">500</span>))</div><div class="line">                .moveTo(deltax, deltay).waitAction(Duration.ofMillis(<span class="number">500</span>))</div><div class="line">                .release().perform();</div></pre></td></tr></table></figure>
+<p>如上code，在iOS上直接报错，去掉waitAction才可以。<br>在Android上面执行，页面很容易因为滑动惯性而直接滑动到底部（对比iOS去掉waitAction也没有惯性滑动），必须加大等待时间，如2秒。也可以在滑动之后通过点击屏幕阻止惯性滑动，<code>press(startX, StartY).moveTo(deltaX, deltaY).release().press(x,y).release().perform()</code>，但后者在实际执行中有一定几率不能即时停止滑动。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/" data-id="cj7a9oyk5000eccqj3aqzmodw" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/28/appiumSwipe/" data-id="cj7a9oyk9000mccqj6azi8ev0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance/">performance</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 
     </footer>
   </div>
@@ -107,19 +109,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/02/housingLoan/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/07/appiumAdb/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          房贷博弈误区
+          Appium启动关闭App过程的adb命令
         
       </div>
     </a>
   
   
-    <a href="/2017/06/25/java8Stream/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/18/betterHistory/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java 8 Stream 学习笔记</div>
+      <div class="article-nav-title">优化history</div>
     </a>
   
 </nav>
