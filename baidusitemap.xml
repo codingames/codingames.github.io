@@ -4,34 +4,8 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    <lastmod>2017-09-07T09:44:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>iOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    <lastmod>2017-09-07T09:22:27.000Z</lastmod>
+    <lastmod>2017-09-07T09:47:02.000Z</lastmod>
     <data>
         <display>
         <title>Appium启动关闭App过程的adb命令</title>
@@ -54,6 +28,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <lastmod>2017-09-07T09:44:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     <lastmod>2017-08-20T09:31:28.000Z</lastmod>
     <data>
@@ -63,9 +63,9 @@
         
         <tag>app</tag>
          
-        <tag>appium</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
@@ -163,9 +163,9 @@
         
         <tag>app</tag>
          
-        <tag>appium</tag>
-         
         <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
