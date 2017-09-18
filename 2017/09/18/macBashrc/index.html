@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android dumpsys cpuinfo大于100％解释 | tracenote</title>
+  <title>macOS .bashrc 失效问题 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
-<meta name="keywords" content="android,performance">
+  <meta name="description" content="一般的linux机器配置.bashrc就可以，但在Mac上这个文件不起作用。">
+<meta name="keywords" content="env,issue,linux,macOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta property="og:url" content="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/index.html">
+<meta property="og:title" content="macOS .bashrc 失效问题">
+<meta property="og:url" content="http://tracenote.com/2017/09/18/macBashrc/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta property="og:description" content="一般的linux机器配置.bashrc就可以，但在Mac上这个文件不起作用。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-06-28T16:37:29.000Z">
+<meta property="og:updated_time" content="2017-09-18T13:06:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android dumpsys cpuinfo大于100％解释">
-<meta name="twitter:description" content="On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%">
+<meta name="twitter:title" content="macOS .bashrc 失效问题">
+<meta name="twitter:description" content="一般的linux机器配置.bashrc就可以，但在Mac上这个文件不起作用。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-androidPerformanceCpuInfo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-macBashrc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/28/androidPerformanceCpuInfo/" class="article-date">
-  <time datetime="2017-06-28T14:57:00.000Z" itemprop="datePublished">2017-06-28</time>
+    <a href="/2017/09/18/macBashrc/" class="article-date">
+  <time datetime="2017-09-18T12:30:00.000Z" itemprop="datePublished">2017-09-18</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Test/">Test</a>
+    <a class="article-category-link" href="/categories/env/">env</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android dumpsys cpuinfo大于100％解释
+      macOS .bashrc 失效问题
     </h1>
   
 
@@ -91,15 +91,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>On multi-core systems, you can have percentages that are greater than 100%. For example, if 3 cores are at 60% use, top will show a CPU use of 180%</p>
+        <p>一般的linux机器配置.bashrc就可以，但在Mac上这个文件不起作用。<br><a id="more"></a><br><blockquote><p>.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells.</p>
+<p>Mac OS X — an exception<br>An exception to the terminal window guidelines is Mac OS X’s Terminal.app, which runs a login shell by default for each new terminal window, calling .bash_profile instead of .bashrc. Other GUI terminal emulators may do the same, but most tend not to.</p>
+<p>If you want your aliases to work in both login and non-login shells (and you usually do), you should put them in .bashrc and source .bashrc in your <strong><code>.bash_profile</code></strong>, with a line like this:</p>
+</blockquote><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ -r ~/.bashrc ] &amp;&amp; <span class="built_in">source</span> ~/.bashrc</div></pre></td></tr></table></figure></p>
+<hr>
+<p>参考：</p>
+<ul>
+<li><a href="http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html" target="_blank" rel="external">.bash_profile vs .bashrc</a></li>
+<li><a href="https://superuser.com/questions/244964/mac-os-x-bashrc-not-working/" target="_blank" rel="external">Mac OS X .bashrc not working</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/" data-id="cj7q6pu1n000b1iqjnr42n8r2" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/18/macBashrc/" data-id="cj7q6pu2i00271iqjm30k4qao" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance/">performance</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
 
     </footer>
   </div>
@@ -107,19 +116,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/02/housingLoan/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          房贷博弈误区
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/25/java8Stream/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/09/18/jsonpGet/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java 8 Stream 学习笔记</div>
+      <div class="article-nav-title">jsonp get 问题</div>
     </a>
   
 </nav>

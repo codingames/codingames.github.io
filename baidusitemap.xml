@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
+    <lastmod>2017-09-18T13:06:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>macOS .bashrc 失效问题</title>
+        <pubTime>2017-09-18T12:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <lastmod>2017-09-18T13:06:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>jsonp get 问题</title>
+        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
+        
+        <tag>issue</tag>
+         
+        <tag>web</tag>
+         
+         
+           
+             
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     <lastmod>2017-09-13T15:08:12.000Z</lastmod>
     <data>
@@ -159,9 +207,9 @@
         
         <tag>app</tag>
          
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>android</tag>
          
          
            
@@ -183,9 +231,9 @@
         
         <tag>app</tag>
          
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>android</tag>
          
          
            
@@ -283,9 +331,9 @@
         <title>体验腾讯云服务器</title>
         <pubTime>2017-03-27T13:55:24.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>server</tag>
+         
+        <tag>env</tag>
          
         <tag>linux</tag>
          
@@ -487,9 +535,9 @@
         <title>华为刷机踩坑</title>
         <pubTime>2017-07-05T04:15:00.000Z</pubTime>
         
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>android</tag>
          
          
            
@@ -689,11 +737,11 @@
         <title>DNSPod解析Godaddy域名</title>
         <pubTime>2017-03-19T12:18:25.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>domain</tag>
          
         <tag>server</tag>
+         
+        <tag>env</tag>
          
          
            
