@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 设计模式 | tracenote</title>
+  <title>解决appium Xcode version 9.0 is not yet supported | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/设计模式/index.html">
+  <meta name="description" content="Xcode升级到9之后，Appium会报错：appium Xcode version 9.0 is not yet supported">
+<meta name="keywords" content="iOS,appium">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决appium Xcode version 9.0 is not yet supported">
+<meta property="og:url" content="http://tracenote.com/2017/09/26/appiumXcode9/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="Xcode升级到9之后，Appium会报错：appium Xcode version 9.0 is not yet supported">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2017-09-26T09:08:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="解决appium Xcode version 9.0 is not yet supported">
+<meta name="twitter:description" content="Xcode升级到9之后，Appium会报错：appium Xcode version 9.0 is not yet supported">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,58 +65,68 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/04/DesignPattern_Template/" class="archive-article-date">
-  <time datetime="2017-06-04T11:54:21.000Z" itemprop="datePublished">Jun 4</time>
+        <section id="main"><article id="post-appiumXcode9" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/26/appiumXcode9/" class="article-date">
+  <time datetime="2017-09-26T11:30:00.000Z" itemprop="datePublished">2017-09-26</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/appium/">appium</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/04/DesignPattern_Template/">设计模式——模板方法模式</a>
+    <h1 class="article-title" itemprop="name">
+      解决appium Xcode version 9.0 is not yet supported
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/03/DesignPattern_Singleton/" class="archive-article-date">
-  <time datetime="2017-06-03T13:28:15.000Z" itemprop="datePublished">Jun 3</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/03/DesignPattern_Singleton/">设计模式——单例模式</a>
-    </h1>
-  
+        <p>Xcode升级到9之后，Appium会报错：<blockquote><p>appium Xcode version 9.0 is not yet supported</p>
+</blockquote><br><a id="more"></a><br>经查，appium官方已经支持Xcode9，但Appium Desktop自带的Server还是v1.6.5的。  </p>
+<ul>
+<li>使用npm安装最新的Appium：<br><code>npm install -g appium</code><br>安装过程可能遇到错误，最好翻墙或者使用<code>cnpm</code>，遇到出错的例如<code>heapdump</code>单独<code>npm install -g heapdump</code> 一下即可。另外可能需要注意的是目录权限问题<code>chown -R $USER /usr/local/lib/node_modules</code>(无权限问题无需执行)或者该文件夹下的早期appium文件残留（删除即可）。另外注意<code>npm</code>安装时<strong>不要</strong>使用<code>sudo</code>。（检查升级版本<code>npm -g outdated</code>，升级和安装一样也是<code>install</code>，查看已安装包<code>npm list -g --depth 0</code>）</li>
+</ul>
+<ul>
+<li><p>启动Appium Server<br><code>appium &amp;</code></p>
+</li>
+<li><p>Inspector定位控件时使用最新的Appium Server而不要启动Appium Destop自带的：<br>Appium Desktop菜单-&gt;<code>Appium</code>-&gt;<code>New Session Window</code>-&gt;<code>Custom Server</code></p>
+</li>
+</ul>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/09/26/appiumXcode9/" data-id="cj81jihsw0010kpqjegx0dp9v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/18/macBashrc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">macOS .bashrc 无效问题</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
