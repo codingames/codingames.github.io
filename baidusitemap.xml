@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    <lastmod>2017-10-18T16:25:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何在本地搭建一个Android应用crashing跟踪系统－ACRA</title>
+        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     <lastmod>2017-10-18T16:21:41.000Z</lastmod>
     <data>
@@ -19,28 +41,6 @@
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
-    <lastmod>2017-10-18T16:08:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何在本地搭建一个Android应用crashing跟踪系统－ACRA</title>
-        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
