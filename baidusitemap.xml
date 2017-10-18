@@ -4,6 +4,90 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <lastmod>2017-10-18T16:21:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    <lastmod>2017-10-18T16:08:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何在本地搭建一个Android应用crashing跟踪系统－ACRA</title>
+        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <lastmod>2017-10-18T15:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决appium Xcode version 9.0 is not yet supported</title>
+        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <lastmod>2017-10-13T02:20:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
     <lastmod>2017-09-28T07:49:05.000Z</lastmod>
     <data>
@@ -21,28 +105,6 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
-    <lastmod>2017-09-26T09:08:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
-        
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -503,24 +565,6 @@
            
              
               <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-08-16T16:46:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="1st" url="http://tracenote.com/categories/1st/"/>
           
         </display>
     </data>

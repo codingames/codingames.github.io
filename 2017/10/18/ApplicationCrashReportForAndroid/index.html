@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何在本地搭建一个Android应用crashing跟踪系统－ACRA | tracenote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近玩了一把ACRA：Application Crash Report For Android">
+<meta name="keywords" content="app,android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在本地搭建一个Android应用crashing跟踪系统－ACRA">
+<meta property="og:url" content="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/index.html">
+<meta property="og:site_name" content="tracenote">
+<meta property="og:description" content="最近玩了一把ACRA：Application Crash Report For Android">
+<meta property="og:locale" content="utf-8">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006DkZhIly1fkmtobyah6j326416gqdm.jpg">
+<meta property="og:updated_time" content="2017-10-18T16:08:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何在本地搭建一个Android应用crashing跟踪系统－ACRA">
+<meta name="twitter:description" content="最近玩了一把ACRA：Application Crash Report For Android">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006DkZhIly1fkmtobyah6j326416gqdm.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">tracenote</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ApplicationCrashReportForAndroid" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/18/ApplicationCrashReportForAndroid/" class="article-date">
+  <time datetime="2017-10-18T14:30:00.000Z" itemprop="datePublished">2017-10-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/app/">app</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何在本地搭建一个Android应用crashing跟踪系统－ACRA
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近玩了一把ACRA：Application Crash Report For Android</p>
+<a id="more"></a>
+<p>简单说，就是把Android App产生的Crash日志自动发送至下平台：<br><img src="http://ww1.sinaimg.cn/large/006DkZhIly1fkmtobyah6j326416gqdm.jpg" alt=""></p>
+<p>是参考这篇文章折腾的：<a href="https://testerhome.com/topics/3982" target="_blank" rel="external">https://testerhome.com/topics/3982</a>   其中crash demo app代码截图不全，可以同时参考<a href="http://blog.csdn.net/chen52671/article/details/44751347" target="_blank" rel="external">http://blog.csdn.net/chen52671/article/details/44751347</a><br>（官方文档：<a href="https://github.com/ACRA/acralyzer/wiki/setup" target="_blank" rel="external">https://github.com/ACRA/acralyzer/wiki/setup</a> ）</p>
+<p>具体步骤不再复制粘贴，这里说下问题：  </p>
+<blockquote>
+<p>配置本地数据库<br>现在我们要安装一个acro-storage（Acralyzer的存储端）。通过右侧&gt;的菜单，点击Replicator(复制器)，并填写表单的from Remote &gt;Database和from Remote Database类似如下所示：</p>
+<p>from Remote Database: <a href="http://get.acralyzer.com/distrib-acra-storage" target="_blank" rel="external">http://get.acralyzer.com/distrib-acra-storage</a></p>
+<p>to Local Database: acra-myapp<br>然后点击Replicate，等待它完成。</p>
+</blockquote>
+<p>这里一直在转圈loading，后台日志报错：<br><blockquote><p>[info] [<0.132.0>] 10.10.93.113 - - POST /_replicate 500<br>[error] [<0.132.0>] httpd 500 error response:<br> {“error”:”timeout”}</0.132.0></0.132.0></p>
+</blockquote><br>怀疑需要翻墙，最近一段时间(20171018)翻墙工具很难用，找遍新工具即使能翻墙速度也很慢，还是报这个错误。</p>
+<p>无奈，放弃Replicate Remote Database，参考 EXPERT MODE - manual install from sources<br><a href="https://github.com/ACRA/acralyzer/wiki/manual-setup" target="_blank" rel="external">https://github.com/ACRA/acralyzer/wiki/manual-setup</a><br>这里需要<code>couchapp</code>， 安装参考：<a href="https://github.com/couchapp/couchapp" target="_blank" rel="external">https://github.com/couchapp/couchapp</a> 注意Mac下安装可能因为SIP报错，需要开机时按<code>Command+R(直到出现苹果标志)</code>进入Recovery Mode，关闭它<code>csrutil disable</code> (恢复SIP机制<code>csrutil enable</code>)</p>
+<p>另外，使用最新的acra jar包，平台怎么都没日志，降了个老版本，终于有报告了<code>compile &#39;ch.acra:acra:4.5.0&#39;</code>，有时间再抽空看下新版本须新用法？</p>
+<p>附，崩溃DemoApp代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">package</span>=<span class="string">"com.tracenote.myapplication"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">application</span></span></div><div class="line">        <span class="attr">android:allowBackup</span>=<span class="string">"true"</span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">".CrashApp"</span></div><div class="line">        <span class="attr">android:icon</span>=<span class="string">"@mipmap/ic_launcher"</span></div><div class="line">        <span class="attr">android:label</span>=<span class="string">"@string/app_name"</span></div><div class="line">        <span class="attr">android:supportsRtl</span>=<span class="string">"true"</span></div><div class="line">        <span class="attr">android:theme</span>=<span class="string">"@style/AppTheme"</span>&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MainActivity"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span> /&gt;</span></div><div class="line"></div><div class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.app.Application;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.acra.ACRA;</div><div class="line"><span class="keyword">import</span> org.acra.ReportingInteractionMode;</div><div class="line"><span class="keyword">import</span> org.acra.annotation.ReportsCrashes;</div><div class="line"><span class="keyword">import</span> org.acra.sender.HttpSender;</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@ReportsCrashes</span>(</div><div class="line">        formKey = <span class="string">""</span>,</div><div class="line"><span class="comment">//        formUri = "https://10.10.93.113:5984/acra-myapp/_design/acra-storage/_update/report",</span></div><div class="line"><span class="comment">//        reportType = org.acra.sender.HttpSender.Type.JSON,</span></div><div class="line"><span class="comment">//        httpMethod = org.acra.sender.HttpSender.Method.PUT,</span></div><div class="line"><span class="comment">//        formUriBasicAuthLogin="tester",</span></div><div class="line"><span class="comment">//        formUriBasicAuthPassword="111111",</span></div><div class="line"><span class="comment">//        // Your usual ACRA configuration</span></div><div class="line"><span class="comment">//        mode = ReportingInteractionMode.TOAST</span></div><div class="line"><span class="comment">////        resToastText = R.string.crash_toast_text</span></div><div class="line"></div><div class="line">        httpMethod = HttpSender.Method.PUT,</div><div class="line">        reportType = HttpSender.Type.JSON,</div><div class="line">        formUri = <span class="string">"http://10.10.93.113:5984/acra-myapp/_design/acra-storage/_update/report"</span>,</div><div class="line">        formUriBasicAuthLogin = <span class="string">"tester"</span>,</div><div class="line">        formUriBasicAuthPassword = <span class="string">"111111"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CrashApp</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="comment">//    @Override</span></div><div class="line"><span class="comment">//    protected void attachBaseContext(Context base) &#123;</span></div><div class="line"><span class="comment">//        super.attachBaseContext(base);</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//    &#125;</span></div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate();</div><div class="line">        ACRA.init(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</div><div class="line"><span class="keyword">import</span> android.os.Bundle;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line"><span class="keyword">import</span> android.widget.TextView;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">    TextView aaa;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line"><span class="comment">//        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() &#123;</span></div><div class="line"><span class="comment">//            @Override</span></div><div class="line"><span class="comment">//            public void onClick(View v) &#123;</span></div><div class="line"><span class="comment">//                Integer.parseInt("aa");</span></div><div class="line"><span class="comment">//            &#125;</span></div><div class="line"><span class="comment">//        &#125;);</span></div><div class="line">        <span class="keyword">int</span> a = <span class="number">0</span> / <span class="number">0</span>;</div><div class="line">        aaa.setText(<span class="string">"aaaaa"</span>);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>一些无用代码注释没有花时间去剔除，直接粘过来了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/" data-id="cj8x8x17t0001qafy23efvsqh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/17/appiumIssues/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">appium近期问题（待补充）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/IED/" style="font-size: 10px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10px;">IntelliJ</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.75px;">android</a> <a href="/tags/app/" style="font-size: 17.5px;">app</a> <a href="/tags/appium/" style="font-size: 17.5px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 16.25px;">issue</a> <a href="/tags/java/" style="font-size: 16.25px;">java</a> <a href="/tags/java8/" style="font-size: 11.25px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 13.75px;">linux</a> <a href="/tags/macOS/" style="font-size: 12.5px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 11.25px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.25px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/18/ApplicationCrashReportForAndroid/">如何在本地搭建一个Android应用crashing跟踪系统－ACRA</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/17/appiumIssues/">appium近期问题（待补充）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/26/appiumXcode9/">解决appium Xcode version 9.0 is not yet supported</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/18/macBashrc/">macOS .bashrc 无效问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/18/jsonpGet/">jsonp get 问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 worldlect<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?57d74626902d897e9a283b661d87c039";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  </div>
+</body>
+</html>

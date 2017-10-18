@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>caps lock切换输入法失效问题 | tracenote</title>
+  <title>appium近期问题（待补充） | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好不容易习惯了Sierra的大写键切换中英文输入法，很方便，却发现有时切换不管用，原来是网易云音乐造成了，退出网易云音乐就好了，QQ音乐就无此问题。">
-<meta name="keywords" content="env,macOS">
+  <meta name="description" content="这两天解决了appium使用中的一些小问题，简记一下：">
+<meta name="keywords" content="appium,issue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="caps lock切换输入法失效问题">
-<meta property="og:url" content="http://tracenote.com/2017/07/30/switchInputIssue/index.html">
+<meta property="og:title" content="appium近期问题（待补充）">
+<meta property="og:url" content="http://tracenote.com/2017/10/17/appiumIssues/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="好不容易习惯了Sierra的大写键切换中英文输入法，很方便，却发现有时切换不管用，原来是网易云音乐造成了，退出网易云音乐就好了，QQ音乐就无此问题。">
+<meta property="og:description" content="这两天解决了appium使用中的一些小问题，简记一下：">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-07-30T14:37:36.000Z">
+<meta property="og:updated_time" content="2017-10-18T16:21:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="caps lock切换输入法失效问题">
-<meta name="twitter:description" content="好不容易习惯了Sierra的大写键切换中英文输入法，很方便，却发现有时切换不管用，原来是网易云音乐造成了，退出网易云音乐就好了，QQ音乐就无此问题。">
+<meta name="twitter:title" content="appium近期问题（待补充）">
+<meta name="twitter:description" content="这两天解决了appium使用中的一些小问题，简记一下：">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-switchInputIssue" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-appiumIssues" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/30/switchInputIssue/" class="article-date">
-  <time datetime="2017-07-30T14:30:00.000Z" itemprop="datePublished">2017-07-30</time>
+    <a href="/2017/10/17/appiumIssues/" class="article-date">
+  <time datetime="2017-10-17T14:30:00.000Z" itemprop="datePublished">2017-10-17</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/env/">env</a>
+    <a class="article-category-link" href="/categories/appium/">appium</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      caps lock切换输入法失效问题
+      appium近期问题（待补充）
     </h1>
   
 
@@ -91,15 +91,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>好不容易习惯了Sierra的大写键切换中英文输入法，很方便，却发现有时切换不管用，原来是网易云音乐造成了，退出网易云音乐就好了，QQ音乐就无此问题。</p>
+        <p>这两天解决了appium使用中的一些小问题，简记一下：<br><a id="more"></a></p>
+<ul>
+<li>自己做了滑动封装，升级appium 1.6.5 -&gt; 1.7.1发现个别页面滑动失效无效而有些页面又仍正常</li>
+<li>华为Mate9@Android7 兼容问题 <code>@AndroidFindBy(uiAutomator = &quot;new UiSelector().text(\&quot;北京\&quot;)&quot;)</code> <code>@AndroidFindBy(xpath = &quot;//*[@text=&#39;北京&#39;]&quot;)</code> 都是 no such element，换个android 6就没问题</li>
+<li>iOS Inspector不可识别控件</li>
+<li>iOS 真机运行速度过慢问题</li>
+<li>安卓uiautomator崩溃 （华为Mate7@Android6）</li>
+<li>安卓键盘遮挡问题</li>
+<li>iOS sendkeys 效果等同于setValue，没有像手动输入一样引起建议浮层控件</li>
+</ul>
+<p>问题虽小，但appium调试起来还是很麻烦的，慢狠慢非常慢，不能指哪打哪随心所欲。这一点体验跟API相差实在太远，API所见即所得，500毫秒就超时了。而且appium百度到的资料经常是过期失效的，上google又要翻墙。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/30/switchInputIssue/" data-id="cj8x8x195002sqafyje9dwteg" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/17/appiumIssues/" data-id="cj8x8x189000rqafyykxehso0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
 
     </footer>
   </div>
@@ -107,19 +117,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/30/javaGetSubClassName/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/18/ApplicationCrashReportForAndroid/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          父类获取子类名字
+          如何在本地搭建一个Android应用crashing跟踪系统－ACRA
         
       </div>
     </a>
   
   
-    <a href="/2017/07/29/appInstallSimulator/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/09/26/appiumXcode9/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">iOS安装app到Simulator</div>
+      <div class="article-nav-title">解决appium Xcode version 9.0 is not yet supported</div>
     </a>
   
 </nav>
