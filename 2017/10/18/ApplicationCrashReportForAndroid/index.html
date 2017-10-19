@@ -14,7 +14,7 @@
 <meta property="og:description" content="最近玩了一把ACRA：Application Crash Report For Android">
 <meta property="og:locale" content="utf-8">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006DkZhIly1fkmtobyah6j326416gqdm.jpg">
-<meta property="og:updated_time" content="2017-10-18T16:25:19.000Z">
+<meta property="og:updated_time" content="2017-10-19T02:03:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在本地搭建一个Android应用crashing跟踪系统－ACRA">
 <meta name="twitter:description" content="最近玩了一把ACRA：Application Crash Report For Android">
@@ -103,7 +103,7 @@
 <p>from Remote Database: <a href="http://get.acralyzer.com/distrib-acra-storage" target="_blank" rel="external">http://get.acralyzer.com/distrib-acra-storage</a></p>
 <p>to Local Database: acra-myapp<br>然后点击Replicate，等待它完成。</p>
 </blockquote>
-<p>这里一直在转圈loading，后台日志报错：<br><blockquote><p>[info] [<0.132.0>] 10.10.93.113 - - POST /_replicate 500<br>[error] [<0.132.0>] httpd 500 error response:<br> {“error”:”timeout”}</0.132.0></0.132.0></p>
+<p>这里一直在转圈loading，后台日志报错：<br><blockquote><p>[info] [<0.132.0>] 192.168.1.2 - - POST /_replicate 500<br>[error] [<0.132.0>] httpd 500 error response:<br> {“error”:”timeout”}</0.132.0></0.132.0></p>
 </blockquote><br>怀疑需要翻墙，最近一段时间(20171018)翻墙工具很难用，找遍新工具即使能翻墙速度也很慢，还是报这个错误。</p>
 <p>无奈，放弃Replicate Remote Database，参考 EXPERT MODE - manual install from sources<br><a href="https://github.com/ACRA/acralyzer/wiki/manual-setup" target="_blank" rel="external">https://github.com/ACRA/acralyzer/wiki/manual-setup</a><br>这里需要<code>couchapp</code>， 安装参考：<a href="https://github.com/couchapp/couchapp" target="_blank" rel="external">https://github.com/couchapp/couchapp</a> 注意Mac下安装可能因为SIP报错，需要开机时按<code>Command+R(直到出现苹果标志)</code>进入Recovery Mode，关闭它<code>csrutil disable</code> (恢复SIP机制<code>csrutil enable</code>)</p>
 <p>另外，使用最新的acra jar包，平台怎么都没日志，降了个老版本，终于有报告了<code>compile &#39;ch.acra:acra:4.5.0&#39;</code>，有时间再抽空看下新版本须新用法？</p>
@@ -116,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/" data-id="cj8x917xg0001rbfynpydhu3b" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/" data-id="cj8xtqfhd0001gsqjz7hyoqpj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li></ul>
