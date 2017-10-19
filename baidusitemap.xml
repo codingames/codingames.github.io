@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    <lastmod>2017-10-19T16:25:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>房贷博弈误区</title>
+        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
+        
+        <tag>realEstate</tag>
+         
+        <tag>finance</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
     <lastmod>2017-10-19T16:13:39.000Z</lastmod>
     <data>
@@ -451,28 +473,6 @@
            
              
               <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    <lastmod>2017-08-16T17:11:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>房贷博弈误区</title>
-        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
-        
-        <tag>realEstate</tag>
-         
-        <tag>finance</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
