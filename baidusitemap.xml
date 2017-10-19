@@ -5,15 +5,15 @@
     
   <url>
     <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
-    <lastmod>2017-10-19T02:03:47.000Z</lastmod>
+    <lastmod>2017-10-19T15:55:26.000Z</lastmod>
     <data>
         <display>
-        <title>如何在本地搭建一个Android应用crashing跟踪系统－ACRA</title>
+        <title>如何在本地搭建Android应用Crash跟踪系统－ACRA</title>
         <pubTime>2017-10-18T14:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
          
            
@@ -95,9 +95,9 @@
         <title>画蛇添足的小米</title>
         <pubTime>2017-08-11T12:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>env</tag>
          
@@ -263,9 +263,9 @@
         <title>appium swipe</title>
         <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>iOS</tag>
          
@@ -313,9 +313,9 @@
         <title>adb获取安卓手机厂商型号</title>
         <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>env</tag>
          
