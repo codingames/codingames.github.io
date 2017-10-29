@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld%20copy/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-10-29T15:56:36.000Z</lastmod>
     <data>
         <display>
@@ -81,24 +81,6 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-10-21T14:03:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
