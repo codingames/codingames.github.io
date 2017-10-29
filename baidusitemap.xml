@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <lastmod>2017-10-29T15:48:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
-    <lastmod>2017-10-29T15:17:13.000Z</lastmod>
+    <lastmod>2017-10-29T15:18:41.000Z</lastmod>
     <data>
         <display>
         <title>mac上nginx配置</title>
@@ -103,28 +125,6 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    <lastmod>2017-10-18T16:21:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
