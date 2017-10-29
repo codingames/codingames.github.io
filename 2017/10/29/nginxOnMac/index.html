@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: game | tracenote</title>
+  <title>mac上nginx配置 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/game/index.html">
+  <meta name="description" content="近日在mac上安装了nginx，">
+<meta name="keywords" content="env,server">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac上nginx配置">
+<meta property="og:url" content="http://tracenote.com/2017/10/29/nginxOnMac/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="近日在mac上安装了nginx，">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2017-10-29T15:17:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="mac上nginx配置">
+<meta name="twitter:description" content="近日在mac上安装了nginx，">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,39 +65,77 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/08/unityFromInstall2Uninstall/" class="archive-article-date">
-  <time datetime="2017-06-08T14:17:29.000Z" itemprop="datePublished">Jun 8</time>
+        <section id="main"><article id="post-nginxOnMac" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/29/nginxOnMac/" class="article-date">
+  <time datetime="2017-10-29T04:30:00.000Z" itemprop="datePublished">2017-10-29</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/env/">env</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/08/unityFromInstall2Uninstall/">Unity 从安装到卸载</a>
+    <h1 class="article-title" itemprop="name">
+      mac上nginx配置
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>近日在mac上安装了nginx，<br><a id="more"></a></p>
+<ul>
+<li>安装： <code>brew install nginx</code></li>
+<li>启动 <code>nginx</code>  (localhost:8080打开可见欢迎页)</li>
+<li>退出 <code>nginx -s quit</code></li>
+<li>重新加载 <code>nginx -s reload</code></li>
+<li>测试nginx.conf配置 <code>nginx -t</code></li>
+<li>配置文件 <code>/usr/local/etc/nginx/nginx.conf</code></li>
+<li>示例增加文件 <ul>
+<li><code>/usr/local/Cellar/nginx/1.12.2_1/html</code> 下增加<code>sample.json</code></li>
+<li>浏览器访问 <code>localhost:8080/sample.json</code></li>
+</ul>
+</li>
+<li>改端口号80错误<ul>
+<li>【Nginx】nginx: [emerg] bind() to 0.0.0.0:80 failed (13: Permission denied)</li>
+<li>在Linux中1024以下的端口号都需要root权限才能使用，普通用户会报权限问题</li>
+<li>解决方法 <code>sudo nginx</code></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/10/29/nginxOnMac/" data-id="cj9cwgbfz002m28fya26iplr3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/28/androidBuild/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">android打包</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
