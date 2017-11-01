@@ -65,6 +65,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javaPropertiesGibberish" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/01/javaPropertiesGibberish/" class="article-date">
+  <time datetime="2017-11-01T04:30:00.000Z" itemprop="datePublished">2017-11-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/01/javaPropertiesGibberish/">Java Properties 中文乱码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java项目properties文件，中文读出来乱码，项目文件编码也都是utf-8，尝试后下述方案解决：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> String GET_VALUE = props.getProperty(<span class="string">"tmpTestCode"</span>);</div><div class="line">GET_VALUE = <span class="keyword">new</span> String(GET_VALUE.getBytes(<span class="string">"ISO-8859-1"</span>), <span class="string">"utf-8"</span>);</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/11/01/javaPropertiesGibberish/" data-id="cj9gtcmil002e0kqj0neft68b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nginxOnMac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/29/nginxOnMac/" class="article-date">
@@ -100,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/29/nginxOnMac/" data-id="cj9cxwlx6002k89fyphbh725e" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/29/nginxOnMac/" data-id="cj9gtcmiy002r0kqj564ig2ls" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li></ul>
@@ -140,16 +183,16 @@
       
         <p>安卓命令行打包, <code>gradle clean build</code>即可，只打包，不执行检查，<code>gradle clean assemble</code></p>
 <ul>
-<li>assemble：对所有的 buildType 生成 apk 包。</li>
-<li>clean:移除所有的编译输出文件，比如apk</li>
-<li>check:执行lint检测编译。</li>
-<li>build:同时执行assemble和check命令</li>
+<li>assemble: 对所有的 buildType 生成 apk 包。</li>
+<li>clean: 移除所有的编译输出文件，比如apk</li>
+<li>check: 执行lint检测编译。</li>
+<li>build: 同时执行assemble和check命令</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/28/androidBuild/" data-id="cj9cxwlw5000e89fydscughqx" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/28/androidBuild/" data-id="cj9gtcmhb000e0kqj3o1s3udz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li></ul>
@@ -196,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/" data-id="cj9cxwlvv000189fyxq6r1v36" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/" data-id="cj9gtcmh000010kqjm617leqt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li></ul>
@@ -243,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/17/appiumIssues/" data-id="cj9cxwlwd001289fymx125n2f" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/10/17/appiumIssues/" data-id="cj9gtcmhj00120kqjbojzd2gj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
@@ -291,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/26/appiumXcode9/" data-id="cj9cxwlwi001a89fyh5988i5y" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/26/appiumXcode9/" data-id="cj9gtcmho001a0kqjybn0tb8r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -338,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/18/macBashrc/" data-id="cj9cxwlx8002m89fy7r335dnq" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/18/macBashrc/" data-id="cj9gtcmiw002m0kqj3jm3ab1a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
@@ -381,7 +424,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/18/jsonpGet/" data-id="cj9cxwlx3002e89fy9w38fvf3" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/18/jsonpGet/" data-id="cj9gtcmip002g0kqjhx4awsvb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
@@ -424,7 +467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/" data-id="cj9cxwlwu001u89fy3pdw3bxt" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/" data-id="cj9gtcmi4001u0kqjiwxozohq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IED/">IED</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntelliJ/">IntelliJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -471,7 +514,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/07/linuxGrepColorIssue/" data-id="cj9cxwlx5002g89fyi5l3cp7k" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/07/linuxGrepColorIssue/" data-id="cj9gtcmit002k0kqj6n812prv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -518,7 +561,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/09/07/appiumAdb/" data-id="cj9cxwlwa000u89fyund9xsws" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/09/07/appiumAdb/" data-id="cj9gtcmhf000p0kqjoq1nwxd3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adb/">adb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li></ul>
@@ -565,7 +608,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/28/appiumSwipe/" data-id="cj9cxwlwf001789fy2wyhzqsr" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/28/appiumSwipe/" data-id="cj9gtcmhk00130kqj5j2negh8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -612,7 +655,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/18/betterHistory/" data-id="cj9cxwlwj001d89fydfg3547z" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/18/betterHistory/" data-id="cj9gtcmhq001d0kqjnr5ubi8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
@@ -659,7 +702,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/16/appInstallRealDevice/" data-id="cj9cxwlw8000m89fyuaa3h15a" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/16/appInstallRealDevice/" data-id="cj9gtcmhe000m0kqjn2o0s3rv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -706,7 +749,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/11/fuckXiaoMi/" data-id="cj9cxwlwn001i89fyt849iurn" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/11/fuckXiaoMi/" data-id="cj9gtcmhv001i0kqj91h73afd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>
@@ -753,7 +796,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/08/11/adbdevicesinfo/" data-id="cj9cxwlw4000b89fy6nra5mud" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/08/11/adbdevicesinfo/" data-id="cj9gtcmh9000b0kqjorohhxec" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>
@@ -800,7 +843,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/30/javaGetSubClassName/" data-id="cj9cxwlx1002a89fyzck2weol" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/07/30/javaGetSubClassName/" data-id="cj9gtcmic002a0kqjw8p6k0xn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -843,7 +886,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/30/switchInputIssue/" data-id="cj9cxwlxg002z89fype86m2zf" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/07/30/switchInputIssue/" data-id="cj9gtcmj300320kqj5ooll8m4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
@@ -890,7 +933,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/29/appInstallSimulator/" data-id="cj9cxwlw9000p89fyufdc16th" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/07/29/appInstallSimulator/" data-id="cj9gtcmhi000x0kqjjpvjia8b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -937,57 +980,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/05/HuaWeiBrush/" data-id="cj9cxwlw0000689fyo9e8ycm9" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/07/05/HuaWeiBrush/" data-id="cj9gtcmh600060kqjrm0bc5wg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-housingLoan" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/02/housingLoan/" class="article-date">
-  <time datetime="2017-07-01T16:15:00.000Z" itemprop="datePublished">2017-07-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/02/housingLoan/">房贷博弈误区</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>关于房贷还款计算，网上说法很多，诸如：<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/07/02/housingLoan/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/07/02/housingLoan/" data-id="cj9cxwlws001q89fyln6ndou9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/finance/">finance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realEstate/">realEstate</a></li></ul>
 
     </footer>
   </div>
@@ -1009,7 +1005,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -1019,7 +1015,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3rd/">3rd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -1029,7 +1025,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/IED/" style="font-size: 10px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10px;">IntelliJ</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.89px;">android</a> <a href="/tags/app/" style="font-size: 17.78px;">app</a> <a href="/tags/appium/" style="font-size: 16.67px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/iOS/" style="font-size: 14.44px;">iOS</a> <a href="/tags/issue/" style="font-size: 15.56px;">issue</a> <a href="/tags/java/" style="font-size: 15.56px;">java</a> <a href="/tags/java8/" style="font-size: 11.11px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/macOS/" style="font-size: 12.22px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 12.22px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.11px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.11px;">设计模式</a>
+      <a href="/tags/3rd/" style="font-size: 10px;">3rd</a> <a href="/tags/IED/" style="font-size: 10px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10px;">IntelliJ</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 18.75px;">android</a> <a href="/tags/app/" style="font-size: 17.5px;">app</a> <a href="/tags/appium/" style="font-size: 16.25px;">appium</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 16.25px;">issue</a> <a href="/tags/java/" style="font-size: 16.25px;">java</a> <a href="/tags/java8/" style="font-size: 11.25px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 13.75px;">linux</a> <a href="/tags/macOS/" style="font-size: 12.5px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 12.5px;">server</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.25px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a>
     </div>
   </div>
 
@@ -1038,7 +1034,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -1049,6 +1045,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/11/01/javaPropertiesGibberish/">Java Properties 中文乱码</a>
+          </li>
         
           <li>
             <a href="/2017/10/29/nginxOnMac/">mac上nginx配置</a>
@@ -1064,10 +1064,6 @@
         
           <li>
             <a href="/2017/10/17/appiumIssues/">appium近期问题（待补充）</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/26/appiumXcode9/">解决appium Xcode version 9.0 is not yet supported</a>
           </li>
         
       </ul>

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>android打包 | tracenote</title>
+  <title>Java Properties 中文乱码 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安卓命令行打包, gradle clean build即可，只打包，不执行检查，gradle clean assemble  assemble: 对所有的 buildType 生成 apk 包。 clean: 移除所有的编译输出文件，比如apk check: 执行lint检测编译。 build: 同时执行assemble和check命令">
-<meta name="keywords" content="app,android">
+  <meta name="description" content="Java项目properties文件，中文读出来乱码，项目文件编码也都是utf-8，尝试后下述方案解决： 12public static String GET_VALUE = props.getProperty(&quot;tmpTestCode&quot;);GET_VALUE = new String(GET_VALUE.getBytes(&quot;ISO-8859-1&quot;), &quot;utf-8&quot;);">
+<meta name="keywords" content="java,env,issue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android打包">
-<meta property="og:url" content="http://tracenote.com/2017/10/28/androidBuild/index.html">
+<meta property="og:title" content="Java Properties 中文乱码">
+<meta property="og:url" content="http://tracenote.com/2017/11/01/javaPropertiesGibberish/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="安卓命令行打包, gradle clean build即可，只打包，不执行检查，gradle clean assemble  assemble: 对所有的 buildType 生成 apk 包。 clean: 移除所有的编译输出文件，比如apk check: 执行lint检测编译。 build: 同时执行assemble和check命令">
+<meta property="og:description" content="Java项目properties文件，中文读出来乱码，项目文件编码也都是utf-8，尝试后下述方案解决： 12public static String GET_VALUE = props.getProperty(&quot;tmpTestCode&quot;);GET_VALUE = new String(GET_VALUE.getBytes(&quot;ISO-8859-1&quot;), &quot;utf-8&quot;);">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-10-30T02:35:18.000Z">
+<meta property="og:updated_time" content="2017-11-01T09:01:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android打包">
-<meta name="twitter:description" content="安卓命令行打包, gradle clean build即可，只打包，不执行检查，gradle clean assemble  assemble: 对所有的 buildType 生成 apk 包。 clean: 移除所有的编译输出文件，比如apk check: 执行lint检测编译。 build: 同时执行assemble和check命令">
+<meta name="twitter:title" content="Java Properties 中文乱码">
+<meta name="twitter:description" content="Java项目properties文件，中文读出来乱码，项目文件编码也都是utf-8，尝试后下述方案解决： 12public static String GET_VALUE = props.getProperty(&quot;tmpTestCode&quot;);GET_VALUE = new String(GET_VALUE.getBytes(&quot;ISO-8859-1&quot;), &quot;utf-8&quot;);">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-androidBuild" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-javaPropertiesGibberish" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/28/androidBuild/" class="article-date">
-  <time datetime="2017-10-28T13:30:00.000Z" itemprop="datePublished">2017-10-28</time>
+    <a href="/2017/11/01/javaPropertiesGibberish/" class="article-date">
+  <time datetime="2017-11-01T04:30:00.000Z" itemprop="datePublished">2017-11-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/app/">app</a>
+    <a class="article-category-link" href="/categories/java/">java</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      android打包
+      Java Properties 中文乱码
     </h1>
   
 
@@ -91,21 +91,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>安卓命令行打包, <code>gradle clean build</code>即可，只打包，不执行检查，<code>gradle clean assemble</code></p>
-<ul>
-<li>assemble: 对所有的 buildType 生成 apk 包。</li>
-<li>clean: 移除所有的编译输出文件，比如apk</li>
-<li>check: 执行lint检测编译。</li>
-<li>build: 同时执行assemble和check命令</li>
-</ul>
-
+        <p>Java项目properties文件，中文读出来乱码，项目文件编码也都是utf-8，尝试后下述方案解决：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> String GET_VALUE = props.getProperty(<span class="string">"tmpTestCode"</span>);</div><div class="line">GET_VALUE = <span class="keyword">new</span> String(GET_VALUE.getBytes(<span class="string">"ISO-8859-1"</span>), <span class="string">"utf-8"</span>);</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/28/androidBuild/" data-id="cj9gtcmhb000e0kqj3o1s3udz" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/11/01/javaPropertiesGibberish/" data-id="cj9gtcmil002e0kqj0neft68b" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
     </footer>
   </div>
@@ -113,19 +107,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/10/29/nginxOnMac/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          mac上nginx配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/18/ApplicationCrashReportForAndroid/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/10/29/nginxOnMac/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">如何在本地搭建Android应用Crash跟踪系统－ACRA</div>
+      <div class="article-nav-title">mac上nginx配置</div>
     </a>
   
 </nav>
