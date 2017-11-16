@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <lastmod>2017-11-16T15:55:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>IntelliJ IDEA 引用其它工程</title>
+        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>IntelliJ</tag>
+         
+        <tag>IED</tag>
+         
+         
+           
+             
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
-    <lastmod>2017-11-14T14:04:41.000Z</lastmod>
+    <lastmod>2017-11-14T14:10:49.000Z</lastmod>
     <data>
         <display>
         <title>从零开始配置appium iOS环境</title>
