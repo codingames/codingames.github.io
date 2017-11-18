@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-11-18T17:38:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     <lastmod>2017-11-16T15:55:09.000Z</lastmod>
     <data>
@@ -83,9 +107,9 @@
         <title>android打包</title>
         <pubTime>2017-10-28T13:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
          
            
@@ -189,9 +213,9 @@
         <title>如何在本地搭建Android应用Crash跟踪系统－ACRA</title>
         <pubTime>2017-10-18T14:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
          
            
@@ -233,9 +257,9 @@
         <title>画蛇添足的小米</title>
         <pubTime>2017-08-11T12:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>env</tag>
          
@@ -322,30 +346,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-09-07T13:25:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     <lastmod>2017-09-07T12:25:14.000Z</lastmod>
     <data>
@@ -401,9 +401,9 @@
         <title>appium swipe</title>
         <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>iOS</tag>
          
@@ -451,9 +451,9 @@
         <title>adb获取安卓手机厂商型号</title>
         <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
+         
+        <tag>app</tag>
          
         <tag>env</tag>
          

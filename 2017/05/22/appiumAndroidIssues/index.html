@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-09-07T13:25:56.000Z">
+<meta property="og:updated_time" content="2017-11-18T17:38:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Appium Android 坎坷">
 <meta name="twitter:description" content="原来使用的appium版本很久没升级了，最近升级了最新的appium(version 1.0.2-beta.2)和java-client(5.0.0-BETA8)，却跑不起来了，debug来debug去，甚至从头从新版本建个环境做对比。">
@@ -99,6 +99,8 @@
 <h4 id="Maven-依赖冲突"><a href="#Maven-依赖冲突" class="headerlink" title="Maven 依赖冲突"></a>Maven 依赖冲突</h4><p>Appium java-client 用的selenium是3.4版本，而项目Maven Dependencies中的selenium-api等还是2.x版本（来自于包含Web测试的测试框架包），解决方案，调整pom.xml文件的依赖顺序，java-client写在前面即可。这里靠上优先加载，是有一个从上到下的顺序的。<br>温习，官方文档说明：  </p>
 <blockquote><p>Appium 服务端定义了官方协议的扩展，为Appium 用户提供了方便的接口来执行各种设备动作，例如在测试过程中<br>安装/卸载app。这就是为什么我们需要Appium 特定的客户端，而不是通用的Selenium 客户端。当然，Appium 客<br>户端类库只是增加了一些功能，而实际上这些功能就是简单的扩展了Selenium 客户端，所以他们仍然可以用来运行通<br>用的selenium会话。</p>
 </blockquote>
+<p>另外，也可以在引用dependency时使用如下方式来排除冲突，</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.tracenote.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>xx-x-a<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">exclusions</span>&gt;</span>  </div><div class="line">    	<span class="tag">&lt;<span class="name">exclusion</span>&gt;</span>  </div><div class="line">    	    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>xx-x-b<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </div><div class="line">    	    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.tracenote.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </div><div class="line">    	<span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span>  </div><div class="line">    	<span class="tag">&lt;<span class="name">exclusion</span>&gt;</span>  </div><div class="line">    	    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>xx-x-c<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </div><div class="line">    	    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.tracenote.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="TestNG"><a href="#TestNG" class="headerlink" title="TestNG"></a>TestNG</h4><p>运行@Test方法提示<br><blockquote><p>Could not find or load main class org.testng.remote.RemoteTestNG</p>
 </blockquote><br>程序引用TestNG jar包版本升级到了6.11，而eclipse TestNG插件仍是6.9，升级eclipse TestNG插件解决。</p>
 <h4 id="DDMS定位"><a href="#DDMS定位" class="headerlink" title="DDMS定位"></a>DDMS定位</h4><p>对应DDMS属性  </p>
@@ -123,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/22/appiumAndroidIssues/" data-id="cja2nqzq5000uf1fya8lk92qb" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/05/22/appiumAndroidIssues/" data-id="cja5mc7wb000xq4fymq5h7r4m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
