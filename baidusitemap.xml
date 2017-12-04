@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
+    <lastmod>2017-12-04T03:55:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
+        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
+        
+        <tag>server</tag>
+         
+        <tag>web</tag>
+         
+        <tag>spring boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     <lastmod>2017-11-18T17:44:12.000Z</lastmod>
     <data>
@@ -307,9 +331,9 @@
         <title>jsonp get 问题</title>
         <pubTime>2017-09-18T11:30:00.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>web</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -921,9 +945,9 @@
         
         <tag>env</tag>
          
-        <tag>domain</tag>
-         
         <tag>server</tag>
+         
+        <tag>domain</tag>
          
          
            
