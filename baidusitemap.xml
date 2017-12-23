@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/</loc>
-    <lastmod>2017-12-23T07:49:36.779Z</lastmod>
+    <lastmod>2017-12-23T08:02:34.116Z</lastmod>
     <data>
         <display>
         <title>iCloud自动同步本地目录</title>
@@ -270,23 +270,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
+        <title>android打包</title>
+        <pubTime>2017-10-28T13:30:00.000Z</pubTime>
         
-        <tag>java</tag>
+        <tag>app</tag>
          
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
+        <tag>android</tag>
          
          
            
              
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -342,30 +340,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>从零开始配置appium iOS环境</title>
-        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -388,16 +362,14 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>从零开始配置appium iOS环境</title>
+        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
         
         <tag>app</tag>
-         
-        <tag>android</tag>
          
         <tag>iOS</tag>
          
@@ -440,13 +412,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
         <tag>iOS</tag>
          
         <tag>appium</tag>
@@ -462,21 +438,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>折腾琐记：编辑器篇</title>
-        <pubTime>2017-03-27T23:51:42.000Z</pubTime>
+        <title>解决appium Xcode version 9.0 is not yet supported</title>
+        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
         
-        <tag>env</tag>
+        <tag>iOS</tag>
          
-        <tag>工具</tag>
+        <tag>appium</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -508,23 +484,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>画蛇添足的小米</title>
-        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
+        <title>折腾琐记：编辑器篇</title>
+        <pubTime>2017-03-27T23:51:42.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>env</tag>
+        <tag>appium</tag>
          
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -542,6 +540,30 @@
         <tag>app</tag>
          
         <tag>android</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/08/16/appInstallRealDevice/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS命令行安装ipa到真机</title>
+        <pubTime>2017-08-16T14:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
@@ -594,30 +616,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/16/appInstallRealDevice/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS命令行安装ipa到真机</title>
-        <pubTime>2017-08-16T14:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -640,21 +638,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>android打包</title>
-        <pubTime>2017-10-28T13:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA code format</title>
+        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
         
-        <tag>app</tag>
+        <tag>java</tag>
          
-        <tag>android</tag>
+        <tag>IntelliJ</tag>
+         
+        <tag>IED</tag>
          
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
           
         </display>
     </data>
@@ -1036,23 +1036,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        <title>画蛇添足的小米</title>
+        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>appium</tag>
+        <tag>env</tag>
          
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>

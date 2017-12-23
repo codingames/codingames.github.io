@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="在两台Mac上写blog，需要同步_posts目录。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-12-23T07:49:36.779Z">
+<meta property="og:updated_time" content="2017-12-23T08:02:34.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iCloud自动同步本地目录">
 <meta name="twitter:description" content="在两台Mac上写blog，需要同步_posts目录。">
@@ -94,13 +94,14 @@
         <p>在两台Mac上写blog，需要同步_posts目录。<br><a id="more"></a><br>网上诸多解决方案，例如新开git分支，甚至写个小程序来同步，<code>hexo g -d</code>发布完blog还需要敲几个命令或开小程序来同步，都稍嫌麻烦。直接修改<code>hexo g -d</code>命令的任务，让它带上git同步或者启动同步小程序也可以，这就需要去改动源码了。有没有更简捷的方式，例如利用iCloud来自动同步_posts目录？</p>
 <p>百度iCloud同步指定目录，并没有查到方案（也可能是百度不行）。</p>
 <p>尝试在hexo blog目录下的_posts文件夹上<code>右键</code> - <code>Make Alias</code>，得到一个Alias文件，把这个文件拖动到iCloud里面，实际上这种方案不可行，它同步的仅仅是一个Alias文件，而且Alias文件只适用一台电脑。同理，建立一个指向_posts文件夹的软链接，然后把这个软链接扔到iCloud里面也是不可行的。</p>
-<p>把Finder - iCloud目录中的文件拖动到Terminal中，得到iCloud的本地路径，<code>/Users/zzz/Library/Mobile\ Documents/com\~apple\~Numbers/Documents</code><br>即<code>/Users/zzz/Library/Mobile Documents/com~apple~CloudDocs</code>，然后把hexo blog目录下的_posts文件夹copy到这个目录里面(可以重命名，例如改成tracenote)，删掉hexo blog目录下的_posts文件夹，在此被删除的_posts文件夹的目录中做个软链接指向iCloud本地目录中的文件夹即可，<code>ln -s /zzz/zhang/Library/Mobile\ Documents/com~apple~CloudDocs/docs/tracenote _posts</code>。</p>
-<p>最好本地再备份一下，iCloud用的少，是否丢文件未知。</p>
+<p>把Finder - iCloud目录中的文件拖动到Terminal中，得到iCloud的本地路径，<code>/Users/zzz/Library/Mobile\ Documents/com\~apple\~Numbers/Documents</code><br>即<code>/Users/zzz/Library/Mobile Documents/com~apple~CloudDocs</code>，然后把hexo blog目录下的_posts文件夹copy到这个目录里面(可以重命名，例如改成tracenote)，删掉hexo blog目录下的_posts文件夹，在此被删除的_posts文件夹的目录中做个软链接指向iCloud本地目录中的文件夹即可，<code>ln -s /zzz/zhang/Library/Mobile\ Documents/com~apple~CloudDocs/docs/tracenote _posts</code>。问题解决。</p>
+<hr>
+<p>总结一下，就是需要同步的文件夹直接放入iCloud对应的本地目录中，然后在需要此文件夹的路径下建立一个软链接指向iCloud本地目录的目标文件夹。最好本地再备份一下，iCloud用的少，是否丢文件未知。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/" data-id="cjbj1ojna002atcqjo0qkshxn" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/" data-id="cjbj24xm9002euaqjgvc71trj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iCloud/">iCloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
