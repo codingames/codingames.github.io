@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Gradle Sync 过慢问题 | tracenote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在伟大的墙的保护下，android工程gradle同步速度简直不能忍，其实可以用阿里云的镜像仓库（当然自己搭一个内网仓库服务器更好）。">
+<meta name="keywords" content="app,android,issue,gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gradle Sync 过慢问题">
+<meta property="og:url" content="http://tracenote.com/2017/12/22/gradleSyncIssue/index.html">
+<meta property="og:site_name" content="tracenote">
+<meta property="og:description" content="在伟大的墙的保护下，android工程gradle同步速度简直不能忍，其实可以用阿里云的镜像仓库（当然自己搭一个内网仓库服务器更好）。">
+<meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2017-12-22T17:07:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gradle Sync 过慢问题">
+<meta name="twitter:description" content="在伟大的墙的保护下，android工程gradle同步速度简直不能忍，其实可以用阿里云的镜像仓库（当然自己搭一个内网仓库服务器更好）。">
+  
+    <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">tracenote</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gradleSyncIssue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/22/gradleSyncIssue/" class="article-date">
+  <time datetime="2017-12-22T13:30:00.000Z" itemprop="datePublished">2017-12-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/app/">app</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Gradle Sync 过慢问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在<code>伟大的墙</code>的<code>保护</code>下，android工程gradle同步速度简直不能忍，其实可以用<strong>阿里云的镜像仓库</strong>（当然自己搭一个内网仓库服务器更好）。<br><a id="more"></a><br><blockquote><p>使用阿里云的国内镜像仓库地址，就可以快速的下载需要的文件<br>修改项目根目录下的文件 build.gradle ：<br>buildscript {<br>    repositories {<br>        maven{ url ‘<a href="http://maven.aliyun.com/nexus/content/groups/public/&#39;}" target="_blank" rel="external">http://maven.aliyun.com/nexus/content/groups/public/&#39;}</a><br>    }<br>}</p>
+<p>allprojects {<br>    repositories {<br>        maven{ url ‘<a href="http://maven.aliyun.com/nexus/content/groups/public/&#39;}" target="_blank" rel="external">http://maven.aliyun.com/nexus/content/groups/public/&#39;}</a><br>    }<br>}<br>然后选择重新构建项目就可以了</p>
+<p>===========分割线===================<br>更新：上面那段代码 只要把两个repositories里的内容替换掉就好了，buildscript里还有一个dependencies不要删除，要不会报错<br>我发现有好几个人直接把上面一整段给复制进去了</p>
+<p>作者：知乎用户<br>链接：<a href="https://www.zhihu.com/question/37810416/answer/153168766" target="_blank" rel="external">https://www.zhihu.com/question/37810416/answer/153168766</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote><br>但也有网友指出，<code>阿里云的同步速度会有延迟，请不要盲目追新。</code></p>
+<p>当然对于合格的iOS、android工程师，一个好用的穿墙工具是必需的，毕竟最新的一手资料都在墙外，英文原版。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2017/12/22/gradleSyncIssue/" data-id="cjbj1io75001vsmqj8xxl9j39" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/23/iCloudSyncLocalDirectory/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          iCloud自动同步本地目录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/19/h5UITestChromeIssue/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Chrome强制升级引起的H5自动化异常</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITest/">UITest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5/">h5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iCloud/">iCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java8/">java8</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/IED/" style="font-size: 11.25px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 11.25px;">IntelliJ</a> <a href="/tags/UITest/" style="font-size: 10px;">UITest</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/app/" style="font-size: 18.75px;">app</a> <a href="/tags/appium/" style="font-size: 17.5px;">appium</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/env/" style="font-size: 20px;">env</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/gradle/" style="font-size: 10px;">gradle</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/h5/" style="font-size: 10px;">h5</a> <a href="/tags/iCloud/" style="font-size: 10px;">iCloud</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/issue/" style="font-size: 17.5px;">issue</a> <a href="/tags/java/" style="font-size: 16.25px;">java</a> <a href="/tags/java8/" style="font-size: 11.25px;">java8</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/linux/" style="font-size: 13.75px;">linux</a> <a href="/tags/macOS/" style="font-size: 13.75px;">macOS</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/server/" style="font-size: 13.75px;">server</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/工具/" style="font-size: 11.25px;">工具</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/23/iCloudSyncLocalDirectory/">iCloud自动同步本地目录</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/22/gradleSyncIssue/">Gradle Sync 过慢问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/19/h5UITestChromeIssue/">Chrome强制升级引起的H5自动化异常</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/04/fuckHuaweiIme/">坑人的华为输入法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/12/03/IntellijSpringBootHelloWorld/">IntelliJ IDEA创建Spring Boot的Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 worldlect<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?57d74626902d897e9a283b661d87c039";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  </div>
+</body>
+</html>
