@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2017/12/28/androidJacoco/</loc>
-    <lastmod>2017-12-29T06:13:52.610Z</lastmod>
+    <lastmod>2017-12-29T06:19:30.603Z</lastmod>
     <data>
         <display>
         <title>android代码覆盖率jacoco实践</title>
@@ -298,12 +298,12 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA 引用其它工程</title>
-        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA code format</title>
+        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
         
         <tag>java</tag>
          
@@ -514,28 +514,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>折腾琐记：编辑器篇</title>
-        <pubTime>2017-03-27T23:51:42.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -553,6 +531,28 @@
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>折腾琐记：编辑器篇</title>
+        <pubTime>2017-03-27T23:51:42.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -646,28 +646,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>房贷博弈误区</title>
-        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
-        
-        <tag>realEstate</tag>
-         
-        <tag>finance</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -683,6 +661,28 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>房贷博弈误区</title>
+        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
+        
+        <tag>realEstate</tag>
+         
+        <tag>finance</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -714,12 +714,12 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA 引用其它工程</title>
+        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
         
         <tag>java</tag>
          
