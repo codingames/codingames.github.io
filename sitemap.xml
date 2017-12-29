@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/</loc>
+    <loc>http://tracenote.com/2017/12/28/androidJacoco/</loc>
     
-    <lastmod>2017-12-23T08:46:54.901Z</lastmod>
+    <lastmod>2017-12-29T06:13:52.610Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tracenote.com/2017/12/22/gradleSyncIssue/</loc>
     
-    <lastmod>2017-12-22T17:07:49.000Z</lastmod>
+    <lastmod>2017-12-27T12:32:52.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/</loc>
+    
+    <lastmod>2017-12-27T09:44:50.552Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
     
     <lastmod>2017-12-20T15:21:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
@@ -72,6 +72,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -79,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -205,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -226,14 +233,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     

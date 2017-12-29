@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mac上nginx配置 | tracenote</title>
+  <title>android代码覆盖率jacoco实践 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="近日在mac上安装了nginx，">
-<meta name="keywords" content="env,server">
+  <meta name="description" content="简记代码覆盖率工具jacoco（Java Code Coverage）在android项目中的实践。">
+<meta name="keywords" content="app,android,jacoco,gradle,coverage">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac上nginx配置">
-<meta property="og:url" content="http://tracenote.com/2017/10/29/nginxOnMac/index.html">
+<meta property="og:title" content="android代码覆盖率jacoco实践">
+<meta property="og:url" content="http://tracenote.com/2017/12/28/androidJacoco/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="近日在mac上安装了nginx，">
+<meta property="og:description" content="简记代码覆盖率工具jacoco（Java Code Coverage）在android项目中的实践。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-12-10T15:57:48.000Z">
+<meta property="og:updated_time" content="2017-12-29T06:13:52.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac上nginx配置">
-<meta name="twitter:description" content="近日在mac上安装了nginx，">
+<meta name="twitter:title" content="android代码覆盖率jacoco实践">
+<meta name="twitter:description" content="简记代码覆盖率工具jacoco（Java Code Coverage）在android项目中的实践。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-nginxOnMac" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-androidJacoco" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/29/nginxOnMac/" class="article-date">
-  <time datetime="2017-10-29T04:30:00.000Z" itemprop="datePublished">2017-10-29</time>
+    <a href="/2017/12/28/androidJacoco/" class="article-date">
+  <time datetime="2017-12-28T13:30:00.000Z" itemprop="datePublished">2017-12-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/env/">env</a>
+    <a class="article-category-link" href="/categories/app/">app</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mac上nginx配置
+      android代码覆盖率jacoco实践
     </h1>
   
 
@@ -91,34 +91,70 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>近日在mac上安装了nginx，<br><a id="more"></a></p>
+        <p>简记代码覆盖率工具jacoco（Java Code Coverage）在android项目中的实践。</p>
+<a id="more"></a>
+<p>app目录里面的<code>build.gradle</code>文件：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'jacoco'</span></div><div class="line">android &#123;</div><div class="line">    buildTypes &#123;</div><div class="line">        debug &#123;</div><div class="line">            testCoverageEnabled = <span class="keyword">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">// 用于从.ec文件生成coverage报告</span></div><div class="line"><span class="keyword">task</span> jacocoTestReport(type: JacocoReport) &#123;</div><div class="line">    <span class="keyword">group</span> = <span class="string">"Reporting"</span></div><div class="line">    <span class="keyword">description</span> = <span class="string">"Generate Jacoco coverage reports on the  build."</span></div><div class="line">    classDirectories = <span class="keyword">fileTree</span>(</div><div class="line">            dir: <span class="string">"$&#123;project.buildDir&#125;/intermediates/classes"</span>,</div><div class="line">            excludes: [<span class="string">'**/R.class'</span>,</div><div class="line">                       <span class="string">'**/R$*.class'</span>,</div><div class="line">                       <span class="string">'**/*$ViewInjector*.*'</span>,</div><div class="line">                       <span class="string">'**/BuildConfig.*'</span>,</div><div class="line">                       <span class="string">'**/Manifest*.*'</span>]</div><div class="line">    )</div><div class="line">    <span class="keyword">def</span> coverageSourceDirs = [</div><div class="line">            <span class="string">"src/main/java"</span></div><div class="line">    ]</div><div class="line">    additionalSourceDirs = files(coverageSourceDirs)</div><div class="line">    sourceDirectories = files(coverageSourceDirs)</div><div class="line">    executionData = <span class="keyword">fileTree</span>(dir: <span class="string">'./build/outputs'</span>, <span class="keyword">include</span>: <span class="string">'**/*.ec'</span>)</div><div class="line">    reports &#123;</div><div class="line">        xml.enabled = <span class="keyword">true</span></div><div class="line">        html.enabled = <span class="keyword">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>AndroidManifest.xml</code>:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<p>启动第一个activity：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    Log.d(<span class="string">"tttttest"</span>, <span class="string">"onCreate: MainActivity"</span>);</div><div class="line"></div><div class="line">    String DEFAULT_COVERAGE_FILE_PATH = <span class="string">"/mnt/sdcard/coverage.ec"</span>;</div><div class="line">    File file = <span class="keyword">new</span> File(DEFAULT_COVERAGE_FILE_PATH);</div><div class="line">    <span class="keyword">if</span> (!file.exists()) &#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            file.createNewFile();</div><div class="line">            Log.d(<span class="string">"tttttest"</span>, <span class="string">"Main create file /mnt/sdcard/coverage.ec "</span>);</div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第一个activity，可以在<code>AndroidManifest.xml</code>中查找<code>android.intent.action.MAIN</code>得到，也可以启动app时由<code>adb logcat | grep ActivityManager</code>得到。</p>
+<p>按机身back键退出app时必经的activiy：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    OutputStream out = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        out = <span class="keyword">new</span> FileOutputStream(<span class="string">"/mnt/sdcard/coverage.ec"</span>, <span class="keyword">true</span>);</div><div class="line">        Object agent = Class.forName(<span class="string">"org.jacoco.agent.rt.RT"</span>)</div><div class="line">                .getMethod(<span class="string">"getAgent"</span>)</div><div class="line">                .invoke(<span class="keyword">null</span>);</div><div class="line"></div><div class="line">        out.write((<span class="keyword">byte</span>[]) agent.getClass().getMethod(<span class="string">"getExecutionData"</span>, <span class="keyword">boolean</span>.class)</div><div class="line">                .invoke(agent, <span class="keyword">false</span>));</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        Log.d(TAG, e.toString(), e);</div><div class="line">    &#125; <span class="keyword">finally</span> &#123;</div><div class="line">        <span class="keyword">if</span> (out != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                out.close();</div><div class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">                e.printStackTrace();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    Log.d(<span class="string">"tttttest"</span>, <span class="string">"XXXActivity  onDestroy"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>点back键退出时检查日志，看onDestroy()方法是否被调用了。<code>out = new FileOutputStream(&quot;/mnt/sdcard/coverage.ec&quot;, true);</code> 写成true即追加而不是覆盖。</p>
+<p>一般实际项目中，这些activity通常会继承一个上层activity（一些通用方法的封装）， onCreate()和onDestroy()中增加的coverage相关方法也可以写在这个父activity类中。   </p>
+<p>执行完测试后，adb pull /mnt/sdcard/coverage.ec到app/build/outputs里面(该目录在task jacocoTestReport配置)，然后项目根目录下运行<code>./gradlew jacocoTestReport</code>，最后在app/build/reports中查看报告即可。</p>
+<h5 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a>错误解决</h5><p>错误1:<br>执行<code>./gradlew  jacocoTestReport</code>报错：</p>
+<blockquote>
+<p>[jacoco:report] Classes in bundle ‘Code Coverage Report’ do no match with execution data. For report generation the same class files must be used as at runtime.<br>[jacoco:report] Execution data for class xxxxx does not match.<br>[jacoco:report] Execution data for class yyyyy does not match.  </p>
+</blockquote>
+<p>原因，编译apk的Java版本和生成Jacoco报告的Java版本不一致（都是Java8，但小版本不一致）。android studio默认的JDK不是电脑系统的而是自带的<code>/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin</code>。（在项目上右键<code>Open Module Settings</code>可以看到）这里有两篇文章解释的比较详细：<a href="https://stackoverflow.com/questions/44776226" target="_blank" rel="external">文章一</a>，<a href="https://stackoverflow.com/questions/31720139" target="_blank" rel="external">文章二</a>。</p>
+<p>错误2:<br>有时候遇到其它莫名错误，可以用Android Studio的<code>Build - Project Clean</code>一下，或者<code>Invalidated Caches / Restart...</code>。</p>
+<p>错误3:<br><code>./gradlew jacocoTestReport</code>生成报告时：  </p>
+<blockquote>
+<p>Caused by: java.lang.IllegalStateException: Can’t add different class with same name:</p>
+</blockquote>
+<p>存在同名class，（<code>intermediates/classes</code>下有debug和release两个文件夹），删除release文件夹或者classDirectories写到debug，<code>${project.buildDir}/intermediates/classes/debug</code>。</p>
+<h5 id="报告合并"><a href="#报告合并" class="headerlink" title="报告合并"></a>报告合并</h5><p>多个<code>.ec</code>文件直接扔到<code>app/build/outputs</code>文件夹中（该目录在task jacocoTestReport配置）即可，会自动合并报告。</p>
+<h5 id="自动插桩"><a href="#自动插桩" class="headerlink" title="自动插桩"></a>自动插桩</h5><p>可以把变更打成svn patch， </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn diff &gt; ../coverage.patch</div></pre></td></tr></table></figure>
+<p>svn 重新拉取代码后，导入 patch</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn patch ../coverage.patch</div></pre></td></tr></table></figure>
+<p>git也一样，命令略有差异。</p>
+<h5 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h5><p>1，做server，可以接收文件，手机端退出时自动把ec报告发送至server。<br>2，2017年GITC全球互联网技术大会上，听了饿了么邱化峰的报告，他们代码覆盖率做得比较深入，</p>
 <ul>
-<li>安装 <code>brew install nginx</code></li>
-<li>启动 <code>nginx</code>  (localhost:8080打开可见欢迎页)</li>
-<li>退出 <code>nginx -s quit</code></li>
-<li>重新加载 <code>nginx -s reload</code></li>
-<li>测试nginx.conf配置 <code>nginx -t</code></li>
-<li>配置文件 <code>/usr/local/etc/nginx/nginx.conf</code></li>
-<li>示例增加文件 <ul>
-<li><code>/usr/local/Cellar/nginx/1.12.2_1/html</code> 下增加<code>sample.json</code></li>
-<li>浏览器访问 <code>localhost:8080/sample.json</code></li>
+<li>最少用例数<br>覆盖所有情况使用的最少用例数，在系统软件和军事软 件有75%的在使用，将圈复杂度维持在10以下有很多实 际的和经济的理由，低于10的软件是非常简单且很容易 跟踪的，</li>
+<li>圈复杂度-降低圈复杂度的重构技术<br>代码复杂度的衡量标准，程序的可能错误和高的圈复杂度有着很大关系，圈复杂度可以成为编码及重构的重要参考指标。参考 《代码大全》 《重构 改善既有代码的设计》。<ul>
+<li>提取函数— 将独立业务活模块代码单独封装为函数</li>
+<li>算法替换—复杂的算法可能会导致Bug，满足功能的前提下，使用简单的算法</li>
+<li>解条件式—复杂的条件表达式封装为函数</li>
+<li>合并条件式—将一系列得到相同结果的条件表达式合并</li>
+<li>查询函数和修改函数分离—-单一职责原则，强调复用性</li>
+<li>合并重复的条件判断——不同的分支有相同的处理，提炼到分之外</li>
 </ul>
 </li>
-<li>改端口号80错误<ul>
-<li>【Nginx】nginx: [emerg] bind() to 0.0.0.0:80 failed (13: Permission denied)</li>
-<li>在Linux中1024以下的端口号都需要root权限才能使用，普通用户会报权限问题</li>
-<li>解决方法 <code>sudo nginx</code></li>
+<li>跟CI的持续集成<ul>
+<li>1.自动化的回归并收集代码覆盖率 </li>
+<li>2.查看代码覆盖率的历史记录</li>
 </ul>
 </li>
+<li>精准的代码覆盖率<ul>
+<li>1.识别出所有被修改的方法(新增，删除和修改) </li>
+<li>2.可以有效的查看那些被修改的方法是否被测试到 </li>
+<li>3.通过圈复杂度衡量代码的质量</li>
+</ul>
+</li>
+<li>突变测试</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/10/29/nginxOnMac/" data-id="cjbriwt0g003mx1qjibgj7jir" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2017/12/28/androidJacoco/" data-id="cjbriwszc000kx1qjn8p59lc2" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coverage/">coverage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jacoco/">jacoco</a></li></ul>
 
     </footer>
   </div>
@@ -126,19 +162,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/01/javaPropertiesGibberish/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Java Properties 中文乱码
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/28/androidBuild/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/23/iCloudSyncLocalDirectory/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">android打包</div>
+      <div class="article-nav-title">iCloud Drive自动同步本地文件夹</div>
     </a>
   
 </nav>
