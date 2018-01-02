@@ -4,7 +4,7 @@
   <url>
     <loc>http://tracenote.com/2017/08/16/appInstallRealDevice/</loc>
     
-    <lastmod>2018-01-02T13:03:06.926Z</lastmod>
+    <lastmod>2018-01-02T13:32:42.129Z</lastmod>
     
   </url>
   
@@ -58,6 +58,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/06/08/unityFromInstall2Uninstall/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
+    <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/08/unityFromInstall2Uninstall/</loc>
+    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -128,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -143,6 +136,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -177,7 +177,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -191,14 +198,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -233,6 +233,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -241,13 +248,6 @@
   
   <url>
     <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -268,14 +268,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -289,7 +282,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
+    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
