@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: jacoco | tracenote</title>
+  <title>iOS崩溃日志抓取与符号化 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/jacoco/index.html">
+  <meta name="description" content="iOS发生崩溃时，会在设备上生成tracenote-app-2018-01-03-101212.ips这样的崩溃日志文件，本文简记崩溃日志的命令行抓取和符号化。">
+<meta name="keywords" content="app,iOS,commandline,crash,log">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS崩溃日志抓取与符号化">
+<meta property="og:url" content="http://tracenote.com/2018/01/03/iOSCrashLogExtractionAndAnalysis/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="iOS发生崩溃时，会在设备上生成tracenote-app-2018-01-03-101212.ips这样的崩溃日志文件，本文简记崩溃日志的命令行抓取和符号化。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2018-01-03T13:49:11.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="iOS崩溃日志抓取与符号化">
+<meta name="twitter:description" content="iOS发生崩溃时，会在设备上生成tracenote-app-2018-01-03-101212.ips这样的崩溃日志文件，本文简记崩溃日志的命令行抓取和符号化。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,39 +65,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/28/androidJacoco/" class="archive-article-date">
-  <time datetime="2017-12-28T13:30:00.000Z" itemprop="datePublished">Dec 28</time>
+        <section id="main"><article id="post-iOSCrashLogExtractionAndAnalysis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/03/iOSCrashLogExtractionAndAnalysis/" class="article-date">
+  <time datetime="2018-01-03T13:30:00.000Z" itemprop="datePublished">2018-01-03</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/app/">app</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/28/androidJacoco/">android代码覆盖率jacoco实践</a>
+    <h1 class="article-title" itemprop="name">
+      iOS崩溃日志抓取与符号化
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>iOS发生崩溃时，会在设备上生成<code>tracenote-app-2018-01-03-101212.ips</code>这样的崩溃日志文件，本文简记崩溃日志的命令行抓取和符号化。<br><a id="more"></a><br>使用Xcode，<code>Xcode -&gt; Window -&gt; Devices -&gt; View Device Logs</code> 可以直接看到崩溃日志，在日志界面上稍等数秒，会直接符号化显示。</p>
+<h4 id="抓取"><a href="#抓取" class="headerlink" title="抓取"></a>抓取</h4><p>命令行从设备导出日志用的是<code>idevicecrashreport</code>(libimobiledevice库中)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">idevicecrashreport -k iOSLog</div></pre></td></tr></table></figure>
+<p>导出到iOSLog文件夹，其中只有类似<code>tracenote-app-2018-01-03-101212.ips</code>这样的才是目标app的崩溃日志，其它的可以忽略。</p>
+<h4 id="符号化"><a href="#符号化" class="headerlink" title="符号化"></a>符号化</h4><p>使用的是<a href="https://github.com/JohnWong/symbolicate" target="_blank" rel="external"><strong>symbolicate</strong></a>,<br>使用方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./symbolicate.sh tracenote-app-2018-01-03-101212.ips  tracenote-app.app  &gt; handled.crash</div></pre></td></tr></table></figure>
+<hr>
+<p>找到一篇介绍的比较详细文章，点击<a href="http://www.sohu.com/a/194036361_744135" target="_blank" rel="external">这里</a>参考。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2018/01/03/iOSCrashLogExtractionAndAnalysis/" data-id="cjbz4czjy002ioaqj8qkfvx77" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commandline/">commandline</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crash/">crash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/01/weChatJumpsRobot/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">用机器人来玩微信跳一跳</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
