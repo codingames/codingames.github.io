@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2018/01/16/iOSCodeCoverage/</loc>
-    <lastmod>2018-01-15T13:16:50.144Z</lastmod>
+    <lastmod>2018-01-15T13:18:36.048Z</lastmod>
     <data>
         <display>
         <title>iOS 代码覆盖率 XcodeCoverage 真机</title>
@@ -600,30 +600,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>画蛇添足的小米</title>
-        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>env</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -636,6 +612,30 @@
         <tag>iOS</tag>
          
         <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>画蛇添足的小米</title>
+        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>env</tag>
          
          
            
@@ -784,23 +784,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
-        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
+        <title>DNSPod解析Godaddy域名</title>
+        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
         
+        <tag>env</tag>
+         
         <tag>server</tag>
          
-        <tag>web</tag>
-         
-        <tag>spring boot</tag>
+        <tag>domain</tag>
          
          
            
              
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -832,45 +832,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>从零开始配置appium iOS环境</title>
-        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
         <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java8环境不支持Lambda？</title>
-        <pubTime>2017-06-16T01:10:02.000Z</pubTime>
-        
-        <tag>java</tag>
          
         <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -899,6 +875,28 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java8环境不支持Lambda？</title>
+        <pubTime>2017-06-16T01:10:02.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
@@ -998,23 +996,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>DNSPod解析Godaddy域名</title>
-        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
+        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
         
-        <tag>env</tag>
-         
-        <tag>domain</tag>
-         
         <tag>server</tag>
+         
+        <tag>web</tag>
+         
+        <tag>spring boot</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -1068,16 +1066,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        <title>从零开始配置appium iOS环境</title>
+        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
         
-        <tag>appium</tag>
+        <tag>app</tag>
          
-        <tag>issue</tag>
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="简记XcodeCoverage，">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-01-15T13:16:50.144Z">
+<meta property="og:updated_time" content="2018-01-15T13:18:36.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 代码覆盖率 XcodeCoverage 真机">
 <meta name="twitter:description" content="简记XcodeCoverage，">
@@ -93,7 +93,7 @@
       
         <p>简记XcodeCoverage，</p>
 <a id="more"></a>
-<p>1，<code>Podfile</code>文件: <code>pod &#39;XcodeCoverage&#39;, &#39;~&gt;1.0&#39;</code><br>2，<code>pod install</code><br>3，Xcode - Build Phases - TARGETS - Run Script:<br><code>Pods/XcodeCoverage/exportenv.sh</code><br>4，Xcode - Build Settings - Generate Legacy Test Coverage Files - <code>Yes</code> (仅设置Debug即可)<br>5，Xcode - Build Settings - Instrument Program Flow - <code>Yes</code> (仅设置Debug即可)<br>6，<code>AppDelegate.m</code>: （触发点是点击 home 键应用进入后台时）  </p>
+<p>1，<code>Podfile</code>文件: <code>pod &#39;XcodeCoverage&#39;, &#39;~&gt;1.0&#39;</code><br>2，<code>pod install</code><br>3，Xcode - Build Phases - TARGETS - Run Script:<br>    <code>Pods/XcodeCoverage/exportenv.sh</code><br>4，Xcode - Build Settings - Generate Legacy Test Coverage Files - <code>Yes</code> (仅设置Debug即可)<br>5，Xcode - Build Settings - Instrument Program Flow - <code>Yes</code> (仅设置Debug即可)<br>6，<code>AppDelegate.m</code>: （触发点是点击 home 键应用进入后台时）  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">- (void)applicationDidEnterBackground:(UIApplication *)application</div><div class="line">&#123;</div><div class="line">    ...</div><div class="line">        #if !TARGET_IPHONE_SIMULATOR</div><div class="line">            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);</div><div class="line">            NSString *documentsDirectory = [paths objectAtIndex:0];</div><div class="line">            setenv(&quot;GCOV_PREFIX&quot;, [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);</div><div class="line">            setenv(&quot;GCOV_PREFIX_STRIP&quot;, &quot;13&quot;, 1);</div><div class="line">        #endif</div><div class="line"></div><div class="line">        extern void __gcov_flush(void);</div><div class="line">        __gcov_flush();</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>7，Xcode - build - run… - … - 按home键，app进入后台<br>8，Xcode - window - Devices - 目标设备 - Installed Apps - 目标app - 底部齿轮按钮 - Download Container - 下载下来的xcappdata 文件右键 show package content - 获取 AppData/Documents/arm64/ 下所有 .gcda 文件<br>9，项目/Pods/XcodeCoverage - env.sh - 获取 OBJECT_FILE_DIR_normal 和 CURRENT_ARCH - copy上一步设备上得到的 .gcda 文件到 <object_file_dir_normal>/<current_arch> 路径下。<br>10，项目/Pods/XcodeCoverage下运行<code>./getcov --show</code></current_arch></object_file_dir_normal></p>
 <hr>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/01/16/iOSCodeCoverage/" data-id="cjcg8hloy002nbtqj7wqjyki4" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/01/16/iOSCodeCoverage/" data-id="cjcg8jrss002lcnqjn0llnb8c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-coverage/">code coverage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcodecoverage/">xcodecoverage</a></li></ul>
