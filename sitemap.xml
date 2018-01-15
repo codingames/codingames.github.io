@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2018/01/16/iOSCodeCoverage/</loc>
+    
+    <lastmod>2018-01-15T13:16:50.144Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/01/15/daoShiShenYuanShen/</loc>
+    
+    <lastmod>2018-01-14T17:06:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/01/10/javaRuntimeExecComandBlock/</loc>
+    
+    <lastmod>2018-01-11T16:08:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2018/01/10/xcodebuildLogIssue/</loc>
     
-    <lastmod>2018-01-10T15:02:38.140Z</lastmod>
+    <lastmod>2018-01-11T03:49:20.991Z</lastmod>
     
   </url>
   
@@ -135,21 +156,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -170,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -198,14 +205,21 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -219,21 +233,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -241,6 +248,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -275,6 +289,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -289,27 +310,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -339,6 +339,27 @@
   
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
