@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2018/01/16/iOSCodeCoverage/</loc>
-    <lastmod>2018-01-15T13:18:36.048Z</lastmod>
+    <lastmod>2018-01-15T13:20:19.633Z</lastmod>
     <data>
         <display>
         <title>iOS 代码覆盖率 XcodeCoverage 真机</title>
@@ -576,47 +576,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        <title>Appium启动关闭App过程的adb命令</title>
+        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
          
         <tag>appium</tag>
+         
+        <tag>adb</tag>
          
          
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS安装app到Simulator</title>
-        <pubTime>2017-07-29T15:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -636,6 +612,30 @@
         <tag>android</tag>
          
         <tag>env</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS安装app到Simulator</title>
+        <pubTime>2017-07-29T15:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
@@ -716,28 +716,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android dumpsys cpuinfo大于100％解释</title>
-        <pubTime>2017-06-28T14:57:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>performance</tag>
-         
-         
-           
-             
-              <breadCrumb title="Test" url="http://tracenote.com/categories/Test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -753,6 +731,28 @@
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android dumpsys cpuinfo大于100％解释</title>
+        <pubTime>2017-06-28T14:57:00.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>performance</tag>
+         
+         
+           
+             
+              <breadCrumb title="Test" url="http://tracenote.com/categories/Test/"/>
           
         </display>
     </data>
@@ -1232,18 +1232,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium启动关闭App过程的adb命令</title>
-        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
         <tag>appium</tag>
-         
-        <tag>adb</tag>
          
          
            
