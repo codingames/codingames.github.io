@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2017/7 | tracenote</title>
+  <title>guava在jdk7和jdk8之间的问题 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/2017/07/index.html">
+  <meta name="description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用它: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
+<meta name="keywords" content="java,java8,guava,maven">
+<meta property="og:type" content="article">
+<meta property="og:title" content="guava在jdk7和jdk8之间的问题">
+<meta property="og:url" content="http://tracenote.com/2018/01/16/java8GuavaJDK7/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用它: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2018-01-16T12:42:07.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="guava在jdk7和jdk8之间的问题">
+<meta name="twitter:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用它: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,115 +65,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/30/javaGetSubClassName/" class="archive-article-date">
-  <time datetime="2017-07-30T15:30:00.000Z" itemprop="datePublished">Jul 30</time>
+        <section id="main"><article id="post-java8GuavaJDK7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/16/java8GuavaJDK7/" class="article-date">
+  <time datetime="2018-01-16T14:00:00.000Z" itemprop="datePublished">2018-01-16</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/30/javaGetSubClassName/">父类获取子类名字</a>
+    <h1 class="article-title" itemprop="name">
+      guava在jdk7和jdk8之间的问题
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/30/switchInputIssue/" class="archive-article-date">
-  <time datetime="2017-07-30T14:30:00.000Z" itemprop="datePublished">Jul 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/30/switchInputIssue/">caps lock切换输入法失效问题</a>
-    </h1>
-  
+        <p>Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用它:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>简记遇到的一个guava在jdk7和jdk8之间的问题。<br><a id="more"></a><br>jdk8的工程，引用别人jdk7环境的一个jar之后（下面以jdk7-jar代称），下述代码直接抛错，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> WebDriverWait(driver, timeout).until(ExpectedConditions.presenceOfElementLocated(by));</div></pre></td></tr></table></figure>
+<p>表面上看是selenium-support的jar包冲突，把这个jar包exclusion后仍有错误，经查，jdk7-jar中并没有引用这个jar。  </p>
+<p>仔细去翻代码，<code>until(Function&lt;? super T, V&gt; isTrue)</code>，需要的参数类型是<code>Function</code>（jdk8的类），而<br><code>ExpectedConditions.presenceOfElementLocated(by)</code>的返回类型<code>ExpectedCondition&lt;WebElement&gt;</code>的父类是<code>Function&lt;WebDriver, T&gt;</code>，这是guava的类<code>public interface Function&lt;F, T&gt; {</code>，发现该guava的jar版本很低，对比去掉jdk7-jar之后自动引用的高版本guava，<code>public interface Function&lt;F, T&gt; extends java.util.function.Function&lt;F, T&gt; {</code>，其中java.util.function.Function是jdk8的类，到此，问题解决并且背后原因明了，</p>
+<p>把jdk7-jar之中间接引用的guava包exclusion掉。</p>
+<p>jdk7环境下必须用低版本的guava包，因为高版本的guava继承了jdk8的类。在jdk7和8之间迁移jar时可以留意一下guava冲突问题。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/29/appInstallSimulator/" class="archive-article-date">
-  <time datetime="2017-07-29T15:30:00.000Z" itemprop="datePublished">Jul 29</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/29/appInstallSimulator/">iOS安装app到Simulator</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/05/HuaWeiBrush/" class="archive-article-date">
-  <time datetime="2017-07-05T04:15:00.000Z" itemprop="datePublished">Jul 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2018/01/16/java8GuavaJDK7/" data-id="cjchmpmkb003hdlqjjholmx4y" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/05/HuaWeiBrush/">华为刷机踩坑</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/02/housingLoan/" class="archive-article-date">
-  <time datetime="2017-07-01T16:15:00.000Z" itemprop="datePublished">Jul 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/02/housingLoan/">房贷博弈误区</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/guava/">guava</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java8/">java8</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/16/adbscreenshot/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">android命令行截图</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
