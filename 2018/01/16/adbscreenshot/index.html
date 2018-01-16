@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: UITest | tracenote</title>
+  <title>android命令行截图 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/UITest/index.html">
+  <meta name="description" content="安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。">
+<meta name="keywords" content="android,app,bash,shell,tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android命令行截图">
+<meta property="og:url" content="http://tracenote.com/2018/01/16/adbscreenshot/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2018-01-16T11:51:22.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="android命令行截图">
+<meta name="twitter:description" content="安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -63,39 +65,62 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/19/h5UITestChromeIssue/" class="archive-article-date">
-  <time datetime="2017-12-19T12:30:00.000Z" itemprop="datePublished">Dec 19</time>
+        <section id="main"><article id="post-adbscreenshot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/16/adbscreenshot/" class="article-date">
+  <time datetime="2018-01-16T13:30:00.000Z" itemprop="datePublished">2018-01-16</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/app/">app</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/19/h5UITestChromeIssue/">Chrome强制升级引起的H5自动化异常</a>
+    <h1 class="article-title" itemprop="name">
+      android命令行截图
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell /system/bin/screencap -p /sdcard/screenshotTmp.png &amp;&amp; d=`date <span class="string">"+%Y%m%d%H%M%S"</span>` &amp;&amp; adb pull /sdcard/screenshotTmp.png screenshot<span class="variable">$&#123;d// /&#125;</span>.png</div></pre></td></tr></table></figure>
+<p>上述命令将直接截屏并把图片传送至当前执行命令的目录下，文件名类似<code>screenshot20180116194309.png</code>。</p>
+<p>把上述命令存成脚本，然后再做一个alias指向该脚本，就可以实现terminal中敲<code>ass</code>(比如)截图到当前目录。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2018/01/16/adbscreenshot/" data-id="cjchkvq26000ba0qjs75j2b4k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/16/iOSCodeCoverage/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS 代码覆盖率 XcodeCoverage 真机</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
