@@ -4,7 +4,7 @@
   <url>
     <loc>http://tracenote.com/2018/01/16/java8GuavaJDK7/</loc>
     
-    <lastmod>2018-01-16T12:42:07.829Z</lastmod>
+    <lastmod>2018-01-16T12:44:32.439Z</lastmod>
     
   </url>
   
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -261,7 +261,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -269,13 +269,6 @@
   
   <url>
     <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -296,35 +289,14 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -338,7 +310,35 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -366,14 +366,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -381,6 +374,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
