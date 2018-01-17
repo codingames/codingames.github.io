@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-01-16T11:51:22.854Z">
+<meta property="og:updated_time" content="2018-01-17T09:58:19.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android命令行截图">
 <meta name="twitter:description" content="安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。">
@@ -93,14 +93,14 @@
       
         <p>安卓截图可以用机身快捷键然后上传也可以用DDMS之类工具，更简单的方式可以使用adb命令截图。</p>
 <a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell /system/bin/screencap -p /sdcard/screenshotTmp.png &amp;&amp; d=`date <span class="string">"+%Y%m%d%H%M%S"</span>` &amp;&amp; adb pull /sdcard/screenshotTmp.png screenshot<span class="variable">$&#123;d// /&#125;</span>.png</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb shell /system/bin/screencap -p /sdcard/screenshotTmp.png &amp;&amp; d=`date <span class="string">"+%Y%m%d%H%M%S"</span>` &amp;&amp; adb pull /sdcard/screenshotTmp.png screenshot<span class="variable">$d</span>.png</div></pre></td></tr></table></figure>
 <p>上述命令将直接截屏并把图片传送至当前执行命令的目录下，文件名类似<code>screenshot20180116194309.png</code>。</p>
 <p>把上述命令存成脚本，然后再做一个alias指向该脚本，就可以实现terminal中敲<code>ass</code>(比如)截图到当前目录。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/01/16/adbscreenshot/" data-id="cjcif41nt000hioqjchm2d987" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/01/16/adbscreenshot/" data-id="cjciwdmyw000a39qjig654pzo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>

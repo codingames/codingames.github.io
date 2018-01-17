@@ -5,18 +5,18 @@
   
   <title>guava在jdk7和jdk8之间的兼容问题 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
+  <meta name="description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个关于guava在jdk7和jdk8之间切换的冲突和兼容问题。">
 <meta name="keywords" content="java,java8,guava,maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="guava在jdk7和jdk8之间的兼容问题">
 <meta property="og:url" content="http://tracenote.com/2018/01/16/java8GuavaJDK7/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
+<meta property="og:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个关于guava在jdk7和jdk8之间切换的冲突和兼容问题。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-01-17T01:57:22.053Z">
+<meta property="og:updated_time" content="2018-01-17T10:00:50.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="guava在jdk7和jdk8之间的兼容问题">
-<meta name="twitter:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个guava在jdk7和jdk8之间的问题。">
+<meta name="twitter:description" content="Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用: 12&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt; 简记遇到的一个关于guava在jdk7和jdk8之间切换的冲突和兼容问题。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -93,7 +93,7 @@
       
         <p>Google Guava 非常流行，即使你不直接引用它，也可能由其它jar间接引用:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>简记遇到的一个guava在jdk7和jdk8之间的问题。<br><a id="more"></a><br>jdk8的工程，引用别人jdk7环境的一个jar之后（下面以jdk7-jar代称），下述代码直接抛错，</p>
+<p>简记遇到的一个关于guava在jdk7和jdk8之间切换的冲突和兼容问题。<br><a id="more"></a><br>jdk8的工程，引用别人jdk7环境的一个jar之后（下面以jdk7-jar代称），下述代码直接抛错，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> WebDriverWait(driver, timeout).until(ExpectedConditions.presenceOfElementLocated(by));</div></pre></td></tr></table></figure>
 <p>表面上看是selenium-support的jar包冲突，把这个jar包exclusion后仍有错误，经查，jdk7-jar中并没有引用这个jar。  </p>
 <p>仔细去翻代码，<code>until(Function&lt;? super T, V&gt; isTrue)</code>，需要的参数类型是<code>Function</code>（jdk8的类），而<br><code>ExpectedConditions.presenceOfElementLocated(by)</code>的返回类型<code>ExpectedCondition&lt;WebElement&gt;</code>的父类是<code>Function&lt;WebDriver, T&gt;</code>，这是guava的类<code>public interface Function&lt;F, T&gt; {</code>，该guava的jar版本很低，对比去掉jdk7-jar之后自动引用的高版本guava，<code>public interface Function&lt;F, T&gt; extends java.util.function.Function&lt;F, T&gt; {</code>，其中java.util.function.Function是jdk8的类，到此，问题解决并且背后原因明了，</p>
@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/01/16/java8GuavaJDK7/" data-id="cjcif41oz003fioqjkuim7afm" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/01/16/java8GuavaJDK7/" data-id="cjciwdn0c003e39qjx31e2dxr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/guava/">guava</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java8/">java8</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
