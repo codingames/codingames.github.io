@@ -4,7 +4,7 @@
   <url>
     <loc>http://tracenote.com/2018/01/22/bashStringSplit/</loc>
     
-    <lastmod>2018-01-22T12:47:14.124Z</lastmod>
+    <lastmod>2018-01-22T12:49:38.463Z</lastmod>
     
   </url>
   
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -282,6 +282,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -290,13 +297,6 @@
   
   <url>
     <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -394,14 +394,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
+    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
