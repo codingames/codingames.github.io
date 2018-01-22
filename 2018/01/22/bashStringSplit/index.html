@@ -9,11 +9,11 @@
 <meta name="keywords" content="env,bash,shell,tools,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 字符串分割">
-<meta property="og:url" content="http://tracenote.com/2018/01/22/bashsplit/index.html">
+<meta property="og:url" content="http://tracenote.com/2018/01/22/bashStringSplit/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="有一个类似”a:d::b::c”的字符串需要用bash shell以”::”分割开，分别得到a:d，b，c。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-01-22T12:32:41.413Z">
+<meta property="og:updated_time" content="2018-01-22T12:47:14.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 字符串分割">
 <meta name="twitter:description" content="有一个类似”a:d::b::c”的字符串需要用bash shell以”::”分割开，分别得到a:d，b，c。">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-bashsplit" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bashStringSplit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/01/22/bashsplit/" class="article-date">
+    <a href="/2018/01/22/bashStringSplit/" class="article-date">
   <time datetime="2018-01-22T12:30:00.000Z" itemprop="datePublished">2018-01-22</time>
 </a>
     
@@ -105,12 +105,12 @@
 <h4 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="variable">$p</span>|awk -F <span class="string">"::"</span>  <span class="string">'&#123;print $1; print $2; print $3&#125;'</span></div></pre></td></tr></table></figure>
 <p>输出：<br><blockquote><p>a:d<br>b<br>c</p>
 </blockquote><br>赋值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">link=`<span class="built_in">echo</span> <span class="variable">$p</span>|awk -F <span class="string">"::"</span>  <span class="string">'&#123;print $1&#125;'</span>`</div></pre></td></tr></table></figure></p>
-<p>问题解决。</p>
+<p>问题解决。当然这只是固定分隔符的简单情况，复杂的情况用strstr？</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/01/22/bashsplit/" data-id="cjcq6zqtr001vhxqjamtiq9m0" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/01/22/bashStringSplit/" data-id="cjcq7k7at001qjoqjnbzg0cm9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -182,7 +182,7 @@
       <ul>
         
           <li>
-            <a href="/2018/01/22/bashsplit/">linux 字符串分割</a>
+            <a href="/2018/01/22/bashStringSplit/">linux 字符串分割</a>
           </li>
         
           <li>
