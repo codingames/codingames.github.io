@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2018/01/23/blogOperationData/</loc>
+    <lastmod>2018-01-25T13:22:45.794Z</lastmod>
+    <data>
+        <display>
+        <title>blog运营数据：访客遍布全球</title>
+        <pubTime>2018-01-23T12:30:00.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+        <tag>misc</tag>
+         
+        <tag>statistics</tag>
+         
+         
+           
+             
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2018/01/22/bashStringSplit/</loc>
     <lastmod>2018-01-22T12:49:38.463Z</lastmod>
     <data>
@@ -408,9 +432,9 @@
         
         <tag>macOS</tag>
          
-        <tag>iCloud</tag>
-         
         <tag>blog</tag>
+         
+        <tag>iCloud</tag>
          
          
            
@@ -685,20 +709,20 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium 资料摘抄</title>
-        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
+        <tag>iOS</tag>
+         
         <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>摘抄</tag>
          
          
            
@@ -847,12 +871,12 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA 引用其它工程</title>
-        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA code format</title>
+        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
         
         <tag>java</tag>
          
@@ -871,12 +895,12 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA 引用其它工程</title>
+        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
         
         <tag>java</tag>
          
@@ -923,17 +947,13 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>解决appium Xcode version 9.0 is not yet supported</title>
+        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
         <tag>iOS</tag>
          
         <tag>appium</tag>
@@ -997,18 +1017,14 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Lambda 学习笔记</title>
-        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
+        <title>父类获取子类名字</title>
+        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
         
         <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>lambda</tag>
          
          
            
@@ -1021,14 +1037,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>父类获取子类名字</title>
-        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
+        <title>Java 8 Lambda 学习笔记</title>
+        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
         
         <tag>java</tag>
+         
+        <tag>java8</tag>
+         
+        <tag>lambda</tag>
          
          
            
@@ -1135,16 +1155,20 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
+        <title>Appium 资料摘抄</title>
+        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
         
-        <tag>iOS</tag>
+        <tag>android</tag>
          
         <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>摘抄</tag>
          
          
            
@@ -1181,30 +1205,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>从零开始配置appium iOS环境</title>
-        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1222,6 +1222,30 @@
            
              
               <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>从零开始配置appium iOS环境</title>
+        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
