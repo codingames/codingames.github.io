@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2018/01/23/blogOperationData/</loc>
-    <lastmod>2018-01-25T13:22:45.794Z</lastmod>
+    <lastmod>2018-01-26T02:26:16.626Z</lastmod>
     <data>
         <display>
         <title>blog运营数据：访客遍布全球</title>
@@ -14,6 +14,8 @@
         <tag>blog</tag>
          
         <tag>misc</tag>
+         
+        <tag>operation</tag>
          
         <tag>statistics</tag>
          
@@ -709,20 +711,20 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>Appium 资料摘抄</title>
+        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
          
-        <tag>iOS</tag>
-         
         <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>摘抄</tag>
          
          
            
@@ -1017,26 +1019,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>父类获取子类名字</title>
-        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1049,6 +1031,26 @@
         <tag>java8</tag>
          
         <tag>lambda</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>父类获取子类名字</title>
+        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
+        
+        <tag>java</tag>
          
          
            
@@ -1155,20 +1157,20 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium 资料摘抄</title>
-        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
+        <tag>iOS</tag>
+         
         <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>摘抄</tag>
          
          
            
