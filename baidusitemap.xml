@@ -29,6 +29,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://tracenote.com/2018/01/22/bashStringSplit/</loc>
     <lastmod>2018-01-22T12:49:38.463Z</lastmod>
@@ -114,7 +115,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://tracenote.com/2018/01/16/java8GuavaJDK7/</loc>
@@ -274,9 +274,9 @@
         <title>微信跳一跳抓接口刷分</title>
         <pubTime>2018-01-04T04:30:00.000Z</pubTime>
         
-        <tag>api</tag>
-         
         <tag>robot</tag>
+         
+        <tag>api</tag>
          
          
            
@@ -356,9 +356,9 @@
          
         <tag>python</tag>
          
-        <tag>robot</tag>
-         
         <tag>automation</tag>
+         
+        <tag>robot</tag>
          
          
            
@@ -530,9 +530,9 @@
         <title>mac上nginx配置</title>
         <pubTime>2017-10-29T04:30:00.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>server</tag>
+         
+        <tag>env</tag>
          
          
            
@@ -578,9 +578,9 @@
         <title>体验腾讯云服务器</title>
         <pubTime>2017-03-27T13:55:24.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>server</tag>
+         
+        <tag>env</tag>
          
         <tag>linux</tag>
          
@@ -711,20 +711,20 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium 资料摘抄</title>
-        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
+        <tag>iOS</tag>
+         
         <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>摘抄</tag>
          
          
            
@@ -995,30 +995,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Stream 学习笔记</title>
-        <pubTime>2017-06-25T14:57:23.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>stream</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1063,6 +1039,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Stream 学习笔记</title>
+        <pubTime>2017-06-25T14:57:23.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>java8</tag>
+         
+        <tag>stream</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1094,9 +1094,9 @@
         <title>DNSPod解析Godaddy域名</title>
         <pubTime>2017-03-19T12:18:25.000Z</pubTime>
         
-        <tag>env</tag>
-         
         <tag>server</tag>
+         
+        <tag>env</tag>
          
         <tag>domain</tag>
          
@@ -1133,6 +1133,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium 资料摘抄</title>
+        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>摘抄</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1157,49 +1183,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>华为刷机踩坑</title>
+        <pubTime>2017-07-05T04:15:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
          
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
+        <tag>env</tag>
          
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
-        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
-        
-        <tag>server</tag>
-         
-        <tag>web</tag>
-         
-        <tag>spring boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
           
         </display>
     </data>
@@ -1347,21 +1345,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>华为刷机踩坑</title>
-        <pubTime>2017-07-05T04:15:00.000Z</pubTime>
+        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
+        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
         
-        <tag>android</tag>
+        <tag>server</tag>
          
-        <tag>env</tag>
+        <tag>web</tag>
+         
+        <tag>spring boot</tag>
          
          
            
              
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
