@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: robot | tracenote</title>
+  <title>java多重继承和java 8 接口默认方法 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/robot/index.html">
+  <meta name="description" content="Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免菱形继承问题（钻石问题），而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。 Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。">
+<meta name="keywords" content="java,java8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java多重继承和java 8 接口默认方法">
+<meta property="og:url" content="http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免菱形继承问题（钻石问题），而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。 Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2018-05-16T13:31:20.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="java多重继承和java 8 接口默认方法">
+<meta name="twitter:description" content="Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免菱形继承问题（钻石问题），而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。 Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,58 +67,59 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/04/weChatJumpsAPI/" class="archive-article-date">
-  <time datetime="2018-01-04T04:30:00.000Z" itemprop="datePublished">Jan 4</time>
+        <section id="main"><article id="post-java8MultipleInheritanceAndInterfaceDefaultMethod" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/" class="article-date">
+  <time datetime="2018-05-16T12:00:00.000Z" itemprop="datePublished">2018-05-16</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/weChatJumpsAPI/">微信跳一跳抓接口刷分</a>
+    <h1 class="article-title" itemprop="name">
+      java多重继承和java 8 接口默认方法
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/01/weChatJumpsRobot/" class="archive-article-date">
-  <time datetime="2018-01-01T04:30:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/weChatJumpsRobot/">用机器人来玩微信跳一跳</a>
-    </h1>
-  
+        <p>Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免<a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem" target="_blank" rel="external"><strong>菱形继承问题（钻石问题）</strong></a>，而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。</p>
+<p>Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/" data-id="cjh95bjxf003r1cqjx2yvz4tn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java8/">java8</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/15/dnsSettings/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">网站的DNS解析配置</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
