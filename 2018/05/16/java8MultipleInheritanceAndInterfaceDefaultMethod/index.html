@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免菱形继承问题（钻石问题），而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。 Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-05-16T13:31:20.340Z">
+<meta property="og:updated_time" content="2018-05-16T13:40:42.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多重继承和java 8 接口默认方法">
 <meta name="twitter:description" content="Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免菱形继承问题（钻石问题），而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。 Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。">
@@ -95,11 +95,17 @@
       
         <p>Java的class是不支持多重继承的，一个子类只能继承一个父类，（可以实现多个接口），原因就是为避免<a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem" target="_blank" rel="external"><strong>菱形继承问题（钻石问题）</strong></a>，而interface可以继承多个interface，因为接口没有实现，不存在菱形继承问题。</p>
 <p>Java 8 的新特性，接口方法可以有默认实现，如果接口A、B有同样默认方法，为避免菱形继承问题，当类同时实现A、B，或者当其它接口同时继承A、B时，就必须重写这个冲突的方法。</p>
+<a id="more"></a>
+<p>另外方法重写时加不加@Override并不影响运行效果，但是，</p>
+<ul>
+<li>加了@Override，当写错了需要继承的方法名称时，IDE就会报错提示纠正。</li>
+<li>便于代码阅读，也算是代码规范。</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/" data-id="cjh95bjxf003r1cqjx2yvz4tn" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/" data-id="cjh95smrp00412lqjewl3r60t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java8/">java8</a></li></ul>
