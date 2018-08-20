@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: guava | tracenote</title>
+  <title>blog hexo DTraceProviderBindings 报错解决 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/guava/index.html">
+  <meta name="description" content="blog的hexo报错解决：   { [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }">
+<meta name="keywords" content="issue,blog,misc,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="blog hexo DTraceProviderBindings 报错解决">
+<meta property="og:url" content="http://tracenote.com/2018/08/20/issueBlogHexo/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="blog的hexo报错解决：   { [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2018-08-20T11:44:48.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="blog hexo DTraceProviderBindings 报错解决">
+<meta name="twitter:description" content="blog的hexo报错解决：   { [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,39 +67,66 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/java8GuavaJDK7/" class="archive-article-date">
-  <time datetime="2018-01-16T14:00:00.000Z" itemprop="datePublished">Jan 16</time>
+        <section id="main"><article id="post-issueBlogHexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/20/issueBlogHexo/" class="article-date">
+  <time datetime="2018-08-20T04:30:00.000Z" itemprop="datePublished">2018-08-20</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/misc/">misc</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/java8GuavaJDK7/">guava在jdk7和jdk8之间的兼容问题</a>
+    <h1 class="article-title" itemprop="name">
+      blog hexo DTraceProviderBindings 报错解决
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>blog的hexo报错解决：</p>
+<blockquote>
+<blockquote>
+<p>{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }</p>
+</blockquote>
+</blockquote>
+<a id="more"></a>
+<p>百度到的中文解决办法不行，如，<a href="https://www.jianshu.com/p/4eaa609d4fc0" target="_blank" rel="external">https://www.jianshu.com/p/4eaa609d4fc0</a> 不管用，关键时刻还是要靠英文资料<a href="https://stackoverflow.com/questions/37550100/cannot-find-module-dtrace-provider" target="_blank" rel="external">https://stackoverflow.com/questions/37550100/cannot-find-module-dtrace-provider</a></p>
+<p>重装<code>dtrace-provider</code>即可：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install dtrace-provider --save</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2018/08/20/issueBlogHexo/" data-id="cjl27s9u4003sfqqjaihr2o91" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/misc/">misc</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/19/readingNotesTestingWithRobotium/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">《手机测试Robotium实战教程》读书笔记</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
