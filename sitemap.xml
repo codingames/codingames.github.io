@@ -2,23 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/</loc>
+    <loc>http://tracenote.com/2018/08/19/readingNotesTestingWithRobotium/</loc>
     
-    <lastmod>2018-05-16T13:40:42.313Z</lastmod>
+    <lastmod>2018-08-20T06:36:06.312Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2018/05/15/dnsSettings/</loc>
+    <loc>http://tracenote.com/2018/08/11/readingNotesABriefHistoryOf%20Humankind/</loc>
     
-    <lastmod>2018-05-16T12:30:37.857Z</lastmod>
+    <lastmod>2018-08-20T06:35:07.521Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/08/01/codeCollections/</loc>
+    
+    <lastmod>2018-08-10T06:21:02.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/06/30/javaGenericsParam/</loc>
+    
+    <lastmod>2018-08-09T11:04:23.801Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/07/25/appiumUpgradeIssues/</loc>
+    
+    <lastmod>2018-08-03T17:17:33.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tracenote.com/2018/05/08/elliptical/</loc>
     
-    <lastmod>2018-05-08T16:32:03.000Z</lastmod>
+    <lastmod>2018-08-03T09:00:26.656Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/07/12/mvnParams/</loc>
+    
+    <lastmod>2018-08-03T08:58:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
+    
+    <lastmod>2018-07-26T06:34:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/06/18/telnetNc/</loc>
+    
+    <lastmod>2018-06-18T16:18:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/05/31/sublimeText3HtmlFormat/</loc>
+    
+    <lastmod>2018-06-01T09:50:39.633Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/05/15/dnsSettings/</loc>
+    
+    <lastmod>2018-05-24T03:06:32.639Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/</loc>
+    
+    <lastmod>2018-05-16T15:09:46.000Z</lastmod>
     
   </url>
   
@@ -170,20 +233,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -219,58 +268,16 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
     
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
@@ -296,14 +303,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -317,7 +317,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -345,20 +352,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -366,28 +359,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -408,7 +387,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -422,7 +408,28 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -436,6 +443,48 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -443,7 +492,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
