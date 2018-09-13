@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-09-13T09:56:40.177Z">
+<meta property="og:updated_time" content="2018-09-13T11:17:37.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="appium hybrid app web view">
 <meta name="twitter:description" content="hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。">
@@ -97,17 +97,17 @@
 <p>官方示例：<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/hybrid.md" target="_blank" rel="external">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/hybrid.md</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// java</span></div><div class="line"><span class="comment">// assuming we have a set of capabilities</span></div><div class="line">driver = <span class="keyword">new</span> AppiumDriver(<span class="keyword">new</span> URL(<span class="string">"http://127.0.0.1:4723/wd/hub"</span>), capabilities);</div><div class="line"></div><div class="line">Set&lt;String&gt; contextNames = driver.getContextHandles();</div><div class="line"><span class="keyword">for</span> (String contextName : contextNames) &#123;</div><div class="line">    System.out.println(contextNames); <span class="comment">//prints out something like NATIVE_APP \n WEBVIEW_1</span></div><div class="line">&#125;</div><div class="line">driver.context(contextNames.toArray()[<span class="number">1</span>]); <span class="comment">// set context to WEBVIEW_1</span></div><div class="line"></div><div class="line"><span class="comment">//do some web testing</span></div><div class="line">String myText = driver.findElement(By.cssSelector(<span class="string">".green_button"</span>)).click();</div><div class="line"></div><div class="line">driver.context(<span class="string">"NATIVE_APP"</span>);</div><div class="line"></div><div class="line"><span class="comment">// do more native testing if we want</span></div><div class="line"></div><div class="line">driver.quit();</div></pre></td></tr></table></figure>
 <p>打印获取到的<code>contextNames</code>发现只有一个元素：[‘NATIVE_APP’]，没有WEBVIEW_1，无法切换。查资料 <blockquote><p>For a real device you need to have “setWebContentsDebuggingEnabled” in the web view. Without it the web view is not exposed to automation tools </p>
-</blockquote><br>需求修改app源程序代码：</p>
+</blockquote><br>需要修改app源程序代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT) &#123;</div><div class="line">        WebView.setWebContentsDebuggingEnabled(<span class="keyword">true</span>);&#125;</div></pre></td></tr></table></figure>
 <p>另外有说法是appium web view只支持chrome内核的解析器，非chrome内核的无法识别。</p>
 <p>这里有别人的一份总结：<a href="https://testerhome.com/topics/10951" target="_blank" rel="external">https://testerhome.com/topics/10951</a></p>
 <hr>
 <p>【但是】上面这些并没有什么卵用。</p>
-<h4 id="实际操作中发现，虽然页面确认是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作完全可行，不用费劲去切换。"><a href="#实际操作中发现，虽然页面确认是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作完全可行，不用费劲去切换。" class="headerlink" title="实际操作中发现，虽然页面确认是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作完全可行，不用费劲去切换。"></a>实际操作中发现，虽然页面确认是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作完全可行，不用费劲去切换。</h4>
+<h4 id="实际操作中发现，当页面是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作可行，不用费劲切换。"><a href="#实际操作中发现，当页面是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作可行，不用费劲切换。" class="headerlink" title="实际操作中发现，当页面是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作可行，不用费劲切换。"></a>实际操作中发现，当页面是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作可行，不用费劲切换。</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/09/10/appiumHybrid/" data-id="cjm0ehe82001b19qjlm22j920" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2018/09/10/appiumHybrid/" data-id="cjm0hcr4s00114zqjxr1wagly" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hybrid/">hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-view/">web view</a></li></ul>
