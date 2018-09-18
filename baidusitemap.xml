@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
+    <lastmod>2018-09-18T06:54:59.410Z</lastmod>
+    <data>
+        <display>
+        <title>TestNG @Factory</title>
+        <pubTime>2017-06-08T05:39:06.000Z</pubTime>
+        
+        <tag>testng</tag>
+         
+         
+           
+             
+              <breadCrumb title="Test" url="http://tracenote.com/categories/Test/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
-    <lastmod>2018-09-18T06:21:38.477Z</lastmod>
+    <lastmod>2018-09-18T06:54:45.619Z</lastmod>
     <data>
         <display>
         <title>Android dumpsys cpuinfo大于100％解释</title>
@@ -18,7 +38,7 @@
          
            
              
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
+              <breadCrumb title="Test" url="http://tracenote.com/categories/Test/"/>
           
         </display>
     </data>
@@ -26,19 +46,27 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
-    <lastmod>2018-09-18T06:21:21.931Z</lastmod>
+    <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
+    <lastmod>2018-09-18T06:54:25.989Z</lastmod>
     <data>
         <display>
-        <title>TestNG @Factory</title>
-        <pubTime>2017-06-08T05:39:06.000Z</pubTime>
+        <title>Chrome强制升级引起的H5自动化异常</title>
+        <pubTime>2017-12-19T12:30:00.000Z</pubTime>
         
-        <tag>testng</tag>
+        <tag>web</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>h5</tag>
+         
+        <tag>UITest</tag>
+         
+        <tag>test</tag>
          
          
            
              
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
+              <breadCrumb title="Test" url="http://tracenote.com/categories/Test/"/>
           
         </display>
     </data>
@@ -917,34 +945,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
-    <lastmod>2017-12-20T15:21:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>Chrome强制升级引起的H5自动化异常</title>
-        <pubTime>2017-12-19T12:30:00.000Z</pubTime>
-        
-        <tag>web</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>h5</tag>
-         
-        <tag>UITest</tag>
-         
-        <tag>test</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     <data>
@@ -1303,21 +1303,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>如何在本地搭建Android应用Crash跟踪系统－ACRA</title>
-        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
         
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -1371,23 +1367,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        <title>IntelliJ IDEA code format</title>
+        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>IntelliJ</tag>
+         
+        <tag>IED</tag>
+         
+         
+           
+             
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何在本地搭建Android应用Crash跟踪系统－ACRA</title>
+        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>appium</tag>
-         
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -1419,45 +1437,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>房贷博弈误区</title>
-        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
-        <tag>realEstate</tag>
+        <tag>app</tag>
          
-        <tag>finance</tag>
+        <tag>android</tag>
+         
+        <tag>appium</tag>
          
          
            
              
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -1539,23 +1535,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>DNSPod解析Godaddy域名</title>
-        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        <title>adb获取安卓手机厂商型号</title>
+        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
         <tag>env</tag>
-         
-        <tag>server</tag>
-         
-        <tag>domain</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -1585,23 +1581,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>adb获取安卓手机厂商型号</title>
-        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
+        <title>DNSPod解析Godaddy域名</title>
+        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
         
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
         <tag>env</tag>
+         
+        <tag>server</tag>
+         
+        <tag>domain</tag>
          
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -1655,46 +1651,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——模板方法模式</title>
-        <pubTime>2017-06-04T11:54:21.000Z</pubTime>
-        
-        <tag>设计模式</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1710,6 +1666,50 @@
            
              
               <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>房贷博弈误区</title>
+        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
+        
+        <tag>realEstate</tag>
+         
+        <tag>finance</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式——模板方法模式</title>
+        <pubTime>2017-06-04T11:54:21.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
           
         </display>
     </data>

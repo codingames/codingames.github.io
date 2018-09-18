@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
+    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
     
-    <lastmod>2018-09-18T06:21:38.477Z</lastmod>
+    <lastmod>2018-09-18T06:54:59.410Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
+    <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
     
-    <lastmod>2018-09-18T06:21:21.931Z</lastmod>
+    <lastmod>2018-09-18T06:54:45.619Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
+    
+    <lastmod>2018-09-18T06:54:25.989Z</lastmod>
     
   </url>
   
@@ -268,13 +275,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
-    
-    <lastmod>2017-12-20T15:21:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -380,7 +380,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -401,7 +401,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -415,14 +422,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -450,7 +450,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -464,7 +464,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -485,21 +485,21 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
