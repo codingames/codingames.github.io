@@ -345,13 +345,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -359,7 +352,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
+    <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -367,6 +360,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -471,6 +471,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -485,21 +492,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
