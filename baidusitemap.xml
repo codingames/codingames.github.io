@@ -3,6 +3,524 @@
 
 
     
+  <url>
+    <loc>http://tracenote.com/2020/08/03/20200803helloVue/</loc>
+    <lastmod>2020-08-03T18:01:06.846Z</lastmod>
+    <data>
+        <display>
+        <title>Hello Vue!</title>
+        <pubTime>2020-08-03T15:00:00.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>fe</tag>
+         
+         
+           
+             
+              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/12/28/androidJacoco/</loc>
+    <lastmod>2020-08-03T17:58:08.720Z</lastmod>
+    <data>
+        <display>
+        <title>android代码覆盖率jacoco实践</title>
+        <pubTime>2017-12-28T13:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>jacoco</tag>
+         
+        <tag>gradle</tag>
+         
+        <tag>code coverage</tag>
+         
+        <tag>代码覆盖率</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/08/01/codeCollections/</loc>
+    <lastmod>2020-08-03T17:58:07.679Z</lastmod>
+    <data>
+        <display>
+        <title>不得不收集的代码[摘抄]</title>
+        <pubTime>2018-08-01T12:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>code</tag>
+         
+        <tag>摘抄</tag>
+         
+        <tag>Utils</tag>
+         
+        <tag>common</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
+    <lastmod>2020-08-03T17:58:06.775Z</lastmod>
+    <data>
+        <display>
+        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
+        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
+        
+        <tag>server</tag>
+         
+        <tag>web</tag>
+         
+        <tag>spring boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/01/16/java8GuavaJDK7/</loc>
+    <lastmod>2020-08-03T17:58:05.616Z</lastmod>
+    <data>
+        <display>
+        <title>guava在jdk7和jdk8之间的兼容问题</title>
+        <pubTime>2018-01-16T14:00:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Java8</tag>
+         
+        <tag>guava</tag>
+         
+        <tag>maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <lastmod>2020-08-03T17:58:04.881Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Lambda 学习笔记</title>
+        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Java8</tag>
+         
+        <tag>lambda</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/</loc>
+    <lastmod>2020-08-03T17:58:04.116Z</lastmod>
+    <data>
+        <display>
+        <title>java多重继承和java 8 接口默认方法</title>
+        <pubTime>2018-05-16T12:00:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Java8</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    <lastmod>2020-08-03T17:58:03.281Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Stream 学习笔记</title>
+        <pubTime>2017-06-25T14:57:23.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Java8</tag>
+         
+        <tag>stream</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/08/31/javaA/</loc>
+    <lastmod>2020-08-03T17:58:02.421Z</lastmod>
+    <data>
+        <display>
+        <title>Answers To Questions of Java</title>
+        <pubTime>2018-08-31T14:00:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>question</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/01/29/javaArraylistnCopiesIssue/</loc>
+    <lastmod>2020-08-03T17:58:01.600Z</lastmod>
+    <data>
+        <display>
+        <title>Java ArrayList nCopies 相关的一个小坑</title>
+        <pubTime>2018-01-29T14:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/06/30/javaGenericsParam/</loc>
+    <lastmod>2020-08-03T17:58:00.736Z</lastmod>
+    <data>
+        <display>
+        <title>List<子类>传入someMethod(List<父类> alist)问题</title>
+        <pubTime>2018-06-30T12:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>generics</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    <lastmod>2020-08-03T17:57:59.848Z</lastmod>
+    <data>
+        <display>
+        <title>父类获取子类名字</title>
+        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/09/26/javaJSON/</loc>
+    <lastmod>2020-08-03T17:57:58.928Z</lastmod>
+    <data>
+        <display>
+        <title>Java json</title>
+        <pubTime>2018-09-26T04:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>json</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
+    <lastmod>2020-08-03T17:57:58.098Z</lastmod>
+    <data>
+        <display>
+        <title>Java Properties 中文乱码</title>
+        <pubTime>2017-11-01T04:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/08/31/javaQ/</loc>
+    <lastmod>2020-08-03T17:57:57.265Z</lastmod>
+    <data>
+        <display>
+        <title>Questions of Java</title>
+        <pubTime>2018-08-31T13:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>question</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/01/10/javaRuntimeExecComandBlock/</loc>
+    <lastmod>2020-08-03T17:57:56.464Z</lastmod>
+    <data>
+        <display>
+        <title>Java Runtime.getRuntime().exec() 阻塞问题</title>
+        <pubTime>2018-01-10T14:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>command</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2018/07/12/mvnParams/</loc>
+    <lastmod>2020-08-03T17:57:54.872Z</lastmod>
+    <data>
+        <display>
+        <title>mvn传参数</title>
+        <pubTime>2018-07-12T12:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>maven</tag>
+         
+        <tag>mvn</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
+    <lastmod>2020-08-03T17:57:29.113Z</lastmod>
+    <data>
+        <display>
+        <title>Java8环境不支持Lambda？</title>
+        <pubTime>2017-06-16T01:10:02.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
+    <lastmod>2020-08-03T17:56:26.714Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式——单例模式</title>
+        <pubTime>2017-06-03T13:28:15.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
+    <lastmod>2020-08-03T17:56:25.344Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式——模板方法模式</title>
+        <pubTime>2017-06-04T11:54:21.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
+    <lastmod>2020-08-03T17:56:24.367Z</lastmod>
+    <data>
+        <display>
+        <title>IntelliJ IDEA code format</title>
+        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>IntelliJ</tag>
+         
+        <tag>IED</tag>
+         
+         
+           
+             
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
+    <lastmod>2020-08-03T17:56:23.311Z</lastmod>
+    <data>
+        <display>
+        <title>IntelliJ IDEA 引用其它工程</title>
+        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>IntelliJ</tag>
+         
+        <tag>IED</tag>
+         
+         
+           
+             
+              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://tracenote.com/2018/06/18/telnetNc/</loc>
@@ -20,30 +538,6 @@
            
              
               <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
-    <lastmod>2020-08-03T16:14:48.817Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
-        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
-        
-        <tag>server</tag>
-         
-        <tag>web</tag>
-         
-        <tag>spring boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -557,28 +1051,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2018/09/26/javaJSON/</loc>
-    <lastmod>2018-09-26T04:10:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java json</title>
-        <pubTime>2018-09-26T04:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>json</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2018/09/20/dockerInstall/</loc>
     <lastmod>2018-09-21T10:21:34.000Z</lastmod>
     <data>
@@ -695,50 +1167,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2018/08/31/javaA/</loc>
-    <lastmod>2018-09-10T12:27:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>Answers To Questions of Java</title>
-        <pubTime>2018-08-31T14:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>question</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/08/31/javaQ/</loc>
-    <lastmod>2018-09-10T11:50:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Questions of Java</title>
-        <pubTime>2018-08-31T13:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>question</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2018/08/20/issueBlogHexo/</loc>
     <lastmod>2018-08-20T11:44:48.000Z</lastmod>
     <data>
@@ -787,60 +1215,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2018/08/01/codeCollections/</loc>
-    <lastmod>2018-08-10T06:21:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>不得不收集的代码[摘抄]</title>
-        <pubTime>2018-08-01T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>code</tag>
-         
-        <tag>摘抄</tag>
-         
-        <tag>Utils</tag>
-         
-        <tag>common</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/06/30/javaGenericsParam/</loc>
-    <lastmod>2018-08-09T11:04:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>List<子类>传入someMethod(List<父类> alist)问题</title>
-        <pubTime>2018-06-30T12:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>generics</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2018/05/08/elliptical/</loc>
     <lastmod>2018-08-03T09:00:26.000Z</lastmod>
     <data>
@@ -867,30 +1241,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2018/07/12/mvnParams/</loc>
-    <lastmod>2018-08-03T08:58:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>mvn传参数</title>
-        <pubTime>2018-07-12T12:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>maven</tag>
-         
-        <tag>mvn</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2018/05/31/sublimeText3HtmlFormat/</loc>
     <lastmod>2018-06-01T09:50:39.000Z</lastmod>
     <data>
@@ -908,50 +1258,6 @@
            
              
               <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/</loc>
-    <lastmod>2018-05-16T15:09:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>java多重继承和java 8 接口默认方法</title>
-        <pubTime>2018-05-16T12:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/01/29/javaArraylistnCopiesIssue/</loc>
-    <lastmod>2018-01-29T16:40:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java ArrayList nCopies 相关的一个小坑</title>
-        <pubTime>2018-01-29T14:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -987,62 +1293,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/28/androidJacoco/</loc>
-    <lastmod>2018-01-20T06:54:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>android代码覆盖率jacoco实践</title>
-        <pubTime>2017-12-28T13:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>jacoco</tag>
-         
-        <tag>gradle</tag>
-         
-        <tag>code coverage</tag>
-         
-        <tag>代码覆盖率</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/01/16/java8GuavaJDK7/</loc>
-    <lastmod>2018-01-17T10:00:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>guava在jdk7和jdk8之间的兼容问题</title>
-        <pubTime>2018-01-16T14:00:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>guava</tag>
-         
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2018/01/15/daoShiShenYuanShen/</loc>
     <lastmod>2018-01-14T17:06:31.000Z</lastmod>
     <data>
@@ -1058,28 +1308,6 @@
            
              
               <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2018/01/10/javaRuntimeExecComandBlock/</loc>
-    <lastmod>2018-01-11T16:08:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Runtime.getRuntime().exec() 阻塞问题</title>
-        <pubTime>2018-01-10T14:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>command</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -1413,6 +1641,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -1437,21 +1689,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>jsonp get 问题</title>
-        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
+        <title>解决appium Xcode version 9.0 is not yet supported</title>
+        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
         
-        <tag>web</tag>
+        <tag>iOS</tag>
          
-        <tag>issue</tag>
+        <tag>appium</tag>
          
          
            
              
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium启动关闭App过程的adb命令</title>
+        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>adb</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -1483,114 +1759,40 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Stream 学习笔记</title>
-        <pubTime>2017-06-25T14:57:23.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>stream</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        <title>adb获取安卓手机厂商型号</title>
+        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
+        <tag>env</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        
         <tag>appium</tag>
          
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA 引用其它工程</title>
-        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium启动关闭App过程的adb命令</title>
-        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>adb</tag>
+        <tag>issue</tag>
          
          
            
@@ -1631,23 +1833,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
         
-        <tag>env</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
-         
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -1655,111 +1851,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>父类获取子类名字</title>
-        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>adb获取安卓手机厂商型号</title>
-        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
+        <title>android打包</title>
+        <pubTime>2017-10-28T13:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>env</tag>
-         
          
            
              
               <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
-        
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——模板方法模式</title>
-        <pubTime>2017-06-04T11:54:21.000Z</pubTime>
-        
-        <tag>设计模式</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Properties 中文乱码</title>
-        <pubTime>2017-11-01T04:30:00.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>env</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
           
         </display>
     </data>
@@ -1789,104 +1895,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>iOS</tag>
-         
         <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——单例模式</title>
-        <pubTime>2017-06-03T13:28:15.000Z</pubTime>
-        
-        <tag>设计模式</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java8环境不支持Lambda？</title>
-        <pubTime>2017-06-16T01:10:02.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
          
          
            
@@ -1925,23 +1945,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        <title>优化history</title>
+        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
         
-        <tag>android</tag>
+        <tag>env</tag>
          
-        <tag>appium</tag>
+        <tag>linux</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>jsonp get 问题</title>
+        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
+        
+        <tag>web</tag>
          
         <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
@@ -1949,45 +1991,25 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Lambda 学习笔记</title>
-        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java8</tag>
-         
-        <tag>lambda</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://tracenote.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>android打包</title>
-        <pubTime>2017-10-28T13:30:00.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
+         
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
