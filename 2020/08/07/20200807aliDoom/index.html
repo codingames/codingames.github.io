@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: linux | tracenote</title>
+  <title>阿里Doom双引擎自动回归服务简介 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/linux/index.html">
+  <meta name="description" content="阿里Doom双引擎自动回归服务，目前尚未开源，作为云效平台的一部分提供给公众。">
+<meta name="keywords" content="Java,tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里Doom双引擎自动回归服务简介">
+<meta property="og:url" content="http://tracenote.com/2020/08/07/20200807aliDoom/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="阿里Doom双引擎自动回归服务，目前尚未开源，作为云效平台的一部分提供给公众。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-08-08T10:07:56.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="阿里Doom双引擎自动回归服务简介">
+<meta name="twitter:description" content="阿里Doom双引擎自动回归服务，目前尚未开源，作为云效平台的一部分提供给公众。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,125 +67,63 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/22/bashStringSplit/" class="archive-article-date">
-  <time datetime="2018-01-22T12:30:00.000Z" itemprop="datePublished">Jan 22</time>
+        <section id="main"><article id="post-20200807aliDoom" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/07/20200807aliDoom/" class="article-date">
+  <time datetime="2020-08-07T15:00:00.000Z" itemprop="datePublished">2020-08-07</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/22/bashStringSplit/">linux 字符串分割</a>
+    <h1 class="article-title" itemprop="name">
+      阿里Doom双引擎自动回归服务简介
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/18/macBashrc/" class="archive-article-date">
-  <time datetime="2017-09-18T12:30:00.000Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/macBashrc/">macOS .bashrc 无效问题</a>
-    </h1>
-  
+        <p>阿里Doom双引擎自动回归服务，目前尚未开源，作为云效平台的一部分提供给公众。<br><a id="more"></a></p>
+<p>猜测其底层利用JVM AOP，基于已经开源的录制回放工具jvm-sandbox-repeater（改天再介绍）？而JVM-Sandbox底层核心技术即Java Instrument，参考 <a href="https://mp.weixin.qq.com/s/t_qDt9iO8_-hC8GA7dsWIw" target="_blank" rel="external">[摘抄]Java Instrumentation 简介</a></p>
+<p>通过获取方法的请求参数和返回，对比录制流量和真实流量。</p>
+<p>对于读接口，流量不拦截。</p>
+<p>关键是<strong>写</strong>接口，从接入指南看，是做了中间件隔离，即流量拦截，只校验发给中间件的请求参数。</p>
+<p><a href="https://mp.weixin.qq.com/s/AEqKp3xH0El3YHX18SKRgA" target="_blank" rel="external">详见公众号</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/07/linuxGrepColorIssue/" class="archive-article-date">
-  <time datetime="2017-09-07T09:30:00.000Z" itemprop="datePublished">Sep 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/07/linuxGrepColorIssue/">grep color与重定向</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/18/betterHistory/" class="archive-article-date">
-  <time datetime="2017-08-18T04:30:00.000Z" itemprop="datePublished">Aug 18</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/08/07/20200807aliDoom/" data-id="ckdlhx3d10007v3d8lrt7pgj8" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/18/betterHistory/">优化history</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/27/qcouldcvm/" class="archive-article-date">
-  <time datetime="2017-03-27T13:55:24.000Z" itemprop="datePublished">Mar 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/27/qcouldcvm/">体验腾讯云服务器</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/06/20200806vueInstance/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（二）：实例</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
