@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/08/09/20200809vueClassandStyleBindings/</loc>
+    
+    <lastmod>2020-08-09T17:46:27.698Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/08/08/20200808vueTemplateSyntax/</loc>
     
-    <lastmod>2020-08-09T01:43:17.561Z</lastmod>
+    <lastmod>2020-08-09T14:12:55.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/08/09/20200809vueVscodeRumHtml/</loc>
+    
+    <lastmod>2020-08-09T08:09:03.283Z</lastmod>
     
   </url>
   
@@ -499,6 +513,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
@@ -513,35 +534,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -555,14 +548,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -576,28 +569,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -611,6 +583,27 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -618,7 +611,21 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -626,6 +633,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
