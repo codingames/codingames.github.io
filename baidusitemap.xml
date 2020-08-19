@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2020/08/20/20200819androidNativeOOM/</loc>
+    <lastmod>2020-08-19T17:06:06.743Z</lastmod>
+    <data>
+        <display>
+        <title>解读《Android Camera内存问题剖析 》</title>
+        <pubTime>2020-08-20T15:00:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>OOM</tag>
+         
+        <tag>内存泄漏</tag>
+         
+         
+           
+             
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2020/08/18/20200818vueProp/</loc>
     <lastmod>2020-08-19T01:33:13.928Z</lastmod>
     <data>
@@ -1728,9 +1754,9 @@
         <title>微信跳一跳抓接口刷分</title>
         <pubTime>2018-01-04T04:30:00.000Z</pubTime>
         
-        <tag>robot</tag>
-         
         <tag>api</tag>
+         
+        <tag>robot</tag>
          
          
            
@@ -1995,23 +2021,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>DNSPod解析Godaddy域名</title>
-        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        <title>adb获取安卓手机厂商型号</title>
+        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
         
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
         <tag>env</tag>
-         
-        <tag>server</tag>
-         
-        <tag>domain</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -2019,23 +2045,27 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        <title>iOS 10.3 Charles https 问题</title>
+        <pubTime>2017-05-04T04:30:25.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>env</tag>
          
-        <tag>linux</tag>
+        <tag>iOS</tag>
          
-        <tag>macOS</tag>
+        <tag>工具</tag>
+         
+        <tag>charles</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
           
         </display>
     </data>
@@ -2113,23 +2143,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>adb获取安卓手机厂商型号</title>
-        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>android</tag>
          
-        <tag>env</tag>
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -2159,23 +2189,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -2183,27 +2207,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>iOS 10.3 Charles https 问题</title>
-        <pubTime>2017-05-04T04:30:25.000Z</pubTime>
+        <title>优化history</title>
+        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
         <tag>env</tag>
          
-        <tag>iOS</tag>
+        <tag>linux</tag>
          
-        <tag>工具</tag>
-         
-        <tag>charles</tag>
+        <tag>macOS</tag>
          
          
            
              
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -2237,17 +2257,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
+        <title>jsonp get 问题</title>
+        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
         
+        <tag>web</tag>
+         
+        <tag>issue</tag>
+         
          
            
              
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>DNSPod解析Godaddy域名</title>
+        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>server</tag>
+         
+        <tag>domain</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -2294,28 +2342,6 @@
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>jsonp get 问题</title>
-        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
-        
-        <tag>web</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
