@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://tracenote.com/2020/08/20/20200820CustomEvents/</loc>
-    <lastmod>2020-08-21T18:00:35.140Z</lastmod>
+    <lastmod>2020-08-21T18:24:39.128Z</lastmod>
     <data>
         <display>
         <title>Vue 学习笔记（十）：自定义事件</title>
@@ -1726,11 +1726,11 @@
         
         <tag>app</tag>
          
-        <tag>iOS</tag>
-         
         <tag>bash</tag>
          
         <tag>shell</tag>
+         
+        <tag>iOS</tag>
          
         <tag>xcodebuild</tag>
          
@@ -1776,9 +1776,9 @@
         <title>微信跳一跳抓接口刷分</title>
         <pubTime>2018-01-04T04:30:00.000Z</pubTime>
         
-        <tag>robot</tag>
-         
         <tag>api</tag>
+         
+        <tag>robot</tag>
          
          
            
@@ -1947,6 +1947,32 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>macOS .bashrc 无效问题</title>
+        <pubTime>2017-09-18T12:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     <data>
@@ -2017,25 +2043,45 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>macOS .bashrc 无效问题</title>
-        <pubTime>2017-09-18T12:30:00.000Z</pubTime>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
         
-        <tag>env</tag>
+        <tag>appium</tag>
          
         <tag>issue</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -2071,49 +2117,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>grep color与重定向</title>
-        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        <title>jsonp get 问题</title>
+        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
         
-        <tag>env</tag>
+        <tag>web</tag>
          
-        <tag>linux</tag>
-         
-        <tag>grep</tag>
+        <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
@@ -2145,45 +2163,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
         
-        <tag>env</tag>
+        <tag>android</tag>
          
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>jsonp get 问题</title>
-        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
-        
-        <tag>web</tag>
+        <tag>appium</tag>
          
         <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -2237,23 +2233,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>DNSPod解析Godaddy域名</title>
-        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
         
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-        <tag>domain</tag>
-         
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -2287,21 +2277,49 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
-        <tag>appium</tag>
+        <tag>app</tag>
          
-        <tag>issue</tag>
+        <tag>android</tag>
+         
+        <tag>iOS</tag>
+         
+        <tag>appium</tag>
          
          
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>DNSPod解析Godaddy域名</title>
+        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>server</tag>
+         
+        <tag>domain</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -2331,72 +2349,6 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
@@ -2412,6 +2364,54 @@
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>优化history</title>
+        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>grep color与重定向</title>
+        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>grep</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>

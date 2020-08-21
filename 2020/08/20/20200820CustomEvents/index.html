@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="自定义事件 Custom Events">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-08-21T18:00:35.140Z">
+<meta property="og:updated_time" content="2020-08-21T18:24:39.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue 学习笔记（十）：自定义事件">
 <meta name="twitter:description" content="自定义事件 Custom Events">
@@ -96,7 +96,7 @@
         <p>自定义事件 Custom Events</p>
 <a id="more"></a>
 <p><strong>事件名</strong>不存在任何自动化的大小写转换（与组件和prop不同），需要严格匹配，需要使用 <strong>kebab-case</strong> 的事件名</p>
-<h2 id="自定义组件的-v-model"><a href="#自定义组件的-v-model" class="headerlink" title="自定义组件的 v-model"></a>自定义组件的 <code>v-model</code></h2><p>组件上的 <code>v-model</code> 默认会利用 <code>value</code> prop 和 <code>input</code> 事件，但单选框、复选框等输入控件可能会将 <code>value</code> attribute 用于<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value" target="_blank" rel="external">不同的目的</a>。此时可以<code>model</code> 选项来避免冲突：</p>
+<h2 id="自定义组件的-v-model"><a href="#自定义组件的-v-model" class="headerlink" title="自定义组件的 v-model"></a>自定义组件的 <code>v-model</code></h2><p>组件上的 <code>v-model</code> 默认会利用 <code>value</code> prop 和 <code>input</code> 事件，但单选框、复选框等输入控件可能会将 <code>value</code> attribute 用于<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value" target="_blank" rel="external">不同的目的</a>。此时可用<code>model</code> 选项来避免冲突：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'base-checkbox'</span>, &#123;</div><div class="line">  <span class="attr">model</span>: &#123;</div><div class="line">    <span class="attr">prop</span>: <span class="string">'checked'</span>,</div><div class="line">    <span class="attr">event</span>: <span class="string">'change'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">checked</span>: <span class="built_in">Boolean</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">`</span></div><div class="line">    &lt;input</div><div class="line">      type="checkbox"</div><div class="line">      v-bind:checked="checked"</div><div class="line">      v-on:change="$emit('change', $event.target.checked)"</div><div class="line">    &gt;</div><div class="line">  `</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>组件使用 <code>v-model</code> 时：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">base-checkbox</span> <span class="attr">v-model</span>=<span class="string">"lovingVue"</span>&gt;</span><span class="tag">&lt;/<span class="name">base-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -133,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/08/20/20200820CustomEvents/" data-id="cke4kc0dw000usbd8ybjtuxl6" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/08/20/20200820CustomEvents/" data-id="cke4kcppg000wu4d85clkhy4b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -144,10 +144,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2020/08/20/20200819androidNativeOOM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          解读《Android Camera内存问题剖析 》
+        
+      </div>
+    </a>
   
-    <a href="/2020/08/20/20200819androidNativeOOM/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2020/08/18/20200818vueProp/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">解读《Android Camera内存问题剖析 》</div>
+      <div class="article-nav-title">Vue 学习笔记（九）：Prop</div>
     </a>
   
 </nav>
@@ -205,11 +214,11 @@
       <ul>
         
           <li>
-            <a href="/2020/08/20/20200820CustomEvents/">Vue 学习笔记（十）：自定义事件</a>
+            <a href="/2020/08/20/20200819androidNativeOOM/">解读《Android Camera内存问题剖析 》</a>
           </li>
         
           <li>
-            <a href="/2020/08/20/20200819androidNativeOOM/">解读《Android Camera内存问题剖析 》</a>
+            <a href="/2020/08/20/20200820CustomEvents/">Vue 学习笔记（十）：自定义事件</a>
           </li>
         
           <li>
