@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: sport | tracenote</title>
+  <title>Vue 学习笔记（十）：自定义事件 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/sport/index.html">
+  <meta name="description" content="自定义事件 Custom Events">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（十）：自定义事件">
+<meta property="og:url" content="http://tracenote.com/2020/08/20/20200820CustomEvents/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="自定义事件 Custom Events">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-08-21T18:00:35.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（十）：自定义事件">
+<meta name="twitter:description" content="自定义事件 Custom Events">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,39 +67,93 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/08/elliptical/" class="archive-article-date">
-  <time datetime="2018-05-08T13:30:00.000Z" itemprop="datePublished">May 8</time>
+        <section id="main"><article id="post-20200820CustomEvents" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/20/20200820CustomEvents/" class="article-date">
+  <time datetime="2020-08-20T15:00:00.000Z" itemprop="datePublished">2020-08-20</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/elliptical/">椭圆机的缺点[摘抄]</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（十）：自定义事件
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>自定义事件 Custom Events</p>
+<a id="more"></a>
+<p><strong>事件名</strong>不存在任何自动化的大小写转换（与组件和prop不同），需要严格匹配，需要使用 <strong>kebab-case</strong> 的事件名</p>
+<h2 id="自定义组件的-v-model"><a href="#自定义组件的-v-model" class="headerlink" title="自定义组件的 v-model"></a>自定义组件的 <code>v-model</code></h2><p>组件上的 <code>v-model</code> 默认会利用 <code>value</code> prop 和 <code>input</code> 事件，但单选框、复选框等输入控件可能会将 <code>value</code> attribute 用于<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#Value" target="_blank" rel="external">不同的目的</a>。此时可以<code>model</code> 选项来避免冲突：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'base-checkbox'</span>, &#123;</div><div class="line">  <span class="attr">model</span>: &#123;</div><div class="line">    <span class="attr">prop</span>: <span class="string">'checked'</span>,</div><div class="line">    <span class="attr">event</span>: <span class="string">'change'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">checked</span>: <span class="built_in">Boolean</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">`</span></div><div class="line">    &lt;input</div><div class="line">      type="checkbox"</div><div class="line">      v-bind:checked="checked"</div><div class="line">      v-on:change="$emit('change', $event.target.checked)"</div><div class="line">    &gt;</div><div class="line">  `</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>组件使用 <code>v-model</code> 时：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">base-checkbox</span> <span class="attr">v-model</span>=<span class="string">"lovingVue"</span>&gt;</span><span class="tag">&lt;/<span class="name">base-checkbox</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>lovingVue</code> 的值会传入 prop <code>checked</code> 。并且当 <code>&lt;base-checkbox&gt;</code> 触发一个 <code>change</code> 事件并附带一个新值的时候，这个 <code>lovingVue</code> 的 property 将会被更新。</p>
+<blockquote>
+<p>注意仍然需要在组件的 <code>props</code> 选项里声明 <code>checked</code> 这个 prop</p>
+</blockquote>
+<h2 id="将原生事件绑定到组件"><a href="#将原生事件绑定到组件" class="headerlink" title="将原生事件绑定到组件"></a>将原生事件绑定到组件</h2><p>Binding Native Events to Components<br>使用 <code>v-on</code> 的 <code>.native</code> 修饰符可以在一个组件的根元素上直接监听一个原生事件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">base-input</span> <span class="attr">v-on:focus.native</span>=<span class="string">"onFocus"</span>&gt;</span><span class="tag">&lt;/<span class="name">base-input</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>但是 <code>&lt;base-input&gt;</code> 组件可能做了如下重构，所以根元素实际上是一个 <code>&lt;label&gt;</code> 元素，此时父级的 .native 监听器将静默失败，没有报错但 <code>onFocus</code> 无效。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></div><div class="line">  &#123;&#123; label &#125;&#125;</div><div class="line">  <span class="tag">&lt;<span class="name">input</span></span></div><div class="line">    <span class="attr">v-bind</span>=<span class="string">"$attrs"</span></div><div class="line">    <span class="attr">v-bind:value</span>=<span class="string">"value"</span></div><div class="line">    <span class="attr">v-on:input</span>=<span class="string">"$emit('input', $event.target.value)"</span></div><div class="line">  &gt;</div><div class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>对此，Vue 提供了 <code>$listeners</code> property，它是一个对象，里面包含了作用在这个组件上的所有监听器。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">focus</span>: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;</div><div class="line">  input: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有了 <code>$listeners</code> property，就可以配合 <code>v-on=&quot;$listeners&quot;</code> 将所有的事件监听器指向这个组件的某个特定的子元素。对于类似 <code>&lt;input&gt;</code> 的希望它也可以配合 <code>v-model</code> 工作的组件来说，为这些监听器创建一个类似下述 <code>inputListeners</code> 的计算属性非常有用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">Vue.component(<span class="string">'base-input'</span>, &#123;</div><div class="line">  <span class="attr">inheritAttrs</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">props</span>: [<span class="string">'label'</span>, <span class="string">'value'</span>],</div><div class="line">  <span class="attr">computed</span>: &#123;</div><div class="line">    <span class="attr">inputListeners</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> vm = <span class="keyword">this</span></div><div class="line">      <span class="comment">// `Object.assign` 将所有的对象合并为一个新对象</span></div><div class="line">      <span class="keyword">return</span> <span class="built_in">Object</span>.assign(&#123;&#125;,</div><div class="line">        <span class="comment">// 我们从父级添加所有的监听器</span></div><div class="line">        <span class="keyword">this</span>.$listeners,</div><div class="line">        <span class="comment">// 然后我们添加自定义监听器，</span></div><div class="line">        <span class="comment">// 或覆写一些监听器的行为</span></div><div class="line">        &#123;</div><div class="line">          <span class="comment">// 这里确保组件配合 `v-model` 的工作</span></div><div class="line">          input: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">            vm.$emit(<span class="string">'input'</span>, event.target.value)</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      )</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">`</span></div><div class="line">    &lt;label&gt;</div><div class="line">      &#123;&#123; label &#125;&#125;</div><div class="line">      &lt;input</div><div class="line">        v-bind="$attrs"</div><div class="line">        v-bind:value="value"</div><div class="line">        v-on="inputListeners"</div><div class="line">      &gt;</div><div class="line">    &lt;/label&gt;</div><div class="line">  `</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>现在 <code>&lt;base-input&gt;</code> 组件是一个<strong>完全透明的包裹器</strong>了，也就是说它可以完全像一个普通的 <code>&lt;input&gt;</code> 元素一样使用了：所有跟它相同的 attribute 和监听器都可以工作，不必再使用 <code>.native</code> 监听器。</p>
+<h2 id="sync-修饰符"><a href="#sync-修饰符" class="headerlink" title=".sync 修饰符"></a><code>.sync</code> 修饰符</h2><p>有时需要对 prop 进行“双向绑定”。<br>不过，真正的双向绑定会带来维护上的问题，因为子组件可以变更父组件，且在父组件和子组件都没有明显的变更来源。</p>
+<p>推荐以 <code>update:myPropName</code> 的模式触发事件取而代之。例如，在一个包含 <code>title</code> prop 组件中，可以用以下方法表达对其赋新值的意图：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$emit(<span class="string">'update:title'</span>, newTitle)</div></pre></td></tr></table></figure>
+<p>然后父组件可以监听那个事件并根据需要更新一个本地的数据 property。例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">text-document</span></span></div><div class="line">  <span class="attr">v-bind:title</span>=<span class="string">"doc.title"</span></div><div class="line">  <span class="attr">v-on:update:title</span>=<span class="string">"doc.title = $event"</span></div><div class="line">&gt;<span class="tag">&lt;/<span class="name">text-document</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>为了方便起见，我们为这种模式提供一个缩写，即 <code>.sync</code> 修饰符：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">text-document</span> <span class="attr">v-bind:title.sync</span>=<span class="string">"doc.title"</span>&gt;</span><span class="tag">&lt;/<span class="name">text-document</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意带有 <code>.sync</code> 修饰符的 <code>v-bind</code>  不能和表达式一起使用 (例如 <code>v-bind:title.sync=&quot;doc.title + &#39;!&#39;&quot;</code> 是无效的)。只能提供想要绑定的 property 名，类似 <code>v-model</code></p>
+</blockquote>
+<p>当一个对象同时设置多个 prop 的时候，可将 <code>.sync</code> 修饰符和 <code>v-bind</code> 配合使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">text-document</span> <span class="attr">v-bind.sync</span>=<span class="string">"doc"</span>&gt;</span><span class="tag">&lt;/<span class="name">text-document</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这样会把 <code>doc</code> 对象中的每一个 property (如 <code>title</code>) 都作为一个独立的 prop 传进去，然后各自添加用于更新的 <code>v-on</code> 监听器。</p>
+<blockquote>
+<p>将 <code>v-bind.sync</code> 用在一个字面量的对象上，例如 <code>v-bind.sync=&quot;{ title: doc.title }&quot;</code>，是无法正常工作的，因为在解析一个这样的复杂表达式的时候，有很多边缘情况需要考虑。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/08/20/20200820CustomEvents/" data-id="cke4kc0dw000usbd8ybjtuxl6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/20/20200819androidNativeOOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">解读《Android Camera内存问题剖析 》</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
