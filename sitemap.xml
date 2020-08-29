@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/08/28/20200828readingNote/</loc>
+    
+    <lastmod>2020-08-29T03:56:24.791Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/08/27/20200827Thinkin3plus1/</loc>
+    
+    <lastmod>2020-08-28T00:40:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/08/26/20200826vueHandlingEdgeCases/</loc>
+    
+    <lastmod>2020-08-27T01:57:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/08/25/20200825JNIOOM/</loc>
+    
+    <lastmod>2020-08-26T01:38:13.085Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/08/23/20200824CAPandBase/</loc>
     
-    <lastmod>2020-08-25T01:37:59.270Z</lastmod>
+    <lastmod>2020-08-25T01:37:59.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tracenote.com/2020/08/23/20200822vueDynamic&AsyncComponents/</loc>
     
-    <lastmod>2020-08-24T01:29:40.139Z</lastmod>
+    <lastmod>2020-08-24T01:29:40.000Z</lastmod>
     
   </url>
   
@@ -604,21 +632,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -632,14 +653,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -653,14 +674,28 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -668,6 +703,20 @@
   
   <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -688,20 +737,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -716,14 +751,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -731,13 +766,6 @@
   
   <url>
     <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
