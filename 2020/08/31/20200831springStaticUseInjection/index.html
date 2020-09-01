@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="昨天又遇到，又去搜索+翻旧代码，这里做一下简单记载。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-09-01T01:33:30.560Z">
+<meta property="og:updated_time" content="2020-09-01T01:36:47.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring 静态方法使用注入">
 <meta name="twitter:description" content="昨天又遇到，又去搜索+翻旧代码，这里做一下简单记载。">
@@ -99,7 +99,7 @@
 <p>解决方案：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</div><div class="line">    <span class="meta">@Autowired</span></div><div class="line">    <span class="keyword">private</span> HttpServletRequest request;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> HelloWorld helloWorld;</div><div class="line"></div><div class="line">    <span class="meta">@PostConstruct</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initialize</span><span class="params">()</span> </span>&#123;</div><div class="line">        helloWorld = <span class="keyword">this</span>;</div><div class="line">        helloWorld.request = <span class="keyword">this</span>.request;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sayHello</span><span class="params">()</span> </span>&#123;</div><div class="line">        String path = helloWorld.request.getSession().getServletContext().getRealPath(<span class="string">""</span>);</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>@PostConstruct 该注解是 javax.annotation 包下的，被用来修饰一个非静态的 void 方法。被 @PostConstruct 修饰的方法会在服务器加载 Servlet 的时候运行，并且只会被服务器执行一次。PostConstruct 在构造函数之后执行，init 方法之前执行。  </p>
+<p>@PostConstruct 这个注解并不是 Spring 提供的，其实是 Java 自己的注解，是 javax.annotation 包下的，被用来修饰一个非静态的 void 方法。被 @PostConstruct 修饰的方法会在服务器加载 Servlet 的时候运行，并且只会被服务器执行一次。PostConstruct 在构造函数之后执行，init 方法之前执行。  </p>
 <p>@PostConstruct注解的方法在整个Bean初始化中的执行顺序：<br>Constructor(构造方法) -&gt; @Autowired(依赖注入) -&gt; @PostConstruct(注释的方法)  </p>
 <p>@PostConstruct注释规则：除了拦截器这个特殊情况以外，其他情况都不允许有参数，否则 spring 框架会报 IllegalStateException；而且返回值要是void，但实际也可以有返回值，至少不会报错，只会忽略。  </p>
 </blockquote>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/08/31/20200831springStaticUseInjection/" data-id="ckeja2ryr0017yrd85z23r2ge" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/08/31/20200831springStaticUseInjection/" data-id="ckeja6z8r00150gd8t31e6bs8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
