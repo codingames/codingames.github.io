@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>List&lt;子类&gt;传入someMethod(List&lt;父类&gt; alist)问题 | tracenote</title>
+  <title>Vue 学习笔记（十七）：自定义指令 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="List&amp;lt;子类&amp;gt;是不能传进someMethod(List&amp;lt;父类&amp;gt; alist)的，List&amp;lt;子类&amp;gt;并不是List&amp;lt;父类&amp;gt;的子类，可以利用范型改造方法来解决此问题。">
-<meta name="keywords" content="Java,issue,generics">
+  <meta name="description" content="自定义指令Custom Directives">
+<meta name="keywords" content="vue,fe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="List&lt;子类&gt;传入someMethod(List&lt;父类&gt; alist)问题">
-<meta property="og:url" content="http://tracenote.com/2018/06/30/javaGenericsParam/index.html">
+<meta property="og:title" content="Vue 学习笔记（十七）：自定义指令">
+<meta property="og:url" content="http://tracenote.com/2020/09/02/20200902vueCustomDirectives/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="List&amp;lt;子类&amp;gt;是不能传进someMethod(List&amp;lt;父类&amp;gt; alist)的，List&amp;lt;子类&amp;gt;并不是List&amp;lt;父类&amp;gt;的子类，可以利用范型改造方法来解决此问题。">
+<meta property="og:description" content="自定义指令Custom Directives">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-08-03T17:58:00.736Z">
+<meta property="og:updated_time" content="2020-09-02T17:08:31.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="List&lt;子类&gt;传入someMethod(List&lt;父类&gt; alist)问题">
-<meta name="twitter:description" content="List&amp;lt;子类&amp;gt;是不能传进someMethod(List&amp;lt;父类&amp;gt; alist)的，List&amp;lt;子类&amp;gt;并不是List&amp;lt;父类&amp;gt;的子类，可以利用范型改造方法来解决此问题。">
+<meta name="twitter:title" content="Vue 学习笔记（十七）：自定义指令">
+<meta name="twitter:description" content="自定义指令Custom Directives">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-javaGenericsParam" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20200902vueCustomDirectives" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/30/javaGenericsParam/" class="article-date">
-  <time datetime="2018-06-30T12:30:00.000Z" itemprop="datePublished">2018-06-30</time>
+    <a href="/2020/09/02/20200902vueCustomDirectives/" class="article-date">
+  <time datetime="2020-09-02T15:00:00.000Z" itemprop="datePublished">2020-09-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/fe/">fe</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      List&lt;子类&gt;传入someMethod(List&lt;父类&gt; alist)问题
+      Vue 学习笔记（十七）：自定义指令
     </h1>
   
 
@@ -93,21 +93,121 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>List&lt;子类&gt;是不能传进someMethod(List&lt;父类&gt; alist)的，<code>List&lt;子类&gt;</code>并不是<code>List&lt;父类&gt;</code>的子类，可以利用范型改造方法来解决此问题。</p>
+        <p>自定义指令<br>Custom Directives  </p>
 <a id="more"></a>
-<p>详细示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IParam</span> </span>&#123;</div><div class="line">    <span class="function">String <span class="title">getAName</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SuperClass</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SubClass</span> <span class="keyword">extends</span> <span class="title">SuperClass</span> <span class="keyword">implements</span> <span class="title">IParam</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAName</span><span class="params">()</span> </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="string">"a name of sub class"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestParam</span> </span>&#123;    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tryInheritance</span><span class="params">(SuperClass superClass)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"tryInheritance"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tryInterface</span><span class="params">(IParam iParam)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"tryInterface"</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tryInheritanceList</span><span class="params">(List&lt;SuperClass&gt; superClassList)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"tryInheritance list"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tryInterfaceList</span><span class="params">(List&lt;IParam&gt; iParam)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"tryInterface list"</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">public</span> &lt;T extends IParam&gt; <span class="function"><span class="keyword">void</span> <span class="title">tryGeneric</span><span class="params">(List&lt;T&gt; listT)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"tryGeneric"</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        TestParam t = <span class="keyword">new</span> TestParam();</div><div class="line">        SuperClass superC = <span class="keyword">new</span> SuperClass();</div><div class="line">        SubClass subC = <span class="keyword">new</span> SubClass();</div><div class="line">        List&lt;SuperClass&gt; superList = <span class="keyword">new</span> ArrayList&lt;SuperClass&gt;();</div><div class="line">        List&lt;SubClass&gt; subList = <span class="keyword">new</span> ArrayList&lt;SubClass&gt;();</div><div class="line">        </div><div class="line">        t.tryInheritance(subC); <span class="comment">// 参数类型SuperClass，传入子类ok</span></div><div class="line">        t.tryInterface(subC);   <span class="comment">// 参数类型IParam，传入实现类ok</span></div><div class="line">        </div><div class="line">      <span class="comment">// List&lt;子类&gt;并不是List&lt;父类&gt;的子类</span></div><div class="line"><span class="comment">//        t.tryInheritanceList(subList); // 参数类型List&lt;SuperClass&gt;，传入List&lt;子类&gt;，编译错误</span></div><div class="line"><span class="comment">//        t.tryInterfaceList(subList);  // 参数类型List&lt;IParam&gt;，传入List&lt;实现类&gt;，编译错误</span></div><div class="line">        </div><div class="line">        <span class="comment">// 利用范型来解决问题</span></div><div class="line">        t.tryGeneric(subList);  <span class="comment">// 参数类型List&lt;T extends IParam&gt;，传入List&lt;实现类&gt;, ok</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="简介-Intro"><a href="#简介-Intro" class="headerlink" title="简介  Intro"></a>简介  Intro</h2><p>除默认内置指令 (<code>v-model</code> 和 <code>v-show</code>)，Vue 也允许注册自定义指令。Vue2.0 代码复用和抽象的主要形式是组件。然而有时需要使用自定义指令对普通 DOM 元素进行底层操作。例如聚焦输入框，页面加载后输入框默认获得焦点：</p>
+<p>渲染结果</p>
+
+<script src="https://unpkg.com/vue"></script>
+<div id="simplest-directive-example" class="demo">
+  <input v-focus="">
+</div>
+<script>
+Vue.directive('focus', {
+  inserted: function (el) {
+    el.focus()
+  }
+})
+new Vue({
+  el: '#simplest-directive-example'
+})
+</script>
+
+<p>下属全局、局部代码都可以达到此效果</p>
+<h4 id="注册全局自定义指令"><a href="#注册全局自定义指令" class="headerlink" title="注册全局自定义指令"></a>注册全局自定义指令</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"simplest-directive-example"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// 指令的定义：注册一个全局自定义指令 `v-focus`</span></div><div class="line">Vue.directive(<span class="string">'focus'</span>, &#123;</div><div class="line"><span class="comment">// 当被绑定的元素插入到 DOM 中时……</span></div><div class="line">  inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="comment">// 聚焦元素</span></div><div class="line">    el.focus()</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#simplest-directive-example'</span></div><div class="line">&#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：<code>autofocus</code> 在移动版 Safari 上不工作 </p>
+</blockquote>
+<h4 id="注册局部自定义指令"><a href="#注册局部自定义指令" class="headerlink" title="注册局部自定义指令"></a>注册局部自定义指令</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"simplest-directive-example"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 下面定义好局部指令后可以在模板中任何元素上使用新的 v-focus property --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">v-focus</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line">  <span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">el</span>: <span class="string">'#simplest-directive-example'</span>,</div><div class="line">    <span class="comment">// 注册局部指令</span></div><div class="line">    directives: &#123;</div><div class="line">      <span class="attr">focus</span>: &#123;</div><div class="line">        <span class="comment">// directive definition 指令的定义</span></div><div class="line">        inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">          el.focus()</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="钩子函数-Hook-Functions"><a href="#钩子函数-Hook-Functions" class="headerlink" title="钩子函数  Hook Functions"></a>钩子函数  Hook Functions</h2><p>指令定义对象的钩子函数 (均为可选)：</p>
+<ul>
+<li><p><code>bind</code>：只调用一次，指令第一次绑定到元素时调用。可以进行初始化设置。</p>
+</li>
+<li><p><code>inserted</code>：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</p>
+</li>
+<li><p><code>update</code>：所在组件的 VNode 更新时调用，<strong>但是可能发生在其子 VNode 更新之前</strong>。指令的值可能发生了改变，也可能没有。可以通过比较更新前后的值来忽略不必要的模板更新。</p>
+</li>
+<li><p><code>componentUpdated</code>：指令所在组件的 VNode <strong>及其子 VNode</strong> 全部更新后调用。</p>
+</li>
+<li><p><code>unbind</code>：只调用一次，指令与元素解绑时调用。</p>
+</li>
+</ul>
+<p>钩子函数的参数 (<code>el</code>、<code>binding</code>、<code>vnode</code> 和 <code>oldVnode</code>)</p>
+<h2 id="钩子函数参数-Directive-Hook-Arguments"><a href="#钩子函数参数-Directive-Hook-Arguments" class="headerlink" title="钩子函数参数  Directive Hook Arguments"></a>钩子函数参数  Directive Hook Arguments</h2><p>指令钩子函数会被传入以下参数：</p>
+<ul>
+<li><code>el</code>：指令所绑定的元素，可以用来直接操作 DOM</li>
+<li><code>binding</code>：一个对象，包含以下 property：<ul>
+<li><code>name</code>：指令名，不包括 <code>v-</code> 前缀。</li>
+<li><code>value</code>：指令的绑定值，如 <code>v-my-directive=&quot;1 + 1&quot;</code>，绑定值为 <code>2</code>。</li>
+<li><code>oldValue</code>：指令绑定的前一个值，仅在 <code>update</code> 和 <code>componentUpdated</code> 钩子中可用。无论值是否改变都可用。</li>
+<li><code>expression</code>：字符串形式的指令表达式。如 <code>v-my-directive=&quot;1 + 1&quot;</code> 中，表达式为 <code>&quot;1 + 1&quot;</code>。</li>
+<li><code>arg</code>：传给指令的参数，可选。如 <code>v-my-directive:foo</code> 中，参数为 <code>&quot;foo&quot;</code>。</li>
+<li><code>modifiers</code>：一个包含修饰符的对象。如：<code>v-my-directive.foo.bar</code> 中，修饰符对象为 <code>{ foo: true, bar: true }</code>。</li>
+</ul>
+</li>
+<li><code>vnode</code>：Vue 编译生成的虚拟节点</li>
+<li><code>oldVnode</code>：上一个虚拟节点，仅在 <code>update</code> 和 <code>componentUpdated</code> 钩子中可用。</li>
+</ul>
+<blockquote>
+<p>除了 <code>el</code> 之外，其它参数都是只读的，切勿修改。如果需要在钩子之间共享数据，建议通过元素的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external"><code>dataset</code></a> 来进行</p>
+</blockquote>
+<p>一个使用了这些 property 的自定义钩子样例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hook-arguments-example"</span> <span class="attr">v-demo:foo.a.b</span>=<span class="string">"message"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  Vue.directive(<span class="string">'demo'</span>, &#123;</div><div class="line">    <span class="attr">bind</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> s = <span class="built_in">JSON</span>.stringify</div><div class="line">      el.innerHTML =</div><div class="line">        <span class="string">'name: '</span> + s(binding.name) + <span class="string">'&lt;br&gt;'</span> +                <span class="comment">// "demo"</span></div><div class="line">        <span class="string">'value: '</span> + s(binding.value) + <span class="string">'&lt;br&gt;'</span> +              <span class="comment">// "hello!"</span></div><div class="line">        <span class="string">'expression: '</span> + s(binding.expression) + <span class="string">'&lt;br&gt;'</span> +    <span class="comment">//"message"</span></div><div class="line">        <span class="string">'argument: '</span> + s(binding.arg) + <span class="string">'&lt;br&gt;'</span> +             <span class="comment">// "foo"</span></div><div class="line">        <span class="string">'modifiers: '</span> + s(binding.modifiers) + <span class="string">'&lt;br&gt;'</span> +      <span class="comment">// &#123;"a":true,"b":true&#125;</span></div><div class="line">        <span class="string">'vnode keys: '</span> + <span class="built_in">Object</span>.keys(vnode).join(<span class="string">', '</span>)       <span class="comment">//  tag, data, children, text, elm, ns, context, fnContext, fnOptions, fnScopeId, key, componentOptions, componentInstance, parent, raw, isStatic, isRootInsert, isComment, isCloned, isOnce, asyncFactory, asyncMeta, isAsyncPlaceholder</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">  <span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">el</span>: <span class="string">'#hook-arguments-example'</span>,</div><div class="line">    <span class="attr">data</span>: &#123;</div><div class="line">      <span class="attr">message</span>: <span class="string">'hello!'</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>渲染结果</p>
+
+<div id="hook-arguments-example" v-demo:foo.a.b="message" class="demo"></div>
+<script>
+Vue.directive('demo', {
+  bind: function (el, binding, vnode) {
+    var s = JSON.stringify
+    el.innerHTML =
+      'name: '       + s(binding.name) + '<br>' +
+      'value: '      + s(binding.value) + '<br>' +
+      'expression: ' + s(binding.expression) + '<br>' +
+      'argument: '   + s(binding.arg) + '<br>' +
+      'modifiers: '  + s(binding.modifiers) + '<br>' +
+      'vnode keys: ' + Object.keys(vnode).join(', ')
+  }
+})
+new Vue({
+  el: '#hook-arguments-example',
+  data: {
+    message: 'hello!'
+  }
+})
+</script>
+
+<h3 id="动态指令参数-Dynamic-Directive-Arguments"><a href="#动态指令参数-Dynamic-Directive-Arguments" class="headerlink" title="动态指令参数  Dynamic Directive Arguments"></a>动态指令参数  Dynamic Directive Arguments</h3><p>指令的参数可以是动态的。例如，在 <code>v-mydirective:[argument]=&quot;value&quot;</code> 中，<code>argument</code> 参数可以根据组件实例数据进行更新！</p>
+<p>例：创建一个自定义指令，用来通过固定布局将元素固定在页面上。可以创建一个通过指令值来更新竖直位置像素值的自定义指令：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"baseexample"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Scroll down the page<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-pin</span>=<span class="string">"200"</span>&gt;</span>Stick me 200px from the top of the page<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Vue.directive(<span class="string">'pin'</span>, &#123;</div><div class="line">  <span class="attr">bind</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">    el.style.position = <span class="string">'fixed'</span></div><div class="line">    el.style.top = binding.value + <span class="string">'px'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#baseexample'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>即该元素固定在距离页面顶部 200 像素的位置。但如果需要把元素固定在左侧而不是顶部呢？这时使用动态参数就可以非常方便地根据每个组件实例来进行更新。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dynamicexample"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Scroll down inside this section ↓<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-pin:</span>[<span class="attr">direction</span>]=<span class="string">"200"</span>&gt;</span>I am pinned onto the page at 200px to the left.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Vue.directive(<span class="string">'pin'</span>, &#123;</div><div class="line">  <span class="attr">bind</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding, vnode</span>) </span>&#123;</div><div class="line">    el.style.position = <span class="string">'fixed'</span></div><div class="line">    <span class="keyword">var</span> s = (binding.arg == <span class="string">'left'</span> ? <span class="string">'left'</span> : <span class="string">'top'</span>)</div><div class="line">    el.style[s] = binding.value + <span class="string">'px'</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#dynamicexample'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">direction</span>: <span class="string">'left'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>渲染结果：</p>
+
+<iframe height="200" style="width: 100%;" class="demo" scrolling="no" title="Dynamic Directive Arguments" src="//codepen.io/team/Vue/embed/rgLLzb/?height=300&theme-id=32763&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  查看 <a href="https://codepen.io" target="_blank" rel="external">CodePen</a> 上 Vue
+  (<a href="https://codepen.io/Vue" target="_blank" rel="external">@Vue</a>) 的例子 <a href="https://codepen.io/team/Vue/pen/rgLLzb/" target="_blank" rel="external">Dynamic Directive Arguments</a>.
+</iframe>
+
+<p>查看代码：<a href="https://codepen.io/team/Vue/pen/rgLLzb/" target="_blank" rel="external">https://codepen.io/team/Vue/pen/rgLLzb/</a></p>
+<h2 id="函数简写-Function-Shorthand"><a href="#函数简写-Function-Shorthand" class="headerlink" title="函数简写  Function Shorthand"></a>函数简写  Function Shorthand</h2><p>很多时候，可能需要在 <code>bind</code> 和 <code>update</code> 时触发相同行为，而不关心其它的钩子。比如这样写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.directive(<span class="string">'color-swatch'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  el.style.backgroundColor = binding.value</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="对象字面量-Object-Literals"><a href="#对象字面量-Object-Literals" class="headerlink" title="对象字面量  Object Literals"></a>对象字面量  Object Literals</h2><p>如果指令需要多个值，可以传入一个 JavaScript 对象字面量。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-demo</span>=<span class="string">"&#123; color: 'white', text: 'hello!' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.directive(<span class="string">'demo'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(binding.value.color) <span class="comment">// =&gt; "white"</span></div><div class="line">  <span class="built_in">console</span>.log(binding.value.text)  <span class="comment">// =&gt; "hello!"</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>指令函数能够接受所有合法的 JavaScript 表达式。</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/06/30/javaGenericsParam/" data-id="ckelmyy1k0061xyd8bzvc9tsj" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/02/20200902vueCustomDirectives/" data-id="ckelmyy5d00jwxyd8xbuei988" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/generics/">generics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
     </footer>
   </div>
@@ -115,19 +215,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/12/mvnParams/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          mvn传参数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/18/telnetNc/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/01/20200901vueMixins/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">telnet 和 nc</div>
+      <div class="article-nav-title">Vue 学习笔记（十六）：可复用性 &amp; 组合：混入</div>
     </a>
   
 </nav>
