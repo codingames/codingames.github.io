@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://tracenote.com/2020/09/06/20200906vueTools/</loc>
+    <lastmod>2020-09-07T01:55:14.011Z</lastmod>
+    <data>
+        <display>
+        <title>Vue 学习笔记（二十一）：vue 相关外围：NPM, ES6</title>
+        <pubTime>2020-09-06T15:00:00.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>fe</tag>
+         
+         
+           
+             
+              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2020/09/05/20200905SingleFileComponents/</loc>
-    <lastmod>2020-09-06T02:41:34.274Z</lastmod>
+    <lastmod>2020-09-06T02:43:09.707Z</lastmod>
     <data>
         <display>
         <title>Vue 学习笔记（二十）：单文件组件</title>
@@ -2106,9 +2128,9 @@
         <title>微信跳一跳抓接口刷分</title>
         <pubTime>2018-01-04T04:30:00.000Z</pubTime>
         
-        <tag>api</tag>
-         
         <tag>robot</tag>
+         
+        <tag>api</tag>
          
          
            
@@ -2277,16 +2299,16 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     <data>
         <display>
-        <title>caps lock切换输入法失效问题</title>
-        <pubTime>2017-07-30T14:30:00.000Z</pubTime>
+        <title>mac上nginx配置</title>
+        <pubTime>2017-10-29T04:30:00.000Z</pubTime>
         
         <tag>env</tag>
          
-        <tag>macOS</tag>
+        <tag>server</tag>
          
          
            
@@ -2325,6 +2347,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>caps lock切换输入法失效问题</title>
+        <pubTime>2017-07-30T14:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     <data>
@@ -2351,43 +2395,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac上nginx配置</title>
-        <pubTime>2017-10-29T04:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>jsonp get 问题</title>
-        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
         
-        <tag>web</tag>
+        <tag>appium</tag>
          
         <tag>issue</tag>
          
          
            
              
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -2395,18 +2417,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium启动关闭App过程的adb命令</title>
-        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
         
         <tag>android</tag>
          
         <tag>appium</tag>
          
-        <tag>adb</tag>
+        <tag>issue</tag>
          
          
            
@@ -2419,43 +2441,23 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
+        <title>优化history</title>
+        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
         
+        <tag>env</tag>
          
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
-        
-        <tag>app</tag>
+        <tag>linux</tag>
          
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
+        <tag>macOS</tag>
          
          
            
              
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
           
         </display>
     </data>
@@ -2477,30 +2479,6 @@
         <tag>issue</tag>
          
         <tag>摘抄</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
          
          
            
@@ -2541,13 +2519,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
+        <tag>app</tag>
+         
+        <tag>android</tag>
+         
         <tag>iOS</tag>
          
         <tag>appium</tag>
@@ -2556,6 +2538,52 @@
            
              
               <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>grep color与重定向</title>
+        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        
+        <tag>env</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>grep</tag>
+         
+         
+           
+             
+              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>jsonp get 问题</title>
+        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
+        
+        <tag>web</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
           
         </display>
     </data>
@@ -2585,23 +2613,21 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        <title>解决appium Xcode version 9.0 is not yet supported</title>
+        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
         
-        <tag>env</tag>
+        <tag>iOS</tag>
          
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
+        <tag>appium</tag>
          
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -2679,23 +2705,17 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>grep color与重定向</title>
-        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        <title>开篇记</title>
+        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
         
-        <tag>env</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>grep</tag>
-         
          
            
              
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
+              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
           
         </display>
     </data>
@@ -2703,16 +2723,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
+        <title>Appium启动关闭App过程的adb命令</title>
+        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
         
+        <tag>android</tag>
+         
         <tag>appium</tag>
          
-        <tag>issue</tag>
+        <tag>adb</tag>
          
          
            
@@ -2725,18 +2747,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
         <tag>appium</tag>
-         
-        <tag>issue</tag>
          
          
            
