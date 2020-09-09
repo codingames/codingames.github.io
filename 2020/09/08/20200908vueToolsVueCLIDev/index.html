@@ -5,18 +5,18 @@
   
   <title>Vue 学习笔记（二十三）：Vue CLI —— 浏览器兼容、HTML 和静态资源 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Vue CLI：浏览器兼容。浏览器兼容暂时不用考虑，先做初步了解HTML 和静态资源">
+  <meta name="description" content="Vue CLI：浏览器兼容——暂时不用考虑，先做初步了解HTML 和静态资源">
 <meta name="keywords" content="vue,fe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue 学习笔记（二十三）：Vue CLI —— 浏览器兼容、HTML 和静态资源">
 <meta property="og:url" content="http://tracenote.com/2020/09/08/20200908vueToolsVueCLIDev/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="Vue CLI：浏览器兼容。浏览器兼容暂时不用考虑，先做初步了解HTML 和静态资源">
+<meta property="og:description" content="Vue CLI：浏览器兼容——暂时不用考虑，先做初步了解HTML 和静态资源">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-09-09T01:32:28.591Z">
+<meta property="og:updated_time" content="2020-09-09T01:34:25.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue 学习笔记（二十三）：Vue CLI —— 浏览器兼容、HTML 和静态资源">
-<meta name="twitter:description" content="Vue CLI：浏览器兼容。浏览器兼容暂时不用考虑，先做初步了解HTML 和静态资源">
+<meta name="twitter:description" content="Vue CLI：浏览器兼容——暂时不用考虑，先做初步了解HTML 和静态资源">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -93,7 +93,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Vue CLI：<br>浏览器兼容。浏览器兼容暂时不用考虑，先做初步了解<br>HTML 和静态资源<br><a id="more"></a></p>
+        <p>Vue CLI：<br>浏览器兼容——暂时不用考虑，先做初步了解<br>HTML 和静态资源<br><a id="more"></a></p>
 <h1 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h1><h2 id="browserslist"><a href="#browserslist" class="headerlink" title="browserslist"></a>browserslist</h2><p><code>package.json</code> 文件里的 <code>browserslist</code> 字段，或一个单独的 <code>.browserslistrc</code> 文件，指定了项目的目标浏览器的范围。这个值会被 @babel/preset-env 和 Autoprefixer 用来确定需要转译的 JavaScript 特性和需要添加的 CSS 浏览器前缀。</p>
 <h2 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h2><h3 id="什么是Polyfill"><a href="#什么是Polyfill" class="headerlink" title="什么是Polyfill?"></a>什么是Polyfill?</h3><p>Polyfill 是一块代码（通常是 Web 上的 JavaScript），用来为旧浏览器提供它没有原生支持的较新的功能。<br>比如说 polyfill 可以让 IE7 使用 Silverlight 插件来模拟 HTML Canvas 元素的功能，或模拟 CSS 实现 rem 单位的支持，或 text-shadow，或其他任何你想要的功能。</p>
 <p>具体来说：<br>Polyfill 是一个js库，主要抚平不同浏览器之间对js实现的差异。比如，html5的storage(session,local), 不同浏览器，不同版本，有些支持，有些不支持。<a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" target="_blank" rel="external">Polyfill</a>，帮你把这些差异化抹平，不支持的变得支持了（典型做法是在IE浏览器中增加 window.XMLHttpRequest ，内部实现使用 ActiveXObject。）</p>
@@ -240,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/08/20200908vueToolsVueCLIDev/" data-id="ckeupkkz000kn8vd8oayt9l9l" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/08/20200908vueToolsVueCLIDev/" data-id="ckeupnglm00jpasd8lq43dxsd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
