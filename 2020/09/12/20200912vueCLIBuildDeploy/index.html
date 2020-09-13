@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>iOS 10.3 Charles https 问题 | tracenote</title>
+  <title>Vue 学习笔记（二十六）：构建 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="手机升级到 iOS 10.3 之后，Charles抓包总提示SSLHandshake错误，重装手机证书甚至Charles不解决问题。 Google了一下才发现，iOS 10.3安装手机证书后要打开信任选项，通用－关于本机－证书信任设置，找到Charles的证书，把信任开关打开即可。">
-<meta name="keywords" content="app,env,iOS,工具,charles">
+  <meta name="description" content="Build Targets构建目标">
+<meta name="keywords" content="vue,fe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 10.3 Charles https 问题">
-<meta property="og:url" content="http://tracenote.com/2017/05/04/ioshttps/index.html">
+<meta property="og:title" content="Vue 学习笔记（二十六）：构建">
+<meta property="og:url" content="http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="手机升级到 iOS 10.3 之后，Charles抓包总提示SSLHandshake错误，重装手机证书甚至Charles不解决问题。 Google了一下才发现，iOS 10.3安装手机证书后要打开信任选项，通用－关于本机－证书信任设置，找到Charles的证书，把信任开关打开即可。">
+<meta property="og:description" content="Build Targets构建目标">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2017-12-10T15:57:47.000Z">
+<meta property="og:updated_time" content="2020-09-13T02:09:23.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 10.3 Charles https 问题">
-<meta name="twitter:description" content="手机升级到 iOS 10.3 之后，Charles抓包总提示SSLHandshake错误，重装手机证书甚至Charles不解决问题。 Google了一下才发现，iOS 10.3安装手机证书后要打开信任选项，通用－关于本机－证书信任设置，找到Charles的证书，把信任开关打开即可。">
+<meta name="twitter:title" content="Vue 学习笔记（二十六）：构建">
+<meta name="twitter:description" content="Build Targets构建目标">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-ioshttps" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20200912vueCLIBuildDeploy" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/04/ioshttps/" class="article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">2017-05-04</time>
+    <a href="/2020/09/12/20200912vueCLIBuildDeploy/" class="article-date">
+  <time datetime="2020-09-12T15:00:00.000Z" itemprop="datePublished">2020-09-12</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/app/">app</a>
+    <a class="article-category-link" href="/categories/fe/">fe</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      iOS 10.3 Charles https 问题
+      Vue 学习笔记（二十六）：构建
     </h1>
   
 
@@ -93,16 +93,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>手机升级到 iOS 10.3 之后，Charles抓包总提示SSLHandshake错误，重装手机证书甚至Charles不解决问题。</p>
-<p>Google了一下才发现，iOS 10.3安装手机证书后要打开信任选项，通用－关于本机－证书信任设置，找到Charles的证书，把信任开关打开即可。</p>
+        <p>Build Targets<br>构建目标  </p>
+<a id="more"></a>
+<p><code>vue-cli-service build</code> 通过 <code>--target</code> 选项指定不同的构建目标</p>
+<h2 id="应用-App"><a href="#应用-App" class="headerlink" title="应用  App"></a>应用  App</h2><p>默认是应用模式：</p>
+<ul>
+<li><code>index.html</code> 带有注入的资源和 resource hint</li>
+<li>第三方库被分到一个独立包以便更好的缓存</li>
+<li>小于 4kb 的静态资源被内联在 JavaScript 中</li>
+<li><code>public</code> 中的静态资源被复制到输出目录中</li>
+</ul>
+<h2 id="库-Library"><a href="#库-Library" class="headerlink" title="库  Library"></a>库  Library</h2><blockquote>
+<p>注意对 Vue 的依赖<br>在库模式中，Vue 是<em>外置的</em>，包中没有 Vue，即便你在代码中导入了 Vue。如果这个库会通过一个打包器使用，它将尝试通过打包器以依赖的方式加载 Vue；否则就会回退到一个全局的 <code>Vue</code> 变量。</p>
+<p>要避免此行为，可以在<code>build</code>命令中添加<code>--inline-vue</code>标志。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target lib --inline-vue</div></pre></td></tr></table></figure>
+</blockquote>
+<p>将一个单独的入口构建为一个库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target lib --name myLib [entry]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">File                     Size                     Gzipped</div><div class="line"></div><div class="line">dist/myLib.umd.min.js    13.28 kb                 8.42 kb</div><div class="line">dist/myLib.umd.js        20.95 kb                 10.22 kb</div><div class="line">dist/myLib.common.js     20.57 kb                 10.09 kb</div><div class="line">dist/myLib.css           0.33 kb                  0.23 kb</div></pre></td></tr></table></figure>
+<p>入口可以是一个 <code>.js</code> 或一个 <code>.vue</code> 文件。如果没有指定入口，则会使用 <code>src/App.vue</code>。</p>
+<p>构建一个库的输出：</p>
+<ul>
+<li><p><code>dist/myLib.common.js</code>：一个给打包器用的 CommonJS 包 (不过，webpack 目前还并没有支持 ES modules 输出格式的包)</p>
+</li>
+<li><p><code>dist/myLib.umd.js</code>：一个直接给浏览器或 AMD loader 使用的 UMD 包</p>
+</li>
+<li><p><code>dist/myLib.umd.min.js</code>：压缩后的 UMD 构建版本</p>
+</li>
+<li><p><code>dist/myLib.css</code>：提取出来的 CSS 文件 (可以通过在 <code>vue.config.js</code> 中设置 <code>css: { extract: false }</code> 强制内联)</p>
+</li>
+</ul>
+<blockquote>
+<p>注意<br>开发一个库或多项目仓库 (monorepo)时请注意导入 CSS 是具有副作用的。请确保在 <code>package.json</code> 中移除 <code>&quot;sideEffects&quot;: false</code>，否则 CSS 代码块会在生产环境构建时被 webpack 丢掉。</p>
+</blockquote>
+<h3 id="Vue-vs-JS-TS-入口文件-Entry-Files"><a href="#Vue-vs-JS-TS-入口文件-Entry-Files" class="headerlink" title="Vue vs. JS/TS 入口文件 Entry Files"></a>Vue vs. JS/TS 入口文件 Entry Files</h3><p>使用一个 <code>.vue</code> 文件作为入口时，你的库会直接暴露这个 Vue 组件本身，因为组件始终是默认导出的内容。 <em>When using a <code>.vue</code> file as entry, your library will directly expose the Vue component itself, because the component is always the default export.</em></p>
+<p>当使用一个 <code>.js</code> 或 <code>.ts</code> 文件作为入口时，它可能会包含具名导出，所以库会暴露为一个模块。<em>（when you are using a .js or .ts file as your entry, it may contain named exports, so your library will be exposed as a Module.）</em>也就是说你的库必须在 UMD 构建中通过 <code>window.yourLib.default</code> 访问，或在 CommonJS 构建中通过 <code>const myLib = require(&#39;mylib&#39;).default</code> 访问。如果没有任何具名导出并希望直接暴露默认导出，可以在 <code>vue.config.js</code> 中使用以下 webpack 配置：<em>(If you don’t have any named exports and wish to directly expose the default export, you can use the following webpack configuration)</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">configureWebpack</span>: &#123;</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">      <span class="attr">libraryExport</span>: <span class="string">'default'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Web-Components-组件"><a href="#Web-Components-组件" class="headerlink" title="Web Components 组件"></a>Web Components 组件</h2><p>在 Web Components 模式中，Vue 是<em>外置的</em>。这意味着包中不会有 Vue，即便你在代码中导入了 Vue。这里的包会假设在页面中已经有一个可用的全局变量 <code>Vue</code>。</p>
+<p>将一个单独的入口构建为一个 Web Components 组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target wc --name my-element [entry]</div></pre></td></tr></table></figure>
+<p>注意这里的入口应该是一个 <code>*.vue</code> 文件。Vue CLI 将会把这个组件自动包裹并注册为 Web Components 组件，无需在 <code>main.js</code> 里自行注册。也可以在开发时把 <code>main.js</code> 作为 demo app 单独使用。</p>
+<p>该构建将会产生一个单独的 JavaScript 文件 (及其压缩后的版本) 将所有的东西都内联起来。当这个脚本被引入网页时，会注册自定义组件 <code>&lt;my-element&gt;</code>，其使用 <code>@vue/web-component-wrapper</code> 包裹了目标的 Vue 组件。这个包裹器<em>(wrapper)</em>会自动代理属性<em>properties</em>、特性<em>attributes</em>、事件<em>events</em>和插槽<em>slots</em>。</p>
+<blockquote>
+<p>注意这个包依赖了在页面上全局可用的 <code>Vue</code></p>
+</blockquote>
+<p>这个模式允许你的组件的使用者以一个普通 DOM 元素的方式使用这个 Vue 组件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"path/to/my-element.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 可在普通 HTML 中或者其它任何框架中使用 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-element</span>&gt;</span><span class="tag">&lt;/<span class="name">my-element</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="注册多个-Web-Components-组件的包"><a href="#注册多个-Web-Components-组件的包" class="headerlink" title="注册多个 Web Components 组件的包"></a>注册多个 Web Components 组件的包</h3><p>使用一个 glob 表达式作为入口指定多个组件目标：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target wc --name foo &apos;src/components/*.vue&apos;</div></pre></td></tr></table></figure>
+<p>构建多个 web component 时，<code>--name</code> 将会用于设置前缀，同时自定义元素的名称会由组件的文件名推导得出<em>the custom element name will be inferred from the component filename</em>。比如 <code>HelloWorld.vue</code> 的组件携带 <code>--name foo</code> 将会生成的自定义元素名为 <code>&lt;foo-hello-world&gt;</code>。</p>
+<h3 id="异步-Web-Components-组件"><a href="#异步-Web-Components-组件" class="headerlink" title="异步 Web Components 组件"></a>异步 Web Components 组件</h3><p>Async Web Component  </p>
+<p>指定多个 Web Components 组件作为目标时，这个包可能会变得非常大，并且用户可能只想使用你的包中注册的一部分组件。这时异步 Web Components 模式会生成一个 code-split 的包，带一个只提供所有组件共享的运行时，并预先注册所有的自定义组件小入口文件。一个组件真正的实现只会在页面中用到自定义元素相应的一个实例时按需获取：<em>The async web component mode produces a code-split bundle with a small entry file that provides the shared runtime between all the components, and registers all the custom elements upfront. The actual implementation of a component is then fetched on-demand only when an instance of the corresponding custom element is used on the page</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target wc-async --name foo &apos;src/components/*.vue&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">File                Size                        Gzipped</div><div class="line"></div><div class="line">dist/foo.0.min.js    12.80 kb                    8.09 kb</div><div class="line">dist/foo.min.js      7.45 kb                     3.17 kb</div><div class="line">dist/foo.1.min.js    2.91 kb                     1.02 kb</div><div class="line">dist/foo.js          22.51 kb                    6.67 kb</div><div class="line">dist/foo.0.js        17.27 kb                    8.83 kb</div><div class="line">dist/foo.1.js        5.24 kb                     1.64 kb</div></pre></td></tr></table></figure>
+<p>现在用户在该页面上只需要引入 Vue 和这个入口文件即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/vue"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"path/to/foo.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- foo-one 的实现的 chunk 会在用到的时候自动获取 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">foo-one</span>&gt;</span><span class="tag">&lt;/<span class="name">foo-one</span>&gt;</span></div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2017/05/04/ioshttps/" data-id="ckf0gnrlj006cotd8d97mn1rp" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/" data-id="ckf0gnrj6001potd8u1frycdk" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/charles/">charles</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
     </footer>
   </div>
@@ -110,19 +163,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/21/payissue/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          支付问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/28/blogissues/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/11/20200911vueCLIModesandEnvironmentVariables/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">折腾琐记：编辑器篇</div>
+      <div class="article-nav-title">Vue 学习笔记（二十六）：Vue CLI 环境变量和模式</div>
     </a>
   
 </nav>
