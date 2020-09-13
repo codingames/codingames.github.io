@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Vue 学习笔记（二十六）：构建 | tracenote</title>
+  <title>Vue 学习笔记（二十七）：构建 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Build Targets构建目标">
 <meta name="keywords" content="vue,fe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue 学习笔记（二十六）：构建">
+<meta property="og:title" content="Vue 学习笔记（二十七）：构建">
 <meta property="og:url" content="http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="Build Targets构建目标">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-09-13T02:09:23.646Z">
+<meta property="og:updated_time" content="2020-09-13T02:13:52.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue 学习笔记（二十六）：构建">
+<meta name="twitter:title" content="Vue 学习笔记（二十七）：构建">
 <meta name="twitter:description" content="Build Targets构建目标">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue 学习笔记（二十六）：构建
+      Vue 学习笔记（二十七）：构建
     </h1>
   
 
@@ -95,7 +95,7 @@
       
         <p>Build Targets<br>构建目标  </p>
 <a id="more"></a>
-<p><code>vue-cli-service build</code> 通过 <code>--target</code> 选项指定不同的构建目标</p>
+<p><code>vue-cli-service build</code> 通过 <code>--target</code> 指定不同构建目标</p>
 <h2 id="应用-App"><a href="#应用-App" class="headerlink" title="应用  App"></a>应用  App</h2><p>默认是应用模式：</p>
 <ul>
 <li><code>index.html</code> 带有注入的资源和 resource hint</li>
@@ -105,7 +105,7 @@
 </ul>
 <h2 id="库-Library"><a href="#库-Library" class="headerlink" title="库  Library"></a>库  Library</h2><blockquote>
 <p>注意对 Vue 的依赖<br>在库模式中，Vue 是<em>外置的</em>，包中没有 Vue，即便你在代码中导入了 Vue。如果这个库会通过一个打包器使用，它将尝试通过打包器以依赖的方式加载 Vue；否则就会回退到一个全局的 <code>Vue</code> 变量。</p>
-<p>要避免此行为，可以在<code>build</code>命令中添加<code>--inline-vue</code>标志。</p>
+<p>解决：在<code>build</code>命令中添加<code>--inline-vue</code>标志</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target lib --inline-vue</div></pre></td></tr></table></figure>
 </blockquote>
 <p>将一个单独的入口构建为一个库：</p>
@@ -127,9 +127,9 @@
 <p>注意<br>开发一个库或多项目仓库 (monorepo)时请注意导入 CSS 是具有副作用的。请确保在 <code>package.json</code> 中移除 <code>&quot;sideEffects&quot;: false</code>，否则 CSS 代码块会在生产环境构建时被 webpack 丢掉。</p>
 </blockquote>
 <h3 id="Vue-vs-JS-TS-入口文件-Entry-Files"><a href="#Vue-vs-JS-TS-入口文件-Entry-Files" class="headerlink" title="Vue vs. JS/TS 入口文件 Entry Files"></a>Vue vs. JS/TS 入口文件 Entry Files</h3><p>使用一个 <code>.vue</code> 文件作为入口时，你的库会直接暴露这个 Vue 组件本身，因为组件始终是默认导出的内容。 <em>When using a <code>.vue</code> file as entry, your library will directly expose the Vue component itself, because the component is always the default export.</em></p>
-<p>当使用一个 <code>.js</code> 或 <code>.ts</code> 文件作为入口时，它可能会包含具名导出，所以库会暴露为一个模块。<em>（when you are using a .js or .ts file as your entry, it may contain named exports, so your library will be exposed as a Module.）</em>也就是说你的库必须在 UMD 构建中通过 <code>window.yourLib.default</code> 访问，或在 CommonJS 构建中通过 <code>const myLib = require(&#39;mylib&#39;).default</code> 访问。如果没有任何具名导出并希望直接暴露默认导出，可以在 <code>vue.config.js</code> 中使用以下 webpack 配置：<em>(If you don’t have any named exports and wish to directly expose the default export, you can use the following webpack configuration)</em></p>
+<p>当使用一个 <code>.js</code> 或 <code>.ts</code> 文件作为入口时，它可能会包含具名导出，所以库会暴露为一个模块。<em>（when you are using a <code>.js</code> or <code>.ts</code> file as your entry, it may contain named exports, so your library will be exposed as a Module.）</em>也就是说你的库必须在 UMD 构建中通过 <code>window.yourLib.default</code> 访问，或在 CommonJS 构建中通过 <code>const myLib = require(&#39;mylib&#39;).default</code> 访问。如果没有任何具名导出并希望直接暴露默认导出，可以在 <code>vue.config.js</code> 中使用以下 webpack 配置：<em>(If you don’t have any named exports and wish to directly expose the default export, you can use the following webpack configuration)</em></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="attr">configureWebpack</span>: &#123;</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">      <span class="attr">libraryExport</span>: <span class="string">'default'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Web-Components-组件"><a href="#Web-Components-组件" class="headerlink" title="Web Components 组件"></a>Web Components 组件</h2><p>在 Web Components 模式中，Vue 是<em>外置的</em>。这意味着包中不会有 Vue，即便你在代码中导入了 Vue。这里的包会假设在页面中已经有一个可用的全局变量 <code>Vue</code>。</p>
+<h2 id="Web-Components-组件"><a href="#Web-Components-组件" class="headerlink" title="Web Components 组件"></a>Web Components 组件</h2><p>在 Web Components 模式中，Vue 是外置的。包中不会有 Vue，即使代码中导入了 Vue。这里的包会假设在页面中已经有一个可用的全局变量 <code>Vue</code>。</p>
 <p>将一个单独的入口构建为一个 Web Components 组件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue-cli-service build --target wc --name my-element [entry]</div></pre></td></tr></table></figure>
 <p>注意这里的入口应该是一个 <code>*.vue</code> 文件。Vue CLI 将会把这个组件自动包裹并注册为 Web Components 组件，无需在 <code>main.js</code> 里自行注册。也可以在开发时把 <code>main.js</code> 作为 demo app 单独使用。</p>
@@ -152,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/" data-id="ckf0gnrj6001potd8u1frycdk" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/" data-id="ckf0gtc7a001kr7d8j948bno5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -224,7 +224,7 @@
       <ul>
         
           <li>
-            <a href="/2020/09/12/20200912vueCLIBuildDeploy/">Vue 学习笔记（二十六）：构建</a>
+            <a href="/2020/09/12/20200912vueCLIBuildDeploy/">Vue 学习笔记（二十七）：构建</a>
           </li>
         
           <li>
