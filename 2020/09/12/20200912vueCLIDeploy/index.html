@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: json | tracenote</title>
+  <title>Vue 学习笔记（二十八）：Vue CLI 部署 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/json/index.html">
+  <meta name="description" content="Deployment">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（二十八）：Vue CLI 部署">
+<meta property="og:url" content="http://tracenote.com/2020/09/12/20200912vueCLIDeploy/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="Deployment">
 <meta property="og:locale" content="utf-8">
+<meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/CORS_principle.png">
+<meta property="og:updated_time" content="2020-09-13T17:46:24.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（二十八）：Vue CLI 部署">
+<meta name="twitter:description" content="Deployment">
+<meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/CORS_principle.png">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,39 +69,115 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/26/javaJSON/" class="archive-article-date">
-  <time datetime="2018-09-26T04:30:00.000Z" itemprop="datePublished">Sep 26</time>
+        <section id="main"><article id="post-20200912vueCLIDeploy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/12/20200912vueCLIDeploy/" class="article-date">
+  <time datetime="2020-09-12T15:00:00.000Z" itemprop="datePublished">2020-09-12</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/26/javaJSON/">Java json</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（二十八）：Vue CLI 部署
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Deployment </p>
+<a id="more"></a>
+<h2 id="通用指南"><a href="#通用指南" class="headerlink" title="通用指南"></a>通用指南</h2><p>General Guidelines  </p>
+<ul>
+<li><p>前后端不分离<br>如果你用 Vue CLI 处理静态资源并和后端框架一起作为部署的一部分，那么仅仅需要确保 Vue CLI 生成的构建文件在正确的位置，并遵循后端框架的发布方式即可。</p>
+</li>
+<li><p>前后端分离<br>如果独立于后端部署前端应用——也就是说后端暴露一个前端可访问的 API，然后前端实际上是纯静态应用。那么可以将 <code>dist</code> 目录里构建的内容部署到任何静态文件服务器中，但要确保正确的 <code>publicPath</code> 。</p>
+</li>
+</ul>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><p>Previewing Locally  </p>
+<p><code>dist</code> 目录需要启动一个 HTTP 服务器来访问 (除非你已经将 <code>publicPath</code> 配置为了一个相对的值)，所以以 <code>file://</code> 协议直接打开 <code>dist/index.html</code> 是不会工作的。在本地预览生产环境构建最简单的方式就是使用一个 Node.js 静态文件服务器，例如 <a href="https://github.com/zeit/serve" target="_blank" rel="external">serve</a>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g serve</div><div class="line"><span class="comment"># -s 参数的意思是将其架设在 Single-Page Application 模式下</span></div><div class="line"><span class="comment"># 这个模式会处理即将提到的路由问题</span></div><div class="line">serve <span class="_">-s</span> dist</div></pre></td></tr></table></figure>
+<h3 id="使用-history-pushState-的路由"><a href="#使用-history-pushState-的路由" class="headerlink" title="使用 history.pushState 的路由"></a>使用 <code>history.pushState</code> 的路由</h3><p>Routing with <code>history.pushState</code>  </p>
+<p>在 <code>history</code> 模式下使用 Vue Router，是无法搭配简单的静态文件服务器的。例如，如果你使用 Vue Router 为 <code>/todos/42/</code> 定义了一个路由，开发服务器已经配置了相应的 <code>localhost:3000/todos/42</code> 响应，但是一个为生产环境构建架设的简单的静态服务器会却会返回 404。</p>
+<p>为此，你需要配置生产环境服务器，将任何没有匹配到静态文件的请求回退到 <code>index.html</code>。参考<a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html" target="_blank" rel="external">Vue Router 常用服务器配置指引</a>。</p>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><p>如果前端静态内容是部署在与后端 API 不同的域名上，需要配置 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="external">CORS</a>。</p>
+<h4 id="CORS-1"><a href="#CORS-1" class="headerlink" title="CORS"></a>CORS</h4><h5 id="什么是-CORS"><a href="#什么是-CORS" class="headerlink" title="什么是 CORS"></a>什么是 CORS</h5><p>跨域资源共享(CORS) 是一种机制，它使用额外的 HTTP 头来告诉浏览器  让运行在一个 origin (domain) 上的Web应用被准许访问来自不同源服务器上的指定的资源。当一个资源从与该资源本身所在的服务器<strong>不同的域、协议或端口</strong>请求一个资源时，资源会发起一个跨域 HTTP 请求。</p>
+<p>比如，站点 <a href="http://domain-a.com" target="_blank" rel="external">http://domain-a.com</a> 的某 HTML 页面通过 <code>&lt;img&gt; 的 src</code> 请求 <code>http://domain-b.com/image.jpg</code>。网络上的许多页面都会加载来自不同域的CSS样式表，图像和脚本等资源。</p>
+<p>出于安全原因，浏览器限制从脚本内发起的跨源HTTP请求。 例如，XMLHttpRequest和Fetch API遵循同源策略。 这意味着使用这些API的Web应用程序只能从加载应用程序的同一个域请求HTTP资源，除非响应报文包含了正确CORS响应头。（注：并不一定是浏览器限制了发起跨站请求，也可能是跨站请求可以正常发起，但是返回结果被浏览器拦截了。）</p>
+<p>跨域资源共享（ CORS ）机制允许 Web 应用服务器进行跨域访问控制，从而使跨域数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 XMLHttpRequest 或 Fetch ）使用 CORS，以降低跨域 HTTP 请求所带来的风险。</p>
+<p><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/CORS_principle.png" alt=""></p>
+<h5 id="什么情况下需要-CORS"><a href="#什么情况下需要-CORS" class="headerlink" title="什么情况下需要 CORS"></a>什么情况下需要 CORS</h5><p>跨域资源共享标准（ cross-origin sharing standard ）允许在下列场景中使用跨域 HTTP 请求：</p>
+<ul>
+<li>前文提到的由 XMLHttpRequest 或 Fetch 发起的跨域 HTTP 请求。</li>
+<li>Web 字体 (CSS 中通过 @font-face 使用跨域字体资源), 因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用。</li>
+<li>WebGL 贴图</li>
+<li>使用 drawImage 将 Images/video 画面绘制到 canvas</li>
+</ul>
+<p>跨域资源共享标准新增了一组 HTTP 首部字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 GET 以外的 HTTP 请求，或者搭配某些 MIME 类型的 POST 请求），浏览器必须首先使用 OPTIONS 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨域请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（包括 Cookies 和 HTTP 认证相关数据）。</p>
+<p>CORS请求失败会产生错误，但是为了安全，在JavaScript代码层面是无法获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。</p>
+<h3 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h3><p>如果使用了 PWA 插件，那么应用必须架设在 HTTPS 上，这样 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API" target="_blank" rel="external">Service Worker</a> 才能被正确注册。</p>
+<h2 id="平台指南"><a href="#平台指南" class="headerlink" title="平台指南"></a>平台指南</h2><p>官方提供了以下平台部署方式，有需要再针对查看</p>
+<ul>
+<li><p>云开发 CloudBase</p>
+</li>
+<li><p>GitHub Pages</p>
+</li>
+<li>GitLab Pages</li>
+<li>Netlify</li>
+<li>Render</li>
+<li>Amazon S3</li>
+<li>Firebase</li>
+<li>Vercel</li>
+<li>Stdlib</li>
+<li>Heroku</li>
+<li>Surge</li>
+<li>Bitbucket Cloud</li>
+<li>Docker (Nginx)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/12/20200912vueCLIDeploy/" data-id="ckf1evu15001nfbd89cmbdlta" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/12/20200912vueCLIBuildDeploy/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue 学习笔记（二十七）：Vue CLI 构建
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/11/20200911vueCLIModesandEnvironmentVariables/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（二十六）：Vue CLI 环境变量和模式</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
