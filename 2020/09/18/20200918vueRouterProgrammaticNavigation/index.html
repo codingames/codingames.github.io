@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2020/8 | tracenote</title>
+  <title>Vue 学习笔记（三十二）：Vue Router 编程式的导航 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/2020/08/index.html">
+  <meta name="description" content="除了使用 &amp;lt;router-link&amp;gt; 创建 a 标签来定义导航链接，还可以借助 router 的实例方法，通过编写代码来实现。 router.push(location, onComplete?, onAbort?)">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（三十二）：Vue Router 编程式的导航">
+<meta property="og:url" content="http://tracenote.com/2020/09/18/20200918vueRouterProgrammaticNavigation/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="除了使用 &amp;lt;router-link&amp;gt; 创建 a 标签来定义导航链接，还可以借助 router 的实例方法，通过编写代码来实现。 router.push(location, onComplete?, onAbort?)">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-09-18T18:16:32.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（三十二）：Vue Router 编程式的导航">
+<meta name="twitter:description" content="除了使用 &amp;lt;router-link&amp;gt; 创建 a 标签来定义导航链接，还可以借助 router 的实例方法，通过编写代码来实现。 router.push(location, onComplete?, onAbort?)">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,590 +67,89 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/31/20200831springStaticUseInjection/" class="archive-article-date">
-  <time datetime="2020-08-31T15:00:00.000Z" itemprop="datePublished">Aug 31</time>
+        <section id="main"><article id="post-20200918vueRouterProgrammaticNavigation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/18/20200918vueRouterProgrammaticNavigation/" class="article-date">
+  <time datetime="2020-09-18T15:00:00.000Z" itemprop="datePublished">2020-09-18</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/31/20200831springStaticUseInjection/">Spring 静态方法使用注入</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（三十二）：Vue Router 编程式的导航
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/30/20200830vueStateTransitions/" class="archive-article-date">
-  <time datetime="2020-08-30T15:00:00.000Z" itemprop="datePublished">Aug 30</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/30/20200830vueStateTransitions/">Vue 学习笔记（十五）：状态过渡</a>
-    </h1>
-  
+        <p>除了使用 <code>&lt;router-link&gt;</code> 创建 a 标签来定义导航链接，还可以借助 router 的实例方法，通过编写代码来实现。</p>
+<h4 id="router-push-location-onComplete-onAbort"><a href="#router-push-location-onComplete-onAbort" class="headerlink" title="router.push(location, onComplete?, onAbort?)"></a><code>router.push(location, onComplete?, onAbort?)</code></h4><a id="more"></a>
+<p>onComplete?, onAbort? 是回调函数：导航成功完成 (在所有的异步钩子被解析之后) 或终止 (导航到相同的路由、或在当前导航完成之前导航到另一个不同的路由) 的时候进行相应的调用。可省略。</p>
+<blockquote>
+<p>注意： 如果目的地和当前路由相同，只有参数发生了改变 (比如从一个用户资料到另一个 <code>/users/1</code> -&gt; <code>/users/2</code>)，你需要使用 <code>beforeRouteUpdate</code>来响应这个变化 (比如抓取用户信息)。</p>
+</blockquote>
+<p>点击 <code>&lt;router-link :to=&quot;...&quot;&gt;</code> 等同于调用 <code>router.push(...)</code></p>
+<table>
+<thead>
+<tr>
+<th>声明式</th>
+<th>编程式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;router-link :to=&quot;...&quot;&gt;</code></td>
+<td><code>router.push(...)</code></td>
+</tr>
+</tbody>
+</table>
+<p>参数 location 可以是一个字符串路径，或者一个描述地址的对象。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 字符串</span></div><div class="line">router.push(<span class="string">'home'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 对象</span></div><div class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'home'</span> &#125;)</div><div class="line"></div><div class="line"><span class="comment">// 命名的路由</span></div><div class="line">router.push(&#123; <span class="attr">name</span>: <span class="string">'user'</span>, <span class="attr">params</span>: &#123; <span class="attr">userId</span>: <span class="string">'123'</span> &#125;&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 带查询参数，变成 /register?plan=private</span></div><div class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'register'</span>, <span class="attr">query</span>: &#123; <span class="attr">plan</span>: <span class="string">'private'</span> &#125;&#125;)</div></pre></td></tr></table></figure>
+<p>注意：如果提供了 <code>path</code>，<code>params</code> 会被忽略，上述例子中的 <code>query</code> 并不属于这种情况。取而代之的是下面例子的做法，你需要提供路由的 <code>name</code> 或手写完整的带有参数的 <code>path</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> userId = <span class="string">'123'</span></div><div class="line">router.push(&#123; <span class="attr">name</span>: <span class="string">'user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user/123</span></div><div class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">`/user/<span class="subst">$&#123;userId&#125;</span>`</span> &#125;) <span class="comment">// -&gt; /user/123</span></div><div class="line"><span class="comment">// 这里的 params 不生效</span></div><div class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'/user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user</span></div></pre></td></tr></table></figure>
+<p>同样的规则也适用于 <code>router-link</code> 组件的 <code>to</code> 属性。</p>
+<h4 id="router-replace-location-onComplete-onAbort"><a href="#router-replace-location-onComplete-onAbort" class="headerlink" title="router.replace(location, onComplete?, onAbort?)"></a><code>router.replace(location, onComplete?, onAbort?)</code></h4><p>跟 <code>router.push</code> 很像，唯一不同的是，它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录。</p>
+<h4 id="router-go-n"><a href="#router-go-n" class="headerlink" title="router.go(n)"></a><code>router.go(n)</code></h4><p>在 history 记录中向前或者后退多少步</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在浏览器记录中前进一步，等同于 history.forward()</span></div><div class="line">router.go(<span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment">// 后退一步记录，等同于 history.back()</span></div><div class="line">router.go(<span class="number">-1</span>)</div><div class="line"></div><div class="line"><span class="comment">// 前进 3 步记录</span></div><div class="line">router.go(<span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment">// 如果 history 记录不够用，那就默默地失败呗</span></div><div class="line">router.go(<span class="number">-100</span>)</div><div class="line">router.go(<span class="number">100</span>)</div></pre></td></tr></table></figure>
+<h3 id="操作-History"><a href="#操作-History" class="headerlink" title="操作 History"></a>操作 History</h3><p>参考 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/API/History_API</a></p>
+<p><code>router.push</code>、 <code>router.replace</code> 和 <code>router.go</code> 跟 <code>window.history.pushState</code>、 <code>window.history.replaceState</code> 和 <code>window.history.go</code> 很像， 实际上它们确实是效仿 window.history API 的。  </p>
+<p>Vue Router 的导航方法 (<code>push</code>、 <code>replace</code>、 <code>go</code>) 在各类路由模式 (<code>history</code>、 <code>hash</code> 和 <code>abstract</code>) 下表现一致。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/29/20200829vueEnterLeave&ListTransitions/" class="archive-article-date">
-  <time datetime="2020-08-29T15:00:00.000Z" itemprop="datePublished">Aug 29</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/29/20200829vueEnterLeave&ListTransitions/">Vue 学习笔记（十四）：进入/离开 &amp; 列表过渡</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/28/20200828readingNote/" class="archive-article-date">
-  <time datetime="2020-08-28T00:00:00.000Z" itemprop="datePublished">Aug 28</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/18/20200918vueRouterProgrammaticNavigation/" data-id="ckf8kf9bz0020ffd8qqrj79lo" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/28/20200828readingNote/">速读笔记-2020.8.28</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/27/20200827Thinkin3plus1/" class="archive-article-date">
-  <time datetime="2020-08-27T15:00:00.000Z" itemprop="datePublished">Aug 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/27/20200827Thinkin3plus1/">卫哲的3+1思考法：测量项目“靠谱程度”[转载]</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/26/20200826vueHandlingEdgeCases/" class="archive-article-date">
-  <time datetime="2020-08-26T15:00:00.000Z" itemprop="datePublished">Aug 26</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/26/20200826vueHandlingEdgeCases/">Vue 学习笔记（十三）：处理边界情况</a>
-    </h1>
   
+    <a href="/2020/09/17/20200917vueRouter2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（三十一）：Vue Router 示例</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/25/20200825JNIOOM/" class="archive-article-date">
-  <time datetime="2020-08-25T15:00:00.000Z" itemprop="datePublished">Aug 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/25/20200825JNIOOM/">JNI 相关内存泄漏[摘抄]</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/23/20200822vueDynamic&AsyncComponents/" class="archive-article-date">
-  <time datetime="2020-08-23T15:00:00.000Z" itemprop="datePublished">Aug 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/23/20200822vueDynamic&AsyncComponents/">Vue 学习笔记（十二）：动态组件 &amp; 异步组件</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/23/20200824CAPandBase/" class="archive-article-date">
-  <time datetime="2020-08-23T15:00:00.000Z" itemprop="datePublished">Aug 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/23/20200824CAPandBase/">分布式系统CAP不可能三角和Base理论</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/22/20200822vueSlots/" class="archive-article-date">
-  <time datetime="2020-08-22T15:00:00.000Z" itemprop="datePublished">Aug 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/22/20200822vueSlots/">Vue 学习笔记（十一）：插槽 Slots</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/21/20200821CustomEvents/" class="archive-article-date">
-  <time datetime="2020-08-21T15:00:00.000Z" itemprop="datePublished">Aug 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/21/20200821CustomEvents/">Vue 学习笔记（十）：自定义事件</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/20/20200819androidNativeOOM/" class="archive-article-date">
-  <time datetime="2020-08-20T15:00:00.000Z" itemprop="datePublished">Aug 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/20/20200819androidNativeOOM/">解读《Android Camera内存问题剖析 》</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/18/20200818vueProp/" class="archive-article-date">
-  <time datetime="2020-08-18T15:00:00.000Z" itemprop="datePublished">Aug 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/18/20200818vueProp/">Vue 学习笔记（九）：Prop</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/17/20200817DesignPattern_Flyweight/" class="archive-article-date">
-  <time datetime="2020-08-17T15:00:00.000Z" itemprop="datePublished">Aug 17</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/17/20200817DesignPattern_Flyweight/">设计模式——享元模式</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/16/20200816ComponentRegistration/" class="archive-article-date">
-  <time datetime="2020-08-16T15:00:00.000Z" itemprop="datePublished">Aug 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/16/20200816ComponentRegistration/">Vue 学习笔记（八）：组件注册</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/" class="archive-article-date">
-  <time datetime="2020-08-15T15:00:00.000Z" itemprop="datePublished">Aug 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/">Google Best Practices for Java Libraries（转载）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/14/20200814vueComponentsBasics/" class="archive-article-date">
-  <time datetime="2020-08-14T15:00:00.000Z" itemprop="datePublished">Aug 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/14/20200814vueComponentsBasics/">Vue 学习笔记（七）：组件基础</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/13/20200813backEndDeveloper/" class="archive-article-date">
-  <time datetime="2020-08-13T15:00:00.000Z" itemprop="datePublished">Aug 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/13/20200813backEndDeveloper/">后端架构师技术图谱（转载）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/12/20200812vueFormInputBindings/" class="archive-article-date">
-  <time datetime="2020-08-12T15:00:00.000Z" itemprop="datePublished">Aug 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/12/20200812vueFormInputBindings/">Vue 学习笔记（六）：表单输入绑定</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/11/20200811vueListRendering/" class="archive-article-date">
-  <time datetime="2020-08-11T15:00:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/11/20200811vueListRendering/">Vue 学习笔记（五）：列表渲染、事件处理</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/10/20200810readingNotes/" class="archive-article-date">
-  <time datetime="2020-08-10T15:00:00.000Z" itemprop="datePublished">Aug 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/10/20200810readingNotes/">速读笔记-2020.8.10</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/09/20200809vueClassandStyleBindings/" class="archive-article-date">
-  <time datetime="2020-08-09T15:00:00.000Z" itemprop="datePublished">Aug 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/09/20200809vueClassandStyleBindings/">Vue 学习笔记（四）：Class 与 Style 绑定，条件渲染</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/09/20200809vueVscodeRumHtml/" class="archive-article-date">
-  <time datetime="2020-08-09T04:00:00.000Z" itemprop="datePublished">Aug 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/09/20200809vueVscodeRumHtml/">VSCode 运行HTML页面</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/08/20200808vueTemplateSyntax/" class="archive-article-date">
-  <time datetime="2020-08-08T15:00:00.000Z" itemprop="datePublished">Aug 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/08/20200808vueTemplateSyntax/">Vue 学习笔记（三）：模板语法，计算属性和侦听器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/07/20200807aliDoom/" class="archive-article-date">
-  <time datetime="2020-08-07T15:00:00.000Z" itemprop="datePublished">Aug 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/07/20200807aliDoom/">阿里Doom双引擎自动回归服务简介</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/06/20200806vueInstance/" class="archive-article-date">
-  <time datetime="2020-08-06T15:00:00.000Z" itemprop="datePublished">Aug 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/06/20200806vueInstance/">Vue 学习笔记（二）：实例</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/05/20200805vuebasic/" class="archive-article-date">
-  <time datetime="2020-08-05T15:00:00.000Z" itemprop="datePublished">Aug 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/05/20200805vuebasic/">Vue 学习笔记（一）：基础</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/05/20200805arthas/" class="archive-article-date">
-  <time datetime="2020-08-05T00:00:00.000Z" itemprop="datePublished">Aug 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/05/20200805arthas/">Arthas 简介</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/03/20200803helloVue/" class="archive-article-date">
-  <time datetime="2020-08-03T15:00:00.000Z" itemprop="datePublished">Aug 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/20200803helloVue/">Hello Vue!</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/03/20200803makeBlogWorkAgain/" class="archive-article-date">
-  <time datetime="2020-08-03T00:00:00.000Z" itemprop="datePublished">Aug 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/20200803makeBlogWorkAgain/">终于把博客找回来了，继续运营</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         
