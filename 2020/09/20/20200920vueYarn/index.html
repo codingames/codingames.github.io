@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | tracenote</title>
+  <title>Vue 学习笔记（三十四）：yarn | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/page/2/index.html">
+  <meta name="description" content="前端的东西真是又多又杂，下了个 vue 小项目，里面有 yarn.lock 文件。这里了解一下 yarn">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（三十四）：yarn">
+<meta property="og:url" content="http://tracenote.com/2020/09/20/20200920vueYarn/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="前端的东西真是又多又杂，下了个 vue 小项目，里面有 yarn.lock 文件。这里了解一下 yarn">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-09-20T17:10:41.662Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（三十四）：yarn">
+<meta name="twitter:description" content="前端的东西真是又多又杂，下了个 vue 小项目，里面有 yarn.lock 文件。这里了解一下 yarn">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,995 +67,173 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/03/18/macOSLaunchctl/" class="archive-article-date">
-  <time datetime="2019-03-18T12:30:00.000Z" itemprop="datePublished">Mar 18</time>
+        <section id="main"><article id="post-20200920vueYarn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/20/20200920vueYarn/" class="article-date">
+  <time datetime="2020-09-20T15:00:00.000Z" itemprop="datePublished">2020-09-20</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/18/macOSLaunchctl/">macOS定时任务——launchctl</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（三十四）：yarn
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端的东西真是又多又杂，下了个 vue 小项目，里面有 <code>yarn.lock</code> 文件。这里了解一下 yarn</p>
+<a id="more"></a>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Yarn 是一个包管理器。类似 npm。可以通过 brew 安装。官网：<a href="https://yarn.bootcss.com" target="_blank" rel="external">https://yarn.bootcss.com</a></p>
+<h3 id="yarn-优点"><a href="#yarn-优点" class="headerlink" title="yarn 优点"></a>yarn 优点</h3><ul>
+<li>极其快速，Yarn会缓存它下载的每个包，所以无需重复下载。它还能并行化操作以最大化资源利用率。  </li>
+<li>特别安全，Yarn会在每个安装包被执行前校验其完整性</li>
+<li>超级可靠， Yarn使用格式详尽而又简洁的lockfile文件和确定性算法来安装依赖，能够保证在一个系统上的运行的安装过程也会以同样的方式运行在其他系统上</li>
+</ul>
+<h3 id="yarn-lock-文件"><a href="#yarn-lock-文件" class="headerlink" title="yarn.lock 文件"></a><code>yarn.lock</code> 文件</h3><p>官方文档对 <code>yarn.lock</code> 的说明： </p>
+<blockquote>
+<p>为了跨机器安装得到一致的结果，Yarn 需要比你配置在 package.json 中的依赖列表更多的信息。 Yarn 需要准确存储每个安装的依赖是哪个版本。  In order to get consistent installs across machines, Yarn needs more information than the dependencies you configure in your package.json. Yarn needs to store exactly which versions of each dependency were installed.<br>为了做到这样，Yarn 使用一个你项目根目录里的 <code>yarn.lock</code> 文件。这可以媲美其他像 Bundler 或 Cargo 这样的包管理器的 lockfiles。它类似于 npm 的 <code>npm-shrinkwrap.json</code>，然而他并不是有损的并且它能创建可重现的结果。（注：<code>npm-shrinkwrap.json</code>，是由命令 npm shrinkwrap 生成的，它的作用和 <code>package-lock.json</code> 的作用是一样的，都是用来锁定版本用的。现在有了 <code>package-lock.json</code> 之后就不怎么用 <code>npm-shrinkwrap.json</code> 了。）<br>Your yarn.lock file is <strong>auto-generated</strong> and should be handled entirely by Yarn. When you run either yarn or yarn add <package>, Yarn will generate a yarn.lock file within the root directory of your package.</package></p>
+</blockquote>
+<p><code>yarn.lock</code> 需要放入 git 等代码仓库中。</p>
+<h3 id="yarn-对比-npm"><a href="#yarn-对比-npm" class="headerlink" title="yarn 对比 npm"></a>yarn 对比 npm</h3><p>常用命令对比<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">npm init                                              ---- yarn init</div><div class="line">npm install                                         ---- yarn </div><div class="line">npm install xxx@1.1.1 -g                   ---- yarn global add xxx@1.1.1</div><div class="line">npm install xxx@1.1.1 --save            ---- yarn add xxx@1.1.1</div><div class="line">npm install xxx@1.1.1 --save-dev     ---- yarn add xxx@1.1.1 --dev</div><div class="line">npm uninstall xxx --save(-dev)          ----yarn remove xxx</div><div class="line">npm run xxx                                      ---- yarn run xxxx</div></pre></td></tr></table></figure></p>
+<p>更多：</p>
+<table>
+<thead>
+<tr>
+<th>npm (v5)</th>
+<th>Yarn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>npm install</td>
+<td>yarn add</td>
+</tr>
+<tr>
+<td>(N/A)</td>
+<td>yarn add –flat</td>
+</tr>
+<tr>
+<td>(N/A)</td>
+<td>yarn add –har</td>
+</tr>
+<tr>
+<td>npm install –no-package-lock</td>
+<td>yarn add –no-lockfile</td>
+</tr>
+<tr>
+<td>(N/A)</td>
+<td>yarn add –pure-lockfile</td>
+</tr>
+<tr>
+<td>npm install [package] –save</td>
+<td>yarn add [package]</td>
+</tr>
+<tr>
+<td>npm install [package] –save-dev</td>
+<td>yarn add [package] –dev</td>
+</tr>
+<tr>
+<td>(N/A)</td>
+<td>yarn add [package] –peer</td>
+</tr>
+<tr>
+<td>npm install [package] –save-optional</td>
+<td>yarn add [package] –optional</td>
+</tr>
+<tr>
+<td>npm install [package] –save-exact</td>
+<td>yarn add [package] –exact</td>
+</tr>
+<tr>
+<td>(N/A)</td>
+<td>yarn add [package] –tilde</td>
+</tr>
+<tr>
+<td>npm install [package] –global</td>
+<td>yarn global add [package]</td>
+</tr>
+<tr>
+<td>npm update –global</td>
+<td>yarn global upgrade</td>
+</tr>
+<tr>
+<td>npm rebuild</td>
+<td>yarn add –force</td>
+</tr>
+<tr>
+<td>npm uninstall [package]</td>
+<td>yarn remove [package]</td>
+</tr>
+<tr>
+<td>npm cache clean</td>
+<td>yarn cache clean [package]</td>
+</tr>
+<tr>
+<td>rm -rf node_modules &amp;&amp; npm install</td>
+<td>yarn upgrade</td>
+</tr>
+<tr>
+<td>npm version major</td>
+<td>yarn version –major</td>
+</tr>
+<tr>
+<td>npm version minor</td>
+<td>yarn version –minor</td>
+</tr>
+<tr>
+<td>npm version patch</td>
+<td>yarn version –patch</td>
+</tr>
+</tbody>
+</table>
+<p>github上最新 star 对比（20200920）<br>yarn 39k，npm 17.2k，yarn还是广受欢迎的。</p>
+<p>If you want to try Yarn out on your existing npm project, just try running:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn</div></pre></td></tr></table></figure>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h5 id="初始化一个新项目-yarn-init"><a href="#初始化一个新项目-yarn-init" class="headerlink" title="初始化一个新项目 yarn init"></a>初始化一个新项目 <code>yarn init</code></h5><h5 id="添加依赖包"><a href="#添加依赖包" class="headerlink" title="添加依赖包"></a>添加依赖包</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn add [package]</div><div class="line">yarn add [package]@[version]</div><div class="line">yarn add [package]@[tag]</div></pre></td></tr></table></figure>
+<h5 id="将依赖项添加到不同依赖项类别中"><a href="#将依赖项添加到不同依赖项类别中" class="headerlink" title="将依赖项添加到不同依赖项类别中"></a>将依赖项添加到不同依赖项类别中</h5><p>分别添加到 devDependencies、peerDependencies 和 optionalDependencies 类别中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn add [package] --dev</div><div class="line">yarn add [package] --peer</div><div class="line">yarn add [package] --optional</div></pre></td></tr></table></figure></p>
+<h5 id="升级依赖包"><a href="#升级依赖包" class="headerlink" title="升级依赖包"></a>升级依赖包</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yarn upgrade [package]</div><div class="line">yarn upgrade [package]@[version]</div><div class="line">yarn upgrade [package]@[tag]</div></pre></td></tr></table></figure>
+<h5 id="移除依赖包"><a href="#移除依赖包" class="headerlink" title="移除依赖包"></a>移除依赖包</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn remove [package]</div></pre></td></tr></table></figure>
+<h5 id="安装项目的全部依赖"><a href="#安装项目的全部依赖" class="headerlink" title="安装项目的全部依赖"></a>安装项目的全部依赖</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn</div></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn install</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/20/20200920vueYarn/" data-id="ckfbcx54l002d00d8mwhulmon" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/19/20200919vueRouter3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/11/pythonDecorator/" class="archive-article-date">
-  <time datetime="2018-11-11T04:30:00.000Z" itemprop="datePublished">Nov 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/11/pythonDecorator/">python装饰器的顺序</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/29/appiumIssues1.9.1/" class="archive-article-date">
-  <time datetime="2018-10-29T14:30:00.000Z" itemprop="datePublished">Oct 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/29/appiumIssues1.9.1/">appium升级的坑@1.9.1</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/09/mysqlCharacterSet/" class="archive-article-date">
-  <time datetime="2018-10-09T04:30:00.000Z" itemprop="datePublished">Oct 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/09/mysqlCharacterSet/">mysql编码不要使用uft8</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/26/javaJSON/" class="archive-article-date">
-  <time datetime="2018-09-26T04:30:00.000Z" itemprop="datePublished">Sep 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/26/javaJSON/">Java json</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/25/appiumAndroidPopUpWindow/" class="archive-article-date">
-  <time datetime="2018-09-25T04:30:00.000Z" itemprop="datePublished">Sep 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/25/appiumAndroidPopUpWindow/">appium android popupwindow 无法识别解决</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/20/dockerInstall/" class="archive-article-date">
-  <time datetime="2018-09-20T14:30:00.000Z" itemprop="datePublished">Sep 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/20/dockerInstall/">docker related</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/10/appiumHybrid/" class="archive-article-date">
-  <time datetime="2018-09-10T14:30:00.000Z" itemprop="datePublished">Sep 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/10/appiumHybrid/">appium hybrid app web view</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/31/javaA/" class="archive-article-date">
-  <time datetime="2018-08-31T14:00:00.000Z" itemprop="datePublished">Aug 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/javaA/">Answers To Questions of Java</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/31/javaQ/" class="archive-article-date">
-  <time datetime="2018-08-31T13:30:00.000Z" itemprop="datePublished">Aug 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/javaQ/">Questions of Java</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/20/issueBlogHexo/" class="archive-article-date">
-  <time datetime="2018-08-20T04:30:00.000Z" itemprop="datePublished">Aug 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/20/issueBlogHexo/">blog hexo DTraceProviderBindings 报错解决</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/19/readingNotesTestingWithRobotium/" class="archive-article-date">
-  <time datetime="2018-08-19T12:30:00.000Z" itemprop="datePublished">Aug 19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/19/readingNotesTestingWithRobotium/">《手机测试Robotium实战教程》读书笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/11/readingNotesABriefHistoryOf Humankind/" class="archive-article-date">
-  <time datetime="2018-08-11T12:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/11/readingNotesABriefHistoryOf Humankind/">《人类简史》读书笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/01/codeCollections/" class="archive-article-date">
-  <time datetime="2018-08-01T12:30:00.000Z" itemprop="datePublished">Aug 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/01/codeCollections/">不得不收集的代码[摘抄]</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/07/25/appiumUpgradeIssues/" class="archive-article-date">
-  <time datetime="2018-07-25T12:30:00.000Z" itemprop="datePublished">Jul 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/25/appiumUpgradeIssues/">坑爷的appium升级</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/07/12/mvnParams/" class="archive-article-date">
-  <time datetime="2018-07-12T12:30:00.000Z" itemprop="datePublished">Jul 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/mvnParams/">mvn传参数</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/30/javaGenericsParam/" class="archive-article-date">
-  <time datetime="2018-06-30T12:30:00.000Z" itemprop="datePublished">Jun 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/30/javaGenericsParam/">List&lt;子类&gt;传入someMethod(List&lt;父类&gt; alist)问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/06/18/telnetNc/" class="archive-article-date">
-  <time datetime="2018-06-18T12:30:00.000Z" itemprop="datePublished">Jun 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/18/telnetNc/">telnet 和 nc</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/31/sublimeText3HtmlFormat/" class="archive-article-date">
-  <time datetime="2018-05-31T13:30:00.000Z" itemprop="datePublished">May 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/31/sublimeText3HtmlFormat/">Sublime Text 3 Html 格式化</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/" class="archive-article-date">
-  <time datetime="2018-05-16T12:00:00.000Z" itemprop="datePublished">May 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/">java多重继承和java 8 接口默认方法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/15/dnsSettings/" class="archive-article-date">
-  <time datetime="2018-05-14T23:30:00.000Z" itemprop="datePublished">May 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/15/dnsSettings/">网站的DNS解析配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/08/elliptical/" class="archive-article-date">
-  <time datetime="2018-05-08T13:30:00.000Z" itemprop="datePublished">May 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/elliptical/">椭圆机的缺点[摘抄]</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/29/javaArraylistnCopiesIssue/" class="archive-article-date">
-  <time datetime="2018-01-29T14:30:00.000Z" itemprop="datePublished">Jan 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/29/javaArraylistnCopiesIssue/">Java ArrayList nCopies 相关的一个小坑</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/23/blogOperationData/" class="archive-article-date">
-  <time datetime="2018-01-23T12:30:00.000Z" itemprop="datePublished">Jan 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/23/blogOperationData/">blog运营数据：访客遍布全球</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/22/bashStringSplit/" class="archive-article-date">
-  <time datetime="2018-01-22T12:30:00.000Z" itemprop="datePublished">Jan 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/22/bashStringSplit/">linux 字符串分割</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/java8GuavaJDK7/" class="archive-article-date">
-  <time datetime="2018-01-16T14:00:00.000Z" itemprop="datePublished">Jan 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/java8GuavaJDK7/">guava在jdk7和jdk8之间的兼容问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/adbscreenshot/" class="archive-article-date">
-  <time datetime="2018-01-16T13:30:00.000Z" itemprop="datePublished">Jan 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/adbscreenshot/">android命令行截图</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/iOSCodeCoverage/" class="archive-article-date">
-  <time datetime="2018-01-16T12:30:00.000Z" itemprop="datePublished">Jan 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/iOSCodeCoverage/">iOS 代码覆盖率 XcodeCoverage 真机</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/15/daoShiShenYuanShen/" class="archive-article-date">
-  <time datetime="2018-01-15T12:30:00.000Z" itemprop="datePublished">Jan 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/15/daoShiShenYuanShen/">什么是道家所谓的识神和元神？</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/10/javaRuntimeExecComandBlock/" class="archive-article-date">
-  <time datetime="2018-01-10T14:30:00.000Z" itemprop="datePublished">Jan 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/javaRuntimeExecComandBlock/">Java Runtime.getRuntime().exec() 阻塞问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/10/xcodebuildLogIssue/" class="archive-article-date">
-  <time datetime="2018-01-10T12:30:00.000Z" itemprop="datePublished">Jan 10</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/xcodebuildLogIssue/">xcodebuild重定向输出日志的坑</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/07/iOSmonkeys/" class="archive-article-date">
-  <time datetime="2018-01-07T12:30:00.000Z" itemprop="datePublished">Jan 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/07/iOSmonkeys/">iOS monkeys</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/04/weChatJumpsAPI/" class="archive-article-date">
-  <time datetime="2018-01-04T04:30:00.000Z" itemprop="datePublished">Jan 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/04/weChatJumpsAPI/">微信跳一跳抓接口刷分</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/03/iOSCrashLogExtractionAndAnalysis/" class="archive-article-date">
-  <time datetime="2018-01-03T13:30:00.000Z" itemprop="datePublished">Jan 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/03/iOSCrashLogExtractionAndAnalysis/">iOS崩溃日志抓取与符号化</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/01/weChatJumpsRobot/" class="archive-article-date">
-  <time datetime="2018-01-01T04:30:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/weChatJumpsRobot/">用机器人来玩微信跳一跳</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/31/macPython2&3/" class="archive-article-date">
-  <time datetime="2017-12-31T14:30:00.000Z" itemprop="datePublished">Dec 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/31/macPython2&3/">macOS中的python2和python3并存</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/28/androidJacoco/" class="archive-article-date">
-  <time datetime="2017-12-28T13:30:00.000Z" itemprop="datePublished">Dec 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/28/androidJacoco/">android代码覆盖率jacoco实践</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/23/iCloudSyncLocalDirectory/" class="archive-article-date">
-  <time datetime="2017-12-23T04:30:00.000Z" itemprop="datePublished">Dec 23</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/23/iCloudSyncLocalDirectory/">iCloud Drive自动同步本地文件夹</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/22/gradleSyncIssue/" class="archive-article-date">
-  <time datetime="2017-12-22T13:30:00.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/22/gradleSyncIssue/">Gradle Sync 过慢问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/19/h5UITestChromeIssue/" class="archive-article-date">
-  <time datetime="2017-12-19T12:30:00.000Z" itemprop="datePublished">Dec 19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/19/h5UITestChromeIssue/">Chrome强制升级引起的H5自动化异常</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/04/fuckHuaweiIme/" class="archive-article-date">
-  <time datetime="2017-12-04T12:30:00.000Z" itemprop="datePublished">Dec 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/04/fuckHuaweiIme/">坑人的华为输入法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/03/IntellijSpringBootHelloWorld/" class="archive-article-date">
-  <time datetime="2017-12-03T12:30:00.000Z" itemprop="datePublished">Dec 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/IntellijSpringBootHelloWorld/">IntelliJ IDEA创建Spring Boot的Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/16/intellijImportProject/" class="archive-article-date">
-  <time datetime="2017-11-16T10:30:00.000Z" itemprop="datePublished">Nov 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/intellijImportProject/">IntelliJ IDEA 引用其它工程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/14/appiumMacEnv/" class="archive-article-date">
-  <time datetime="2017-11-14T10:30:00.000Z" itemprop="datePublished">Nov 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/appiumMacEnv/">从零开始配置appium iOS环境</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/01/javaPropertiesGibberish/" class="archive-article-date">
-  <time datetime="2017-11-01T04:30:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/javaPropertiesGibberish/">Java Properties 中文乱码</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/29/nginxOnMac/" class="archive-article-date">
-  <time datetime="2017-10-29T04:30:00.000Z" itemprop="datePublished">Oct 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/29/nginxOnMac/">mac上nginx配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/28/androidBuild/" class="archive-article-date">
-  <time datetime="2017-10-28T13:30:00.000Z" itemprop="datePublished">Oct 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/28/androidBuild/">android打包</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/18/ApplicationCrashReportForAndroid/" class="archive-article-date">
-  <time datetime="2017-10-18T14:30:00.000Z" itemprop="datePublished">Oct 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/18/ApplicationCrashReportForAndroid/">如何在本地搭建Android应用Crash跟踪系统－ACRA</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/17/appiumIssues/" class="archive-article-date">
-  <time datetime="2017-10-17T14:30:00.000Z" itemprop="datePublished">Oct 17</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/17/appiumIssues/">appium近期问题（待补充）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/26/appiumXcode9/" class="archive-article-date">
-  <time datetime="2017-09-26T11:30:00.000Z" itemprop="datePublished">Sep 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/26/appiumXcode9/">解决appium Xcode version 9.0 is not yet supported</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">
