@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: question | tracenote</title>
+  <title>Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/question/index.html">
+  <meta name="description" content="命名视图数据获取路由懒加载">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等">
+<meta property="og:url" content="http://tracenote.com/2020/09/19/20200919vueRouter3/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="命名视图数据获取路由懒加载">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-09-20T02:30:58.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等">
+<meta name="twitter:description" content="命名视图数据获取路由懒加载">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,58 +67,96 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/31/javaA/" class="archive-article-date">
-  <time datetime="2018-08-31T14:00:00.000Z" itemprop="datePublished">Aug 31</time>
+        <section id="main"><article id="post-20200919vueRouter3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/19/20200919vueRouter3/" class="article-date">
+  <time datetime="2020-09-19T15:00:00.000Z" itemprop="datePublished">2020-09-19</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/javaA/">Answers To Questions of Java</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/08/31/javaQ/" class="archive-article-date">
-  <time datetime="2018-08-31T13:30:00.000Z" itemprop="datePublished">Aug 31</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/javaQ/">Questions of Java</a>
-    </h1>
-  
+        <p>命名视图<br>数据获取<br>路由懒加载  </p>
+<a id="more"></a>
+<h2 id="命名视图"><a href="#命名视图" class="headerlink" title="命名视图"></a>命名视图</h2><p>Named Views<br>命名视图可以用来：同时 (同级) 展示多个视图，而不是嵌套展示，例如创建一个布局，有 sidebar (侧导航) 和 main (主内容) 两个视图。</p>
+<p>在界面中拥有多个单独命名的视图，而不是只有一个单独的出口。如果 router-view 没有设置名字，那么默认为 default。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">router-view</span> <span class="attr">class</span>=<span class="string">"view one"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">router-view</span> <span class="attr">class</span>=<span class="string">"view two"</span> <span class="attr">name</span>=<span class="string">"a"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">router-view</span> <span class="attr">class</span>=<span class="string">"view three"</span> <span class="attr">name</span>=<span class="string">"b"</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>一个视图使用一个组件渲染，因此对于同个路由，多个视图就需要多个组件。确保正确使用 components 配置 (带上 s)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">path</span>: <span class="string">'/'</span>,</div><div class="line">      <span class="attr">components</span>: &#123;</div><div class="line">        <span class="attr">default</span>: Foo,</div><div class="line">        <span class="attr">a</span>: Bar,</div><div class="line">        <span class="attr">b</span>: Baz</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p>有时候，进入某个路由后，需要从服务器获取数据。例如，在渲染用户信息时，你需要从服务器获取用户的数据。我们可以通过两种方式来实现：</p>
+<ul>
+<li><p><strong>导航完成之后获取</strong>：先完成导航，然后在接下来的组件生命周期钩子中获取数据。在数据获取期间显示“加载中”之类的指示。</p>
+</li>
+<li><p><strong>导航完成之前获取</strong>：导航完成前，在路由进入的守卫中获取数据，在数据获取成功后执行导航。</p>
+</li>
+</ul>
+<p>使用那种方式取决于想要什么样的用户体验。</p>
+<h4 id="导航完成后获取数据"><a href="#导航完成后获取数据" class="headerlink" title="导航完成后获取数据"></a>导航完成后获取数据</h4><p>立即导航和渲染组件，然后在组件的 <code>created</code> 钩子中获取数据。可以在数据获取期间展示一个 loading 状态，还可以在不同视图间展示不同的 loading 状态。</p>
+<p>假设我们有一个 <code>Post</code> 组件，需要基于 <code>$route.params.id</code> 获取文章数据：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"loading"</span> <span class="attr">class</span>=<span class="string">"loading"</span>&gt;</span></div><div class="line">      Loading...</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"error"</span> <span class="attr">class</span>=<span class="string">"error"</span>&gt;</span></div><div class="line">      &#123;&#123; error &#125;&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">"post"</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123; post.title &#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; post.body &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">loading</span>: <span class="literal">false</span>,</div><div class="line">      <span class="attr">post</span>: <span class="literal">null</span>,</div><div class="line">      <span class="attr">error</span>: <span class="literal">null</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  created () &#123;</div><div class="line">    <span class="comment">// 组件创建完后获取数据，</span></div><div class="line">    <span class="comment">// 此时 data 已经被 observed 了</span></div><div class="line">    <span class="keyword">this</span>.fetchData()</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">watch</span>: &#123;</div><div class="line">    <span class="comment">// 如果路由有变化，会再次执行该方法</span></div><div class="line">    <span class="string">'$route'</span>: <span class="string">'fetchData'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    fetchData () &#123;</div><div class="line">      <span class="keyword">this</span>.error = <span class="keyword">this</span>.post = <span class="literal">null</span></div><div class="line">      <span class="keyword">this</span>.loading = <span class="literal">true</span></div><div class="line">      <span class="comment">// replace getPost with your data fetching util / API wrapper</span></div><div class="line">      getPost(<span class="keyword">this</span>.$route.params.id, (err, post) =&gt; &#123;</div><div class="line">        <span class="keyword">this</span>.loading = <span class="literal">false</span></div><div class="line">        <span class="keyword">if</span> (err) &#123;</div><div class="line">          <span class="keyword">this</span>.error = err.toString()</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">this</span>.post = post</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="在导航完成前获取数据"><a href="#在导航完成前获取数据" class="headerlink" title="在导航完成前获取数据"></a>在导航完成前获取数据</h4><p>在导航转入新的路由前获取数据。我们可以在接下来的组件的  <code>beforeRouteEnter</code> 守卫中获取数据，当数据获取成功后只调用 <code>next</code> 方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">post</span>: <span class="literal">null</span>,</div><div class="line">      <span class="attr">error</span>: <span class="literal">null</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  beforeRouteEnter (to, <span class="keyword">from</span>, next) &#123;</div><div class="line">    getPost(to.params.id, (err, post) =&gt; &#123;</div><div class="line">      next(<span class="function"><span class="params">vm</span> =&gt;</span> vm.setData(err, post))</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 路由改变前，组件就已经渲染完了</span></div><div class="line">  <span class="comment">// 逻辑稍稍不同</span></div><div class="line">  beforeRouteUpdate (to, <span class="keyword">from</span>, next) &#123;</div><div class="line">    <span class="keyword">this</span>.post = <span class="literal">null</span></div><div class="line">    getPost(to.params.id, (err, post) =&gt; &#123;</div><div class="line">      <span class="keyword">this</span>.setData(err, post)</div><div class="line">      next()</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    setData (err, post) &#123;</div><div class="line">      <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="keyword">this</span>.error = err.toString()</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">this</span>.post = post</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在为后面的视图获取数据时，用户会停留在当前的界面，因此建议在数据获取期间，显示一些进度条或者别的指示。如果数据获取失败，同样有必要展示一些全局的错误提醒。</p>
+<h2 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h2><p>当打包构建应用时，JavaScript 包会变得非常大，影响页面加载。</p>
+<p>把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，就更加高效了。</p>
+<p>利用 Vue 的异步组件和 Webpack 的代码分割功能实现。</p>
+<p>首先，可以将异步组件定义为返回一个 Promise 的工厂函数 (该函数返回的 Promise 应该 resolve 组件本身)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">Promise</span>.resolve(&#123; <span class="comment">/* 组件定义对象 */</span> &#125;)</div></pre></td></tr></table></figure>
+<p>第二，在 Webpack 2 中，可以使用动态 import语法来定义代码分块点 (split point)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>) <span class="comment">// 返回 Promise</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>如果使用的是 Babel，需要添加 <a href="https://babeljs.io/docs/plugins/syntax-dynamic-import/" target="_blank" rel="external"><code>syntax-dynamic-import</code></a> 插件</p>
+</blockquote>
+<p>结合这两者，这就是如何定义一个能够被 Webpack 自动代码分割的异步组件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</div></pre></td></tr></table></figure>
+<p>在路由配置中什么都不需要改变，只需要像往常一样使用 <code>Foo</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="把组件按组分块"><a href="#把组件按组分块" class="headerlink" title="把组件按组分块"></a>把组件按组分块</h2><p>有时候需要把某个路由下的所有组件都打包在同个异步块 (chunk) 中。只需要使用Webpack的一个特殊的注释语法来提供 chunk name：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "group-foo" */</span> <span class="string">'./Foo.vue'</span>)</div><div class="line"><span class="keyword">const</span> Bar = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "group-foo" */</span> <span class="string">'./Bar.vue'</span>)</div><div class="line"><span class="keyword">const</span> Baz = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "group-foo" */</span> <span class="string">'./Baz.vue'</span>)</div></pre></td></tr></table></figure>
+<p>Webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中。</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/19/20200919vueRouter3/" data-id="ckfahikkx002dy6d8mf9vhldt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/18/20200918vueRouterProgrammaticNavigation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（三十二）：Vue Router 编程式导航</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
