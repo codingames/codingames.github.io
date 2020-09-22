@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: app | tracenote</title>
+  <title>Vue 学习笔记（三十六）：npm start | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/categories/app/index.html">
+  <meta name="description" content="有些项目的启动方式是 npm run dev 、npm run serve，还有些是 npm start ，并且可以主动打开浏览器，是怎么实现的？">
+<meta name="keywords" content="vue,fe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（三十六）：npm start">
+<meta property="og:url" content="http://tracenote.com/2020/09/22/20200922vueNpmStart/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="有些项目的启动方式是 npm run dev 、npm run serve，还有些是 npm start ，并且可以主动打开浏览器，是怎么实现的？">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-09-22T16:59:00.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（三十六）：npm start">
+<meta name="twitter:description" content="有些项目的启动方式是 npm run dev 、npm run serve，还有些是 npm start ，并且可以主动打开浏览器，是怎么实现的？">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,344 +67,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/08/20/20200819androidNativeOOM/" class="archive-article-date">
-  <time datetime="2020-08-20T15:00:00.000Z" itemprop="datePublished">Aug 20</time>
+        <section id="main"><article id="post-20200922vueNpmStart" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/22/20200922vueNpmStart/" class="article-date">
+  <time datetime="2020-09-22T15:00:00.000Z" itemprop="datePublished">2020-09-22</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/fe/">fe</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/20/20200819androidNativeOOM/">解读《Android Camera内存问题剖析 》</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（三十六）：npm start
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/adbscreenshot/" class="archive-article-date">
-  <time datetime="2018-01-16T13:30:00.000Z" itemprop="datePublished">Jan 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/adbscreenshot/">android命令行截图</a>
-    </h1>
-  
+        <p>有些项目的启动方式是 <code>npm run dev</code> 、<code>npm run serve</code>，还有些是 <code>npm start</code> ，并且可以主动打开浏览器，是怎么实现的？</p>
+<a id="more"></a>
+<p>我们已知 <code>npm run dev</code> 、<code>npm run serve</code> 是在 <code>package.json</code> 中配置的，</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">"scripts": &#123;</div><div class="line">    "dev": "vue-cli-service serve",</div><div class="line">    "build": "vue-cli-service build",</div><div class="line">    "lint": "vue-cli-service lint"</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>同样，<code>npm start</code> 也是这里配置的：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">"scripts": &#123;</div><div class="line">    "start": "npm run serve",</div><div class="line">    "serve": "vue-cli-service serve --open",</div><div class="line">    "build": "vue-cli-service build",</div><div class="line">    "lint": "vue-cli-service lint"</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>后面加上 <code>—-open</code> 表示自动打开浏览器。这里 <code>npm start</code> 实际执行的是 <code>npm run serve</code>, 而 <code>npm run serve</code> 实际执行的是 <code>vue-cli-service serve --open</code> ，这里我们可以做个测试，配置<code>package.json</code> 如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"start"</span>: <span class="string">"npm run serve"</span>,</div><div class="line">    <span class="string">"serve"</span>: <span class="string">"vue-cli-service serve --open --port 8090"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"vue-cli-service build"</span>,</div><div class="line">    <span class="string">"lint"</span>: <span class="string">"vue-cli-service lint"</span>,</div><div class="line">    <span class="string">"testtest"</span>: <span class="string">"echo hahaha"</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>执行 <code>npm run testtest</code> ，会得到：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ npm run testtest</div><div class="line"></div><div class="line">&gt; simple-router-demo@0.1.0 testtest /Users/xxx/vueCliProjects/simple-router-demo</div><div class="line">&gt; <span class="built_in">echo</span> hahaha</div><div class="line"></div><div class="line">hahaha</div></pre></td></tr></table></figure>
+<p>它实际执行了 <code>echo hahaha</code></p>
+<p>另外，<code>vue-cli-service serve --open</code> 还可以加 <code>—port</code> 指定端口号。查看更多参数，<code>./node_modules/.bin/vue-cli-service -h</code> ，然后根据输出的提示命令进一步查看即可 <code>./node_modules/.bin/vue-cli-service help serve</code>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Usage: vue-cli-service serve [options] [entry]</div><div class="line"></div><div class="line">  Options:</div><div class="line"></div><div class="line">    --open         open browser on server start</div><div class="line">    --copy         copy url to clipboard on server start</div><div class="line">    --stdin        close when stdin ends</div><div class="line">    --mode         specify env mode (default: development)</div><div class="line">    --host         specify host (default: 0.0.0.0)</div><div class="line">    --port         specify port (default: 8080)</div><div class="line">    --https        use https (default: <span class="literal">false</span>)</div><div class="line">    --public       specify the public network URL <span class="keyword">for</span> the HMR client</div><div class="line">    --skip-plugins comma-separated list of plugin names to skip <span class="keyword">for</span> this run</div></pre></td></tr></table></figure>
+<p><code>vue-cli-service</code> 直接运行是找不到命令的，它并非全局安装，而是  <code>./node_modules/.bin/vue-cli-service</code> ，npm scripts 中以 vue-cli-service 访问它，终端命令则需要带上述路径。</p>
+<p><strong>Q&amp;A:</strong></p>
+<ol>
+<li><p>start 可以是其它任意字符串吗？例如 <code>package.json</code> 中配置<code>start</code>一行改成 <code>&quot;sss&quot;: &quot;npm run serve&quot;</code>，然后执行 <code>npm sss</code>？</p>
+<p> 不行，会被提示：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Usage: npm &lt;<span class="built_in">command</span>&gt;</div><div class="line"></div><div class="line"><span class="built_in">where</span> &lt;<span class="built_in">command</span>&gt; is one of:</div><div class="line">    access, adduser, audit, bin, bugs, c, cache, ci, cit,</div><div class="line">    clean-install, clean-install-test, completion, config,</div><div class="line">    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,</div><div class="line">    edit, explore, fund, get, <span class="built_in">help</span>, <span class="built_in">help</span>-search, hook, i, init,</div><div class="line">    install, install-ci-test, install-test, it, link, list, ln,</div><div class="line">    login, <span class="built_in">logout</span>, ls, org, outdated, owner, pack, ping, prefix,</div><div class="line">    profile, prune, publish, rb, rebuild, repo, restart, root,</div><div class="line">    run, run-script, s, se, search, <span class="built_in">set</span>, shrinkwrap, star,</div><div class="line">    stars, start, stop, t, team, <span class="built_in">test</span>, token, tst, un,</div><div class="line">    uninstall, unpublish, unstar, up, update, v, version, view,</div><div class="line">    whoami</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/16/iOSCodeCoverage/" class="archive-article-date">
-  <time datetime="2018-01-16T12:30:00.000Z" itemprop="datePublished">Jan 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/16/iOSCodeCoverage/">iOS 代码覆盖率 XcodeCoverage 真机</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/22/20200922vueNpmStart/" data-id="ckfe7dvcp0029nkd8veq201vy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/10/xcodebuildLogIssue/" class="archive-article-date">
-  <time datetime="2018-01-10T12:30:00.000Z" itemprop="datePublished">Jan 10</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/10/xcodebuildLogIssue/">xcodebuild重定向输出日志的坑</a>
-    </h1>
   
+    <a href="/2020/09/21/20200921vueNvm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（三十五）：nvm，安装管理不同 node 版本</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/07/iOSmonkeys/" class="archive-article-date">
-  <time datetime="2018-01-07T12:30:00.000Z" itemprop="datePublished">Jan 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/07/iOSmonkeys/">iOS monkeys</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/03/iOSCrashLogExtractionAndAnalysis/" class="archive-article-date">
-  <time datetime="2018-01-03T13:30:00.000Z" itemprop="datePublished">Jan 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/03/iOSCrashLogExtractionAndAnalysis/">iOS崩溃日志抓取与符号化</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/28/androidJacoco/" class="archive-article-date">
-  <time datetime="2017-12-28T13:30:00.000Z" itemprop="datePublished">Dec 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/28/androidJacoco/">android代码覆盖率jacoco实践</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/22/gradleSyncIssue/" class="archive-article-date">
-  <time datetime="2017-12-22T13:30:00.000Z" itemprop="datePublished">Dec 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/22/gradleSyncIssue/">Gradle Sync 过慢问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/28/androidBuild/" class="archive-article-date">
-  <time datetime="2017-10-28T13:30:00.000Z" itemprop="datePublished">Oct 28</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/28/androidBuild/">android打包</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/18/ApplicationCrashReportForAndroid/" class="archive-article-date">
-  <time datetime="2017-10-18T14:30:00.000Z" itemprop="datePublished">Oct 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/18/ApplicationCrashReportForAndroid/">如何在本地搭建Android应用Crash跟踪系统－ACRA</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/16/appInstallRealDevice/" class="archive-article-date">
-  <time datetime="2017-08-16T14:30:00.000Z" itemprop="datePublished">Aug 16</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/16/appInstallRealDevice/">iOS命令行安装ipa到真机及其它常用命令</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/fuckXiaoMi/" class="archive-article-date">
-  <time datetime="2017-08-11T12:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/fuckXiaoMi/">画蛇添足的小米</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/08/11/adbdevicesinfo/" class="archive-article-date">
-  <time datetime="2017-08-11T04:30:00.000Z" itemprop="datePublished">Aug 11</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/11/adbdevicesinfo/">adb获取安卓手机厂商型号</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/07/29/appInstallSimulator/" class="archive-article-date">
-  <time datetime="2017-07-29T15:30:00.000Z" itemprop="datePublished">Jul 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/29/appInstallSimulator/">iOS安装app到Simulator</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/06/20/360jiagu/" class="archive-article-date">
-  <time datetime="2017-06-20T02:00:00.000Z" itemprop="datePublished">Jun 20</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/20/360jiagu/">所谓的360加固</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/04/ioshttps/" class="archive-article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">May 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/04/ioshttps/">iOS 10.3 Charles https 问题</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
 </section>
         
