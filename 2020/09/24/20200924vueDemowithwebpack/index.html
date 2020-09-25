@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python装饰器的顺序 | tracenote</title>
+  <title>Vue 学习笔记（三十七）：一般工程目录结构解析 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python装饰器的顺序是由下往上，但是如下程序的输出常令很多人困惑。为什么不是 1, 11, 2, 22, 3 这样的顺序？">
-<meta name="keywords" content="python,decorator">
+  <meta name="description" content="一般webpack下的vuejs项目结构解析，一般能下到的项目多都是这个结构">
+<meta name="keywords" content="vue,fe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python装饰器的顺序">
-<meta property="og:url" content="http://tracenote.com/2018/11/11/pythonDecorator/index.html">
+<meta property="og:title" content="Vue 学习笔记（三十七）：一般工程目录结构解析">
+<meta property="og:url" content="http://tracenote.com/2020/09/24/20200924vueDemowithwebpack/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="python装饰器的顺序是由下往上，但是如下程序的输出常令很多人困惑。为什么不是 1, 11, 2, 22, 3 这样的顺序？">
+<meta property="og:description" content="一般webpack下的vuejs项目结构解析，一般能下到的项目多都是这个结构">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-11-11T16:19:31.000Z">
+<meta property="og:updated_time" content="2020-09-24T18:54:18.760Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python装饰器的顺序">
-<meta name="twitter:description" content="python装饰器的顺序是由下往上，但是如下程序的输出常令很多人困惑。为什么不是 1, 11, 2, 22, 3 这样的顺序？">
+<meta name="twitter:title" content="Vue 学习笔记（三十七）：一般工程目录结构解析">
+<meta name="twitter:description" content="一般webpack下的vuejs项目结构解析，一般能下到的项目多都是这个结构">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-pythonDecorator" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20200924vueDemowithwebpack" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/11/pythonDecorator/" class="article-date">
-  <time datetime="2018-11-11T04:30:00.000Z" itemprop="datePublished">2018-11-11</time>
+    <a href="/2020/09/24/20200924vueDemowithwebpack/" class="article-date">
+  <time datetime="2020-09-24T15:00:00.000Z" itemprop="datePublished">2020-09-24</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/fe/">fe</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python装饰器的顺序
+      Vue 学习笔记（三十七）：一般工程目录结构解析
     </h1>
   
 
@@ -93,28 +93,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>python装饰器的顺序是由下往上，但是如下程序的输出常令很多人困惑。为什么不是 <code>1, 11, 2, 22, 3</code> 这样的顺序？</p>
+        <p>一般webpack下的vuejs项目结构解析，一般能下到的项目多都是这个结构 </p>
 <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></div><div class="line">    print(<span class="string">'1'</span>)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">aa</span><span class="params">()</span>:</span></div><div class="line">        print(<span class="string">'11'</span>)</div><div class="line">        func()</div><div class="line">    <span class="keyword">return</span> aa</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">(func)</span>:</span></div><div class="line">    print(<span class="string">'2'</span>)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bb</span><span class="params">()</span>:</span></div><div class="line">        print(<span class="string">'22'</span>)</div><div class="line">        func()</div><div class="line">    <span class="keyword">return</span> bb</div><div class="line"></div><div class="line"><span class="meta">@b</span></div><div class="line"><span class="meta">@a</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">p</span><span class="params">()</span>:</span></div><div class="line">    print(<span class="string">'3'</span>)</div><div class="line"></div><div class="line">p()</div></pre></td></tr></table></figure>
-<p>输出：<br><blockquote><p>1<br>2<br>22<br>11<br>3</p>
-</blockquote></p>
-<p>首先要明白，多个装饰器：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@a</span></div><div class="line"><span class="meta">@b</span></div><div class="line"><span class="meta">@c</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span> <span class="params">()</span>:</span></div><div class="line">    <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>相当于 <code>f = a(b(c(f)))</code></p>
-<p>所以，最上面 <code>p = b(a(p))</code>，<br>a(p): 打印 1，返回函数引用 aa，但aa本身并未被执行。<br>b(a(p)): 相当于 b(aa), 此时b打印 2，返回函数引用bb。<br>p(): 相当于执行函数bb()，此时打印 22，<br>接着执行bb()函数里面的func()，而这个func是函数b的入参，即aa，即实际执行aa(), 开始打印 11，<br>接着执行aa()里面的下一句，func(), 而此func是函数a的入参即函数p，即执行函数p()，打印 3.</p>
-<p>加入更多埋点来观察：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></div><div class="line">    print(<span class="string">'1'</span>)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">aa</span><span class="params">()</span>:</span></div><div class="line">        print(<span class="string">'11'</span>)</div><div class="line">        func()</div><div class="line">        print(<span class="string">'111'</span>)</div><div class="line">    <span class="keyword">return</span> aa</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">(func)</span>:</span></div><div class="line">    print(<span class="string">'2'</span>)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bb</span><span class="params">()</span>:</span></div><div class="line">        print(<span class="string">'22'</span>)</div><div class="line">        func()</div><div class="line">        print(<span class="string">'222'</span>)</div><div class="line">    <span class="keyword">return</span> bb</div><div class="line"></div><div class="line"><span class="meta">@b</span></div><div class="line"><span class="meta">@a</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">p</span><span class="params">()</span>:</span></div><div class="line">    print(<span class="string">'3'</span>)</div><div class="line"></div><div class="line">p()</div></pre></td></tr></table></figure>
-<p>输出：</p>
-<blockquote><p>1<br>2<br>22<br>11<br>3<br>111<br>222</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">▸ build/                // 编译用到的脚本</div><div class="line">▸ config/               // 各种配置</div><div class="line">▸ dist/                 // 打包后的文件夹，gitignore</div><div class="line">▸ node_modules/         // node第三方包，gitignore</div><div class="line">▸ src/                  // 源代码</div><div class="line">▸ static/               // 静态文件, 暂时无用</div><div class="line">  index.html            // 最外层文件</div><div class="line">  package.json          // node项目配置文件</div></pre></td></tr></table></figure>
+<ul>
+<li>build  是webpack 相关配置和脚本。开发中仅 偶尔使用 到此文件夹下 <code>webpack.base.conf.js</code> 用于配置 less、sass等css预编译库，或者配置一下 UI 库。</li>
+<li>config 主要存放配置文件，用于区分开发环境、线上环境的不同。 常用到此文件夹下 config.js 配置开发环境的 端口号、是否开启热加载 或者 设置生产环境的静态资源相对路径、是否开启gzip压缩、<code>npm run build</code> 命令打包生成静态资源的名称和路径等。<ul>
+<li>dev.env.js 开发模式下的配置文件，一般不用修改</li>
+<li>prod.env.js 生产模式下的配置文件，一般不用修改</li>
+<li><strong>index.js</strong> 很重要的文件， 定义了 开发时的端口（默认是8080），定义了图片文件夹（默认static)， 定义了开发模式下的 代理服务器. 我们修改的还是比较多的。index.js 的 build 对象：<ul>
+<li>index：配置打包后入口.html文件的名称以及文件夹名称</li>
+<li>assetsRoot：配置打包后生成的文件名称和路径</li>
+<li>assetsPublicPath：配置 打包后 .html 引用静态资源的路径，一般要设置成 “./“</li>
+<li>productionGzip：是否开发 gzip 压缩，以提升加载速度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>dist<br>  打包生成物，注意加入 gitignore，用于生产部署</li>
+<li><p>src 项目源码及需要引用的资源文件，日常开发核心文件夹</p>
+<ul>
+<li><code>assets</code>  存放项目中需要用到的资源文件，css、js、images等。</li>
+<li><code>components</code>  用到的”视图”和”组件”所在的文件夹。可以看到 <code>.vue</code>文件，header.vue、footer.vue等</li>
+<li><code>emit</code>  自己配置的vue集中式事件管理机制</li>
+<li><code>router/index.js</code>  路由文件。 定义了各个页面对应的url</li>
+<li><code>service</code>  自己配置的vue请求后台接口方法</li>
+<li><code>page</code>  存在vue页面组件的文件夹</li>
+<li><code>util</code>  vue开发过程中一些公共的.js方法</li>
+<li><code>vuex</code>  存放 vuex 为vue专门开发的状态管理器</li>
+<li><code>App.vue</code>  如果index.html 是一级页面模板的话，这个App.vue就是二级页面模板。 所有的其他vuejs页面，都作为该模板的 一部分被渲染出来。（使用标签<code>&lt;route-view&gt;&lt;/router-view&gt;</code>渲染整个工程的.vue组件）</li>
+<li>main.js vue-cli工程的入口文件。（？废代码。没有实际意义，但是为了支撑整个vuejs框架，存在很必要。）</li>
+</ul>
+</li>
+<li><p><code>index.html</code>  设置项目的一些 meta 头信息和提供<code>&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;</code>用于挂载 vue 节点</p>
+</li>
+<li><code>package.json</code>  用于 node_modules 依赖配置和启动、打包项目的 npm 命令管理</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/11/11/pythonDecorator/" data-id="ckfhjq641009c2wd8ymmaop0c" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/24/20200924vueDemowithwebpack/" data-id="ckfhjq617002m2wd893boe14i" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/decorator/">decorator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fe/">fe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +144,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/18/macOSLaunchctl/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          macOS定时任务——launchctl
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/10/29/appiumIssues1.9.1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/23/20200923accountingIntroduction/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">appium升级的坑@1.9.1</div>
+      <div class="article-nav-title">通用能力之财会1：前言</div>
     </a>
   
 </nav>
