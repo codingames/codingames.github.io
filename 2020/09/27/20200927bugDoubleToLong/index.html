@@ -5,18 +5,18 @@
   
   <title>Bug 学习：一分钱的误差 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据传到B系统后，发现个别数字少了一分钱。">
+  <meta name="description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据经过B系统后，发现个别数据少了一分钱。">
 <meta name="keywords" content="Java,bug">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bug 学习：一分钱的误差">
 <meta property="og:url" content="http://tracenote.com/2020/09/27/20200927bugDoubleToLong/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据传到B系统后，发现个别数字少了一分钱。">
+<meta property="og:description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据经过B系统后，发现个别数据少了一分钱。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-09-27T17:51:04.310Z">
+<meta property="og:updated_time" content="2020-09-27T18:02:20.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bug 学习：一分钱的误差">
-<meta name="twitter:description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据传到B系统后，发现个别数字少了一分钱。">
+<meta name="twitter:description" content="前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。 遇到一个有意思的bug，A系统的数据经过B系统后，发现个别数据少了一分钱。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -94,19 +94,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><em>前言：基本功相关错误，基本功扎实的同学不用浪费时间看了。</em></p>
-<p>遇到一个有意思的bug，A系统的数据传到B系统后，发现个别数字少了一分钱。</p>
+<p>遇到一个有意思的bug，A系统的数据经过B系统后，发现个别数据少了一分钱。</p>
 <a id="more"></a>
-<p>A 系统数据保留小数点后两位，单位是元，B 系统单位是分。这里有个转化：</p>
-<p>A 系统数字 ** 100 得到分，赋值给 B 系统，示例代码如下，思考一下它会有什么问题？</p>
+<p>A 系统数据单位是元，保留小数点后两位，而 B 系统单位是分。这里有个转化：</p>
+<p>A 系统数字 <code>* 100</code> 得到分，赋值给 B 系统long型变量，示例代码如下，思考一下它会有什么问题？</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> a = <span class="number">0.28</span>;</div><div class="line"><span class="keyword">double</span> b = <span class="number">0.29</span>;</div><div class="line"></div><div class="line">System.out.println(a * <span class="number">100</span>);</div><div class="line">System.out.println(b * <span class="number">100</span>);</div></pre></td></tr></table></figure>
-<p>答案是：<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓</p>
+<p>答案是：<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">28.000000000000004</div><div class="line">28.999999999999996</div></pre></td></tr></table></figure>
 <p>接着如果再转long</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> a = <span class="number">0.28</span>;</div><div class="line"><span class="keyword">double</span> b = <span class="number">0.29</span>;</div><div class="line"></div><div class="line">System.out.println((<span class="keyword">long</span>) (a * <span class="number">100</span>));</div><div class="line">System.out.println((<span class="keyword">long</span>) (b * <span class="number">100</span>));</div></pre></td></tr></table></figure>
 <p>输出是</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">28</div><div class="line">28</div></pre></td></tr></table></figure>
 <p>单位是分，0.29元变成了28分，一分钱的误差产生了。</p>
-<p>另外，类似有意思的例子</p>
+<p>另外，类似例子</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(<span class="number">1f</span> == <span class="number">0.99999999f</span>);</div></pre></td></tr></table></figure>
 <p>输出是 <code>true</code></p>
 <p>原因不再赘述，典型的精度问题，计算机基本功（我们看到的十进制数字在计算机中是以二进制表达的），但稍有不慎也很容易犯错。</p>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/27/20200927bugDoubleToLong/" data-id="ckfleg3et002xvkd882hilr2a" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/27/20200927bugDoubleToLong/" data-id="ckfleukz00032ymd84uy6q2a3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li></ul>
