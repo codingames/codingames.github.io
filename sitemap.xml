@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2020/09/28/20200928Java%20BigDecimalEquals/</loc>
+    <loc>http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/</loc>
     
     <lastmod>2020-09-29T15:37:56.885Z</lastmod>
     
@@ -849,21 +849,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -877,9 +863,16 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
     
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
@@ -898,34 +891,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -933,42 +898,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -983,6 +913,76 @@
   
   <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
