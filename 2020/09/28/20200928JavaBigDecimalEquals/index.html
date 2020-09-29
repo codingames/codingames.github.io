@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="昨天 Bug 学习：一分钱的误差 提到了BigDecimal，正好今天看到这篇文章 为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？，再多谈一点。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-09-29T15:37:56.885Z">
+<meta property="og:updated_time" content="2020-09-29T15:43:47.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较）">
 <meta name="twitter:description" content="昨天 Bug 学习：一分钱的误差 提到了BigDecimal，正好今天看到这篇文章 为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？，再多谈一点。">
@@ -101,7 +101,7 @@
 <p>最新版的《阿里巴巴Java开发手册》：10. 【强制】如上所示 BigDecimal 的等值比较应使用 compareTo() 方法，而不是 equals() 方法。说明：equals() 方法会比较值和精度（1.0 与 1.00 返回结果为 false），而 compareTo() 则会忽略精度。</p>
 </blockquote>
 <p>做下实验：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BigDecimal bigDecimal3 = <span class="keyword">new</span> BigDecimal(<span class="string">"1"</span>);</div><div class="line">BigDecimal bigDecimal4 = <span class="keyword">new</span> BigDecimal(<span class="string">"1.0"</span>);</div><div class="line">System.out.println(bigDecimal3.equals(bigDecimal4));  <span class="comment">// false，精度不同</span></div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BigDecimal bigDecimal1 = <span class="keyword">new</span> BigDecimal(<span class="string">"1"</span>);</div><div class="line">BigDecimal bigDecimal2 = <span class="keyword">new</span> BigDecimal(<span class="string">"1.0"</span>);</div><div class="line">System.out.println(bigDecimal1.equals(bigDecimal2));  <span class="comment">// false，精度不同</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>BigDecimal的JavaDoc：Compares this  BigDecimal with the specified Object for equality.  Unlike compareTo, this method considers two BigDecimal objects equal only if they are equal in value and scale (thus 2.0 is not equal to 2.00 when compared by  this method)  和 compareTo 不同，equals方法会比较两部分内容，分别是值（value）和精度（scale）。</p>
 </blockquote>
@@ -110,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/" data-id="ckfo4qp7j003cu5d8ilvqjy9o" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/" data-id="ckfo4s8tq002zvnd88r8yix3k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
