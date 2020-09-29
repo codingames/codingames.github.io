@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: domain | tracenote</title>
+  <title>继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较） | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/domain/index.html">
+  <meta name="description" content="昨天 Bug 学习：一分钱的误差 提到了BigDecimal，正好今天看到这篇文章 为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？，再多谈一点。">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较）">
+<meta property="og:url" content="http://tracenote.com/2020/09/28/20200928Java BigDecimalEquals/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="昨天 Bug 学习：一分钱的误差 提到了BigDecimal，正好今天看到这篇文章 为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？，再多谈一点。">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-09-29T15:37:56.885Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较）">
+<meta name="twitter:description" content="昨天 Bug 学习：一分钱的误差 提到了BigDecimal，正好今天看到这篇文章 为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？，再多谈一点。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,39 +67,70 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/19/aboutDns/" class="archive-article-date">
-  <time datetime="2017-03-19T12:18:25.000Z" itemprop="datePublished">Mar 19</time>
+        <section id="main"><article id="post-20200928Java BigDecimalEquals" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/28/20200928Java BigDecimalEquals/" class="article-date">
+  <time datetime="2020-09-28T15:00:00.000Z" itemprop="datePublished">2020-09-28</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/aboutDns/">DNSPod解析Godaddy域名</a>
+    <h1 class="article-title" itemprop="name">
+      继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较）
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天 <a href="https://mp.weixin.qq.com/s/-o7Y-TWlV0gY7kbWB7v7XQ" target="_blank" rel="external">Bug 学习：一分钱的误差</a> 提到了BigDecimal，正好今天看到这篇文章 <a href="https://mp.weixin.qq.com/s/6Rmtogevt7Wui59cNCH9pA" target="_blank" rel="external">为什么阿里巴巴禁止使用BigDecimal的equals方法做等值比较？</a>，再多谈一点。</p>
+<a id="more"></a>
+<p>众所周知，在支付、电商、金融等业务的金额表示、计算等场景，不能使用 double、float 等类型，而是要使用对精度支持更好的 BigDecimal。</p>
+<p>它自带了加，减，乘，除等运算方法和等值判断等。</p>
+<blockquote>
+<p>最新版的《阿里巴巴Java开发手册》：10. 【强制】如上所示 BigDecimal 的等值比较应使用 compareTo() 方法，而不是 equals() 方法。说明：equals() 方法会比较值和精度（1.0 与 1.00 返回结果为 false），而 compareTo() 则会忽略精度。</p>
+</blockquote>
+<p>做下实验：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">BigDecimal bigDecimal3 = <span class="keyword">new</span> BigDecimal(<span class="string">"1"</span>);</div><div class="line">BigDecimal bigDecimal4 = <span class="keyword">new</span> BigDecimal(<span class="string">"1.0"</span>);</div><div class="line">System.out.println(bigDecimal3.equals(bigDecimal4));  <span class="comment">// false，精度不同</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>BigDecimal的JavaDoc：Compares this  BigDecimal with the specified Object for equality.  Unlike compareTo, this method considers two BigDecimal objects equal only if they are equal in value and scale (thus 2.0 is not equal to 2.00 when compared by  this method)  和 compareTo 不同，equals方法会比较两部分内容，分别是值（value）和精度（scale）。</p>
+</blockquote>
+<p>这在实际业务场景中经常是不符合需要的。所以推荐使用忽略精度的compareTo方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/09/28/20200928Java BigDecimalEquals/" data-id="ckfo4o66c0036scd83olq6r6z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/27/20200927bugDoubleToLong/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Bug 学习：一分钱的误差</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
