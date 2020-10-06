@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://tracenote.com/2020/10/05/20201005FEXHR/</loc>
+    <lastmod>2020-10-06T14:46:03.328Z</lastmod>
+    <data>
+        <display>
+        <title>XHR是什么？[前端]</title>
+        <pubTime>2020-10-05T04:00:00.000Z</pubTime>
+        
+        <tag>FE</tag>
+         
+        <tag>XHR</tag>
+         
+         
+           
+             
+              <breadCrumb title="FE" url="http://tracenote.com/categories/FE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tracenote.com/2020/10/05/20201005chromeExtensionJson/</loc>
     <lastmod>2020-10-06T14:41:12.973Z</lastmod>
     <data>
@@ -3045,64 +3067,46 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
+        <title>Appium 资料摘抄</title>
+        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+        <tag>摘抄</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>appium swipe</title>
+        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
         
         <tag>app</tag>
          
         <tag>android</tag>
          
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
-        
-        <tag>android</tag>
+        <tag>iOS</tag>
          
         <tag>appium</tag>
-         
-        <tag>issue</tag>
          
          
            
@@ -3130,6 +3134,30 @@
            
              
               <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Appium Android 坎坷</title>
+        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>appium</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
           
         </display>
     </data>
@@ -3201,20 +3229,16 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
+        <title>appium近期问题（待补充）</title>
+        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
         
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
         <tag>appium</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -3227,18 +3251,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
+        <title>grep color与重定向</title>
+        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
         
         <tag>env</tag>
          
         <tag>linux</tag>
          
-        <tag>macOS</tag>
+        <tag>grep</tag>
          
          
            
@@ -3321,18 +3345,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>grep color与重定向</title>
-        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
+        <title>优化history</title>
+        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
         
         <tag>env</tag>
          
         <tag>linux</tag>
          
-        <tag>grep</tag>
+        <tag>macOS</tag>
          
          
            
@@ -3373,20 +3397,18 @@
 
     
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     <data>
         <display>
-        <title>Appium 资料摘抄</title>
-        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
+        <title>坑人的华为输入法</title>
+        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
         
+        <tag>app</tag>
+         
         <tag>android</tag>
          
         <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>摘抄</tag>
          
          
            
