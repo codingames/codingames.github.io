@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: python | tracenote</title>
+  <title>通用能力之财会2：为什么采用借贷记账法 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/python/index.html">
+  <meta name="description" content="&amp;emsp;&amp;emsp;复式记账法  Double Entry Bookkeeping">
+<meta name="keywords" content="财会,会计,财务,accounting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通用能力之财会2：为什么采用借贷记账法">
+<meta property="og:url" content="http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;复式记账法  Double Entry Bookkeeping">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-10-06T15:51:50.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="通用能力之财会2：为什么采用借贷记账法">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;复式记账法  Double Entry Bookkeeping">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,87 +67,85 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/11/pythonDecorator/" class="archive-article-date">
-  <time datetime="2018-11-11T04:30:00.000Z" itemprop="datePublished">Nov 11</time>
+        <section id="main"><article id="post-20201006accountingDoubleEntryBookkeeping" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/06/20201006accountingDoubleEntryBookkeeping/" class="article-date">
+  <time datetime="2020-10-06T15:00:00.000Z" itemprop="datePublished">2020-10-06</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/finance/">finance</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/11/pythonDecorator/">python装饰器的顺序</a>
+    <h1 class="article-title" itemprop="name">
+      通用能力之财会2：为什么采用借贷记账法
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/01/weChatJumpsRobot/" class="archive-article-date">
-  <time datetime="2018-01-01T04:30:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/weChatJumpsRobot/">用机器人来玩微信跳一跳</a>
-    </h1>
-  
+        <p>&emsp;&emsp;复式记账法  Double Entry Bookkeeping</p>
+<a id="more"></a>
+<p>&emsp;&emsp;大家日常生活记账，可能就像这样的流水账：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">早餐：12 元</div><div class="line">午餐：21 元</div><div class="line">晚餐：25 元</div></pre></td></tr></table></figure>
+<blockquote>
+<p>题外话：日常不建议这么琐碎记账，抓大放小，特别琐碎的有个大致数目大致区间就可以了。特别是年轻人。最好的防御是进攻，不应该把大量精力消耗在节流上，而是要尽可能用在开源上。除非入不敷出特别困难的。  </p>
+</blockquote>
+<p>&emsp;&emsp;这种记账方式称作 单式记账。</p>
+<p>&emsp;&emsp;而公司的记账方式，就完全不一样了，对于每一笔经济业务，都必须用相等的金额在两个或两个以上相互联系的账户中进行登记，没有会计学基础的同学可能看着满眼“借”和“贷”就是一头雾水。</p>
+<p>&emsp;&emsp;后续我们再详细介绍借贷记账法。这里简单介绍下为什么采用：</p>
+<p>&emsp;&emsp;复式记账法是指以资产与权益平衡关系作为记账基础，对于每一笔经济业务，都必须用相等的金额在两个或两个以上相互联系的账户中进行登记，全面系统地反映会计要素增减变化的一种记账方法。</p>
+<p>&emsp;&emsp;复式记账法主要有借贷记账法、收付记账法和增减记账法等。借贷记账法是目前<strong>国际通用</strong>的记账方法，也是<strong>我国《企业会计准则》</strong>中明确规定我国企业应当采用的记账方法。</p>
+<p>复式记账法建立在会计恒等式【资产 = 负债 + 所有者权益】的基础上，对比单式记账它有以下优点：</p>
+<ul>
+<li>对于每一项经济业务，都在两个或两个以上相互关联的账户中进行记录（即作双重记录，这也是这一记账法被称为“复式”的由来），不仅可以了解每一项经济业务的来龙去脉，而且在全部经济业务都登记入账以后，可以通过账户记录全面、系统地反映经济活动的过程和结果。</li>
+<li>由于每项经济业务发生后，都是以相等的金额在有关账户中进行记录，因而可据以进行试算平衡，以检查账户记录是否正确。</li>
+</ul>
+<blockquote>
+<p>关于复式记账法的——增减记帐法和收付记账法（其实不用理会，记住借贷记账法就可以），由于资金是个不完整的概念，包括货币资金和物资资金。在现实市场经济条件下，资金渠道增加，经济业务复杂，转帐事务较多，这时候收付记账法就不能同时反映经济业务中资金运动的双方了。<br>借贷记账法的原则是权责发生制原则；收付记账法的原则是收付实现制原则（也称实收实付制或现金制原则）。</p>
+</blockquote>
+<p>借贷记账法，相比收付记账法：</p>
+<ul>
+<li>完整地反映经纪业务的内在联系；</li>
+<li>便于相互验证和核对；</li>
+<li>符合收入与成本之间的配比原则。</li>
+<li>能比较准确的计算出每一会计期间的损益及会计利润；</li>
+<li>唯一不足的是对现金流的计算不如收付记账法便捷。</li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/" data-id="ckfy55ftq003ubld884yexrgv" class="article-share-link">Share</a>
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/31/macPython2&3/" class="archive-article-date">
-  <time datetime="2017-12-31T14:30:00.000Z" itemprop="datePublished">Dec 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/31/macPython2&3/">macOS中的python2和python3并存</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accounting/">accounting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/会计/">会计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财会/">财会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财务/">财务</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/04/20201004books/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">趁活动买了几本书</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
