@@ -4,7 +4,7 @@
   <url>
     <loc>http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/</loc>
     
-    <lastmod>2020-10-06T15:51:50.333Z</lastmod>
+    <lastmod>2020-10-06T16:01:43.650Z</lastmod>
     
   </url>
   
@@ -891,21 +891,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -919,6 +905,20 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
+    
+    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -926,14 +926,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -968,7 +968,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -982,7 +982,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1010,21 +1010,21 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
