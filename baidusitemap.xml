@@ -1,3470 +1,603 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
-    <loc>http://tracenote.com/2020/10/08/20201008blogHexoChart/</loc>
-    <lastmod>2020-10-08T17:00:39.620Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客：markdown 绘制 flowchart 流程图</title>
-        <pubTime>2020-10-08T15:15:12.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>绘图</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2020/10/09/20201009blogHexoplantuml/</loc>
-    <lastmod>2020-10-08T16:59:52.236Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客：markdown 绘制 PlantUML</title>
-        <pubTime>2020-10-09T15:15:12.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>绘图</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2020/10/07/20201007FEXHR/</loc>
-    <lastmod>2020-10-07T15:34:36.812Z</lastmod>
-    <data>
-        <display>
-        <title>XHR是什么？[前端]</title>
-        <pubTime>2020-10-07T04:00:00.000Z</pubTime>
-        
-        <tag>FE</tag>
-         
-        <tag>XHR</tag>
-         
-         
-           
-             
-              <breadCrumb title="FE" url="http://tracenote.com/categories/FE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/</loc>
-    <lastmod>2020-10-06T16:01:43.650Z</lastmod>
-    <data>
-        <display>
-        <title>通用能力之财会2：为什么采用借贷记账法</title>
-        <pubTime>2020-10-06T15:00:00.000Z</pubTime>
-        
-        <tag>财会</tag>
-         
-        <tag>会计</tag>
-         
-        <tag>财务</tag>
-         
-        <tag>accounting</tag>
-         
-         
-           
-             
-              <breadCrumb title="finance" url="http://tracenote.com/categories/finance/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>http://tracenote.com/2020/10/10/20201010blogHexomermaid/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/10/04/20201004books/</loc>
-    <lastmod>2020-10-06T15:01:55.062Z</lastmod>
-    <data>
-        <display>
-        <title>趁活动买了几本书</title>
-        <pubTime>2020-10-04T15:00:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-08</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/10/08/20201008blogHexoChart/</loc>
+    <lastmod>2020-10-08</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/10/09/20201009blogHexoplantuml/</loc>
+    <lastmod>2020-10-08</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/10/07/20201007FEXHR/</loc>
+    <lastmod>2020-10-07</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/</loc>
+    <lastmod>2020-10-06</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/10/03/20201003vueLoader/</loc>
-    <lastmod>2020-10-03T15:38:57.473Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（四十）：了解 Vue Loader</title>
-        <pubTime>2020-10-03T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/10/02/20201002JavaFilterInterceptor/</loc>
-    <lastmod>2020-10-02T15:48:41.574Z</lastmod>
-    <data>
-        <display>
-        <title>拦截器 Interceptor 和过滤器 Filter 的区别 [Java Web]</title>
-        <pubTime>2020-10-02T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>spring</tag>
-         
-        <tag>web</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/19/h5UITestChromeIssue/</loc>
-    <lastmod>2020-10-02T01:10:56.544Z</lastmod>
-    <data>
-        <display>
-        <title>Chrome强制升级引起的H5自动化异常</title>
-        <pubTime>2017-12-19T12:30:00.000Z</pubTime>
-        
-        <tag>test</tag>
-         
-        <tag>web</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>h5</tag>
-         
-        <tag>UITest</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/28/androidPerformanceCpuInfo/</loc>
-    <lastmod>2020-10-02T01:10:30.549Z</lastmod>
-    <data>
-        <display>
-        <title>Android dumpsys cpuinfo大于100％解释</title>
-        <pubTime>2017-06-28T14:57:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>performance</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/08/testNGFactory/</loc>
-    <lastmod>2020-10-02T01:10:05.713Z</lastmod>
-    <data>
-        <display>
-        <title>TestNG @Factory</title>
-        <pubTime>2017-06-08T05:39:06.000Z</pubTime>
-        
-        <tag>testng</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/10/01/20201001apiTest/</loc>
-    <lastmod>2020-10-01T16:00:53.398Z</lastmod>
-    <data>
-        <display>
-        <title>漫谈接口测试1：前言</title>
-        <pubTime>2020-10-01T15:00:00.000Z</pubTime>
-        
-        <tag>test</tag>
-         
-        <tag>api test</tag>
-         
-        <tag>interface test</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-10-01</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/30/20200930performanceTesting/</loc>
-    <lastmod>2020-09-30T13:16:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>漫谈压测1：前言</title>
-        <pubTime>2020-09-30T15:00:00.000Z</pubTime>
-        
-        <tag>performance testing</tag>
-         
-        <tag>test</tag>
-         
-         
-           
-             
-              <breadCrumb title="test" url="http://tracenote.com/categories/test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-30</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/</loc>
-    <lastmod>2020-09-29T15:43:47.916Z</lastmod>
-    <data>
-        <display>
-        <title>继续谈谈 BigDecimal（某里禁止使用BigDecimal的equals方法做等值比较）</title>
-        <pubTime>2020-09-28T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-29</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/27/20200927bugDoubleToLong/</loc>
-    <lastmod>2020-09-27T18:02:20.262Z</lastmod>
-    <data>
-        <display>
-        <title>Bug 学习：一分钱的误差</title>
-        <pubTime>2020-09-27T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>bug</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-27</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/26/20200926vueGulp/</loc>
-    <lastmod>2020-09-27T01:50:21.927Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十九）：了解 gulp</title>
-        <pubTime>2020-09-26T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-27</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/25/20200925vueVuex/</loc>
-    <lastmod>2020-09-26T02:31:33.661Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十八）：了解 Vuex</title>
-        <pubTime>2020-09-25T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-26</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/24/20200924vueDemowithwebpack/</loc>
-    <lastmod>2020-09-25T01:13:42.457Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十七）：一般工程目录结构解析</title>
-        <pubTime>2020-09-24T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-25</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/23/20200923accountingIntroduction/</loc>
-    <lastmod>2020-09-23T18:02:29.295Z</lastmod>
-    <data>
-        <display>
-        <title>通用能力之财会1：前言</title>
-        <pubTime>2020-09-23T15:00:00.000Z</pubTime>
-        
-        <tag>财会</tag>
-         
-        <tag>会计</tag>
-         
-        <tag>财务</tag>
-         
-        <tag>accounting</tag>
-         
-         
-           
-             
-              <breadCrumb title="finance" url="http://tracenote.com/categories/finance/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-23</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/22/20200922vueNpmStart/</loc>
-    <lastmod>2020-09-22T16:59:00.776Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十六）：npm start</title>
-        <pubTime>2020-09-22T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-22</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/21/20200921vueNvm/</loc>
-    <lastmod>2020-09-21T17:20:16.046Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十五）：nvm，安装管理不同 node 版本</title>
-        <pubTime>2020-09-21T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-21</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/20/20200920vueYarn/</loc>
-    <lastmod>2020-09-20T17:15:22.045Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十四）：yarn</title>
-        <pubTime>2020-09-20T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-20</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/19/20200919vueRouter3/</loc>
-    <lastmod>2020-09-20T02:30:58.731Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十三）：Vue Router 命名视图、路由懒加载等</title>
-        <pubTime>2020-09-19T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-20</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/18/20200918vueRouterProgrammaticNavigation/</loc>
-    <lastmod>2020-09-18T18:20:26.844Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十二）：Vue Router 编程式导航</title>
-        <pubTime>2020-09-18T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-18</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/17/20200917vueRouter2/</loc>
-    <lastmod>2020-09-17T19:26:34.879Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十一）：Vue Router 示例</title>
-        <pubTime>2020-09-17T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-17</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/15/20200915aboutNotion/</loc>
-    <lastmod>2020-09-16T17:29:55.441Z</lastmod>
-    <data>
-        <display>
-        <title>奔歌笔记软件 notion</title>
-        <pubTime>2020-09-15T15:00:00.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>misc</tag>
-         
-        <tag>note</tag>
-         
-        <tag>notion</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-16</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/16/20200916vueRouter/</loc>
-    <lastmod>2020-09-16T17:18:03.317Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三十）：Vue Router 概念</title>
-        <pubTime>2020-09-16T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-16</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/14/20200914vueTypeScript/</loc>
-    <lastmod>2020-09-15T01:56:26.128Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十九）：TypeScript 简单了解</title>
-        <pubTime>2020-09-14T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-15</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/13/20200913vueCLIDeploy/</loc>
-    <lastmod>2020-09-14T17:24:30.322Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十八）：Vue CLI 部署</title>
-        <pubTime>2020-09-13T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-14</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/12/20200912vueCLIBuildDeploy/</loc>
-    <lastmod>2020-09-13T02:14:48.619Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十七）：Vue CLI 构建</title>
-        <pubTime>2020-09-12T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-13</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/11/20200911vueCLIModesandEnvironmentVariables/</loc>
-    <lastmod>2020-09-12T03:45:17.583Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十六）：Vue CLI 环境变量和模式</title>
-        <pubTime>2020-09-11T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-12</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/10/20200910vueWebpack/</loc>
-    <lastmod>2020-09-11T01:27:43.747Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十五）：webpack 相关</title>
-        <pubTime>2020-09-10T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-11</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/09/20200909VueCLICSS/</loc>
-    <lastmod>2020-09-10T01:28:17.476Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十四）：Vue CLI — CSS</title>
-        <pubTime>2020-09-09T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/08/20200908vueToolsVueCLIDev/</loc>
-    <lastmod>2020-09-09T01:34:25.380Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十三）：Vue CLI —— 浏览器兼容、HTML 和静态资源</title>
-        <pubTime>2020-09-08T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/07/20200907vueToolsVueCLI/</loc>
-    <lastmod>2020-09-08T01:44:25.872Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十二）：Vue CLI 基础</title>
-        <pubTime>2020-09-07T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-08</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/06/20200906vueTools/</loc>
-    <lastmod>2020-09-07T15:06:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十一）：vue 相关外围：NPM, ES6</title>
-        <pubTime>2020-09-06T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-07</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/05/20200905SingleFileComponents/</loc>
-    <lastmod>2020-09-06T02:43:09.707Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二十）：单文件组件</title>
-        <pubTime>2020-09-05T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-06</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/04/20200904vuePlugins&Filters/</loc>
-    <lastmod>2020-09-05T02:14:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十九）：插件 & 过滤器</title>
-        <pubTime>2020-09-04T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-05</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/03/20200903vueRenderFunctions&JSX/</loc>
-    <lastmod>2020-09-03T18:45:59.060Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十八）：渲染函数 & JSX</title>
-        <pubTime>2020-09-03T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/02/20200902vueCustomDirectives/</loc>
-    <lastmod>2020-09-02T17:08:31.392Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十七）：自定义指令</title>
-        <pubTime>2020-09-02T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/09/01/20200901vueMixins/</loc>
-    <lastmod>2020-09-02T01:26:20.691Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十六）：可复用性 & 组合：混入</title>
-        <pubTime>2020-09-01T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-02</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/31/20200831springStaticUseInjection/</loc>
-    <lastmod>2020-09-01T01:36:47.756Z</lastmod>
-    <data>
-        <display>
-        <title>Spring 静态方法使用注入</title>
-        <pubTime>2020-08-31T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>spring</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-09-01</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/30/20200830vueStateTransitions/</loc>
-    <lastmod>2020-08-30T18:18:42.412Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十五）：状态过渡</title>
-        <pubTime>2020-08-30T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-30</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/29/20200829vueEnterLeave&ListTransitions/</loc>
-    <lastmod>2020-08-30T03:05:16.499Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十四）：进入/离开 & 列表过渡</title>
-        <pubTime>2020-08-29T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-30</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/28/20200828readingNote/</loc>
-    <lastmod>2020-08-29T04:00:26.974Z</lastmod>
-    <data>
-        <display>
-        <title>速读笔记-2020.8.28</title>
-        <pubTime>2020-08-28T00:00:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-29</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/27/20200827Thinkin3plus1/</loc>
-    <lastmod>2020-08-28T00:40:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>卫哲的3+1思考法：测量项目“靠谱程度”[转载]</title>
-        <pubTime>2020-08-27T15:00:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-        <tag>PO</tag>
-         
-         
-           
-             
-              <breadCrumb title="PO" url="http://tracenote.com/categories/PO/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-28</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/26/20200826vueHandlingEdgeCases/</loc>
-    <lastmod>2020-08-27T01:57:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十三）：处理边界情况</title>
-        <pubTime>2020-08-26T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-27</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/25/20200825JNIOOM/</loc>
-    <lastmod>2020-08-26T01:38:13.085Z</lastmod>
-    <data>
-        <display>
-        <title>JNI 相关内存泄漏[摘抄]</title>
-        <pubTime>2020-08-25T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>android</tag>
-         
-        <tag>OOM</tag>
-         
-        <tag>内存泄漏</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-26</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/23/20200824CAPandBase/</loc>
-    <lastmod>2020-08-25T01:37:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>分布式系统CAP不可能三角和Base理论</title>
-        <pubTime>2020-08-23T15:00:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-25</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/23/20200822vueDynamic&AsyncComponents/</loc>
-    <lastmod>2020-08-24T01:29:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十二）：动态组件 & 异步组件</title>
-        <pubTime>2020-08-23T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-24</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/22/20200822vueSlots/</loc>
-    <lastmod>2020-08-23T02:33:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十一）：插槽 Slots</title>
-        <pubTime>2020-08-22T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-23</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/20/20200819androidNativeOOM/</loc>
-    <lastmod>2020-08-23T01:41:11.748Z</lastmod>
-    <data>
-        <display>
-        <title>解读《Android Camera内存问题剖析 》</title>
-        <pubTime>2020-08-20T15:00:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>OOM</tag>
-         
-        <tag>内存泄漏</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-23</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/21/20200821CustomEvents/</loc>
-    <lastmod>2020-08-21T18:27:30.798Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（十）：自定义事件</title>
-        <pubTime>2020-08-21T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-21</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/</loc>
-    <lastmod>2020-08-20T17:17:20.167Z</lastmod>
-    <data>
-        <display>
-        <title>Google Best Practices for Java Libraries（转载）</title>
-        <pubTime>2020-08-15T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-20</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/18/20200818vueProp/</loc>
-    <lastmod>2020-08-19T01:33:13.928Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（九）：Prop</title>
-        <pubTime>2020-08-18T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-19</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/17/20200817DesignPattern_Flyweight/</loc>
-    <lastmod>2020-08-17T17:48:59.938Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——享元模式</title>
-        <pubTime>2020-08-17T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>设计模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-17</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/16/20200816ComponentRegistration/</loc>
-    <lastmod>2020-08-16T16:06:57.879Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（八）：组件注册</title>
-        <pubTime>2020-08-16T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-16</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/13/20200813backEndDeveloper/</loc>
-    <lastmod>2020-08-15T16:30:38.700Z</lastmod>
-    <data>
-        <display>
-        <title>后端架构师技术图谱（转载）</title>
-        <pubTime>2020-08-13T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>BackEnd</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-15</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/14/20200814vueComponentsBasics/</loc>
-    <lastmod>2020-08-14T21:20:19.065Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（七）：组件基础</title>
-        <pubTime>2020-08-14T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-14</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/12/20200812vueFormInputBindings/</loc>
-    <lastmod>2020-08-13T02:12:58.629Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（六）：表单输入绑定</title>
-        <pubTime>2020-08-12T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-13</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/11/20200811vueListRendering/</loc>
-    <lastmod>2020-08-12T01:31:45.138Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（五）：列表渲染、事件处理</title>
-        <pubTime>2020-08-11T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-12</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/10/20200810readingNotes/</loc>
-    <lastmod>2020-08-10T17:33:31.156Z</lastmod>
-    <data>
-        <display>
-        <title>速读笔记-2020.8.10</title>
-        <pubTime>2020-08-10T15:00:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/09/20200809vueClassandStyleBindings/</loc>
-    <lastmod>2020-08-09T17:46:27.698Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（四）：Class 与 Style 绑定，条件渲染</title>
-        <pubTime>2020-08-09T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/08/20200808vueTemplateSyntax/</loc>
-    <lastmod>2020-08-09T14:12:55.578Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（三）：模板语法，计算属性和侦听器</title>
-        <pubTime>2020-08-08T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/09/20200809vueVscodeRumHtml/</loc>
-    <lastmod>2020-08-09T08:09:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>VSCode 运行HTML页面</title>
-        <pubTime>2020-08-09T04:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-        <tag>vscode</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/07/20200807aliDoom/</loc>
-    <lastmod>2020-08-08T10:07:56.348Z</lastmod>
-    <data>
-        <display>
-        <title>阿里Doom双引擎自动回归服务简介</title>
-        <pubTime>2020-08-07T15:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-08</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/06/20200806vueInstance/</loc>
-    <lastmod>2020-08-06T17:22:57.147Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（二）：实例</title>
-        <pubTime>2020-08-06T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-06</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/05/20200805vuebasic/</loc>
-    <lastmod>2020-08-06T04:12:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue 学习笔记（一）：基础</title>
-        <pubTime>2020-08-05T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-06</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/05/20200805arthas/</loc>
-    <lastmod>2020-08-05T01:36:43.000Z</lastmod>
-    <data>
-        <display>
-        <title>Arthas 简介</title>
-        <pubTime>2020-08-05T00:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>debug</tag>
-         
-        <tag>jvm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-05</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/03/20200803helloVue/</loc>
-    <lastmod>2020-08-05T01:32:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello Vue!</title>
-        <pubTime>2020-08-03T15:00:00.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>fe</tag>
-         
-         
-           
-             
-              <breadCrumb title="fe" url="http://tracenote.com/categories/fe/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-05</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/28/androidJacoco/</loc>
-    <lastmod>2020-08-03T17:58:08.720Z</lastmod>
-    <data>
-        <display>
-        <title>android代码覆盖率jacoco实践</title>
-        <pubTime>2017-12-28T13:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>jacoco</tag>
-         
-        <tag>gradle</tag>
-         
-        <tag>code coverage</tag>
-         
-        <tag>代码覆盖率</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/01/codeCollections/</loc>
-    <lastmod>2020-08-03T17:58:07.679Z</lastmod>
-    <data>
-        <display>
-        <title>不得不收集的代码[摘抄]</title>
-        <pubTime>2018-08-01T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>code</tag>
-         
-        <tag>摘抄</tag>
-         
-        <tag>Utils</tag>
-         
-        <tag>common</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/03/IntellijSpringBootHelloWorld/</loc>
-    <lastmod>2020-08-03T17:58:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA创建Spring Boot的Hello World</title>
-        <pubTime>2017-12-03T12:30:00.000Z</pubTime>
-        
-        <tag>web</tag>
-         
-        <tag>server</tag>
-         
-        <tag>spring boot</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/16/java8GuavaJDK7/</loc>
-    <lastmod>2020-08-03T17:58:05.616Z</lastmod>
-    <data>
-        <display>
-        <title>guava在jdk7和jdk8之间的兼容问题</title>
-        <pubTime>2018-01-16T14:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Java8</tag>
-         
-        <tag>guava</tag>
-         
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/18/java8Lambda/</loc>
-    <lastmod>2020-08-03T17:58:04.881Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Lambda 学习笔记</title>
-        <pubTime>2017-06-18T06:51:45.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Java8</tag>
-         
-        <tag>lambda</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/05/16/java8MultipleInheritanceAndInterfaceDefaultMethod/</loc>
-    <lastmod>2020-08-03T17:58:04.116Z</lastmod>
-    <data>
-        <display>
-        <title>java多重继承和java 8 接口默认方法</title>
-        <pubTime>2018-05-16T12:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Java8</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/25/java8Stream/</loc>
-    <lastmod>2020-08-03T17:58:03.281Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Stream 学习笔记</title>
-        <pubTime>2017-06-25T14:57:23.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Java8</tag>
-         
-        <tag>stream</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/31/javaA/</loc>
-    <lastmod>2020-08-03T17:58:02.421Z</lastmod>
-    <data>
-        <display>
-        <title>Answers To Questions of Java</title>
-        <pubTime>2018-08-31T14:00:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>question</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/29/javaArraylistnCopiesIssue/</loc>
-    <lastmod>2020-08-03T17:58:01.600Z</lastmod>
-    <data>
-        <display>
-        <title>Java ArrayList nCopies 相关的一个小坑</title>
-        <pubTime>2018-01-29T14:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/06/30/javaGenericsParam/</loc>
-    <lastmod>2020-08-03T17:58:00.736Z</lastmod>
-    <data>
-        <display>
-        <title>List<子类>传入someMethod(List<父类> alist)问题</title>
-        <pubTime>2018-06-30T12:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>generics</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/07/30/javaGetSubClassName/</loc>
-    <lastmod>2020-08-03T17:57:59.848Z</lastmod>
-    <data>
-        <display>
-        <title>父类获取子类名字</title>
-        <pubTime>2017-07-30T15:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/09/26/javaJSON/</loc>
-    <lastmod>2020-08-03T17:57:58.928Z</lastmod>
-    <data>
-        <display>
-        <title>Java json</title>
-        <pubTime>2018-09-26T04:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>json</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/11/01/javaPropertiesGibberish/</loc>
-    <lastmod>2020-08-03T17:57:58.098Z</lastmod>
-    <data>
-        <display>
-        <title>Java Properties 中文乱码</title>
-        <pubTime>2017-11-01T04:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>env</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/31/javaQ/</loc>
-    <lastmod>2020-08-03T17:57:57.265Z</lastmod>
-    <data>
-        <display>
-        <title>Questions of Java</title>
-        <pubTime>2018-08-31T13:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>question</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/10/javaRuntimeExecComandBlock/</loc>
-    <lastmod>2020-08-03T17:57:56.464Z</lastmod>
-    <data>
-        <display>
-        <title>Java Runtime.getRuntime().exec() 阻塞问题</title>
-        <pubTime>2018-01-10T14:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>command</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/07/12/mvnParams/</loc>
-    <lastmod>2020-08-03T17:57:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>mvn传参数</title>
-        <pubTime>2018-07-12T12:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>maven</tag>
-         
-        <tag>mvn</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://tracenote.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/16/issueJava8Lambda/</loc>
-    <lastmod>2020-08-03T17:57:29.113Z</lastmod>
-    <data>
-        <display>
-        <title>Java8环境不支持Lambda？</title>
-        <pubTime>2017-06-16T01:10:02.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/03/DesignPattern_Singleton/</loc>
-    <lastmod>2020-08-03T17:56:26.714Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——单例模式</title>
-        <pubTime>2017-06-03T13:28:15.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>设计模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/04/DesignPattern_Template/</loc>
-    <lastmod>2020-08-03T17:56:25.344Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式——模板方法模式</title>
-        <pubTime>2017-06-04T11:54:21.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>设计模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="DesignPatterns" url="http://tracenote.com/categories/DesignPatterns/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/09/13/intellijEclipseCodeFormatter/</loc>
-    <lastmod>2020-08-03T17:56:24.367Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA code format</title>
-        <pubTime>2017-09-13T14:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/11/16/intellijImportProject/</loc>
-    <lastmod>2020-08-03T17:56:23.311Z</lastmod>
-    <data>
-        <display>
-        <title>IntelliJ IDEA 引用其它工程</title>
-        <pubTime>2017-11-16T10:30:00.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>IntelliJ</tag>
-         
-        <tag>IED</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/06/18/telnetNc/</loc>
-    <lastmod>2020-08-03T16:14:49.534Z</lastmod>
-    <data>
-        <display>
-        <title>telnet 和 nc</title>
-        <pubTime>2018-06-18T12:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>net</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/07/02/housingLoan/</loc>
-    <lastmod>2020-08-03T16:14:48.081Z</lastmod>
-    <data>
-        <display>
-        <title>房贷博弈误区</title>
-        <pubTime>2017-07-01T16:15:00.000Z</pubTime>
-        
-        <tag>realEstate</tag>
-         
-        <tag>finance</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/08/11/fuckXiaoMi/</loc>
-    <lastmod>2020-08-03T16:14:47.289Z</lastmod>
-    <data>
-        <display>
-        <title>画蛇添足的小米</title>
-        <pubTime>2017-08-11T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>env</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/05/15/dnsSettings/</loc>
-    <lastmod>2020-08-03T16:14:46.582Z</lastmod>
-    <data>
-        <display>
-        <title>网站的DNS解析配置</title>
-        <pubTime>2018-05-14T23:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>dns</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/07/29/appInstallSimulator/</loc>
-    <lastmod>2020-08-03T16:14:45.773Z</lastmod>
-    <data>
-        <display>
-        <title>iOS安装app到Simulator</title>
-        <pubTime>2017-07-29T15:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/03/27/qcouldcvm/</loc>
-    <lastmod>2020-08-03T16:14:44.355Z</lastmod>
-    <data>
-        <display>
-        <title>体验腾讯云服务器</title>
-        <pubTime>2017-03-27T13:55:24.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>云服务器</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/23/blogOperationData/</loc>
-    <lastmod>2020-08-03T16:14:43.661Z</lastmod>
-    <data>
-        <display>
-        <title>blog运营数据：访客遍布全球</title>
-        <pubTime>2018-01-23T12:30:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-        <tag>misc</tag>
-         
-        <tag>operation</tag>
-         
-        <tag>statistics</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/10/18/ApplicationCrashReportForAndroid/</loc>
-    <lastmod>2020-08-03T16:14:42.971Z</lastmod>
-    <data>
-        <display>
-        <title>如何在本地搭建Android应用Crash跟踪系统－ACRA</title>
-        <pubTime>2017-10-18T14:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/03/28/blogissues/</loc>
-    <lastmod>2020-08-03T16:14:41.994Z</lastmod>
-    <data>
-        <display>
-        <title>折腾琐记：编辑器篇</title>
-        <pubTime>2017-03-27T23:51:42.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/08/unityFromInstall2Uninstall/</loc>
-    <lastmod>2020-08-03T16:14:13.888Z</lastmod>
-    <data>
-        <display>
-        <title>Unity 从安装到卸载</title>
-        <pubTime>2017-06-08T14:17:29.000Z</pubTime>
-        
-        <tag>unity</tag>
-         
-        <tag>vr</tag>
-         
-        <tag>ai</tag>
-         
-        <tag>game</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/19/readingNotesTestingWithRobotium/</loc>
-    <lastmod>2020-08-03T16:13:18.258Z</lastmod>
-    <data>
-        <display>
-        <title>《手机测试Robotium实战教程》读书笔记</title>
-        <pubTime>2018-08-19T12:30:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-        <tag>app</tag>
-         
-        <tag>robotium</tag>
-         
-        <tag>automation</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2020/08/03/20200803makeBlogWorkAgain/</loc>
-    <lastmod>2020-08-03T16:07:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>终于把博客找回来了，继续运营</title>
-        <pubTime>2020-08-03T00:00:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2020-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/23/iCloudSyncLocalDirectory/</loc>
-    <lastmod>2019-03-18T11:12:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>iCloud Drive自动同步本地文件夹</title>
-        <pubTime>2017-12-23T04:30:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-        <tag>macOS</tag>
-         
-        <tag>iCloud</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-18</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2019/03/18/macOSLaunchctl/</loc>
-    <lastmod>2019-03-18T11:11:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>macOS定时任务——launchctl</title>
-        <pubTime>2019-03-18T12:30:00.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>env</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-03-18</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/16/iOSCodeCoverage/</loc>
-    <lastmod>2019-02-03T15:37:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS 代码覆盖率 XcodeCoverage 真机</title>
-        <pubTime>2018-01-16T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>code coverage</tag>
-         
-        <tag>代码覆盖率</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>xcodecoverage</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2019-02-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/16/adbscreenshot/</loc>
-    <lastmod>2018-11-29T16:25:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>android命令行截图</title>
-        <pubTime>2018-01-16T13:30:00.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>bash</tag>
-         
-        <tag>shell</tag>
-         
-        <tag>command</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-29</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/11/14/appiumMacEnv/</loc>
-    <lastmod>2018-11-22T16:05:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>从零开始配置appium iOS环境</title>
-        <pubTime>2017-11-14T10:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-22</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/11/11/pythonDecorator/</loc>
-    <lastmod>2018-11-11T16:19:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>python装饰器的顺序</title>
-        <pubTime>2018-11-11T04:30:00.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>decorator</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://tracenote.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-11</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/07/25/appiumUpgradeIssues/</loc>
-    <lastmod>2018-11-01T06:05:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>坑爷的appium升级</title>
-        <pubTime>2018-07-25T12:30:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-11-01</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/10/29/appiumIssues1.9.1/</loc>
-    <lastmod>2018-10-31T03:51:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium升级的坑@1.9.1</title>
-        <pubTime>2018-10-29T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-31</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/10/09/mysqlCharacterSet/</loc>
-    <lastmod>2018-10-09T06:19:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>mysql编码不要使用uft8</title>
-        <pubTime>2018-10-09T04:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-09</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/09/25/appiumAndroidPopUpWindow/</loc>
-    <lastmod>2018-10-08T02:28:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium android popupwindow 无法识别解决</title>
-        <pubTime>2018-09-25T04:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-10-08</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/09/20/dockerInstall/</loc>
-    <lastmod>2018-09-21T10:21:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>docker related</title>
-        <pubTime>2018-09-20T14:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-21</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/09/10/appiumHybrid/</loc>
-    <lastmod>2018-09-13T11:17:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium hybrid app web view</title>
-        <pubTime>2018-09-10T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>hybrid</tag>
-         
-        <tag>web view</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-09-13</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/20/issueBlogHexo/</loc>
-    <lastmod>2018-08-20T11:44:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>blog hexo DTraceProviderBindings 报错解决</title>
-        <pubTime>2018-08-20T04:30:00.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-        <tag>misc</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-20</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/08/11/readingNotesABriefHistoryOf%20Humankind/</loc>
-    <lastmod>2018-08-20T06:45:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>《人类简史》读书笔记</title>
-        <pubTime>2018-08-11T12:30:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-        <tag>humanities</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-20</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/05/08/elliptical/</loc>
-    <lastmod>2018-08-03T09:00:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>椭圆机的缺点[摘抄]</title>
-        <pubTime>2018-05-08T13:30:00.000Z</pubTime>
-        
-        <tag>摘抄</tag>
-         
-        <tag>sport</tag>
-         
-        <tag>elliptical</tag>
-         
-        <tag>health</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-08-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/05/31/sublimeText3HtmlFormat/</loc>
-    <lastmod>2018-06-01T09:50:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>Sublime Text 3 Html 格式化</title>
-        <pubTime>2018-05-31T13:30:00.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>misc</tag>
-         
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-06-01</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/22/bashStringSplit/</loc>
-    <lastmod>2018-01-22T12:49:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>linux 字符串分割</title>
-        <pubTime>2018-01-22T12:30:00.000Z</pubTime>
-        
-        <tag>tools</tag>
-         
-        <tag>env</tag>
-         
-        <tag>bash</tag>
-         
-        <tag>shell</tag>
-         
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-22</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/15/daoShiShenYuanShen/</loc>
-    <lastmod>2018-01-14T17:06:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>什么是道家所谓的识神和元神？</title>
-        <pubTime>2018-01-15T12:30:00.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-        <tag>life</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://tracenote.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-14</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/10/xcodebuildLogIssue/</loc>
-    <lastmod>2018-01-11T03:49:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>xcodebuild重定向输出日志的坑</title>
-        <pubTime>2018-01-10T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>bash</tag>
-         
-        <tag>shell</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>xcodebuild</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-11</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/07/iOSmonkeys/</loc>
-    <lastmod>2018-01-10T14:30:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS monkeys</title>
-        <pubTime>2018-01-07T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>monkey</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/04/weChatJumpsAPI/</loc>
-    <lastmod>2018-01-04T07:23:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>微信跳一跳抓接口刷分</title>
-        <pubTime>2018-01-04T04:30:00.000Z</pubTime>
-        
-        <tag>robot</tag>
-         
-        <tag>api</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-04</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/03/iOSCrashLogExtractionAndAnalysis/</loc>
-    <lastmod>2018-01-04T02:26:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS崩溃日志抓取与符号化</title>
-        <pubTime>2018-01-03T13:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>commandline</tag>
-         
-        <tag>crash</tag>
-         
-        <tag>log</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-04</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/08/16/appInstallRealDevice/</loc>
-    <lastmod>2018-01-03T16:19:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS命令行安装ipa到真机及其它常用命令</title>
-        <pubTime>2017-08-16T14:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>commandline</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-03</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2018/01/01/weChatJumpsRobot/</loc>
-    <lastmod>2018-01-01T06:40:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>用机器人来玩微信跳一跳</title>
-        <pubTime>2018-01-01T04:30:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>python</tag>
-         
-        <tag>automation</tag>
-         
-        <tag>robot</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2018-01-01</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/31/macPython2&3/</loc>
-    <lastmod>2017-12-31T17:01:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>macOS中的python2和python3并存</title>
-        <pubTime>2017-12-31T14:30:00.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-        <tag>python</tag>
-         
-        <tag>pip</tag>
-         
-        <tag>python3</tag>
-         
-        <tag>python2</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-31</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/22/gradleSyncIssue/</loc>
-    <lastmod>2017-12-27T12:32:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Gradle Sync 过慢问题</title>
-        <pubTime>2017-12-22T13:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>gradle</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-27</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/20/360jiagu/</loc>
-    <lastmod>2017-12-22T16:06:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>所谓的360加固</title>
-        <pubTime>2017-06-20T02:00:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-22</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac上nginx配置</title>
-        <pubTime>2017-10-29T04:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>支付问题</title>
-        <pubTime>2017-05-21T04:50:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>pay</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/07/30/switchInputIssue/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>caps lock切换输入法失效问题</title>
-        <pubTime>2017-07-30T14:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/09/18/macBashrc/</loc>
-    <lastmod>2017-12-10T15:57:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>macOS .bashrc 无效问题</title>
-        <pubTime>2017-09-18T12:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>android打包</title>
-        <pubTime>2017-10-28T13:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium 资料摘抄</title>
-        <pubTime>2017-06-01T04:33:36.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-        <tag>摘抄</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>grep color与重定向</title>
-        <pubTime>2017-09-07T09:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>grep</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium Android 坎坷</title>
-        <pubTime>2017-05-22T06:23:25.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium swipe</title>
-        <pubTime>2017-08-27T17:08:07.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>Appium启动关闭App过程的adb命令</title>
-        <pubTime>2017-09-07T04:30:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-        <tag>adb</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>开篇记</title>
-        <pubTime>2017-03-16T15:01:28.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="life" url="http://tracenote.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>解决appium Xcode version 9.0 is not yet supported</title>
-        <pubTime>2017-09-26T11:30:00.000Z</pubTime>
-        
-        <tag>iOS</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>jsonp get 问题</title>
-        <pubTime>2017-09-18T11:30:00.000Z</pubTime>
-        
-        <tag>web</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="issue" url="http://tracenote.com/categories/issue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>优化history</title>
-        <pubTime>2017-08-18T04:30:00.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>adb获取安卓手机厂商型号</title>
-        <pubTime>2017-08-11T04:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>env</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>DNSPod解析Godaddy域名</title>
-        <pubTime>2017-03-19T12:18:25.000Z</pubTime>
-        
-        <tag>env</tag>
-         
-        <tag>server</tag>
-         
-        <tag>domain</tag>
-         
-         
-           
-             
-              <breadCrumb title="env" url="http://tracenote.com/categories/env/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>华为刷机踩坑</title>
-        <pubTime>2017-07-05T04:15:00.000Z</pubTime>
-        
-        <tag>android</tag>
-         
-        <tag>env</tag>
-         
-         
-           
-             
-              <breadCrumb title="misc" url="http://tracenote.com/categories/misc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/12/04/fuckHuaweiIme/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>坑人的华为输入法</title>
-        <pubTime>2017-12-04T12:30:00.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>android</tag>
-         
-        <tag>appium</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
-    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS 10.3 Charles https 问题</title>
-        <pubTime>2017-05-04T04:30:25.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-        <tag>env</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>iOS</tag>
-         
-        <tag>charles</tag>
-         
-         
-           
-             
-              <breadCrumb title="app" url="http://tracenote.com/categories/app/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
   <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>appium近期问题（待补充）</title>
-        <pubTime>2017-10-17T14:30:00.000Z</pubTime>
-        
-        <tag>appium</tag>
-         
-        <tag>issue</tag>
-         
-         
-           
-             
-              <breadCrumb title="appium" url="http://tracenote.com/categories/appium/"/>
-          
-        </display>
-    </data>
-    </url>
-
-</urlset>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/05/04/ioshttps/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/07/05/HuaWeiBrush/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+</urlset> 
