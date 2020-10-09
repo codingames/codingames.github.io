@@ -5,20 +5,20 @@
   
   <title>markdown 绘制 Mermaid | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="利用 markdown 绘制 Mermaid">
+  <meta name="description" content="利用 markdown 绘制 Mermaid 对比 PlantUML（摘抄自网络）：  Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。   之前用过 PlantUML，但是发现这个东西的实现原理是生成 UML 的图片后上传服务端，每次再从服务端读取，因此觉得不够鲁棒，隐私性也不好，因而弃用。——（编者按：纠正一">
 <meta name="keywords" content="env,工具,绘图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="markdown 绘制 Mermaid">
 <meta property="og:url" content="http://tracenote.com/2020/10/10/20201010blogHexomermaid/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="利用 markdown 绘制 Mermaid">
+<meta property="og:description" content="利用 markdown 绘制 Mermaid 对比 PlantUML（摘抄自网络）：  Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。   之前用过 PlantUML，但是发现这个东西的实现原理是生成 UML 的图片后上传服务端，每次再从服务端读取，因此觉得不够鲁棒，隐私性也不好，因而弃用。——（编者按：纠正一">
 <meta property="og:locale" content="utf-8">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/typoraMermaid.png">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vscodeMermaid.png">
-<meta property="og:updated_time" content="2020-10-09T17:33:27.938Z">
+<meta property="og:updated_time" content="2020-10-09T17:44:01.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown 绘制 Mermaid">
-<meta name="twitter:description" content="利用 markdown 绘制 Mermaid">
+<meta name="twitter:description" content="利用 markdown 绘制 Mermaid 对比 PlantUML（摘抄自网络）：  Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。   之前用过 PlantUML，但是发现这个东西的实现原理是生成 UML 的图片后上传服务端，每次再从服务端读取，因此觉得不够鲁棒，隐私性也不好，因而弃用。——（编者按：纠正一">
 <meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/typoraMermaid.png">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
@@ -97,8 +97,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>利用 markdown 绘制 Mermaid</p>
+<p>对比 PlantUML（摘抄自网络）：</p>
+<blockquote>
+<p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。</p>
+</blockquote>
+<blockquote>
+<p>之前用过 PlantUML，但是发现这个东西的实现原理是生成 UML 的图片后上传服务端，每次再从服务端读取，因此觉得不够鲁棒，隐私性也不好，因而弃用。——（编者按：纠正一下，不是图片，而是SVG <em>可缩放矢量图形</em>。但确实存在上传到plantuml.com，博客生成的图表点开是这个域名）</p>
+</blockquote>
+<blockquote>
+<p>Mermaid 作为一个使用 JS 渲染的库，生成的不是一个“图片”，而是一段 HTML 代码，因此安全许多。</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="不依赖hexo，单独使用"><a href="#不依赖hexo，单独使用" class="headerlink" title="不依赖hexo，单独使用"></a>不依赖hexo，单独使用</h2><h3 id="在线编辑器"><a href="#在线编辑器" class="headerlink" title="在线编辑器"></a>在线编辑器</h3><p><a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank" rel="noopener">https://mermaidjs.github.io/mermaid-live-editor/</a></p>
+<h2 id="单独使用"><a href="#单独使用" class="headerlink" title="单独使用"></a>单独使用</h2><h3 id="在线编辑器"><a href="#在线编辑器" class="headerlink" title="在线编辑器"></a>在线编辑器</h3><p><a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank" rel="noopener">https://mermaidjs.github.io/mermaid-live-editor/</a></p>
 <h3 id="使用-markdown-编辑器：Typora"><a href="#使用-markdown-编辑器：Typora" class="headerlink" title="使用 markdown 编辑器：Typora"></a>使用 markdown 编辑器：Typora</h3><p><a href="https://typora.io/" target="_blank" rel="noopener">https://typora.io/</a><br>效果示例：<br><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/typoraMermaid.png" alt></p>
 <h3 id="VSCode-插件"><a href="#VSCode-插件" class="headerlink" title="VSCode 插件"></a>VSCode 插件</h3><p>搜索安装插件： <code>Markdown Preview Mermaid Support</code> （直接搜mermaid找到的安装最多）   </p>
 <p>效果：<br><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vscodeMermaid.png" alt></p>
@@ -122,7 +132,7 @@ Future task2               :         des4, after des3, 5d</pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/10/20201010blogHexomermaid/" data-id="ckg2j4a46003zaed89gggqso7" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/10/20201010blogHexomermaid/" data-id="ckg2jo3w30041cid8x4xzpa29" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
