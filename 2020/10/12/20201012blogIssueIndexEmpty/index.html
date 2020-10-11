@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="昨天发布博客后，发现打不开。排查。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-10-11T17:05:22.059Z">
+<meta property="og:updated_time" content="2020-10-11T17:11:29.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客：解决 index.html 文件为空问题">
 <meta name="twitter:description" content="昨天发布博客后，发现打不开。排查。">
@@ -95,34 +95,23 @@
       
         <p>昨天发布博客后，发现打不开。<br>排查。</p>
 <a id="more"></a>
-<ol>
-<li><p>检查报错</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g --debug</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>结果没错误，但是生成的 `index.html` 文件为空，size 为 0.
-</code></pre><ol>
-<li><p>检查依赖缺失（如有缺失，npm i -s 缺失包 即可） </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ls --depth 0</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>结果无缺失
-</code></pre><ol>
-<li>检查本地启动服务报错</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
+<h3 id="检查部署报错"><a href="#检查部署报错" class="headerlink" title="检查部署报错"></a>检查部署报错</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g --debug</span><br></pre></td></tr></table></figure>
+<p>结果没错误，但是生成的 <code>index.html</code> 文件为空，size 为 0.</p>
+<h3 id="检查依赖缺失"><a href="#检查依赖缺失" class="headerlink" title="检查依赖缺失"></a>检查依赖缺失</h3><p>如有缺失，npm i -s 缺失包 即可  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ls --depth 0</span><br></pre></td></tr></table></figure>
+<p>结果无缺失</p>
+<h3 id="检查本地启动服务报错"><a href="#检查本地启动服务报错" class="headerlink" title="检查本地启动服务报错"></a>检查本地启动服务报错</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
 <p>启动无报错，打开页面，发现如下warning</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(node:9876) Warning: Accessing non-existent property &apos;lineno&apos; of module exports inside circular dependency</span><br><span class="line">(Use `node --trace-warnings ...` to show where the warning was created)</span><br><span class="line">(node:9876) Warning: Accessing non-existent property &apos;column&apos; of module exports inside circular dependency</span><br><span class="line">(node:9876) Warning: Accessing non-existent property &apos;filename&apos; of module exports inside circular dependency</span><br><span class="line">(node:9876) Warning: Accessing non-existent property &apos;lineno&apos; of module exports inside circular dependency</span><br><span class="line">(node:9876) Warning: Accessing non-existent property &apos;column&apos; of module exports inside circular dependency</span><br><span class="line">(node:9876) Warning: Accessing non-existent property &apos;filename&apos; of module exports inside circular dependency</span><br></pre></td></tr></table></figure>
-<ol>
-<li>搜索该告警，发现是node版本过高（14.13.1），使用 nvm 切到 旧版本node</li>
-</ol>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>搜索该告警，发现是node版本过高的bug（14.13.1）<br><a href="https://github.com/nodejs/node/issues/32987" target="_blank" rel="noopener">https://github.com/nodejs/node/issues/32987</a></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>使用 nvm 切到 旧版本node</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 13.14.0</span><br><span class="line">nvm alias default 13.14</span><br></pre></td></tr></table></figure>
 <p>新开 terminal 标签/窗口，重新检查 <code>hexo s --debug</code>，刷新页面不再报错，重新 <code>hexo g</code> 生成的 <code>index.html</code> 不再为空，重新部署 <code>hexo g -d</code>，恢复正常。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/12/20201012blogIssueIndexEmpty/" data-id="ckg5czkcw001xkgd8r08j7xoe" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/12/20201012blogIssueIndexEmpty/" data-id="ckg5d6yrc001ymad8jm3nohei" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li></ul>
