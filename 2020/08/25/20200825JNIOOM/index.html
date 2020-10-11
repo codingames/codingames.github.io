@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>JNI 相关内存泄漏[摘抄] | tracenote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前几天的文章 解读《Android Camera内存问题剖析》 曾提到 Android 的 Java 代码调 C++ 引起的 native 内存泄漏。这里梳理一下 JNI 相关内存泄漏。">
+<meta name="keywords" content="Java,android,OOM,内存泄漏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JNI 相关内存泄漏[摘抄]">
+<meta property="og:url" content="http://tracenote.com/2020/08/25/20200825JNIOOM/index.html">
+<meta property="og:site_name" content="tracenote">
+<meta property="og:description" content="前几天的文章 解读《Android Camera内存问题剖析》 曾提到 Android 的 Java 代码调 C++ 引起的 native 内存泄漏。这里梳理一下 JNI 相关内存泄漏。">
+<meta property="og:locale" content="utf-8">
+<meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/JNI.png">
+<meta property="og:updated_time" content="2020-08-26T01:38:13.085Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JNI 相关内存泄漏[摘抄]">
+<meta name="twitter:description" content="前几天的文章 解读《Android Camera内存问题剖析》 曾提到 Android 的 Java 代码调 C++ 引起的 native 内存泄漏。这里梳理一下 JNI 相关内存泄漏。">
+<meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/JNI.png">
+  
+    <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">tracenote</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">about me</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://tracenote.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20200825JNIOOM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/25/20200825JNIOOM/" class="article-date">
+  <time datetime="2020-08-25T15:00:00.000Z" itemprop="datePublished">2020-08-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JNI 相关内存泄漏[摘抄]
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前几天的文章 <a href="https://mp.weixin.qq.com/s/jEgRCkviBe50Pt3FJe1iMw" target="_blank" rel="noopener">解读《Android Camera内存问题剖析》</a> 曾提到 Android 的 Java 代码调 C++ 引起的 native 内存泄漏。这里梳理一下 JNI 相关内存泄漏。</p>
+<a id="more"></a>
+<h2 id="JNI"><a href="#JNI" class="headerlink" title="JNI"></a>JNI</h2><p>JNI，Java Native Interface，是 native code 的编程接口。JNI 使 Java 代码程序可以与 native code 交互——在 Java 程序中调用 native code；在 native code 中嵌入 Java 虚拟机调用 Java 的代码。   </p>
+<p>JNI 编程在软件开发中运用广泛，其优势可以归结为以下几点： </p>
+<ol>
+<li>利用 native code 的平台相关性，在平台相关的编程中彰显优势。  </li>
+<li>对 native code 的代码重用。  </li>
+<li>native code 底层操作，更加高效。</li>
+</ol>
+<p>然而任何事物都具有两面性，JNI 编程也同样如此。程序员在使用 JNI 时应当认识到 JNI 编程中如下的几点弊端，扬长避短，才可以写出更加完善、高性能的代码：</p>
+<ol>
+<li>从 Java 环境到 native code 的上下文切换耗时、低效。  </li>
+<li>JNI 编程，如果操作不当，可能引起 Java 虚拟机的崩溃。  </li>
+<li>JNI 编程，如果操作不当，可能引起内存泄漏。  </li>
+</ol>
+<h2 id="JAVA-中的内存泄漏"><a href="#JAVA-中的内存泄漏" class="headerlink" title="JAVA 中的内存泄漏"></a>JAVA 中的内存泄漏</h2><p>JAVA 编程中的内存泄漏，从泄漏的内存位置角度可以分为两种：</p>
+<ul>
+<li>JVM 中 Java Heap 的内存泄漏；</li>
+<li>JVM 内存中 native memory 的内存泄漏。</li>
+</ul>
+<h3 id="Java-Heap-的内存泄漏"><a href="#Java-Heap-的内存泄漏" class="headerlink" title="Java Heap 的内存泄漏"></a>Java Heap 的内存泄漏</h3><p>Java 对象存储在 JVM 进程空间中的 Java Heap 中，Java Heap 可以在 JVM 运行过程中动态变化。如果 Java 对象越来越多，占据 Java Heap 的空间也越来越大，JVM 会在运行时扩充 Java Heap 的容量。如果 Java Heap 容量扩充到上限，并且在 GC 后仍然没有足够空间分配新的 Java 对象，便会抛出 out of memory 异常，导致 JVM 进程崩溃。<br>Java Heap 中 out of memory 异常的出现有两种原因——</p>
+<ol>
+<li>程序过于庞大，致使过多 Java 对象的同时存在；</li>
+<li>程序编写的错误导致 Java Heap 内存泄漏。  </li>
+</ol>
+<p>多种原因可能导致 Java Heap 内存泄漏。JNI 编程错误也可能导致 Java Heap 的内存泄漏。  </p>
+<h3 id="JVM-中-native-memory-的内存泄漏"><a href="#JVM-中-native-memory-的内存泄漏" class="headerlink" title="JVM 中 native memory 的内存泄漏"></a>JVM 中 native memory 的内存泄漏</h3><p>从操作系统角度看，JVM 在运行时和其它进程没有本质区别。在系统级别上，它们具有同样的调度机制，同样的内存分配方式，同样的内存格局。 </p>
+<p>JVM 进程空间中，Java Heap 以外的内存空间称为 JVM 的 native memory。进程的很多资源都是存储在 JVM 的 native memory 中，例如载入的代码映像，线程的堆栈，线程的管理控制块，JVM 的静态数据、全局数据等等。也包括 JNI 程序中 native code 分配到的资源。</p>
+<p>在 JVM 运行中，多数进程资源从 native memory 中动态分配。当越来越多的资源在 native memory 中分配，占据越来越多 native memory 空间并且达到 native memory 上限时，JVM 会抛出异常，使 JVM 进程异常退出。而此时 Java Heap 往往还没有达到上限。  </p>
+<p>多种原因可能导致 JVM 的 native memory 内存泄漏。例如 JVM 在运行中过多的线程被创建，并且在同时运行。JVM 为线程分配的资源就可能耗尽 native memory 的容量。  </p>
+<p>JNI 编程错误也可能导致 native memory 的内存泄漏。</p>
+<h2 id="JNI-编程中明显的内存泄漏"><a href="#JNI-编程中明显的内存泄漏" class="headerlink" title="JNI 编程中明显的内存泄漏"></a>JNI 编程中明显的内存泄漏</h2><p>JNI 编程实现了 native code 和 Java 程序的交互，因此 JNI 代码编程既遵循 native code 编程语言的编程规则，同时也遵守 JNI 编程的文档规范。在内存管理方面，native code 编程语言本身的内存管理机制依然要遵循，同时也要考虑 JNI 编程的内存管理。</p>
+<h3 id="Native-Code-本身的内存泄漏"><a href="#Native-Code-本身的内存泄漏" class="headerlink" title="Native Code 本身的内存泄漏"></a>Native Code 本身的内存泄漏</h3><p>JNI 编程首先是一门具体的编程语言，或者 C 语言，或者 C++，或者汇编，或者其它 native 的编程语言。每门编程语言环境都实现了自身的内存管理机制。因此，JNI 程序开发者要遵循 native 语言本身的内存管理机制，避免造成内存泄漏。以 C 语言为例，当用 malloc() 在进程堆中动态分配内存时，JNI 程序在使用完后，应当调用 free() 将内存释放。总之，所有在 native 语言编程中应当注意的内存泄漏规则，在 JNI 编程中依然适应。</p>
+<p>Native 语言本身引入的内存泄漏会造成 native memory 的内存，严重情况下会造成 native memory 的 out of memory。</p>
+<h3 id="Global-Reference-引入的内存泄漏"><a href="#Global-Reference-引入的内存泄漏" class="headerlink" title="Global Reference 引入的内存泄漏"></a>Global Reference 引入的内存泄漏</h3><p>JNI 编程还要同时遵循 JNI 的规范标准，JVM 附加了 JNI 编程特有的内存管理机制。</p>
+<p>JNI 中的 Local Reference 只在 native method 执行时存在，当 native method 执行完后自动失效。这种自动失效，使得对 Local Reference 的使用相对简单，native method 执行完后，它们所引用的 Java 对象的 reference count 会相应减 1。不会造成 Java Heap 中 Java 对象的内存泄漏。</p>
+<p>而 Global Reference 对 Java 对象的引用一直有效，因此它们引用的 Java 对象会一直存在 Java Heap 中。程序员在使用 Global Reference 时，需要仔细维护对 Global Reference 的使用。如果一定要使用 Global Reference，务必确保在不用的时候删除。就像在 C 语言中，调用 malloc() 动态分配一块内存之后，调用 free() 释放一样。否则，Global Reference 引用的 Java 对象将永远停留在 Java Heap 中，造成 Java Heap 的内存泄漏。</p>
+<h3 id="LocalReference-造成的内存泄漏"><a href="#LocalReference-造成的内存泄漏" class="headerlink" title="LocalReference 造成的内存泄漏"></a>LocalReference 造成的内存泄漏</h3><p>Local Reference 在 native method 执行完成后，会自动被释放，似乎不会造成任何的内存泄漏。但这是错误的。对 Local Reference 的理解不够，会造成潜在的内存泄漏。示例不再赘述。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JNI 编程既可能引发 Java Heap 的内存泄漏，也可能引发 native memory 的内存泄漏，严重的情况可能使 JVM 运行异常终止。JNI 软件开发人员在编程中，应当考虑以下几点，避免内存泄漏：</p>
+<ul>
+<li>native code 本身的内存管理机制依然要遵循。  </li>
+<li>使用 Global reference 时，当 native code 不再需要访问 Global reference 时，应当调用 JNI 函数 DeleteGlobalRef() 删除 Global reference 和它引用的 Java 对象。Global reference 管理不当会导致 Java Heap 的内存泄漏。</li>
+<li>透彻理解 Local reference，区分 Local reference 和 native code 的局部变量，避免混淆两者所引起的 native memory 的内存泄漏。</li>
+<li>使用 Local reference 时，如果 Local reference 引用了大的 Java 对象，当不再需要访问 Local reference 时，应当调用 JNI 函数 DeleteLocalRef() 删除 Local reference，从而也断开对 Java 对象的引用。这样可以避免 Java Heap 的 out of memory。</li>
+<li>使用 Local reference 时，如果在 native method 执行期间会创建大量的 Local reference，当不再需要访问 Local reference 时，应当调用 JNI 函数 DeleteLocalRef() 删除 Local reference。Local reference 表空间有限，这样可以避免 Local reference 表的内存溢出，避免 native memory 的 out of memory。</li>
+<li>严格遵循 Java JNI 规范书中的使用规则。</li>
+</ul>
+<h2 id="附-JNI-与-Java-类型对照表"><a href="#附-JNI-与-Java-类型对照表" class="headerlink" title="附 JNI 与 Java 类型对照表"></a>附 JNI 与 Java 类型对照表</h2><p><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/JNI.png" alt></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/08/25/20200825JNIOOM/" data-id="ckg5czkc5000okgd8nlbya73l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OOM/">OOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内存泄漏/">内存泄漏</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/26/20200826vueHandlingEdgeCases/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue 学习笔记（十三）：处理边界情况
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/23/20200822vueDynamic&AsyncComponents/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue 学习笔记（十二）：动态组件 &amp; 异步组件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DesignPatterns/">DesignPatterns</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/FE/">FE</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PO/">PO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/app/">app</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/env/">env</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/fe/">fe</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/finance/">finance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/issue/">issue</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">misc</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BackEnd/">BackEnd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FE/">FE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java8/">Java8</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOM/">OOM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PO/">PO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITest/">UITest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XHR/">XHR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accounting/">accounting</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api-test/">api test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">automation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/">bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/">code coverage</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commandline/">commandline</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/common/">common</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash/">crash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decorator/">decorator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">dns</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elliptical/">elliptical</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">25</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fe/">fe</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generics/">generics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5/">h5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">health</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/humanities/">humanities</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/">hybrid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iCloud/">iCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interface-test/">interface test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jacoco/">jacoco</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/log/">log</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/monkey/">monkey</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvn/">mvn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/net/">net</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notion/">notion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operation/">operation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance-testing/">performance testing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/">pip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/question/">question</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robot/">robot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotium/">robotium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sport/">sport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/statistics/">statistics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-view/">web view</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodebuild/">xcodebuild</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodecoverage/">xcodecoverage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码覆盖率/">代码覆盖率</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会计/">会计</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存泄漏/">内存泄漏</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绘图/">绘图</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财会/">财会</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财务/">财务</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BackEnd/" style="font-size: 10px;">BackEnd</a> <a href="/tags/FE/" style="font-size: 10px;">FE</a> <a href="/tags/IED/" style="font-size: 10.71px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10.71px;">IntelliJ</a> <a href="/tags/Java/" style="font-size: 19.29px;">Java</a> <a href="/tags/Java8/" style="font-size: 12.14px;">Java8</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OOM/" style="font-size: 10.71px;">OOM</a> <a href="/tags/PO/" style="font-size: 10px;">PO</a> <a href="/tags/UITest/" style="font-size: 10px;">UITest</a> <a href="/tags/Utils/" style="font-size: 10px;">Utils</a> <a href="/tags/XHR/" style="font-size: 10px;">XHR</a> <a href="/tags/accounting/" style="font-size: 10.71px;">accounting</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 17.14px;">android</a> <a href="/tags/api/" style="font-size: 10px;">api</a> <a href="/tags/api-test/" style="font-size: 10px;">api test</a> <a href="/tags/app/" style="font-size: 17.86px;">app</a> <a href="/tags/appium/" style="font-size: 15.71px;">appium</a> <a href="/tags/automation/" style="font-size: 10.71px;">automation</a> <a href="/tags/bash/" style="font-size: 11.43px;">bash</a> <a href="/tags/blog/" style="font-size: 12.86px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/code-coverage/" style="font-size: 10.71px;">code coverage</a> <a href="/tags/command/" style="font-size: 10.71px;">command</a> <a href="/tags/commandline/" style="font-size: 10.71px;">commandline</a> <a href="/tags/common/" style="font-size: 10px;">common</a> <a href="/tags/crash/" style="font-size: 10px;">crash</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/decorator/" style="font-size: 10px;">decorator</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/elliptical/" style="font-size: 10px;">elliptical</a> <a href="/tags/env/" style="font-size: 18.57px;">env</a> <a href="/tags/fe/" style="font-size: 20px;">fe</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/generics/" style="font-size: 10px;">generics</a> <a href="/tags/gradle/" style="font-size: 10.71px;">gradle</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/h5/" style="font-size: 10px;">h5</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/humanities/" style="font-size: 10px;">humanities</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/iCloud/" style="font-size: 10px;">iCloud</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/interface-test/" style="font-size: 10px;">interface test</a> <a href="/tags/issue/" style="font-size: 16.43px;">issue</a> <a href="/tags/jacoco/" style="font-size: 10px;">jacoco</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/linux/" style="font-size: 12.86px;">linux</a> <a href="/tags/log/" style="font-size: 10px;">log</a> <a href="/tags/macOS/" style="font-size: 13.57px;">macOS</a> <a href="/tags/maven/" style="font-size: 10.71px;">maven</a> <a href="/tags/misc/" style="font-size: 12.14px;">misc</a> <a href="/tags/monkey/" style="font-size: 10px;">monkey</a> <a href="/tags/mvn/" style="font-size: 10px;">mvn</a> <a href="/tags/net/" style="font-size: 10px;">net</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/notion/" style="font-size: 10px;">notion</a> <a href="/tags/operation/" style="font-size: 10px;">operation</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/performance-testing/" style="font-size: 10px;">performance testing</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 11.43px;">python</a> <a href="/tags/python2/" style="font-size: 10px;">python2</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/question/" style="font-size: 10.71px;">question</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/robot/" style="font-size: 10.71px;">robot</a> <a href="/tags/robotium/" style="font-size: 10px;">robotium</a> <a href="/tags/server/" style="font-size: 12.86px;">server</a> <a href="/tags/shell/" style="font-size: 11.43px;">shell</a> <a href="/tags/sport/" style="font-size: 10px;">sport</a> <a href="/tags/spring/" style="font-size: 10.71px;">spring</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/statistics/" style="font-size: 10px;">statistics</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/test/" style="font-size: 11.43px;">test</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/tools/" style="font-size: 13.57px;">tools</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/web/" style="font-size: 12.14px;">web</a> <a href="/tags/web-view/" style="font-size: 10px;">web view</a> <a href="/tags/xcodebuild/" style="font-size: 10px;">xcodebuild</a> <a href="/tags/xcodecoverage/" style="font-size: 10px;">xcodecoverage</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/代码覆盖率/" style="font-size: 10.71px;">代码覆盖率</a> <a href="/tags/会计/" style="font-size: 10.71px;">会计</a> <a href="/tags/内存泄漏/" style="font-size: 10.71px;">内存泄漏</a> <a href="/tags/工具/" style="font-size: 13.57px;">工具</a> <a href="/tags/摘抄/" style="font-size: 11.43px;">摘抄</a> <a href="/tags/绘图/" style="font-size: 12.14px;">绘图</a> <a href="/tags/设计模式/" style="font-size: 11.43px;">设计模式</a> <a href="/tags/读书笔记/" style="font-size: 14.29px;">读书笔记</a> <a href="/tags/财会/" style="font-size: 10.71px;">财会</a> <a href="/tags/财务/" style="font-size: 10.71px;">财务</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">29</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/12/20201012blogIssueIndexEmpty/">Hexo博客：解决 index.html 文件为空问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/11/20201011blogHexoGraphviz/">绘图工具：Graphviz</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/10/20201010blogHexomermaid/">markdown 绘制 Mermaid</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/20201009blogHexoplantuml/">Hexo博客：markdown 绘制 PlantUML</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/08/20201008blogHexoChart/">Hexo博客：markdown 绘制 flowchart 流程图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 worldlect<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">about me</a>
+  
+</nav>
+    
+
+<script src="//lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?57d74626902d897e9a283b661d87c039";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+  </div>
+</body>
+</html>
