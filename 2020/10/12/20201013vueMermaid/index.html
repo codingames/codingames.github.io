@@ -3,18 +3,22 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>Tag: python | tracenote</title>
+  <title>Vue 学习笔记（四十一）：Vue 画 Mermaid | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/python/index.html">
+  <meta name="description" content="前几天的博文曾提到 markdown 绘制 Mermaid，今天来用 Vue 画 Mermaid 图表：">
+<meta name="keywords" content="vue,FE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 学习笔记（四十一）：Vue 画 Mermaid">
+<meta property="og:url" content="http://tracenote.com/2020/10/12/20201013vueMermaid/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="前几天的博文曾提到 markdown 绘制 Mermaid，今天来用 Vue 画 Mermaid 图表：">
 <meta property="og:locale" content="utf-8">
+<meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vueMermaid.png">
+<meta property="og:updated_time" content="2020-10-12T15:10:54.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Vue 学习笔记（四十一）：Vue 画 Mermaid">
+<meta name="twitter:description" content="前几天的博文曾提到 markdown 绘制 Mermaid，今天来用 Vue 画 Mermaid 图表：">
+<meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vueMermaid.png">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,87 +69,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/11/11/pythonDecorator/" class="archive-article-date">
-  <time datetime="2018-11-11T04:30:00.000Z" itemprop="datePublished">Nov 11</time>
+        <section id="main"><article id="post-20201013vueMermaid" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/20201013vueMermaid/" class="article-date">
+  <time datetime="2020-10-12T15:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/FE/">FE</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/11/pythonDecorator/">python装饰器的顺序</a>
+    <h1 class="article-title" itemprop="name">
+      Vue 学习笔记（四十一）：Vue 画 Mermaid
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/01/01/weChatJumpsRobot/" class="archive-article-date">
-  <time datetime="2018-01-01T04:30:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/weChatJumpsRobot/">用机器人来玩微信跳一跳</a>
-    </h1>
-  
+        <p>前几天的博文曾提到 <a href="https://mp.weixin.qq.com/s/slMdfQP-zIAHNkH79BOAcg" target="_blank" rel="noopener">markdown 绘制 Mermaid</a>，今天来用 Vue 画 Mermaid 图表：</p>
+<a id="more"></a>
+<p>安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save mermaid</span><br></pre></td></tr></table></figure>
+<p><code>main.js</code>（vue-cli 工程）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mermaid <span class="keyword">from</span> <span class="string">'mermaid'</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span>Hi.vue<span class="string">`:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>vue</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"mermaid"</span>&gt;</span><br><span class="line">  graph TB</span><br><span class="line">    sq[Square shape] --&gt; ci((Circle shape))</span><br><span class="line"></span><br><span class="line">    subgraph A</span><br><span class="line">        od&gt;Odd shape]-- Two line&lt;br/&gt;edge comment --&gt; ro</span><br><span class="line">        di&#123;Diamond <span class="keyword">with</span> &lt;br/&gt; line <span class="keyword">break</span>&#125; -.-&gt; ro(Rounded&lt;br&gt;square&lt;br&gt;shape)</span><br><span class="line">        di==&gt;ro2(Rounded square shape)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    %% Notice that no text <span class="keyword">in</span> shape are added here instead that is appended further down</span><br><span class="line">    e --&gt; od3&gt;Really long text <span class="keyword">with</span> linebreak&lt;br&gt;<span class="keyword">in</span> an Odd shape]</span><br><span class="line"></span><br><span class="line">    %% Comments after double percent signs</span><br><span class="line">    e((Inner / circle&lt;br&gt;and some odd &lt;br&gt;special characters)) --&gt; f(,.?!+-*ز)</span><br><span class="line"></span><br><span class="line">    cyr[Cyrillic]--&gt;cyr2((Circle shape Начало));</span><br><span class="line"></span><br><span class="line">     classDef green fill:#9f6,stroke:#333,stroke-width:2px;</span><br><span class="line">     classDef orange fill:#f96,stroke:#333,stroke-width:4px;</span><br><span class="line">     <span class="class"><span class="keyword">class</span> <span class="title">sq</span>,<span class="title">e</span> <span class="title">green</span></span></span><br><span class="line"><span class="class">     <span class="title">class</span> <span class="title">di</span> <span class="title">orange</span></span></span><br><span class="line"><span class="class">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>运行效果：</p>
+<p><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vueMermaid.png" alt></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/10/12/20201013vueMermaid/" data-id="ckg6oo3i8001xf2d8tfujkv91" class="article-share-link">Share</a>
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/31/macPython2&3/" class="archive-article-date">
-  <time datetime="2017-12-31T14:30:00.000Z" itemprop="datePublished">Dec 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/31/macPython2&3/">macOS中的python2和python3并存</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/12/20201012blogIssueIndexEmpty/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo博客：解决 index.html 文件为空问题</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
