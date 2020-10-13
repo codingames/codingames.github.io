@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tracenote.com/2020/10/13/20201013vueTemplateDiv/</loc>
+    <lastmod>2020-10-13</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2020/10/12/20201013vueMermaid/</loc>
     <lastmod>2020-10-12</lastmod>
   </url>
@@ -537,11 +541,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -553,11 +557,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -565,11 +569,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -581,11 +585,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
