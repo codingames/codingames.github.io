@@ -14,7 +14,7 @@
 <meta property="og:description" content="记录学习 Vue 时遇到的一个小错误。">
 <meta property="og:locale" content="utf-8">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/vueIssueTemplateDiv.png">
-<meta property="og:updated_time" content="2020-10-13T15:45:59.847Z">
+<meta property="og:updated_time" content="2020-10-13T15:46:24.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue：解决报错 Component template should contain exactly one root element">
 <meta name="twitter:description" content="记录学习 Vue 时遇到的一个小错误。">
@@ -103,7 +103,7 @@
 </blockquote>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>在模版里只能有一个主div（根对象），如果有多个div，需要外面套一个div：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;div&gt;xxx&lt;/div&gt;</span><br><span class="line">	&lt;div&gt;xxx&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>为什么template下也必须有且只能有一个div？<br>&gt;</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>为什么template下也必须有且只能有一个div？</p>
 <blockquote>
 <p>这里我们要先看一看template这个标签，这个标签是HTML5出来的新标签，它有三个特性：</p>
 <p>1.隐藏性：该标签不会显示在页面的任何地方，即便里面有多少内容，它永远都是隐藏的状态；</p>
@@ -120,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/13/20201013vueTemplateDiv/" data-id="ckg850vnj001x5ld8sssbzhrg" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/13/20201013vueTemplateDiv/" data-id="ckg851ft2002072d8pdoz4qa8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
