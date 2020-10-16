@@ -3,20 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>漫谈接口测试1：前言 | tracenote</title>
+  <title>绕过DNS污染，解决安装 brew 的 Connection refused | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="接口测试，技术支持很成熟，应用也很广泛。可能很多公司不做UI自动化测试，但绝大多数公司都在开展接口测试。">
-<meta name="keywords" content="test,api test,interface test">
+  <meta name="description" content="问题发现电脑上的 brew 坏了，重新用官网命令安装一下： 1/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot; 遇到错误：  curl: (7) Failed to connect to raw.githubusercontent.com port 44">
+<meta name="keywords" content="env,工具,绘图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="漫谈接口测试1：前言">
-<meta property="og:url" content="http://tracenote.com/2020/10/01/20201001apiTest/index.html">
+<meta property="og:title" content="绕过DNS污染，解决安装 brew 的 Connection refused">
+<meta property="og:url" content="http://tracenote.com/2020/10/16/20201016brewConnectionRefused/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="接口测试，技术支持很成熟，应用也很广泛。可能很多公司不做UI自动化测试，但绝大多数公司都在开展接口测试。">
+<meta property="og:description" content="问题发现电脑上的 brew 坏了，重新用官网命令安装一下： 1/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot; 遇到错误：  curl: (7) Failed to connect to raw.githubusercontent.com port 44">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-10-01T16:00:53.398Z">
+<meta property="og:updated_time" content="2020-10-16T01:31:05.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="漫谈接口测试1：前言">
-<meta name="twitter:description" content="接口测试，技术支持很成熟，应用也很广泛。可能很多公司不做UI自动化测试，但绝大多数公司都在开展接口测试。">
+<meta name="twitter:title" content="绕过DNS污染，解决安装 brew 的 Connection refused">
+<meta name="twitter:description" content="问题发现电脑上的 brew 坏了，重新用官网命令安装一下： 1/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot; 遇到错误：  curl: (7) Failed to connect to raw.githubusercontent.com port 44">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-20201001apiTest" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20201016brewConnectionRefused" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/01/20201001apiTest/" class="article-date">
-  <time datetime="2020-10-01T15:00:00.000Z" itemprop="datePublished">2020-10-01</time>
+    <a href="/2020/10/16/20201016brewConnectionRefused/" class="article-date">
+  <time datetime="2020-10-16T00:15:12.000Z" itemprop="datePublished">2020-10-16</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/test/">test</a>
+    <a class="article-category-link" href="/categories/env/">env</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      漫谈接口测试1：前言
+      绕过DNS污染，解决安装 brew 的 Connection refused
     </h1>
   
 
@@ -93,24 +93,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>接口测试，技术支持很成熟，应用也很广泛。可能很多公司不做UI自动化测试，但绝大多数公司都在开展接口测试。</p>
+        <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>发现电脑上的 brew 坏了，重新用官网命令安装一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>遇到错误：</p>
+<blockquote>
+<p>curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</p>
+</blockquote>
 <a id="more"></a>
-<p>网上的接口测试框架一推，从最简单最初级的脚本化框架（需要写测试脚本、代码数据不分离），到接口测试平台（代码与数据完全分离）应有尽有。技术上相当成熟。</p>
-<p>然而，去年面了几十个本硕名校、一线名企的候选人（包括很多来面专家岗的），大失所望，感觉大家的接口测试基本在及格线附近。系统支持很完美、落地效果很突出的，几乎没有。甚至只有两三个候选人知道<code>Json Schema</code>。大部分人还在一个一个的 assert 单个字段，超半数无法较好回答覆盖、落地效果。还有一些因业务忙，只能写一点点。</p>
-<p>反过来扪心自问，自己做得好吗？也不怎么样。以前部门的接口框架，几乎人人私下吐槽，但很少有人去主动优化它，自己所做的努力也极其有限。</p>
-<p>由于没有待过大公司，做得事情一直很杂，缺乏自信和底气在大司名企的服务端专业领域细耕n年的螺丝钉型员工的跟前指点一二。但有些事情也实在是看不下去。</p>
-<p>感谢之前的工作经历，实践中收获了一堆接口框架（其中不乏比所谓大司名企好的多的），特别感谢上一家公司，个人主导了接口测试平台从 0 到 1 的研发和在全公司的推广落地，没有直接参与coding，但后来推广落地的产品的功能设计出自本人。其中也体会到了产品和研发重重矛盾，也有很多不愉快，后期还被摘了桃子，角色从被称产品变成被称用户。但还是很感激原基础研发团队和帮忙推进落地的领导和同事。当然这个系统也不完美，很多我认为必须有的产品设计和功能并没有得到实现。</p>
-<p>也一直想自己做个完全符合自己理想的接口平台，但一是工作量很大，二是技术栈超出个人能力范围。后端的Java可以写，但前端就很头疼了。等啃下Vue，就尝试既做产品又做研发来自己实现。（也不一定，毕竟市场重复产品已经比较多了）</p>
-<p>跳出工作现状和现有工具，如果任凭自己发挥，怎么样才算一个好的接口测试？</p>
-<p>正如说过很多遍的，<strong>最好的输入是输出</strong>，这里抱着学习和交流的目的，梳理一下接口测试。开篇。</p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>搜索一把，发现是由于某些不可告人的原因，<code>raw.githubusercontent.com</code> 的域名解析被污染了。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>在 <a href="https://www.ipaddress.com/" target="_blank" rel="noopener">https://www.ipaddress.com/</a>  查询<code>raw.githubusercontent.com</code>的真实IP。假如查到的是 <code>199.232.68.133</code>，</p>
+<p>把 <code>199.232.68.133  raw.githubusercontent.com</code> 写入本地 hosts：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br></pre></td></tr></table></figure>
+<p>然后继续安装即可。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>遇到其他被污染的DNS都可以参照解决。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/01/20201001apiTest/" data-id="ckgbktc38001nh6d8bff4o3w2" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/16/20201016brewConnectionRefused/" data-id="ckgbktc3d001yh6d85rvuxguq" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api-test/">api test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interface-test/">interface test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
 
     </footer>
   </div>
@@ -118,19 +121,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/10/02/20201002JavaFilterInterceptor/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          拦截器 Interceptor 和过滤器 Filter 的区别 [Java Web]
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/30/20200930performanceTesting/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/15/20201015chromeExtensionJson/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">漫谈压测1：前言</div>
+      <div class="article-nav-title">Chrome 插件备忘 - JSON 格式化显示</div>
     </a>
   
 </nav>
