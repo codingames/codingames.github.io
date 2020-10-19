@@ -5,13 +5,13 @@
   
   <title>为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="（前言：层次比较乱，日后抽空再整理） 学习 Vue 与后端服务交互数据。先搭建一个后端服务。能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
+  <meta name="description" content="（前言：层次比较乱，日后抽空再整理） 目的学习 Vue 与后端服务交互数据。先搭建一个后端服务，能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
 <meta name="keywords" content="Java,web,Spring MVC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]">
 <meta property="og:url" content="http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="（前言：层次比较乱，日后抽空再整理） 学习 Vue 与后端服务交互数据。先搭建一个后端服务。能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
+<meta property="og:description" content="（前言：层次比较乱，日后抽空再整理） 目的学习 Vue 与后端服务交互数据。先搭建一个后端服务，能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
 <meta property="og:locale" content="utf-8">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/mavenwebapp.png">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/no-new-package.png">
@@ -21,10 +21,10 @@
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/JettyDeployment.png">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/artifactsWar.png">
 <meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/springhelloworld.png">
-<meta property="og:updated_time" content="2020-10-19T01:43:55.773Z">
+<meta property="og:updated_time" content="2020-10-19T01:46:11.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]">
-<meta name="twitter:description" content="（前言：层次比较乱，日后抽空再整理） 学习 Vue 与后端服务交互数据。先搭建一个后端服务。能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
+<meta name="twitter:description" content="（前言：层次比较乱，日后抽空再整理） 目的学习 Vue 与后端服务交互数据。先搭建一个后端服务，能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。">
 <meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/mavenwebapp.png">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
@@ -103,11 +103,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><em>（前言：层次比较乱，日后抽空再整理）</em></p>
-<p>学习 Vue 与后端服务交互数据。先搭建一个后端服务。能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。</p>
+<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>学习 Vue 与后端服务交互数据。先搭建一个后端服务，能用的、最简单的，首要目的是服务前端学习：接收前端 Vue 请求并返回预期数据。</p>
 <a id="more"></a>
 <h3 id="选型"><a href="#选型" class="headerlink" title="选型"></a>选型</h3><p>目前互联网公司后端服务很多是Java技术栈的，包括pua里在内很多很多公司都在用。Spring MVC，Spring Boot 之类。Spring Boot 可以看作 Spring MVC 的简化版，所以从 Spring MVC 下手。</p>
 <p>至于 Python、Go，简单粗暴，腾讯和大小周条在用Go，其它公司相对较少。学好 Java 再上手 Python 很快，反之则。。。而且 Python 不适合大规模团队开发，动态一时爽，重构那啥。。。</p>
-<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>简单能用，为Vue提供后端数据。</p>
 <h3 id="新建-Maven-工程"><a href="#新建-Maven-工程" class="headerlink" title="新建 Maven 工程"></a>新建 Maven 工程</h3><p>把它转为 maven 工程：利用 maven 下载 Spring MVC 的依赖：<br>右键工程 - 点击 Add Framework Support - 选中 Maven - OK</p>
 <p><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/mavenwebapp.png" alt></p>
 <p><code>pom.xml</code> 文件，确保有 maven 依赖（如果没有可以手动添加）：</p>
@@ -138,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/" data-id="ckgfvlozx0023nod8w8el28gm" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/" data-id="ckggoohqv0021rnd8z8uvue00" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
