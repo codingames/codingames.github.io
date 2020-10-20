@@ -3,20 +3,22 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>appium hybrid app web view | tracenote</title>
+  <title>SpringMVC：支持 Json 返回 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。">
-<meta name="keywords" content="appium,hybrid,web view">
+  <meta name="description" content="上回书说到 Spring MVC 的 hello world 工程，今天继续，支持 Json 格式的返回。">
+<meta name="keywords" content="Java,web,Spring MVC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="appium hybrid app web view">
-<meta property="og:url" content="http://tracenote.com/2018/09/10/appiumHybrid/index.html">
+<meta property="og:title" content="SpringMVC：支持 Json 返回">
+<meta property="og:url" content="http://tracenote.com/2020/10/20/20201020SpringMVCJsonResp/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。">
+<meta property="og:description" content="上回书说到 Spring MVC 的 hello world 工程，今天继续，支持 Json 格式的返回。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2018-09-13T11:17:37.000Z">
+<meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/postjsondemo.png">
+<meta property="og:updated_time" content="2020-10-20T01:30:58.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="appium hybrid app web view">
-<meta name="twitter:description" content="hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。">
+<meta name="twitter:title" content="SpringMVC：支持 Json 返回">
+<meta name="twitter:description" content="上回书说到 Spring MVC 的 hello world 工程，今天继续，支持 Json 格式的返回。">
+<meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/postjsondemo.png">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-appiumHybrid" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20201020SpringMVCJsonResp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/09/10/appiumHybrid/" class="article-date">
-  <time datetime="2018-09-10T14:30:00.000Z" itemprop="datePublished">2018-09-10</time>
+    <a href="/2020/10/20/20201020SpringMVCJsonResp/" class="article-date">
+  <time datetime="2020-10-20T00:00:00.000Z" itemprop="datePublished">2020-10-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/appium/">appium</a>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
   </div>
 
   </div>
@@ -85,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      appium hybrid app web view
+      SpringMVC：支持 Json 返回
     </h1>
   
 
@@ -93,24 +95,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hybrid 混合app，从原生页面切换到h5 web view。本文重点在末尾。<br><a id="more"></a></p>
-<p>官方示例：<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/hybrid.md" target="_blank" rel="noopener">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/hybrid.md</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java</span></span><br><span class="line"><span class="comment">// assuming we have a set of capabilities</span></span><br><span class="line">driver = <span class="keyword">new</span> AppiumDriver(<span class="keyword">new</span> URL(<span class="string">"http://127.0.0.1:4723/wd/hub"</span>), capabilities);</span><br><span class="line"></span><br><span class="line">Set&lt;String&gt; contextNames = driver.getContextHandles();</span><br><span class="line"><span class="keyword">for</span> (String contextName : contextNames) &#123;</span><br><span class="line">    System.out.println(contextNames); <span class="comment">//prints out something like NATIVE_APP \n WEBVIEW_1</span></span><br><span class="line">&#125;</span><br><span class="line">driver.context(contextNames.toArray()[<span class="number">1</span>]); <span class="comment">// set context to WEBVIEW_1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//do some web testing</span></span><br><span class="line">String myText = driver.findElement(By.cssSelector(<span class="string">".green_button"</span>)).click();</span><br><span class="line"></span><br><span class="line">driver.context(<span class="string">"NATIVE_APP"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// do more native testing if we want</span></span><br><span class="line"></span><br><span class="line">driver.quit();</span><br></pre></td></tr></table></figure>
-<p>打印获取到的<code>contextNames</code>发现只有一个元素：[‘NATIVE_APP’]，没有WEBVIEW_1，无法切换。查资料 <blockquote><p>For a real device you need to have “setWebContentsDebuggingEnabled” in the web view. Without it the web view is not exposed to automation tools </p>
-</blockquote><br>需要修改app源程序代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT) &#123;</span><br><span class="line">        WebView.setWebContentsDebuggingEnabled(<span class="keyword">true</span>);&#125;</span><br></pre></td></tr></table></figure>
-<p>另外有说法是appium web view只支持chrome内核的解析器，非chrome内核的无法识别。</p>
-<p>这里有别人的一份总结：<a href="https://testerhome.com/topics/10951" target="_blank" rel="noopener">https://testerhome.com/topics/10951</a></p>
-<hr>
-<p>【但是】上面这些并没有什么卵用。</p>
-<h4 id="实际操作中发现，当页面是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作可行，不用费劲切换。"><a href="#实际操作中发现，当页面是web-view，driver-getContextHandles-返回只有NATIVE-APP时，按原生app进行元素识别、操作可行，不用费劲切换。" class="headerlink" title="实际操作中发现，当页面是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作可行，不用费劲切换。"></a>实际操作中发现，当页面是web view，driver.getContextHandles() 返回只有NATIVE_APP时，按原生app进行元素识别、操作可行，不用费劲切换。</h4>
+        <p>上回书说到 Spring MVC 的 hello world 工程，今天继续，支持 Json 格式的返回。</p>
+<a id="more"></a>
+<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>SpringMVC 默认使用 jackson 来转化 json 到 java 对象以及 java 对象到 json，如无依赖，会报 <code>No converter found for return value of type: class xxx</code></p>
+<ul>
+<li>@ResponseBody：转化 java 对象到 json，输出</li>
+<li>@RequestBody：转化 json 到 java 对象，输入</li>
+</ul>
+<p>maven 依赖：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jackson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jackson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用-ResponseBody"><a href="#使用-ResponseBody" class="headerlink" title="使用 @ResponseBody"></a>使用 @ResponseBody</h3><h4 id="返回-Json"><a href="#返回-Json" class="headerlink" title="返回 Json"></a>返回 Json</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tracenote.api.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.common.collect.ImmutableMap;</span><br><span class="line"><span class="keyword">import</span> com.tracenote.bean.vo.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestBody;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"helloJson"</span>, method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String, String&gt; <span class="title">helloJson</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ImmutableMap.of(<span class="string">"result"</span>, <span class="string">"success"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="接收-Json参数"><a href="#接收-Json参数" class="headerlink" title="接收 Json参数"></a>接收 Json参数</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"helloUser"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">helloUser</span><span class="params">(@RequestBody User user)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用-RestController"><a href="#使用-RestController" class="headerlink" title="使用 @RestController"></a>使用 @RestController</h3><p>相当于：<code>@ResponseBody</code> + <code>@Controller</code> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tracenote.api.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.tracenote.bean.vo.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloUser</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">helloUser</span><span class="params">(@RequestBody User user)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="效果示例"><a href="#效果示例" class="headerlink" title="效果示例"></a>效果示例</h3><p><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/postjsondemo.png" alt></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2018/09/10/appiumHybrid/" data-id="ckghakk8e002pobd8kqi6yyx4" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/20/20201020SpringMVCJsonResp/" data-id="ckghakk820021obd8xgq0n6hs" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/appium/">appium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hybrid/">hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-view/">web view</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
 
     </footer>
   </div>
@@ -118,19 +124,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/09/20/dockerInstall/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          docker related
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/31/javaA/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/19/20201019JavaWebSpringMVCforVue/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Answers To Questions of Java</div>
+      <div class="article-nav-title">为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]</div>
     </a>
   
 </nav>
