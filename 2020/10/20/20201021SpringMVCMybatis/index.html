@@ -3,22 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>速读笔记-2020.8.28 | tracenote</title>
+  <title>SpringMVC：web.xml 中 contextConfigLocation 作用 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="碎片化阅读，碎片化笔记：">
-<meta name="keywords" content="读书笔记">
+  <meta name="description" content="继续写一点后端服务。">
+<meta name="keywords" content="Java,web,Spring MVC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="速读笔记-2020.8.28">
-<meta property="og:url" content="http://tracenote.com/2020/08/28/20200828readingNote/index.html">
+<meta property="og:title" content="SpringMVC：web.xml 中 contextConfigLocation 作用">
+<meta property="og:url" content="http://tracenote.com/2020/10/20/20201021SpringMVCMybatis/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="碎片化阅读，碎片化笔记：">
+<meta property="og:description" content="继续写一点后端服务。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/RDSystem20200828.png">
-<meta property="og:updated_time" content="2020-08-29T04:00:26.974Z">
+<meta property="og:updated_time" content="2020-10-20T16:41:50.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="速读笔记-2020.8.28">
-<meta name="twitter:description" content="碎片化阅读，碎片化笔记：">
-<meta name="twitter:image" content="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/RDSystem20200828.png">
+<meta name="twitter:title" content="SpringMVC：web.xml 中 contextConfigLocation 作用">
+<meta name="twitter:description" content="继续写一点后端服务。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -69,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-20200828readingNote" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20201021SpringMVCMybatis" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/08/28/20200828readingNote/" class="article-date">
-  <time datetime="2020-08-28T00:00:00.000Z" itemprop="datePublished">2020-08-28</time>
+    <a href="/2020/10/20/20201021SpringMVCMybatis/" class="article-date">
+  <time datetime="2020-10-20T15:00:00.000Z" itemprop="datePublished">2020-10-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
   </div>
 
   </div>
@@ -87,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      速读笔记-2020.8.28
+      SpringMVC：web.xml 中 contextConfigLocation 作用
     </h1>
   
 
@@ -95,140 +93,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>碎片化阅读，碎片化笔记：<br><a id="more"></a></p>
-<h3 id="通过hook-socket来统计应用流量"><a href="#通过hook-socket来统计应用流量" class="headerlink" title="通过hook socket来统计应用流量"></a><a href="https://mp.weixin.qq.com/s/Di2cNklIl-UlrV7IZNxOXQ" target="_blank" rel="noopener">通过hook socket来统计应用流量</a></h3><p>Android App，网络都会走socket，通过重写 socket 的类 <code>SocketImplFactory</code>，植入流量统计。这种方案可以以SDK的形式输出作为通用的应用流量统计方案。如果只简单统计应用流量，也可以使用okHttp等的拦截器来实现。<br>另外值得表扬的是文中贴了大量代码。</p>
-<h3 id="58SSP平台测试设计及实现"><a href="#58SSP平台测试设计及实现" class="headerlink" title="58SSP平台测试设计及实现"></a><a href="https://mp.weixin.qq.com/s/6XVDcfIGLjOcNdFEHKLiAQ" target="_blank" rel="noopener">58SSP平台测试设计及实现</a></h3><p>好像也没什么，能把简单的事情讲复杂也是一种能力。</p>
-<h3 id="ElasticSearch-索引-VS-MySQL-索引"><a href="#ElasticSearch-索引-VS-MySQL-索引" class="headerlink" title="ElasticSearch 索引 VS MySQL 索引"></a><a href="https://mp.weixin.qq.com/s/FBxWKxFMnNKTVDuZ7j-gPA" target="_blank" rel="noopener">ElasticSearch 索引 VS MySQL 索引</a></h3><p>收藏：由浅入深讲到B+数和倒排索引</p>
-<h3 id="阿里研究员：警惕软件复杂度困局"><a href="#阿里研究员：警惕软件复杂度困局" class="headerlink" title="阿里研究员：警惕软件复杂度困局"></a><a href="https://mp.weixin.qq.com/s/L2hviITn-MgKGWzyUdXSjg" target="_blank" rel="noopener">阿里研究员：警惕软件复杂度困局</a></h3><p>收藏：编写技术改造立项及收益文档时可以借鉴里面的话术。</p>
-<h3 id="送外卖也要“黑科技”？阿里移动感知技术应用揭秘"><a href="#送外卖也要“黑科技”？阿里移动感知技术应用揭秘" class="headerlink" title="送外卖也要“黑科技”？阿里移动感知技术应用揭秘"></a><a href="https://mp.weixin.qq.com/s/7jVa-K-qUlYIrCg3YpPSEQ" target="_blank" rel="noopener">送外卖也要“黑科技”？阿里移动感知技术应用揭秘</a></h3><p>为解决下述送外卖的挑战，阿里做了个aBeacon，很明显是借鉴了苹果的ibeacon</p>
-<blockquote>
-<p>GPS在室内的漂移<br>商户在不同楼层的垂直分布<br>商户环境的动态性和骑手手机的多样性<br>基于Wi-Fi的方法的局限性</p>
-</blockquote>
-<h3 id="干货-广告系统架构解密"><a href="#干货-广告系统架构解密" class="headerlink" title="干货 | 广告系统架构解密"></a><a href="https://mp.weixin.qq.com/s/pY54bGV61rjbklSa15g5DQ" target="_blank" rel="noopener">干货 | 广告系统架构解密</a></h3><p>文中提到的这些技术挑战也是质量挑战</p>
-<blockquote>
-<p>1、高并发：广告引擎和C端流量对接，请求量大（平峰往往有上万QPS），要求实时响应，必须在几十毫秒内返回结果。</p>
-<p>2、业务逻辑复杂：一次广告请求，涉及到多路召回、算法模型打分、竞价排序等复杂的业务流程，策略多，执行链路长。</p>
-<p>3、稳定性要求高：广告系统直接跟收入挂钩，广告引擎以及计费平台等核心系统的稳定性要求很高，可用性至少要做到3个9。</p>
-<p>4、大数据存储和计算：随业务发展，推广数量以及扣费订单数量很容易达到千万甚至上亿规模，另外收入报表的聚合维度多，单报表可能达到百亿级别的记录数。</p>
-<p>5、账务的准确性：广告扣费属于金融性质的操作，需要做到不丢失、不重复，否则会损害某一方的利益。另外，如果收入数据不准确，还可能影响到业务决策。</p>
-</blockquote>
-<h3 id="谈有效的单元测试"><a href="#谈有效的单元测试" class="headerlink" title="谈有效的单元测试"></a><a href="https://mp.weixin.qq.com/s/X1sTkuVKXb_f2kskytBryA" target="_blank" rel="noopener">谈有效的单元测试</a></h3><p>TODO 抽空做个专题，写一下spring mvc后端服务，和Android的单元测试。</p>
-<h3 id="单元测试，只是测试吗？"><a href="#单元测试，只是测试吗？" class="headerlink" title="单元测试，只是测试吗？"></a><a href="https://mp.weixin.qq.com/s/nIntjcrhgLQMiNo0XqPyyg" target="_blank" rel="noopener">单元测试，只是测试吗？</a></h3><p>TODO 同上，注意留言区信息量也很大。</p>
-<h3 id="ClassLoader踩坑实例现场"><a href="#ClassLoader踩坑实例现场" class="headerlink" title="ClassLoader踩坑实例现场"></a><a href="https://mp.weixin.qq.com/s/kvOpNo3D827qtWyN8BVUPA" target="_blank" rel="noopener">ClassLoader踩坑实例现场</a></h3><p>TODO 在spring mvc web服务中也遇到过classloader/双亲委派相关的问题，抽空写一下。</p>
-<h3 id="思考：如何打造一个优秀的研发体系"><a href="#思考：如何打造一个优秀的研发体系" class="headerlink" title="思考：如何打造一个优秀的研发体系"></a><a href="https://mp.weixin.qq.com/s/IOskiDoI3unX0MG8-l1wtw" target="_blank" rel="noopener">思考：如何打造一个优秀的研发体系</a></h3><p>图不错：<br><img src="https://codingames.coding.net/p/codingames/d/sources/git/raw/master/RDSystem20200828.png" alt></p>
-<h3 id="网易新闻QUIC敏捷实践"><a href="#网易新闻QUIC敏捷实践" class="headerlink" title="网易新闻QUIC敏捷实践"></a><a href="https://mp.weixin.qq.com/s/MUCSsgLbn3XBz7jgmdWk6Q" target="_blank" rel="noopener">网易新闻QUIC敏捷实践</a></h3><p> 选型：为了快速接入并验证 QUIC，在流量入口设计上，我们选择用 Nginx + Caddy 方案实现；在客户端网络库上，我们选择了 Chromium 的网络库 Cronet。<br> 都是既有方案，文章的核心是以最小的成本、最小的风险和最大的收益接入 QUIC。即选项加落地的实践。当然，既有方案更有参考和复制的意义。</p>
-<h3 id="为什么-TCP-会被-UDP-取代？"><a href="#为什么-TCP-会被-UDP-取代？" class="headerlink" title="为什么 TCP 会被 UDP 取代？"></a><a href="https://mp.weixin.qq.com/s/WaiCEdwfIQAYZRTytJUgsA" target="_blank" rel="noopener">为什么 TCP 会被 UDP 取代？</a></h3><p>结合上篇网易，看来QUIC是个趋势。</p>
-<h3 id="StackExchange和它的游戏规则"><a href="#StackExchange和它的游戏规则" class="headerlink" title="StackExchange和它的游戏规则"></a><a href="https://mp.weixin.qq.com/s/jlnG9SRN-Cg2sTROphg6Qg" target="_blank" rel="noopener">StackExchange和它的游戏规则</a></h3><p>Stackoverflow，赞投票机制，赞制度的力量。值得学习和借鉴。</p>
-<h3 id="信也科技工作流平台的技术实践"><a href="#信也科技工作流平台的技术实践" class="headerlink" title="信也科技工作流平台的技术实践"></a><a href="https://mp.weixin.qq.com/s/btv7XBTZq7PJ4zQClhY24A" target="_blank" rel="noopener">信也科技工作流平台的技术实践</a></h3><p>收藏：流程引擎Flowable，设计系统/平台，难免会遇到流程相关。</p>
-<h3 id="彻底弄懂TCP协议：从三次握手说起"><a href="#彻底弄懂TCP协议：从三次握手说起" class="headerlink" title="彻底弄懂TCP协议：从三次握手说起"></a><a href="https://mp.weixin.qq.com/s/6LiZGMt2KRiIoMaLwx-lkQ" target="_blank" rel="noopener">彻底弄懂TCP协议：从三次握手说起</a></h3><p>收藏：苦练基本功，需要时再复习。</p>
-<h3 id="有赞移动Crash平台建设"><a href="#有赞移动Crash平台建设" class="headerlink" title="有赞移动Crash平台建设"></a><a href="https://mp.weixin.qq.com/s/QJr3MyoUj__K6DjNvI1Asg" target="_blank" rel="noopener">有赞移动Crash平台建设</a></h3><p>（前言：抵制任何996公司的任何产品，学习其技术不代表同意其价值观。）</p>
-<blockquote>
-<p>Crash数据收集可以通过埋点通道的进行上报，然后通过Flink实时计算任务将上报上来的Crash实时进行捞取、分组、实时监控，最后落到我们自己的业务数据库中。Crash平台上可以对Crash进行浏览，分配，标记解决等等。</p>
-<p>为了避免crash堆栈的数据量过大，crash堆栈等长字段存储至HBase. Mysql中只要存储前128预览字符与Hbase中的row_key即可</p>
-</blockquote>
-<p>算是比较简陋的平台，不过有些技术细节写了，比如：</p>
-<blockquote>
-<p>Android为例，首先需要实现Thread.UncaughtExceptionHandler接口，在初始化的时候将线程默认的Handler替换为我们拦截的Handler(当然别忘了调用下原先默认的handler)。</p>
+        <p>继续写一点后端服务。</p>
+<a id="more"></a>
+<p><code>web.xml</code> 中有这样的配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置spring核心监听器，默认会以 /WEB-INF/applicationContext.xml作为配置文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- contextConfigLocation参数用来指定Spring的配置文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath*:applicationContext.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>ContextLoaderListener</code></strong>的作用就是启动Web容器时，读取在<strong><code>contextConfigLocation</code></strong>中定义的xml文件，自动装配ApplicationContext的配置信息，并产生WebApplicationContext对象，然后将这个对象放置在ServletContext的属性里，这样我们只要得到Servlet就可以得到WebApplicationContext对象，并利用这个对象访问spring容器管理的bean。<br>简而言之，为项目提供了spring支持，初始化了Ioc容器。  </p>
+<p>如果没有指定，它会默认加载 <code>/WEB-INF/</code> 下的 <code>applicationContext.xml</code>。如果已指定，就不会去加载 <code>/WEB-INF/</code> 下的 <code>applicationContext.xml</code>，而是加载指定的配置文件。</p>
+<p>可以配置多个xml，以逗号作为分隔符。</p>
 <ul>
-<li>前端监控用户行为，收集并通过http请求上报</li>
-<li>NIO高并发日志接收服务将日志转发到rsyslog服务器中</li>
-<li>rsyslog服务器再通过logstash转发到kafka原始日志中</li>
-<li>flink实时ETl任务将原始日志加工成标准中间层格式，并继续落地到kafka</li>
-<li>最后消息会到Crash收集flink任务程序crash-clollection-task  </li>
+<li>classpath：只会到你的class路径中查找找文件</li>
+<li>classpath*：不仅包含class路径，还包括jar文件中(class路径)进行查找</li>
 </ul>
-<p>分组归类：App标识、系统、crash类型、crash错误原因、crash发生页面这五个维度。</p>
-<p>以Android堆栈为例：crashType为“java.lang.OutOfMemoryError”，crashReson为“Failed to allocate a 8306416 byte allocation with 502326 free bytes and 490KB until OOM”<br>crash发生页面是用来区分不同页面发生的同一个错误类型的。<br>将这些字段通过MD5算法计算出一个 groupId：String groupKey = MD5Utils.crypt(bundleId + crashType + crashReason + pageType);</p>
-</blockquote>
-<h3 id="凶残！一款毫无人性的全网插件统计工时工具，竟然覆盖了所有IDE！"><a href="#凶残！一款毫无人性的全网插件统计工时工具，竟然覆盖了所有IDE！" class="headerlink" title="凶残！一款毫无人性的全网插件统计工时工具，竟然覆盖了所有IDE！"></a><a href="https://mp.weixin.qq.com/s/nijIl7gXQky7BswB4yOERQ" target="_blank" rel="noopener">凶残！一款毫无人性的全网插件统计工时工具，竟然覆盖了所有IDE！</a></h3><p>TODO 安装玩玩</p>
-<h3 id="Github上-10-个超好看可视化面板"><a href="#Github上-10-个超好看可视化面板" class="headerlink" title="Github上 10 个超好看可视化面板"></a><a href="https://mp.weixin.qq.com/s/E9fseXrieojA1WqwnMZRLw" target="_blank" rel="noopener">Github上 10 个超好看可视化面板</a></h3><p>mark Vue:</p>
-<blockquote>
-<p>2.vue-Element-Admin<br>Github Star 数 19546， Github 地址：<br><a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener">https://github.com/PanJiaChen/vue-element-admin</a><br>一个基于 vue2.0 和 Eelement 的控制面板 UI 框架。</p>
-<p>8.vue-admin<br>Github Star 数 8676，Github 地址：<br><a href="https://github.com/vue-bulma/vue-admin" target="_blank" rel="noopener">https://github.com/vue-bulma/vue-admin</a><br>基于 Vue 和 Bulma 的控制面板。</p>
-<p>9.iview-admin<br>Github Star 数 8668，Github 地址：<br><a href="https://github.com/iview/iview-admin" target="_blank" rel="noopener">https://github.com/iview/iview-admin</a><br>基于 iView 的 Vue 2.0 控制面板。  </p>
-</blockquote>
-<h3 id="小技巧-在-Android-Studio-调试应用-上"><a href="#小技巧-在-Android-Studio-调试应用-上" class="headerlink" title="小技巧 | 在 Android Studio 调试应用 (上)"></a><a href="https://mp.weixin.qq.com/s/kZGM2vgSmxdyTKPqm1J3XA" target="_blank" rel="noopener">小技巧 | 在 Android Studio 调试应用 (上)</a></h3><p>Log 的过滤与折叠</p>
-<blockquote>
+<p>还支持这样的通配符：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath*:**/spring-*.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>参考：  </p>
 <ul>
-<li>设置每行显示内容：点击 Logcat 工具栏中的设置图标 - Configure Logcat Header 窗口</li>
-<li>近似的日志折叠为同一组：选中一条日志中的部分文本，右击鼠标，并选择 Fold Lines Like This</li>
+<li>ContextLoaderListener解析 <a href="https://www.jianshu.com/p/523bfddf0810" target="_blank" rel="noopener">https://www.jianshu.com/p/523bfddf0810</a></li>
+<li>详解contextConfigLocation|Spring启动过程详解 <a href="https://www.cnblogs.com/xuyuanjia/p/5847790.html" target="_blank" rel="noopener">https://www.cnblogs.com/xuyuanjia/p/5847790.html</a></li>
 </ul>
-</blockquote>
-<p>在当前进程附加调试器</p>
-<blockquote>
-<p>点击顶部 Attach Debugger to Android Process 按钮</p>
-</blockquote>
-<p>条件断点（满足执行条件才触发断点）</p>
-<blockquote>
-<p>右击一个断点并为其添加一个条件</p>
-</blockquote>
-<p>依赖断点（前一个断点触发才会断点）</p>
-<blockquote>
-<p>右击路径中的第二个断点，并打开 More 菜单。在 Disable until breakpoint is hit 选框中，选中您想要依赖的断点</p>
-</blockquote>
-<p>挂起线程</p>
-<blockquote>
-<p>默认情况下断点将会挂起所有线程。仅挂起当前线程，您需要打开断点选项，并且选中 Suspend 设置中的 Thread 选项</p>
-</blockquote>
-<p>Evaluate and log (评估与记录)</p>
-<blockquote>
-<p>希望看到一些有关应用状态的信息。也许您会通过在代码中添加 println 语句来做到这一点，但这种方法需要重新编译应用，您其实可以利用断点本身来进行评估与记录：断点选项中禁用 Suspend 并启用 Evaluate and log<br>如果您只是想快速验证断点是否触发并且不在乎其中的细节信息，可以使用 “Breakpoint hit” 信息来记录断点的触发事件。</p>
-</blockquote>
-<p>断点分组</p>
-<blockquote>
-<p>您正在解决一个 Bug，并为此添加了几个断点，但是发现自己一时间没什么头绪，所以您就去解决别的 Bug 了。然而，很快您就开始触发为了解决第一个 Bug 所添加的断点。<br>当您的程序运行到第一个与当前调试流程无关的断点时，右击并打开 More 菜单，这时您会看到一个所有断点的列表，您可以在这里复选所有与第一个 Bug 相关的断点，右击选中的断点，并选择 Move to group 接下来  Create new 并为新的分组命名。</p>
-</blockquote>
-<h3 id="27个阿里-Java-开源项目，很全面！"><a href="#27个阿里-Java-开源项目，很全面！" class="headerlink" title="27个阿里 Java 开源项目，很全面！"></a><a href="https://mp.weixin.qq.com/s/tOWXMlDxN2O1ZR6GTOs6-Q" target="_blank" rel="noopener">27个阿里 Java 开源项目，很全面！</a></h3><p>收藏</p>
-<h3 id="几个-GitHub-上算法开源项目，超-2W-的关注"><a href="#几个-GitHub-上算法开源项目，超-2W-的关注" class="headerlink" title="几个 GitHub 上算法开源项目，超 2W 的关注"></a><a href="https://mp.weixin.qq.com/s/RTqDUSgyPjSqMeG-uy117w" target="_blank" rel="noopener">几个 GitHub 上算法开源项目，超 2W 的关注</a></h3><p>在线算法网站，动画，看起来很赞。另外文中推荐了一些算法书籍。</p>
-<blockquote>
-<p>开源链接：<br><a href="https://github.com/algorithm-visualizer/algorithm-visualizer" target="_blank" rel="noopener">https://github.com/algorithm-visualizer/algorithm-visualizer</a><br>在线地址：<br><a href="https://algorithm-visualizer.org/" target="_blank" rel="noopener">https://algorithm-visualizer.org/</a></p>
-</blockquote>
-<h3 id="百度的71个非常厉害的开源项目"><a href="#百度的71个非常厉害的开源项目" class="headerlink" title="百度的71个非常厉害的开源项目"></a><a href="https://mp.weixin.qq.com/s/cv8YqSJJ57wawuno_tcIlg" target="_blank" rel="noopener">百度的71个非常厉害的开源项目</a></h3><p>收藏</p>
-<h3 id="滴滴十大技术方向开源项目出炉！有点牛啊"><a href="#滴滴十大技术方向开源项目出炉！有点牛啊" class="headerlink" title="滴滴十大技术方向开源项目出炉！有点牛啊"></a><a href="https://mp.weixin.qq.com/s/8fPAVJ7jbMAVQWj5ZQYfxw" target="_blank" rel="noopener">滴滴十大技术方向开源项目出炉！有点牛啊</a></h3><p>收藏</p>
-<h3 id="6-个实用的-Code-Review-实践技巧"><a href="#6-个实用的-Code-Review-实践技巧" class="headerlink" title="6 个实用的 Code Review 实践技巧"></a><a href="https://mp.weixin.qq.com/s/YN9C46E222gZl4UO7iDFNw" target="_blank" rel="noopener">6 个实用的 Code Review 实践技巧</a></h3><p>收藏：撰写PR规范时可能有用。</p>
-<h3 id="花了-5-分钟就搞定了-Java-下载和解析-Excel"><a href="#花了-5-分钟就搞定了-Java-下载和解析-Excel" class="headerlink" title="花了 5 分钟就搞定了 Java 下载和解析 Excel"></a><a href="https://mp.weixin.qq.com/s/fo_V97mIXDutfujinVHeeA" target="_blank" rel="noopener">花了 5 分钟就搞定了 Java 下载和解析 Excel</a></h3><p>阿里开源的 EasyExcel</p>
-<h3 id="提速-72-倍，在-Python-里面调用-Golang-函数"><a href="#提速-72-倍，在-Python-里面调用-Golang-函数" class="headerlink" title="提速 72 倍，在 Python 里面调用 Golang 函数"></a><a href="https://mp.weixin.qq.com/s/lCwT0wDPuUjMxdoOwCYqSQ" target="_blank" rel="noopener">提速 72 倍，在 Python 里面调用 Golang 函数</a></h3><p>是不是应该放弃python，直接上go。。。。。。</p>
-<h3 id="详解：Drools规则引擎探究以及在IOT的应用"><a href="#详解：Drools规则引擎探究以及在IOT的应用" class="headerlink" title="详解：Drools规则引擎探究以及在IOT的应用"></a><a href="https://mp.weixin.qq.com/s/E2oJH_HcpRvJOAtu5CU6xw" target="_blank" rel="noopener">详解：Drools规则引擎探究以及在IOT的应用</a></h3><p>mark 规则引擎，将业务规则从代码中分离出来。<br>Drools 是用Java语言编写的开放源码规则引擎</p>
-<h3 id="6-款-超好用的-Python-时间库"><a href="#6-款-超好用的-Python-时间库" class="headerlink" title="6 款 超好用的 Python 时间库"></a><a href="https://mp.weixin.qq.com/s/soOgNuorEpHgZFGwXT4AgQ" target="_blank" rel="noopener">6 款 超好用的 Python 时间库</a></h3><blockquote>
-<p>六个Python的时间日期库：</p>
-<ul>
-<li>Dateutil  </li>
-<li>Arrow</li>
-<li>Moment</li>
-<li>Maya</li>
-<li>Delorean</li>
-<li>Freezegun</li>
-</ul>
-</blockquote>
-<h3 id="20-000-字帮你搞定策略模式！"><a href="#20-000-字帮你搞定策略模式！" class="headerlink" title="20,000 字帮你搞定策略模式！"></a><a href="https://mp.weixin.qq.com/s/YUtsAbrvnZjtsgIjLZy1Ow" target="_blank" rel="noopener">20,000 字帮你搞定策略模式！</a></h3><p>收藏：设计模式，苦练基本功，需要时再复习。</p>
-<h3 id="RICE：简单的优先级管理方法"><a href="#RICE：简单的优先级管理方法" class="headerlink" title="RICE：简单的优先级管理方法"></a><a href="https://mp.weixin.qq.com/s/LBUmx2NtET4xvnQ-Tga_Aw" target="_blank" rel="noopener">RICE：简单的优先级管理方法</a></h3><p>收藏：评估项目可以借鉴</p>
-<h3 id="推荐一款万能抓包神器：Fiddler-Everywhere"><a href="#推荐一款万能抓包神器：Fiddler-Everywhere" class="headerlink" title="推荐一款万能抓包神器：Fiddler Everywhere"></a><a href="https://mp.weixin.qq.com/s/NOhx8PwAziCaMfDduz7KIw" target="_blank" rel="noopener">推荐一款万能抓包神器：Fiddler Everywhere</a></h3><p>收藏</p>
-<h3 id="阿里、腾讯、京东的团队如何远离低效？"><a href="#阿里、腾讯、京东的团队如何远离低效？" class="headerlink" title="阿里、腾讯、京东的团队如何远离低效？"></a><a href="https://mp.weixin.qq.com/s/gu3Uy45WPFPdpXzKjQ97mQ" target="_blank" rel="noopener">阿里、腾讯、京东的团队如何远离低效？</a></h3><p>公司做大了老板甚至不断上升的中层很容易丧失对一线的敏感。</p>
-<p>文章给的解决方案有点不食人间烟火。不过有一点在其他公司可能已经落地的就是，靠共同的、相关联的OKR，共同把事情搞定。</p>
-<h3 id="暗知识：“听过很多道理，却依然过不好这一生”的秘密"><a href="#暗知识：“听过很多道理，却依然过不好这一生”的秘密" class="headerlink" title="暗知识：“听过很多道理，却依然过不好这一生”的秘密"></a><a href="https://mp.weixin.qq.com/s/laGz0C5V8bdFyzTqTs618A" target="_blank" rel="noopener">暗知识：“听过很多道理，却依然过不好这一生”的秘密</a></h3><blockquote>
-<p>本文意在终结对以下问题的讨论：</p>
-<p>为什么许多人会觉得“听过了许多道理，但仍过不好这一生”？<br>为什么看过书之后觉得没什么用，尽管这些书销量非常好，口碑也不错？<br>为什么没怎么上过学的人却能成为企业家，拥有非常多的财富或者取得很大的成就？<br>为什么很多情况下说教是无效的？<br>为什么知行合一是困难的？具体而言怎么做到？<br>为什么我们尽管处于一个知识爆炸的时代，但还是缺乏知识？</p>
-<p>暗知识至少包含了三种类型，第一种是分散知识，第二种是定量的重要性知识，第三种是未被现有学科框架所包含的实践知识。</p>
-<p>哈耶克（F. A. Hayek）是1974年诺贝尔经济学奖得主。他在《知识在社会中的运用（The Use of Knowledge in Society）》中提出了分散知识的概念。这篇&gt;文章非常重要，在2011年《美国经济评论》庆祝它创刊100周年的时候，请了世界上顶级的经济学家们来评选它发表过的20篇最经典文章。这篇《知识在社会中的运&gt;用》就是其中一篇。</p>
-<p>什么是分散知识呢？</p>
-<p>哈耶克是这么说的，“今天，谁要是认为科学知识不是全部知识的概括，简直就是异端邪说。但是稍加思索就会知道，当然还存在许多非常重要但未组织起来的知识，&gt;即有关特定时间和地点的知识，它们在一般意义上甚至不可能称为科学的知识，但正是在这方面，每个人实际上都对所有其他人来说具有某种优势，因为每个人都掌握&gt;可以利用的独一无二的信息，而基于这种信息的决策只有由每个个人作出，或由他积极参与作出，这种信息才能被利用。”</p>
-<p>这是一种不同于学科知识未经组织，没有系统化的，分散于每个个体的知识。比如说，你知道某个小区周边缺少一个方便的水果店。这就是分散知识，它没有被任何书&gt;本记录，它只存在个别人的心中。但你发现这样的知识，你就可以利用它们来做出有益的决策，比如开一个水果店。</p>
-<p>哈耶克正是基于此来说明自由经济相对于计划经济的根本优越性，因为自由经济状态下，分散知识被每个个体收集，处理，并发挥它的效果，让整体的资源配置更优。</p>
-<p>哈耶克称这种各行各业中，对人们的了解，对当地环境的了解、对特殊情况的闲散知识为宝贵的财富。足以见得这种分散知识很重要。</p>
-<p>【总结】<br>暗知识是被忽略的知识。它至少包含了三种类型，第一种是分散知识，第二种是定量的重要性知识，第三种是未被现有学科框架所包含的实践知识。</p>
-<p>暗知识通常被运气所掩藏，缺失必要的暗知识会被解释成运气不好，但是更根本的原因是掌握知识的不完备性。许多道理都是不完备的，因此它们还不能直接用来指导&gt;行动。对聪明的迷思也会严重低估暗知识的重要性。</p>
-<p>发现暗知识有三种办法，第一种是细心地观察，甚至可以做一些实验，并与别人进行广泛的交流并进行有效的合作，可惜许多人没有意识到交流和合作的重要性，根本&gt;原因是忽略了暗知识的存在，没有认识到自己掌握的知识仅仅是知识大海中的一滴水。</p>
-<p>第二种是在大量阅读和学习基础上的刻意思考，许多人做到了阅读和学习，少部分做到了大量阅读和学习，但极少部分的人基于阅读和学习进行刻意思考。</p>
-<p>第三种也是最重要的，在实践中获得宝贵的实践知识，实践知识是根本上不同的一类知识，只能通过亲历才能得到。</p>
-<p>暗知识与人类的大脑结构有关，人类和人工智能可能均有自身所独有的暗知识，无法交换，只有彼此的合作才能发挥这些暗知识的作用。</p>
-</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/08/28/20200828readingNote/" data-id="ckgi73tlq000q96d8nxr1hepu" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/20/20201021SpringMVCMybatis/" data-id="ckgi73tmi002496d8f0tgoe6u" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
 
     </footer>
   </div>
@@ -236,19 +127,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/08/29/20200829vueEnterLeave&ListTransitions/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Vue 学习笔记（十四）：进入/离开 &amp; 列表过渡
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/27/20200827Thinkin3plus1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/20/20201020SpringMVCJson/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">卫哲的3+1思考法：测量项目“靠谱程度”[转载]</div>
+      <div class="article-nav-title">SpringMVC：支持 Json 返回和请求</div>
     </a>
   
 </nav>
