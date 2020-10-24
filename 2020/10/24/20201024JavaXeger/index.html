@@ -5,18 +5,18 @@
   
   <title>Java：根据正则表达式生成随机字符串 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。这里举的是Java的例子，Python 也有 Xeger 这个包（pip install）。">
+  <meta name="description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。  这里举的是Java的例子。Python 也有 Xeger 这个包（pip install）。">
 <meta name="keywords" content="Java,String,Random,Regex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java：根据正则表达式生成随机字符串">
-<meta property="og:url" content="http://tracenote.com/2020/10/23/20201024JavaXeger/index.html">
+<meta property="og:url" content="http://tracenote.com/2020/10/24/20201024JavaXeger/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。这里举的是Java的例子，Python 也有 Xeger 这个包（pip install）。">
+<meta property="og:description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。  这里举的是Java的例子。Python 也有 Xeger 这个包（pip install）。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-10-24T15:46:42.540Z">
+<meta property="og:updated_time" content="2020-10-24T15:48:15.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java：根据正则表达式生成随机字符串">
-<meta name="twitter:description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。这里举的是Java的例子，Python 也有 Xeger 这个包（pip install）。">
+<meta name="twitter:description" content="有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。  这里举的是Java的例子。Python 也有 Xeger 这个包（pip install）。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -69,8 +69,8 @@
       <div class="outer">
         <section id="main"><article id="post-20201024JavaXeger" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/23/20201024JavaXeger/" class="article-date">
-  <time datetime="2020-10-23T00:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+    <a href="/2020/10/24/20201024JavaXeger/" class="article-date">
+  <time datetime="2020-10-24T00:00:00.000Z" itemprop="datePublished">2020-10-24</time>
 </a>
     
   <div class="article-category">
@@ -93,7 +93,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。这里举的是Java的例子，Python 也有 Xeger 这个包（pip install）。</p>
+        <p>有些场合需要生成随机字符串，并且需要把随机字符串的定制权交给用户。可以利用 Xeger，根据正则表达式生成随机字符串。</p>
+<blockquote>
+<p>这里举的是Java的例子。<br>Python 也有 Xeger 这个包（pip install）。</p>
+</blockquote>
 <a id="more"></a>
 <h3 id="依赖："><a href="#依赖：" class="headerlink" title="依赖："></a>依赖：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.github.krraghavan/xeger --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.krraghavan<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>xeger<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0-RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>###示例：</p>
@@ -107,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/23/20201024JavaXeger/" data-id="ckgnuw8hp00252pd8kh24no4g" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/24/20201024JavaXeger/" data-id="ckgnuy4ze00264md8so9e0elq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Random/">Random</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Regex/">Regex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
@@ -179,7 +182,7 @@
       <ul>
         
           <li>
-            <a href="/2020/10/23/20201024JavaXeger/">Java：根据正则表达式生成随机字符串</a>
+            <a href="/2020/10/24/20201024JavaXeger/">Java：根据正则表达式生成随机字符串</a>
           </li>
         
           <li>
