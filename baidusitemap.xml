@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tracenote.com/2020/10/28/20201028JenkinsCopyArtifact/</loc>
+    <lastmod>2020-10-30</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/10/27/20201027JavaFileUtils/</loc>
+    <lastmod>2020-10-29</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2020/10/25/20201025JavaPrimitive/</loc>
     <lastmod>2020-10-27</lastmod>
   </url>
