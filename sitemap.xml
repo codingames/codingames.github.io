@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/10/30/20201030JavaOkHttp3BodyString/</loc>
+    
+    <lastmod>2020-11-01T15:59:46.362Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/10/29/20201029ScrumVSKanban/</loc>
     
     <lastmod>2020-10-31T13:54:09.000Z</lastmod>
@@ -1080,7 +1087,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1094,7 +1101,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1171,14 +1178,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
