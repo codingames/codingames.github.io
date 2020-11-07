@@ -5,18 +5,18 @@
   
   <title>Java：fastjosn - 根据 JsonPath 删除元素的坑 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继续 json 系列：Java：找个好用的 json diff （未完待续）Java：org.skyscreamer.jsonassert.JSONCompare 上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
+  <meta name="description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑  上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
 <meta name="keywords" content="Java,json,fastjson">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java：fastjosn - 根据 JsonPath 删除元素的坑">
 <meta property="og:url" content="http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="继续 json 系列：Java：找个好用的 json diff （未完待续）Java：org.skyscreamer.jsonassert.JSONCompare 上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
+<meta property="og:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑  上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-11-07T15:48:49.460Z">
+<meta property="og:updated_time" content="2020-11-07T15:57:37.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java：fastjosn - 根据 JsonPath 删除元素的坑">
-<meta name="twitter:description" content="继续 json 系列：Java：找个好用的 json diff （未完待续）Java：org.skyscreamer.jsonassert.JSONCompare 上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
+<meta name="twitter:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑  上次说到判断是否 Json 字符串非预期，那用什么可以呢？">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -93,7 +93,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>继续 json 系列：<br><a href="https://mp.weixin.qq.com/s/nD__ZIuhi7LMwJ-MHaEGCA" target="_blank" rel="noopener">Java：找个好用的 json diff （未完待续）</a><br><a href="https://mp.weixin.qq.com/s/ZyCBCTgRZIYV5duOEPyXmw" target="_blank" rel="noopener">Java：org.skyscreamer.jsonassert.JSONCompare</a><br><a href></a></p>
+        <p>继续 json 系列：  </p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/nD__ZIuhi7LMwJ-MHaEGCA" target="_blank" rel="noopener">Java：找个好用的 json diff （未完待续）</a>  </li>
+<li><a href="https://mp.weixin.qq.com/s/ZyCBCTgRZIYV5duOEPyXmw" target="_blank" rel="noopener">Java：org.skyscreamer.jsonassert.JSONCompare</a>   </li>
+<li><a href="https://mp.weixin.qq.com/s/tXWG3fF_2rch3FE2UmL3wg" target="_blank" rel="noopener">Java：fastjosn 判断是否 json 字符串的坑</a></li>
+</ul>
 <p>上次说到判断是否 Json 字符串非预期，那用什么可以呢？</p>
 <a id="more"></a>
 <p>经验证，可以用 <code>com.alibaba.fastjson.PATH.isValidObject(&quot;str&quot;)</code> 和 <code>PATH.isValidObject(&quot;str&quot;)</code>来判断，即使是 “0” 也不会像 PATH.isValid(“0”) 返回非预期的 <code>true</code>。</p>
@@ -126,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/" data-id="ckh7v4wqc002f6xgpcmiqtcqs" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/" data-id="ckh7vg7sf002h92gpmv5rbcqd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
