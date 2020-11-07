@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tracenote.com/2020/11/07/20201107PresidentialElection/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/11/03/20201103JavaFastjosnValid/</loc>
+    <lastmod>2020-11-06</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/11/02/20201102JavaJsonassert/</loc>
+    <lastmod>2020-11-05</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/11/01/20201101JavaSystemInfo/</loc>
+    <lastmod>2020-11-03</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2020/10/31/20201031TestNGListenerReporter/</loc>
     <lastmod>2020-11-02</lastmod>
   </url>
@@ -621,11 +637,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -645,11 +661,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
