@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/11/05/20201105JavaJsonPath/</loc>
+    
+    <lastmod>2020-11-09T15:50:15.661Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/</loc>
     
-    <lastmod>2020-11-07T16:03:17.359Z</lastmod>
+    <lastmod>2020-11-08T08:17:01.473Z</lastmod>
     
   </url>
   
@@ -1101,14 +1108,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -1129,6 +1136,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1137,13 +1151,6 @@
   
   <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1171,14 +1178,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
