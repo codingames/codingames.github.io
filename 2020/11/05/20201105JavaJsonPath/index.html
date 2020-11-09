@@ -5,18 +5,18 @@
   
   <title>JSONPath 笔记 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑   JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
+  <meta name="description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑 Java：fastjosn - 根据 JSONPath 删除元素的坑  JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
 <meta name="keywords" content="Java,json,fastjson">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSONPath 笔记">
 <meta property="og:url" content="http://tracenote.com/2020/11/05/20201105JavaJsonPath/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑   JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
+<meta property="og:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑 Java：fastjosn - 根据 JSONPath 删除元素的坑  JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-11-09T15:50:15.661Z">
+<meta property="og:updated_time" content="2020-11-09T16:21:49.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSONPath 笔记">
-<meta name="twitter:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑   JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
+<meta name="twitter:description" content="继续 json 系列：    Java：找个好用的 json diff （未完待续）   Java：org.skyscreamer.jsonassert.JSONCompare    Java：fastjosn 判断是否 json 字符串的坑 Java：fastjosn - 根据 JSONPath 删除元素的坑  JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -98,11 +98,12 @@
 <li><a href="https://mp.weixin.qq.com/s/nD__ZIuhi7LMwJ-MHaEGCA" target="_blank" rel="noopener">Java：找个好用的 json diff （未完待续）</a>  </li>
 <li><a href="https://mp.weixin.qq.com/s/ZyCBCTgRZIYV5duOEPyXmw" target="_blank" rel="noopener">Java：org.skyscreamer.jsonassert.JSONCompare</a>   </li>
 <li><a href="https://mp.weixin.qq.com/s/tXWG3fF_2rch3FE2UmL3wg" target="_blank" rel="noopener">Java：fastjosn 判断是否 json 字符串的坑</a></li>
-<li><a href></a></li>
+<li><a href="https://mp.weixin.qq.com/s/McaG9V8wNtKtHdrB7apQaw" target="_blank" rel="noopener">Java：fastjosn - 根据 JSONPath 删除元素的坑</a></li>
 </ul>
 <p>JSONPath 虽然简单，但偶尔用起来还要去求助搜索引擎，这里做下常用笔记。</p>
 <a id="more"></a>
-<table>
+<p>在线验证： <a href="http://jsonpath.com/" target="_blank" rel="noopener">http://jsonpath.com/</a><br>Java包： <a href="https://github.com/json-path/JsonPath" target="_blank" rel="noopener">https://github.com/json-path/JsonPath</a>  （GitHub上Star最多的）</p>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h3><table>
 <thead>
 <tr>
 <th>符号</th>
@@ -148,7 +149,43 @@
 </tr>
 </tbody>
 </table>
-<table>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min()</td>
+<td>获取数值类型数组的最小值</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>max()</td>
+<td>获取数值类型数组的最大值</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>avg()</td>
+<td>获取数值类型数组的平均值</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>stddev()</td>
+<td>获取数值类型数组的标准差</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>length()</td>
+<td>获取数值类型数组的长度</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><table>
 <thead>
 <tr>
 <th>操作符</th>
@@ -202,26 +239,90 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"store"</span>: &#123;</span><br><span class="line">        <span class="attr">"book"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"reference"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Nigel Rees"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Sayings of the Century"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">8.95</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Evelyn Waugh"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Sword of Honour"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">12.99</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Herman Melville"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Moby Dick"</span>,</span><br><span class="line">                <span class="attr">"isbn"</span>: <span class="string">"0-553-21311-3"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">8.99</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"J. R. R. Tolkien"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"The Lord of the Rings"</span>,</span><br><span class="line">                <span class="attr">"isbn"</span>: <span class="string">"0-395-19395-8"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">22.99</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"bicycle"</span>: &#123;</span><br><span class="line">            <span class="attr">"color"</span>: <span class="string">"red"</span>,</span><br><span class="line">            <span class="attr">"price"</span>: <span class="number">19.95</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"expensive"</span>: <span class="number">10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"store"</span>: &#123;</span><br><span class="line">        <span class="attr">"book"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"reference"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Nigel Rees"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Sayings of the Century"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">8.95</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Evelyn Waugh"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Sword of Honour"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">12.99</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"Herman Melville"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"Moby Dick"</span>,</span><br><span class="line">                <span class="attr">"isbn"</span>: <span class="string">"0-553-21311-3"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">8.99</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"category"</span>: <span class="string">"fiction"</span>,</span><br><span class="line">                <span class="attr">"author"</span>: <span class="string">"J. R. R. Tolkien"</span>,</span><br><span class="line">                <span class="attr">"title"</span>: <span class="string">"The Lord of the Rings"</span>,</span><br><span class="line">                <span class="attr">"isbn"</span>: <span class="string">"0-395-19395-8"</span>,</span><br><span class="line">                <span class="attr">"price"</span>: <span class="number">22.99</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"bicycle"</span>: &#123;</span><br><span class="line">            <span class="attr">"color"</span>: <span class="string">"red"</span>,</span><br><span class="line">            <span class="attr">"price"</span>: <span class="number">19.95</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"expensive"</span>: <span class="number">10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>JsonPath表达式</th>
-<th>结果</th>
+<th>JsonPath (click link to try)</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>$.store.book[*].author </td>
+<td>$.store.book[*].author</td>
+<td>The authors of all books</td>
+</tr>
+<tr>
+<td>$..author</td>
+<td>All authors</td>
+</tr>
+<tr>
+<td>$.store.*</td>
+<td>All things, both books and bicycles</td>
+</tr>
+<tr>
+<td>$.store..price</td>
+<td>The price of everything</td>
+</tr>
+<tr>
+<td>$..book[2]</td>
+<td>The third book</td>
+</tr>
+<tr>
+<td>$..book[-2]</td>
+<td>The second to last book</td>
+</tr>
+<tr>
+<td>$..book[0,1]</td>
+<td>The first two books</td>
+</tr>
+<tr>
+<td>$..book[:2]</td>
+<td>All books from index 0 (inclusive) until index 2 (exclusive)</td>
+</tr>
+<tr>
+<td>$..book[1:2]</td>
+<td>All books from index 1 (inclusive) until index 2 (exclusive)</td>
+</tr>
+<tr>
+<td>$..book[-2:]</td>
+<td>Last two books</td>
+</tr>
+<tr>
+<td>$..book[2:]</td>
+<td>Book number two from tail</td>
+</tr>
+<tr>
+<td>$..book[?(@.isbn)]</td>
+<td>All books with an ISBN number</td>
+</tr>
+<tr>
+<td>$.store.book[?(@.price &lt; 10)]</td>
+<td>All books in store cheaper than 10</td>
+</tr>
+<tr>
+<td>$..book[?(@.price &lt;= $[‘expensive’])]</td>
+<td>All books in store that are not “expensive”</td>
+</tr>
+<tr>
+<td>$..book[?(@.author =~ /.*REES/i)]</td>
+<td>All books matching regex (ignore case)</td>
+</tr>
+<tr>
+<td>$..*</td>
+<td>Give me every thing</td>
+</tr>
+<tr>
+<td>$..book.length()</td>
+<td>The number of books</td>
 </tr>
 </tbody>
 </table>
-<p>或<br>$..author | [<br>“Nigel Rees”,<br>“Evelyn Waugh”,<br>“Herman Melville”,<br>“J. R. R. Tolkien”<br>]                                                                                                                                                                                                                                                                                                                                                                                                                                          |<br>| $.store.<em> 显示所有叶子节点值 | [<br>[<br>{<br>”category” : “reference”,<br>”author” : “Nigel Rees”,<br>”title” : “Sayings of the Century”,<br>”price” : 8.95<br>},<br>{<br>”category” : “fiction”,<br>”author” : “Evelyn Waugh”,<br>”title” : “Sword of Honour”,<br>”price” : 12.99<br>},<br>{<br>”category” : “fiction”,<br>”author” : “Herman Melville”,<br>”title” : “Moby Dick”,<br>”isbn” : “0-553-21311-3”,<br>”price” : 8.99<br>},<br>{<br>”category” : “fiction”,<br>”author” : “J. R. R. Tolkien”,<br>”title” : “The Lord of the Rings”,<br>”isbn” : “0-395-19395-8”,<br>”price” : 22.99<br>}<br>],<br>{<br>”color” : “red”,<br>”price” : 19.95<br>}<br>] |<br>| $.store..price                        | [<br>8.95,<br>12.99,<br>8.99,<br>22.99,<br>19.95<br>]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |<br>| $..book[0,1]<br>或<br>$..book[:2]          | [<br>{<br>”category” : “reference”,<br>”author” : “Nigel Rees”,<br>”title” : “Sayings of the Century”,<br>”price” : 8.95<br>},<br>{<br>”category” : “fiction”,<br>”author” : “Evelyn Waugh”,<br>”title” : “Sword of Honour”,<br>”price” : 12.99<br>}<br>]                                                                                                                                                                                                                                                       |<br>| $..book[-2:]                          | 获取最后两本书                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |<br>| $..book[2:]                           | [<br>{<br>”category” : “fiction”,<br>”author” : “Herman Melville”,<br>”title” : “Moby Dick”,<br>”isbn” : “0-553-21311-3”,<br>”price” : 8.99<br>},<br>{<br>”category” : “fiction”,<br>”author” : “J. R. R. Tolkien”,<br>”title” : “The Lord of the Rings”,<br>”isbn” : “0-395-19395-8”,<br>”price” : 22.99<br>}<br>]                                                                                                                                                                                   |<br>| $..book[?(@.isbn)]                    | 所有具有isbn属性的书                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |<br>| $.store.book[?(@.price &lt; 10)]         | 所有价格小于10的书                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |<br>| $..book[?(@.price &lt;= $[‘expensive’])] | 所有价格低于expensive字段的书                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |<br>| $..book[?(@.author =~ /.</em>REES/i)]     | 所有符合正则表达式的书<br>[<br>{<br>”category” : “reference”,<br>”author” : “Nigel Rees”,<br>”title” : “Sayings of the Century”,<br>”price” : 8.95<br>}<br>]                                                                                                                                                                                                                                                                                                                                                    |<br>| $..*                                  | 返回所有                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |<br>| $..book.length()                      | [<br>4<br>]                             </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/05/20201105JavaJsonPath/" data-id="ckhaq2ixx002kktgo38u5liq5" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/05/20201105JavaJsonPath/" data-id="ckhas1370002ksggoomsvaovm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
