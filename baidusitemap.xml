@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tracenote.com/2020/11/11/20201111DoubleEleven/</loc>
+    <lastmod>2020-11-11</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2020/11/05/20201105JavaJsonPath/</loc>
     <lastmod>2020-11-09</lastmod>
   </url>
@@ -629,11 +633,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -657,15 +661,19 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
-    <lastmod>2017-12-10</lastmod>
-  </url>
-  <url>
     <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -674,10 +682,6 @@
   </url>
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
-    <lastmod>2017-12-10</lastmod>
-  </url>
-  <url>
-    <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -697,11 +701,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
 </urlset> 
