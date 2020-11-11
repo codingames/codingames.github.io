@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/11/11/20201111DoubleEleven/</loc>
+    
+    <lastmod>2020-11-11T18:04:29.408Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/06/20201106JavaJaywayJsonPath/</loc>
     
     <lastmod>2020-11-11T18:00:00.539Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://tracenote.com/2020/11/07/20201107JavaFastJsonGuide/</loc>
     
     <lastmod>2020-11-11T17:59:50.181Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/11/11/20201111DoubleEleven/</loc>
-    
-    <lastmod>2020-11-11T17:57:45.908Z</lastmod>
     
   </url>
   
@@ -1157,14 +1157,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
+    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/03/19/aboutDns/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1248,14 +1248,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
