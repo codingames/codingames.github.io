@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/11/20201111DoubleEleven/" data-id="ckhjbai4l002svigo17w2lh7h" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/11/20201111DoubleEleven/" data-id="ckhjc8hjg002u6cgo7r06s5u1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shopping/">shopping</a></li></ul>
@@ -152,10 +152,71 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/10/20201110AgilePoker/" data-id="ckhjbai4j002nvigo4na9auc2" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/10/20201110AgilePoker/" data-id="ckhjc8hje002q6cgoogpbogtw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poker/">poker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project-management/">project management</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20201110SpringMVCLog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/09/20201110SpringMVCLog/" class="article-date">
+  <time datetime="2020-11-09T00:00:00.000Z" itemprop="datePublished">2020-11-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/09/20201110SpringMVCLog/">SpringMVC：配置 Log</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>继续后端服务系列：  </p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/AMbJrFyWGXQ0P0bofCMt_A" target="_blank" rel="noopener">为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]</a></li>
+<li><a href="https://mp.weixin.qq.com/s/S0rlRv8Fv4dQSbLVc_9A0g" target="_blank" rel="noopener">SpringMVC：支持 Json 返回和请求</a></li>
+<li><a href="https://mp.weixin.qq.com/s/60YJJtEknUkmw9kHhfi33g" target="_blank" rel="noopener">SpringMVC：web.xml 中 contextConfigLocation 作用</a></li>
+<li><a href="https://mp.weixin.qq.com/s/ioGEJUKkt3-hUJf577y5kQ" target="_blank" rel="noopener">Java 混乱的日志体系</a></li>
+</ul>
+<p>SpringMVC 配置 slf4J + log4j2。</p>
+<p>log4j2参考了logback的一些优秀的设计，并且修复了一些问题，因此带来了一些重大的提升，主要有：</p>
+<ol>
+<li>异常处理：在logback中，Appender中的异常不会被应用感知到，但是在log4j2中，提供了一些异常处理机制。</li>
+<li>性能提升：log4j2相较于log4j 1和logback都具有很明显的性能提升。</li>
+<li>自动重载配置：参考了logback的设计，提供自动刷新参数配置，可以动态的修改日志的级别而不需要重启应用。</li>
+<li>无垃圾机制，log4j2在大部分情况下，都可以使用其设计的一套无垃圾机制，避免频繁的日志收集导致的jvm gc。</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/11/09/20201110SpringMVCLog/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/11/09/20201110SpringMVCLog/" data-id="ckhjc8hjd002n6cgo1emftyy1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log4j2/">log4j2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slf4j/">slf4j</a></li></ul>
 
     </footer>
   </div>
@@ -205,60 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/09/20201109JavaLogs/" data-id="ckhjbai4l002qvigou73qc764" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log4j2/">log4j2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slf4j/">slf4j</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20201110SpringMVCLog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/09/20201110SpringMVCLog/" class="article-date">
-  <time datetime="2020-11-09T00:00:00.000Z" itemprop="datePublished">2020-11-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/09/20201110SpringMVCLog/">SpringMVC：配置 Log</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>继续后端服务系列：  </p>
-<ul>
-<li><a href="https://mp.weixin.qq.com/s/AMbJrFyWGXQ0P0bofCMt_A" target="_blank" rel="noopener">为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]</a></li>
-<li><a href="https://mp.weixin.qq.com/s/S0rlRv8Fv4dQSbLVc_9A0g" target="_blank" rel="noopener">SpringMVC：支持 Json 返回和请求</a></li>
-<li><a href="https://mp.weixin.qq.com/s/60YJJtEknUkmw9kHhfi33g" target="_blank" rel="noopener">SpringMVC：web.xml 中 contextConfigLocation 作用</a></li>
-<li><a href="https://mp.weixin.qq.com/s/ioGEJUKkt3-hUJf577y5kQ" target="_blank" rel="noopener">Java 混乱的日志体系</a></li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2020/11/09/20201110SpringMVCLog/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/09/20201110SpringMVCLog/" data-id="ckhjbai4l002rvigocx4a3yk2" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/09/20201109JavaLogs/" data-id="ckhjc8hje002r6cgorusgbs0x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log4j2/">log4j2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slf4j/">slf4j</a></li></ul>
@@ -305,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/08/20201108MySQLStoreIp/" data-id="ckhjbai4k002ovigo363tqted" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/08/20201108MySQLStoreIp/" data-id="ckhjc8hjc002m6cgoohswjqld" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
@@ -353,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/07/20201107PresidentialElection/" data-id="ckhjbai4k002pvigot4929bad" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/07/20201107PresidentialElection/" data-id="ckhjc8hjd002p6cgof9d2f3vf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
@@ -410,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/07/20201107JavaFastJsonGuide/" data-id="ckhjbai4j002mvigog36nm071" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/07/20201107JavaFastJsonGuide/" data-id="ckhjc8hjd002o6cgoaw86o2hw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -465,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/06/20201106JavaJaywayJsonPath/" data-id="ckhjbai4j002lvigoy9y4jiog" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/06/20201106JavaJaywayJsonPath/" data-id="ckhjc8hjb002l6cgof1bpb548" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -519,7 +527,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/05/20201105JavaJsonPath/" data-id="ckhjbai4i002kvigoiajn1eg8" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/05/20201105JavaJsonPath/" data-id="ckhjc8hja002j6cgo10jer53z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -572,7 +580,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/" data-id="ckhjbai4i002jvigob82bulzj" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/04/20201104JavaJsonPathDelete/" data-id="ckhjc8hja002h6cgo2gnvfltc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -620,7 +628,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/03/20201103JavaFastjosnValid/" data-id="ckhjbai4h002ivigojndscg28" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/03/20201103JavaFastjosnValid/" data-id="ckhjc8hjb002k6cgoaexe8s87" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fastjson/">fastjson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -667,7 +675,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/02/20201102JavaJsonassert/" data-id="ckhjbai4f002evigoeugniwdd" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/02/20201102JavaJsonassert/" data-id="ckhjc8hja002i6cgof0ztsgsx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -714,7 +722,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/01/20201101JavaSystemInfo/" data-id="ckhjbai4f002dvigoutb5vg4v" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/01/20201101JavaSystemInfo/" data-id="ckhjc8hj8002e6cgo0hjc91aq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basic/">Basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -761,7 +769,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/31/20201031TestNGListenerReporter/" data-id="ckhjbai4g002fvigoojwdzeug" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/31/20201031TestNGListenerReporter/" data-id="ckhjc8hj9002g6cgopixvyn9l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TestNG/">TestNG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
@@ -808,7 +816,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/30/20201030JavaOkHttp3BodyString/" data-id="ckhjbai4e002bvigofcebyzzj" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/30/20201030JavaOkHttp3BodyString/" data-id="ckhjc8hj8002d6cgorsmmln71" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basic/">Basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/okhttp3/">okhttp3</a></li></ul>
@@ -855,7 +863,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/29/20201029ScrumVSKanban/" data-id="ckhjbai4f002cvigokvrqbk1n" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/29/20201029ScrumVSKanban/" data-id="ckhjc8hj9002f6cgow1iyr375" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">agile</a></li></ul>
@@ -902,7 +910,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/28/20201028JenkinsCopyArtifact/" data-id="ckhjbai4e002avigo5hthmfy5" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/28/20201028JenkinsCopyArtifact/" data-id="ckhjc8hj7002b6cgo7ffvb5tc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jenkins/">Jenkins</a></li></ul>
@@ -949,7 +957,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/27/20201027JavaFileUtils/" data-id="ckhjbai4g002gvigoojmmlc7j" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/27/20201027JavaFileUtils/" data-id="ckhjc8hj7002c6cgohxnlp1j7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basic/">Basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -996,7 +1004,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/26/20201026JavaLombok/" data-id="ckhjbai4d0029vigo2jmbpl18" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/26/20201026JavaLombok/" data-id="ckhjc8hj7002a6cgouozdwsf7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basic/">Basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -1043,7 +1051,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/25/20201025JavaPrimitive/" data-id="ckhjbai4b0027vigoinws71ql" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/25/20201025JavaPrimitive/" data-id="ckhjc8hj400286cgot9l8mdr6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Basic/">Basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -1094,7 +1102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/24/20201024JavaXeger/" data-id="ckhjbai480024vigojlzvj5ht" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/24/20201024JavaXeger/" data-id="ckhjc8hj400276cgownqkrh42" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Random/">Random</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Regex/">Regex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
@@ -1142,7 +1150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/24/20201025JavaQuartz/" data-id="ckhjbai4h002hvigos3bylnhn" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/24/20201025JavaQuartz/" data-id="ckhjc8hj600296cgo7mihnifx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Quartz/">Quartz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/定时任务/">定时任务</a></li></ul>
@@ -1189,7 +1197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/23/20201023JavaJsonDiff/" data-id="ckhjbai4b0028vigouzntp53q" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/23/20201023JavaJsonDiff/" data-id="ckhjc8hj200246cgou7jjh281" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
@@ -1236,7 +1244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/20/20201020SpringMVCContextConfigLocation/" data-id="ckhjbai470022vigo4yy21s9t" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/20/20201020SpringMVCContextConfigLocation/" data-id="ckhjc8hj300256cgo9h2b5hpu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMVC/">SpringMVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
@@ -1283,7 +1291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/20/20201020SpringMVCJson/" data-id="ckhjbai490025vigofrpn0hhv" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/20/20201020SpringMVCJson/" data-id="ckhjc8hj100236cgowptuj9yj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMVC/">SpringMVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
@@ -1331,7 +1339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/" data-id="ckhjbai4a0026vigo3ajrwrwa" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/" data-id="ckhjc8hj100226cgouhl2b9zs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
@@ -1378,7 +1386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/18/20201018blogPage404/" data-id="ckhjbai470021vigoi85rbutq" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/18/20201018blogPage404/" data-id="ckhjc8hj300266cgo5sufbfh1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/misc/">misc</a></li></ul>
@@ -1430,7 +1438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/16/20201016brewConnectionRefused/" data-id="ckhjbai480023vigoc7tw823e" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/16/20201016brewConnectionRefused/" data-id="ckhjc8hj000216cgodpsdmo3h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
@@ -1477,7 +1485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/15/20201015chromeExtensionJson/" data-id="ckhjbai46001zvigoitza1lxx" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/15/20201015chromeExtensionJson/" data-id="ckhjc8hj000206cgoa5ealju9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/extensions/">extensions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/misc/">misc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -1524,7 +1532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/13/20201013vueTemplateDiv/" data-id="ckhjbai45001yvigofqfid1ef" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/13/20201013vueTemplateDiv/" data-id="ckhjc8hiz001z6cgovff3adi4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -1571,7 +1579,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/12/20201013vueMermaid/" data-id="ckhjbai460020vigoj5p5fpmg" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/12/20201013vueMermaid/" data-id="ckhjc8hiz001y6cgoaah2slk7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -1618,7 +1626,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/12/20201012blogIssueIndexEmpty/" data-id="ckhjbai44001wvigoixje4yg9" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/12/20201012blogIssueIndexEmpty/" data-id="ckhjc8hiy001x6cgoim7feiwo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/issue/">issue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
@@ -1665,7 +1673,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/11/20201011blogHexoGraphviz/" data-id="ckhjbai44001xvigorb3yicmd" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/11/20201011blogHexoGraphviz/" data-id="ckhjc8hiy001w6cgoqckqd14h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
@@ -1718,7 +1726,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/10/20201010blogHexomermaid/" data-id="ckhjbai43001uvigookhcsspg" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/10/20201010blogHexomermaid/" data-id="ckhjc8hix001u6cgo32zkfaoa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
@@ -1765,7 +1773,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/09/20201009blogHexoplantuml/" data-id="ckhjbai43001vvigo8x4kqwmi" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/09/20201009blogHexoplantuml/" data-id="ckhjc8hiw001t6cgo3ujdwepa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
@@ -1812,7 +1820,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/08/20201008blogHexoChart/" data-id="ckhjbai42001svigo8jq758u9" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/08/20201008blogHexoChart/" data-id="ckhjc8hix001v6cgopcqn2gre" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/env/">env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/绘图/">绘图</a></li></ul>
@@ -1859,7 +1867,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/07/20201007FEXHR/" data-id="ckhjbai41001qvigol8bnnbeu" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/07/20201007FEXHR/" data-id="ckhjc8hiu001r6cgos6hekcdo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XHR/">XHR</a></li></ul>
@@ -1906,7 +1914,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/" data-id="ckhjbai43001tvigo4blff31y" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/06/20201006accountingDoubleEntryBookkeeping/" data-id="ckhjc8hiu001p6cgo3pqm20cv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accounting/">accounting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/会计/">会计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财会/">财会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财务/">财务</a></li></ul>
@@ -1953,7 +1961,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/04/20201004books/" data-id="ckhjbai40001nvigopc8ejs06" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/04/20201004books/" data-id="ckhjc8hiu001q6cgo7qlk237r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
@@ -2000,7 +2008,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/03/20201003vueLoader/" data-id="ckhjbai3z001mvigoo6kphjs5" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/03/20201003vueLoader/" data-id="ckhjc8his001l6cgo7o1g2234" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2047,7 +2055,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/02/20201002JavaFilterInterceptor/" data-id="ckhjbai41001pvigons5bpypl" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/02/20201002JavaFilterInterceptor/" data-id="ckhjc8hit001n6cgo3ianv8ob" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
@@ -2094,7 +2102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/10/01/20201001apiTest/" data-id="ckhjbai40001ovigorsbcfahb" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/10/01/20201001apiTest/" data-id="ckhjc8hit001o6cgontcx1qi2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api-test/">api test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interface-test/">interface test</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
@@ -2141,7 +2149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/30/20200930performanceTesting/" data-id="ckhjbai3y001jvigo3v663v87" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/30/20200930performanceTesting/" data-id="ckhjc8hiv001s6cgoekk646lw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance-testing/">performance testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
@@ -2188,7 +2196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/" data-id="ckhjbai42001rvigosv3354pw" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/28/20200928JavaBigDecimalEquals/" data-id="ckhjc8his001m6cgosr1mmaqy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
@@ -2236,7 +2244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/27/20200927bugDoubleToLong/" data-id="ckhjbai3z001lvigo1ywlu2mq" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/27/20200927bugDoubleToLong/" data-id="ckhjc8hir001k6cgokf5twk2w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li></ul>
@@ -2283,7 +2291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/26/20200926vueGulp/" data-id="ckhjbai3y001kvigo1j7w5nqs" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/26/20200926vueGulp/" data-id="ckhjc8hir001i6cgoct9hvodp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2330,7 +2338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/25/20200925vueVuex/" data-id="ckhjbai3x001ivigocwoaxe51" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/25/20200925vueVuex/" data-id="ckhjc8hiq001h6cgoq47rfsiu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2377,7 +2385,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/24/20200924vueDemowithwebpack/" data-id="ckhjbai3x001hvigojawsysrk" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/24/20200924vueDemowithwebpack/" data-id="ckhjc8hiq001g6cgoo0a0rfxw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2424,7 +2432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/23/20200923accountingIntroduction/" data-id="ckhjbai3w001gvigor5g56auu" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/23/20200923accountingIntroduction/" data-id="ckhjc8hip001f6cgoegcep0e3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accounting/">accounting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/会计/">会计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财会/">财会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/财务/">财务</a></li></ul>
@@ -2471,7 +2479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/09/22/20200922vueNpmStart/" data-id="ckhjbai3t001fvigory4p13q6" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/09/22/20200922vueNpmStart/" data-id="ckhjc8hio001d6cgo2iyi9qeg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FE/">FE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2506,7 +2514,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BackEnd/">BackEnd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Basic/">Basic</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FE/">FE</a><span class="tag-list-count">45</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">48</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java8/">Java8</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOM/">OOM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PO/">PO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quartz/">Quartz</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random/">Random</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TestNG/">TestNG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITest/">UITest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XHR/">XHR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accounting/">accounting</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">agile</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api-test/">api test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">automation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/">bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/">code coverage</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commandline/">commandline</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/common/">common</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash/">crash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decorator/">decorator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">dns</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elliptical/">elliptical</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">26</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extensions/">extensions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fastjson/">fastjson</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generics/">generics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5/">h5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">health</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/humanities/">humanities</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/">hybrid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iCloud/">iCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interface-test/">interface test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jacoco/">jacoco</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/log/">log</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/log4j2/">log4j2</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/monkey/">monkey</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvn/">mvn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/net/">net</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notion/">notion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/okhttp3/">okhttp3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operation/">operation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance-testing/">performance testing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/">pip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poker/">poker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-management/">project management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/question/">question</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robot/">robot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotium/">robotium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shopping/">shopping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slf4j/">slf4j</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sport/">sport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/statistics/">statistics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">44</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-view/">web view</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodebuild/">xcodebuild</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodecoverage/">xcodecoverage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码覆盖率/">代码覆盖率</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会计/">会计</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存泄漏/">内存泄漏</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时任务/">定时任务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绘图/">绘图</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财会/">财会</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财务/">财务</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BackEnd/">BackEnd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Basic/">Basic</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FE/">FE</a><span class="tag-list-count">45</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IED/">IED</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IntelliJ/">IntelliJ</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">48</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java8/">Java8</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/">Jenkins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OOM/">OOM</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PO/">PO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quartz/">Quartz</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random/">Random</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring-MVC/">Spring MVC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TestNG/">TestNG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UITest/">UITest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Utils/">Utils</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XHR/">XHR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accounting/">accounting</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adb/">adb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">agile</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ai/">ai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">21</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api/">api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/api-test/">api test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">app</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">automation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug/">bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/charles/">charles</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-coverage/">code coverage</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commandline/">commandline</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/common/">common</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crash/">crash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/decorator/">decorator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">dns</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain/">domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elliptical/">elliptical</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/env/">env</a><span class="tag-list-count">26</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/extensions/">extensions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fastjson/">fastjson</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/finance/">finance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generics/">generics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/guava/">guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5/">h5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">health</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/humanities/">humanities</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/">hybrid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iCloud/">iCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/interface-test/">interface test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/issue/">issue</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jacoco/">jacoco</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/">jvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/log/">log</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/log4j2/">log4j2</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macOS/">macOS</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/misc/">misc</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/monkey/">monkey</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvn/">mvn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/net/">net</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/note/">note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notion/">notion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvm/">nvm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/okhttp3/">okhttp3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operation/">operation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance/">performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/performance-testing/">performance testing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/">pip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poker/">poker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/project-management/">project management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python2/">python2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python3/">python3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/question/">question</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/realEstate/">realEstate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robot/">robot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotium/">robotium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shopping/">shopping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slf4j/">slf4j</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sport/">sport</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/">spring boot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/statistics/">statistics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stream/">stream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testng/">testng</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr/">vr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">44</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-view/">web view</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodebuild/">xcodebuild</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xcodecoverage/">xcodecoverage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云服务器/">云服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代码覆盖率/">代码覆盖率</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会计/">会计</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存泄漏/">内存泄漏</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时任务/">定时任务</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘抄/">摘抄</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/绘图/">绘图</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财会/">财会</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/财务/">财务</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -2516,7 +2524,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/BackEnd/" style="font-size: 10px;">BackEnd</a> <a href="/tags/Basic/" style="font-size: 12.5px;">Basic</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/FE/" style="font-size: 19.38px;">FE</a> <a href="/tags/IED/" style="font-size: 10.63px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10.63px;">IntelliJ</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Java8/" style="font-size: 11.88px;">Java8</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/Maven/" style="font-size: 10px;">Maven</a> <a href="/tags/OOM/" style="font-size: 10.63px;">OOM</a> <a href="/tags/PO/" style="font-size: 10px;">PO</a> <a href="/tags/Quartz/" style="font-size: 10px;">Quartz</a> <a href="/tags/Random/" style="font-size: 10px;">Random</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/Spring-MVC/" style="font-size: 10px;">Spring MVC</a> <a href="/tags/SpringMVC/" style="font-size: 10.63px;">SpringMVC</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/TestNG/" style="font-size: 10px;">TestNG</a> <a href="/tags/UITest/" style="font-size: 10px;">UITest</a> <a href="/tags/Utils/" style="font-size: 10px;">Utils</a> <a href="/tags/XHR/" style="font-size: 10px;">XHR</a> <a href="/tags/accounting/" style="font-size: 10.63px;">accounting</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/agile/" style="font-size: 10.63px;">agile</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.88px;">android</a> <a href="/tags/api/" style="font-size: 10px;">api</a> <a href="/tags/api-test/" style="font-size: 10px;">api test</a> <a href="/tags/app/" style="font-size: 17.5px;">app</a> <a href="/tags/appium/" style="font-size: 15.63px;">appium</a> <a href="/tags/automation/" style="font-size: 10.63px;">automation</a> <a href="/tags/bash/" style="font-size: 11.25px;">bash</a> <a href="/tags/blog/" style="font-size: 13.13px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/code-coverage/" style="font-size: 10.63px;">code coverage</a> <a href="/tags/command/" style="font-size: 10.63px;">command</a> <a href="/tags/commandline/" style="font-size: 10.63px;">commandline</a> <a href="/tags/common/" style="font-size: 10px;">common</a> <a href="/tags/crash/" style="font-size: 10px;">crash</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/decorator/" style="font-size: 10px;">decorator</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/elliptical/" style="font-size: 10px;">elliptical</a> <a href="/tags/env/" style="font-size: 18.13px;">env</a> <a href="/tags/extensions/" style="font-size: 10px;">extensions</a> <a href="/tags/fastjson/" style="font-size: 12.5px;">fastjson</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/generics/" style="font-size: 10px;">generics</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gradle/" style="font-size: 10.63px;">gradle</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/h5/" style="font-size: 10px;">h5</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/humanities/" style="font-size: 10px;">humanities</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/iCloud/" style="font-size: 10px;">iCloud</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/interface-test/" style="font-size: 10px;">interface test</a> <a href="/tags/issue/" style="font-size: 16.25px;">issue</a> <a href="/tags/jacoco/" style="font-size: 10px;">jacoco</a> <a href="/tags/json/" style="font-size: 14.38px;">json</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/life/" style="font-size: 10.63px;">life</a> <a href="/tags/linux/" style="font-size: 12.5px;">linux</a> <a href="/tags/log/" style="font-size: 11.25px;">log</a> <a href="/tags/log4j2/" style="font-size: 10.63px;">log4j2</a> <a href="/tags/macOS/" style="font-size: 13.13px;">macOS</a> <a href="/tags/maven/" style="font-size: 10.63px;">maven</a> <a href="/tags/misc/" style="font-size: 13.13px;">misc</a> <a href="/tags/monkey/" style="font-size: 10px;">monkey</a> <a href="/tags/mvn/" style="font-size: 10px;">mvn</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/net/" style="font-size: 10px;">net</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/notion/" style="font-size: 10px;">notion</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/okhttp3/" style="font-size: 10px;">okhttp3</a> <a href="/tags/operation/" style="font-size: 10px;">operation</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/performance-testing/" style="font-size: 10px;">performance testing</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/poker/" style="font-size: 10px;">poker</a> <a href="/tags/project-management/" style="font-size: 10px;">project management</a> <a href="/tags/python/" style="font-size: 11.25px;">python</a> <a href="/tags/python2/" style="font-size: 10px;">python2</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/question/" style="font-size: 10.63px;">question</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/robot/" style="font-size: 10.63px;">robot</a> <a href="/tags/robotium/" style="font-size: 10px;">robotium</a> <a href="/tags/server/" style="font-size: 12.5px;">server</a> <a href="/tags/shell/" style="font-size: 11.25px;">shell</a> <a href="/tags/shopping/" style="font-size: 10px;">shopping</a> <a href="/tags/slf4j/" style="font-size: 10.63px;">slf4j</a> <a href="/tags/sport/" style="font-size: 10px;">sport</a> <a href="/tags/spring/" style="font-size: 10.63px;">spring</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/statistics/" style="font-size: 10px;">statistics</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/test/" style="font-size: 11.88px;">test</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/tools/" style="font-size: 13.75px;">tools</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 18.75px;">vue</a> <a href="/tags/web/" style="font-size: 13.75px;">web</a> <a href="/tags/web-view/" style="font-size: 10px;">web view</a> <a href="/tags/xcodebuild/" style="font-size: 10px;">xcodebuild</a> <a href="/tags/xcodecoverage/" style="font-size: 10px;">xcodecoverage</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/代码覆盖率/" style="font-size: 10.63px;">代码覆盖率</a> <a href="/tags/会计/" style="font-size: 10.63px;">会计</a> <a href="/tags/内存泄漏/" style="font-size: 10.63px;">内存泄漏</a> <a href="/tags/定时任务/" style="font-size: 10px;">定时任务</a> <a href="/tags/工具/" style="font-size: 13.75px;">工具</a> <a href="/tags/摘抄/" style="font-size: 11.25px;">摘抄</a> <a href="/tags/绘图/" style="font-size: 12.5px;">绘图</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a> <a href="/tags/读书笔记/" style="font-size: 14.38px;">读书笔记</a> <a href="/tags/财会/" style="font-size: 10.63px;">财会</a> <a href="/tags/财务/" style="font-size: 10.63px;">财务</a>
+      <a href="/tags/BackEnd/" style="font-size: 10px;">BackEnd</a> <a href="/tags/Basic/" style="font-size: 12.5px;">Basic</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/FE/" style="font-size: 19.38px;">FE</a> <a href="/tags/IED/" style="font-size: 10.63px;">IED</a> <a href="/tags/IntelliJ/" style="font-size: 10.63px;">IntelliJ</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Java8/" style="font-size: 11.88px;">Java8</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/OOM/" style="font-size: 10.63px;">OOM</a> <a href="/tags/PO/" style="font-size: 10px;">PO</a> <a href="/tags/Quartz/" style="font-size: 10px;">Quartz</a> <a href="/tags/Random/" style="font-size: 10px;">Random</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/Spring-MVC/" style="font-size: 10px;">Spring MVC</a> <a href="/tags/SpringMVC/" style="font-size: 10.63px;">SpringMVC</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/TestNG/" style="font-size: 10px;">TestNG</a> <a href="/tags/UITest/" style="font-size: 10px;">UITest</a> <a href="/tags/Utils/" style="font-size: 10px;">Utils</a> <a href="/tags/XHR/" style="font-size: 10px;">XHR</a> <a href="/tags/accounting/" style="font-size: 10.63px;">accounting</a> <a href="/tags/adb/" style="font-size: 10px;">adb</a> <a href="/tags/agile/" style="font-size: 10.63px;">agile</a> <a href="/tags/ai/" style="font-size: 10px;">ai</a> <a href="/tags/android/" style="font-size: 16.88px;">android</a> <a href="/tags/api/" style="font-size: 10px;">api</a> <a href="/tags/api-test/" style="font-size: 10px;">api test</a> <a href="/tags/app/" style="font-size: 17.5px;">app</a> <a href="/tags/appium/" style="font-size: 15.63px;">appium</a> <a href="/tags/automation/" style="font-size: 10.63px;">automation</a> <a href="/tags/bash/" style="font-size: 11.25px;">bash</a> <a href="/tags/blog/" style="font-size: 13.13px;">blog</a> <a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/charles/" style="font-size: 10px;">charles</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/code-coverage/" style="font-size: 10.63px;">code coverage</a> <a href="/tags/command/" style="font-size: 10.63px;">command</a> <a href="/tags/commandline/" style="font-size: 10.63px;">commandline</a> <a href="/tags/common/" style="font-size: 10px;">common</a> <a href="/tags/crash/" style="font-size: 10px;">crash</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/decorator/" style="font-size: 10px;">decorator</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/elliptical/" style="font-size: 10px;">elliptical</a> <a href="/tags/env/" style="font-size: 18.13px;">env</a> <a href="/tags/extensions/" style="font-size: 10px;">extensions</a> <a href="/tags/fastjson/" style="font-size: 12.5px;">fastjson</a> <a href="/tags/finance/" style="font-size: 10px;">finance</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/generics/" style="font-size: 10px;">generics</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gradle/" style="font-size: 10.63px;">gradle</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/guava/" style="font-size: 10px;">guava</a> <a href="/tags/h5/" style="font-size: 10px;">h5</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/humanities/" style="font-size: 10px;">humanities</a> <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/iCloud/" style="font-size: 10px;">iCloud</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/interface-test/" style="font-size: 10px;">interface test</a> <a href="/tags/issue/" style="font-size: 16.25px;">issue</a> <a href="/tags/jacoco/" style="font-size: 10px;">jacoco</a> <a href="/tags/json/" style="font-size: 14.38px;">json</a> <a href="/tags/jvm/" style="font-size: 10px;">jvm</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/life/" style="font-size: 10.63px;">life</a> <a href="/tags/linux/" style="font-size: 12.5px;">linux</a> <a href="/tags/log/" style="font-size: 11.25px;">log</a> <a href="/tags/log4j2/" style="font-size: 10.63px;">log4j2</a> <a href="/tags/macOS/" style="font-size: 13.13px;">macOS</a> <a href="/tags/maven/" style="font-size: 11.25px;">maven</a> <a href="/tags/misc/" style="font-size: 13.13px;">misc</a> <a href="/tags/monkey/" style="font-size: 10px;">monkey</a> <a href="/tags/mvn/" style="font-size: 10px;">mvn</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/net/" style="font-size: 10px;">net</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/note/" style="font-size: 10px;">note</a> <a href="/tags/notion/" style="font-size: 10px;">notion</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/okhttp3/" style="font-size: 10px;">okhttp3</a> <a href="/tags/operation/" style="font-size: 10px;">operation</a> <a href="/tags/pay/" style="font-size: 10px;">pay</a> <a href="/tags/performance/" style="font-size: 10px;">performance</a> <a href="/tags/performance-testing/" style="font-size: 10px;">performance testing</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/poker/" style="font-size: 10px;">poker</a> <a href="/tags/project-management/" style="font-size: 10px;">project management</a> <a href="/tags/python/" style="font-size: 11.25px;">python</a> <a href="/tags/python2/" style="font-size: 10px;">python2</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/question/" style="font-size: 10.63px;">question</a> <a href="/tags/realEstate/" style="font-size: 10px;">realEstate</a> <a href="/tags/robot/" style="font-size: 10.63px;">robot</a> <a href="/tags/robotium/" style="font-size: 10px;">robotium</a> <a href="/tags/server/" style="font-size: 12.5px;">server</a> <a href="/tags/shell/" style="font-size: 11.25px;">shell</a> <a href="/tags/shopping/" style="font-size: 10px;">shopping</a> <a href="/tags/slf4j/" style="font-size: 10.63px;">slf4j</a> <a href="/tags/sport/" style="font-size: 10px;">sport</a> <a href="/tags/spring/" style="font-size: 10.63px;">spring</a> <a href="/tags/spring-boot/" style="font-size: 10px;">spring boot</a> <a href="/tags/statistics/" style="font-size: 10px;">statistics</a> <a href="/tags/stream/" style="font-size: 10px;">stream</a> <a href="/tags/test/" style="font-size: 11.88px;">test</a> <a href="/tags/testng/" style="font-size: 10px;">testng</a> <a href="/tags/tools/" style="font-size: 13.75px;">tools</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/vr/" style="font-size: 10px;">vr</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 18.75px;">vue</a> <a href="/tags/web/" style="font-size: 13.75px;">web</a> <a href="/tags/web-view/" style="font-size: 10px;">web view</a> <a href="/tags/xcodebuild/" style="font-size: 10px;">xcodebuild</a> <a href="/tags/xcodecoverage/" style="font-size: 10px;">xcodecoverage</a> <a href="/tags/云服务器/" style="font-size: 10px;">云服务器</a> <a href="/tags/代码覆盖率/" style="font-size: 10.63px;">代码覆盖率</a> <a href="/tags/会计/" style="font-size: 10.63px;">会计</a> <a href="/tags/内存泄漏/" style="font-size: 10.63px;">内存泄漏</a> <a href="/tags/定时任务/" style="font-size: 10px;">定时任务</a> <a href="/tags/工具/" style="font-size: 13.75px;">工具</a> <a href="/tags/摘抄/" style="font-size: 11.25px;">摘抄</a> <a href="/tags/绘图/" style="font-size: 12.5px;">绘图</a> <a href="/tags/设计模式/" style="font-size: 11.25px;">设计模式</a> <a href="/tags/读书笔记/" style="font-size: 14.38px;">读书笔记</a> <a href="/tags/财会/" style="font-size: 10.63px;">财会</a> <a href="/tags/财务/" style="font-size: 10.63px;">财务</a>
     </div>
   </div>
 
@@ -2546,11 +2554,11 @@
           </li>
         
           <li>
-            <a href="/2020/11/09/20201109JavaLogs/">Java 混乱的日志体系</a>
+            <a href="/2020/11/09/20201110SpringMVCLog/">SpringMVC：配置 Log</a>
           </li>
         
           <li>
-            <a href="/2020/11/09/20201110SpringMVCLog/">SpringMVC：配置 Log</a>
+            <a href="/2020/11/09/20201109JavaLogs/">Java 混乱的日志体系</a>
           </li>
         
           <li>

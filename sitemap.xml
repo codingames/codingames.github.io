@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/</loc>
+    
+    <lastmod>2020-11-15T16:32:53.191Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/09/20201110SpringMVCLog/</loc>
     
-    <lastmod>2020-11-15T16:06:33.827Z</lastmod>
+    <lastmod>2020-11-15T16:26:36.515Z</lastmod>
     
   </url>
   
@@ -677,13 +684,6 @@
     <loc>http://tracenote.com/2020/08/20/20200819androidNativeOOM/</loc>
     
     <lastmod>2020-08-23T01:41:11.748Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/</loc>
-    
-    <lastmod>2020-08-20T17:17:20.167Z</lastmod>
     
   </url>
   
