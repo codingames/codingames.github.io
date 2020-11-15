@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2020/11/10/20201110AgilePoker/</loc>
+    <loc>http://tracenote.com/2020/11/09/20201109JavaSpringMVCLog/</loc>
     
-    <lastmod>2020-11-14T15:55:33.578Z</lastmod>
+    <lastmod>2020-11-15T10:48:30.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2020/11/09/20201109JavaLog4j2/</loc>
+    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
     
-    <lastmod>2020-11-14T15:24:01.823Z</lastmod>
+    <lastmod>2020-11-15T08:45:46.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/10/20/20201020SpringMVCContextConfigLocation/</loc>
+    
+    <lastmod>2020-11-15T08:45:41.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/10/20/20201020SpringMVCJson/</loc>
+    
+    <lastmod>2020-11-15T08:45:34.857Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/11/10/20201110AgilePoker/</loc>
+    
+    <lastmod>2020-11-14T16:03:37.957Z</lastmod>
     
   </url>
   
@@ -152,27 +173,6 @@
     <loc>http://tracenote.com/2020/10/24/20201024JavaXeger/</loc>
     
     <lastmod>2020-10-24T15:51:21.063Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/10/20/20201020SpringMVCContextConfigLocation/</loc>
-    
-    <lastmod>2020-10-20T16:43:56.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/10/20/20201020SpringMVCJson/</loc>
-    
-    <lastmod>2020-10-20T01:32:20.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
-    
-    <lastmod>2020-10-19T15:22:30.193Z</lastmod>
     
   </url>
   
@@ -1150,14 +1150,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
@@ -1199,14 +1199,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1220,13 +1220,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1234,7 +1227,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1242,6 +1235,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1269,14 +1269,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
