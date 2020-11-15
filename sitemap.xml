@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2020/11/09/20201109JavaSpringMVCLog/</loc>
+    <loc>http://tracenote.com/2020/11/09/20201110SpringMVCLog/</loc>
     
-    <lastmod>2020-11-15T10:52:02.207Z</lastmod>
+    <lastmod>2020-11-15T16:06:33.827Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/11/09/20201109JavaLogs/</loc>
+    
+    <lastmod>2020-11-15T15:57:37.270Z</lastmod>
     
   </url>
   
@@ -1150,14 +1157,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     
     <lastmod>2017-12-10T15:57:48.000Z</lastmod>
     

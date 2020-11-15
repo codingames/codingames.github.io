@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://tracenote.com/2020/11/09/20201109JavaSpringMVCLog/</loc>
+    <loc>http://tracenote.com/2020/11/09/20201110SpringMVCLog/</loc>
+    <lastmod>2020-11-15</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/11/09/20201109JavaLogs/</loc>
     <lastmod>2020-11-15</lastmod>
   </url>
   <url>
@@ -653,11 +657,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
+    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/10/29/nginxOnMac/</loc>
+    <loc>http://tracenote.com/2017/05/21/payissue/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
