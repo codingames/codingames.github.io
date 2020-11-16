@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://tracenote.com/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/</loc>
+    <loc>http://tracenote.com/2020/11/09/20201111Log4j2/</loc>
     
-    <lastmod>2020-11-15T16:32:53.191Z</lastmod>
+    <lastmod>2020-11-16T16:51:20.862Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://tracenote.com/2020/11/09/20201110SpringMVCLog/</loc>
     
-    <lastmod>2020-11-15T16:26:36.515Z</lastmod>
+    <lastmod>2020-11-16T01:18:21.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/08/15/20200815GoogleBestPracticesforJavaLibraries/</loc>
+    
+    <lastmod>2020-11-15T16:32:53.191Z</lastmod>
     
   </url>
   
@@ -1206,13 +1213,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1220,14 +1220,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1242,6 +1242,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1276,14 +1283,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     

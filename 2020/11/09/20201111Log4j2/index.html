@@ -3,18 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>Archives: 2017/5 | tracenote</title>
+  <title>Log4j 2 配置 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/archives/2017/05/index.html">
+  <meta name="description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系   log4j2 配置。 log4j2 官网 https://logging.apache.org/log4j/2.x/">
+<meta name="keywords" content="Java,log,log4j2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Log4j 2 配置">
+<meta property="og:url" content="http://tracenote.com/2020/11/09/20201111Log4j2/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系   log4j2 配置。 log4j2 官网 https://logging.apache.org/log4j/2.x/">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-11-16T16:51:20.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="Log4j 2 配置">
+<meta name="twitter:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系   log4j2 配置。 log4j2 官网 https://logging.apache.org/log4j/2.x/">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,77 +67,76 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/22/appiumAndroidIssues/" class="archive-article-date">
-  <time datetime="2017-05-22T06:23:25.000Z" itemprop="datePublished">May 22</time>
+        <section id="main"><article id="post-20201111Log4j2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/09/20201111Log4j2/" class="article-date">
+  <time datetime="2020-11-09T00:00:00.000Z" itemprop="datePublished">2020-11-09</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/22/appiumAndroidIssues/">Appium Android 坎坷</a>
+    <h1 class="article-title" itemprop="name">
+      Log4j 2 配置
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/21/payissue/" class="archive-article-date">
-  <time datetime="2017-05-21T04:50:00.000Z" itemprop="datePublished">May 21</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/21/payissue/">支付问题</a>
-    </h1>
-  
+        <p>继续后端服务系列：  </p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/AMbJrFyWGXQ0P0bofCMt_A" target="_blank" rel="noopener">为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]</a></li>
+<li><a href="https://mp.weixin.qq.com/s/S0rlRv8Fv4dQSbLVc_9A0g" target="_blank" rel="noopener">SpringMVC：支持 Json 返回和请求</a></li>
+<li><a href="https://mp.weixin.qq.com/s/60YJJtEknUkmw9kHhfi33g" target="_blank" rel="noopener">SpringMVC：web.xml 中 contextConfigLocation 作用</a></li>
+<li><a href="https://mp.weixin.qq.com/s/ioGEJUKkt3-hUJf577y5kQ" target="_blank" rel="noopener">Java 混乱的日志体系</a></li>
+<li><a href></a></li>
+</ul>
+<p>log4j2 配置。</p>
+<p>log4j2 官网 <a href="https://logging.apache.org/log4j/2.x/" target="_blank" rel="noopener">https://logging.apache.org/log4j/2.x/</a><br><a id="more"></a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/04/ioshttps/" class="archive-article-date">
-  <time datetime="2017-05-04T04:30:25.000Z" itemprop="datePublished">May 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/04/ioshttps/">iOS 10.3 Charles https 问题</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/11/09/20201111Log4j2/" data-id="ckhksckep002t8dgoadfh8z0i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log4j2/">log4j2</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/09/20201109JavaLogs/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java 混乱的日志体系
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/08/20201108MySQLStoreIp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL 存储 IP 地址需要存 int ？</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
