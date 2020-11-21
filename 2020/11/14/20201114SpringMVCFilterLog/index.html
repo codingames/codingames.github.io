@@ -9,11 +9,11 @@
 <meta name="keywords" content="Java,log,aop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC - 使用 Filter 统一打请求日志">
-<meta property="og:url" content="http://tracenote.com/2020/11/13/20201114SpringMVCFilterLog/index.html">
+<meta property="og:url" content="http://tracenote.com/2020/11/14/20201114SpringMVCFilterLog/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-11-21T15:49:40.319Z">
+<meta property="og:updated_time" content="2020-11-21T16:10:10.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC - 使用 Filter 统一打请求日志">
 <meta name="twitter:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
@@ -69,8 +69,8 @@
       <div class="outer">
         <section id="main"><article id="post-20201114SpringMVCFilterLog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/13/20201114SpringMVCFilterLog/" class="article-date">
-  <time datetime="2020-11-13T00:00:00.000Z" itemprop="datePublished">2020-11-13</time>
+    <a href="/2020/11/14/20201114SpringMVCFilterLog/" class="article-date">
+  <time datetime="2020-11-14T00:00:00.000Z" itemprop="datePublished">2020-11-14</time>
 </a>
     
   <div class="article-category">
@@ -104,7 +104,7 @@
 <li><a href="https://mp.weixin.qq.com/s/wb_YuwATHPTbZbSa6bnl_A" target="_blank" rel="noopener">Spring - 使用 AOP 为 Service 统一打日志</a></li>
 <li><a href="https://mp.weixin.qq.com/s/i-gvBxyTMmsQA18VYArAaA" target="_blank" rel="noopener">[Java Web]拦截器 Interceptor 和过滤器 Filter 的区别</a></li>
 </ul>
-<p>使用 Filter 统一打日志。Filter 其实来自 <code>javax.servlet.Filter</code>，是在 Servlet 规范中定义的，是 Servlet 容器支持的。下述这种日志流式</p>
+<p>使用 Filter 统一打日志。Filter 其实来自 <code>javax.servlet.Filter</code>，是在 Servlet 规范中定义的，是 Servlet 容器支持的。</p>
 <a id="more"></a>
 <p>效果如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[23:42:05:223] [INFO] - com.tracenote.filters.RequestBodyReaderWrapper.writeLog(RequestBodyReaderWrapper.java:29) - &#123;    &quot;name&quot;: &quot;zhang&quot;&#125;</span><br></pre></td></tr></table></figure>
@@ -114,12 +114,18 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tracenote.filters;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(RequestFilter.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response,</span></span></span><br><span class="line"><span class="function"><span class="params">                         FilterChain chain)</span> <span class="keyword">throws</span> ServletException </span>&#123;</span><br><span class="line">        HttpServletRequest req = (HttpServletRequest) request;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            RequestBodyReaderWrapper myRequest = <span class="keyword">new</span> RequestBodyReaderWrapper(req);</span><br><span class="line">            chain.doFilter(myRequest, response);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            logger.error(e.toString());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tracenote.filters;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.ReadListener;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletInputStream;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequestWrapper;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestBodyReaderWrapper</span> <span class="keyword">extends</span> <span class="title">HttpServletRequestWrapper</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(RequestBodyReaderWrapper.class);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">byte</span>[] body;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RequestBodyReaderWrapper</span><span class="params">(HttpServletRequest request)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(request);</span><br><span class="line">        body = writeLog(request).getBytes();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">writeLog</span><span class="params">(HttpServletRequest request)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        InputStream inputStream = request.getInputStream();</span><br><span class="line">        BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(inputStream));</span><br><span class="line">        String msg = <span class="string">""</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">while</span> ((msg = reader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            sb.append(msg);</span><br><span class="line">        &#125;</span><br><span class="line">        logger.info(sb.toString());</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletInputStream <span class="title">getInputStream</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> ByteArrayInputStream byteArrayInputStream = <span class="keyword">new</span> ByteArrayInputStream(body);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ServletInputStream() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> byteArrayInputStream.read();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isReady</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setReadListener</span><span class="params">(ReadListener readListener)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFinished</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> byteArrayInputStream.available() == <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> BufferedReader <span class="title">getReader</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">this</span>.getInputStream()));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<p><em>参考：<a href="https://blog.csdn.net/fransis/article/details/84990849" target="_blank" rel="noopener">https://blog.csdn.net/fransis/article/details/84990849</a></em></p>
+<blockquote>
+<p>参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/fransis/article/details/84990849" target="_blank" rel="noopener">https://blog.csdn.net/fransis/article/details/84990849</a></li>
+<li><a href="https://blog.csdn.net/panyongcsd/article/details/80990397" target="_blank" rel="noopener">https://blog.csdn.net/panyongcsd/article/details/80990397</a></li>
+</ul>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/13/20201114SpringMVCFilterLog/" data-id="ckhrvhjev002ucogog522cloy" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/14/20201114SpringMVCFilterLog/" data-id="ckhrw27tm002whjgoyky4k6qf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aop/">aop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
@@ -130,19 +136,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/13/20201113AopLogForService/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Spring - 使用 AOP 为 Service 统一追加日志
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/12/20201112SpringMVCXmlProperty/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/13/20201113AopLogForService/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Spring 获取 bean xml 的 property</div>
+      <div class="article-nav-title">Spring - 使用 AOP 为 Service 统一追加日志</div>
     </a>
   
 </nav>
@@ -200,11 +197,11 @@
       <ul>
         
           <li>
-            <a href="/2020/11/13/20201113AopLogForService/">Spring - 使用 AOP 为 Service 统一追加日志</a>
+            <a href="/2020/11/14/20201114SpringMVCFilterLog/">SpringMVC - 使用 Filter 统一打请求日志</a>
           </li>
         
           <li>
-            <a href="/2020/11/13/20201114SpringMVCFilterLog/">SpringMVC - 使用 Filter 统一打请求日志</a>
+            <a href="/2020/11/13/20201113AopLogForService/">Spring - 使用 AOP 为 Service 统一追加日志</a>
           </li>
         
           <li>
