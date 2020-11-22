@@ -3,19 +3,19 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>SpringMVC - 使用切面打请求返回参数日志 | tracenote</title>
+  <title>SpringMVC - 使用切面打请求返回参数日志 [推荐方案] | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
 <meta name="keywords" content="Java,log,aop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringMVC - 使用切面打请求返回参数日志">
+<meta property="og:title" content="SpringMVC - 使用切面打请求返回参数日志 [推荐方案]">
 <meta property="og:url" content="http://tracenote.com/2020/11/16/20201116SpringMVCAOPLogResquestAndResponse/index.html">
 <meta property="og:site_name" content="tracenote">
 <meta property="og:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-11-22T17:25:43.448Z">
+<meta property="og:updated_time" content="2020-11-22T17:27:37.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringMVC - 使用切面打请求返回参数日志">
+<meta name="twitter:title" content="SpringMVC - 使用切面打请求返回参数日志 [推荐方案]">
 <meta name="twitter:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SpringMVC - 使用切面打请求返回参数日志
+      SpringMVC - 使用切面打请求返回参数日志 [推荐方案]
     </h1>
   
 
@@ -104,6 +104,7 @@
 <li><a href="https://mp.weixin.qq.com/s/wb_YuwATHPTbZbSa6bnl_A" target="_blank" rel="noopener">Spring - 使用 AOP 为 Service 统一打日志</a></li>
 <li><a href="https://mp.weixin.qq.com/s/i-gvBxyTMmsQA18VYArAaA" target="_blank" rel="noopener">[Java Web]拦截器 Interceptor 和过滤器 Filter 的区别</a></li>
 <li><a href="https://mp.weixin.qq.com/s/7yaWrS_L4bETGVFgr6fOSg" target="_blank" rel="noopener">SpringMVC - 使用 Filter 统一打请求日志</a></li>
+<li><a href="https://mp.weixin.qq.com/s/eBllLVWm-PL25EHAUwfPXA" target="_blank" rel="noopener">SpringMVC - web.xml 版本踩坑</a></li>
 </ul>
 <p>基于AOP统一打请求返回参数日志。</p>
 <a id="more"></a>
@@ -130,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/11/16/20201116SpringMVCAOPLogResquestAndResponse/" data-id="ckhte7k3z002ufngomxhir029" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/16/20201116SpringMVCAOPLogResquestAndResponse/" data-id="ckhtec5ta002xhlgocay7rofl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aop/">aop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
@@ -202,7 +203,7 @@
       <ul>
         
           <li>
-            <a href="/2020/11/16/20201116SpringMVCAOPLogResquestAndResponse/">SpringMVC - 使用切面打请求返回参数日志</a>
+            <a href="/2020/11/16/20201116SpringMVCAOPLogResquestAndResponse/">SpringMVC - 使用切面打请求返回参数日志 [推荐方案]</a>
           </li>
         
           <li>
