@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/11/21/20201121vueJsonFormat/</loc>
+    
+    <lastmod>2020-12-02T16:23:45.494Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/11/20/20201120JavaStaticClass/</loc>
+    
+    <lastmod>2020-11-30T15:58:20.843Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/19/20201119DesignPattern_Builder/</loc>
     
-    <lastmod>2020-11-28T16:19:40.338Z</lastmod>
+    <lastmod>2020-11-30T03:38:29.000Z</lastmod>
     
   </url>
   
