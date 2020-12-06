@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
+    <lastmod>2020-12-06</lastmod>
+  </url>
+  <url>
     <loc>http://tracenote.com/2020/11/11/20201111Log4j2/</loc>
     <lastmod>2020-12-06</lastmod>
   </url>
@@ -66,10 +70,6 @@
   </url>
   <url>
     <loc>http://tracenote.com/2020/11/09/20201109JavaLogs/</loc>
-    <lastmod>2020-11-15</lastmod>
-  </url>
-  <url>
-    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
     <lastmod>2020-11-15</lastmod>
   </url>
   <url>

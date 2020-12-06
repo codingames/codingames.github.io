@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
+    
+    <lastmod>2020-12-06T14:28:22.820Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/11/20201111Log4j2/</loc>
     
     <lastmod>2020-12-06T11:56:36.110Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://tracenote.com/2020/11/09/20201109JavaLogs/</loc>
     
     <lastmod>2020-11-15T15:57:37.270Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/10/19/20201019JavaWebSpringMVCforVue/</loc>
-    
-    <lastmod>2020-11-15T08:45:46.050Z</lastmod>
     
   </url>
   
