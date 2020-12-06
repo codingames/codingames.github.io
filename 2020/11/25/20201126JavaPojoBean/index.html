@@ -3,20 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>卫哲的3+1思考法：测量项目“靠谱程度”[转载] | tracenote</title>
+  <title>Java - POJO 与 JavaBean 的区别 | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题记：很赞的文章，必须转载。">
-<meta name="keywords" content="读书笔记,PO">
+  <meta name="description" content="POJO 和JavaBean是我们常见的两个关键字，一般容易混淆。">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="卫哲的3+1思考法：测量项目“靠谱程度”[转载]">
-<meta property="og:url" content="http://tracenote.com/2020/08/27/20200827Thinkin3plus1/index.html">
+<meta property="og:title" content="Java - POJO 与 JavaBean 的区别">
+<meta property="og:url" content="http://tracenote.com/2020/11/25/20201126JavaPojoBean/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="题记：很赞的文章，必须转载。">
+<meta property="og:description" content="POJO 和JavaBean是我们常见的两个关键字，一般容易混淆。">
 <meta property="og:locale" content="utf-8">
-<meta property="og:updated_time" content="2020-08-28T00:40:54.000Z">
+<meta property="og:updated_time" content="2020-12-06T17:03:13.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="卫哲的3+1思考法：测量项目“靠谱程度”[转载]">
-<meta name="twitter:description" content="题记：很赞的文章，必须转载。">
+<meta name="twitter:title" content="Java - POJO 与 JavaBean 的区别">
+<meta name="twitter:description" content="POJO 和JavaBean是我们常见的两个关键字，一般容易混淆。">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-20200827Thinkin3plus1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20201126JavaPojoBean" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/08/27/20200827Thinkin3plus1/" class="article-date">
-  <time datetime="2020-08-27T15:00:00.000Z" itemprop="datePublished">2020-08-27</time>
+    <a href="/2020/11/25/20201126JavaPojoBean/" class="article-date">
+  <time datetime="2020-11-25T00:00:00.000Z" itemprop="datePublished">2020-11-25</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/PO/">PO</a>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      卫哲的3+1思考法：测量项目“靠谱程度”[转载]
+      Java - POJO 与 JavaBean 的区别
     </h1>
   
 
@@ -93,69 +93,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><em>题记：很赞的文章，必须转载。</em></p>
+        <p>POJO 和JavaBean是我们常见的两个关键字，一般容易混淆。</p>
 <a id="more"></a>
-<p><em>（注：2011年）</em></p>
-<p>近几年在年初年尾的时候总碰到这样的事：“现在的小老板都用个小本本记帐，太不方便了，我们今年要给中小企业提供一个管理财务的工具，这样就可以帮助中小企业把钱管起来了”，“给客户做个电子传真的功能吧，他们就可以节约大量的传真费用和纸了”。“给客户做个在线买软件服务的开放平台吧，这样他们就能在这里买到所有需要的软件服务了”……</p>
-<p>当我们决定做什么的时候，成功还是失败，50%就已经注定了。那究竟什么是靠谱的呢？貌似只有做了才知道，那有办法提高成功率吗？有一次卫哲来做走动管理，对每一条产品线都问了 3+1 个问题，令我印象深刻：</p>
-<p>当时我们正在做一款淘宝卖家的管理工具，其中有一个功能是帮助淘宝卖家研究市场行情的，接着问题就来了：</p>
-<p>卫：“你们怎么想到要做这个产品的？”</p>
-<p>我：“我们在和卖家接触的时候发现有很多人花很多时间了解竞争对手的情况和市场上什么好卖。”</p>
-<p>卫：“有多少卖家做这件事？多久做一次”</p>
-<p>我：“大部分卖家每周都会做几次”</p>
-<p>卫：“他们现在是怎么了解竞争对手的情况和市场上什么好卖的？”</p>
-<p>我：“他们现在每天都会上淘宝进行搜索，找到同类商品卖得好的卖家，然后看他的关键字设置有什么特点，价格是多少，卖了多少个，做了什么活动，每周要花好几小时。”</p>
-<p>卫：“那用了你们的产品，他们怎么做这件事？”</p>
-<p>我：“用了我们的产品，他们一方面可以看到针对他的某个宝贝，同行的类似宝贝有哪些，价格如何，销量如何。另一方面可以看到某一类目下特定关键字下，哪些宝贝卖得最好。”</p>
-<p>卫：“也就是说你们是帮他们节约时间？小企业的时间是不值钱的，中国是这样，美国也是这样。”</p>
-<p>我：“…”</p>
-<p>卫：“这些数据他们自己在网上能看到吗？”</p>
-<p>我：“能，但有些统计和分析，比如平均价格，有多少人比他价格高之类的他不知道。”</p>
-<p>卫：“那知道了这些信息之后呢？他能做什么？”</p>
-<p>我：“他可以做一些关键字的修改，价格的修改，或者换一下推广的商品，做直通车的时候可以更有的放矢。”</p>
-<p>卫：“那我们的功能有没有和推广挂钩，比如和直通车做整合？直接让他做直通车的优化？”</p>
-<p>我一愣，这个问题我还没有想过，但立刻意识到这可能是个方向：“还没有，不过的确是个很好的方向。”</p>
-<p>卫：“那客户在用了你们的产品后，网站数据上会有什么反应？”</p>
-<p>我：“也许卖家的搜索行为会减少吧，修改的次数会增加”</p>
-<p>……</p>
-<p>1个月后产品上线，在一个月内就吸引了上万的付费客户，但是这些客户的留存率却很低，很多人都反映一个问题：这些问题告诉我了，然后呢？</p>
-<p>到这里，再回顾一下这次谈话，有几点是很令人惊讶的：</p>
-<ol>
-<li><p>卫哲其实没有接触过我们的业务，也许也没有接触过淘宝的客户，但通过这些问题，却很快的延伸出了几个有价值的问题，使得业务的本质显露出来。如：“那用了你们的产品，他们怎么做这件事？”</p>
-</li>
-<li><p>所有的信息都是我们给出的，但很多问题却是我们之前没有想过的，结论也是我们之前没有想到的。</p>
-</li>
-</ol>
-<p>于是我们思考：是否这套分析思路可以适用于任何的陌生环境和陌生业务，让我们通过问出正确的问题来了解更多有价值的信息，然后做出判断。</p>
-<p>卫哲把这套问问题的方法称为 3+1：</p>
-<h2 id="3："><a href="#3：" class="headerlink" title="3："></a>3：</h2><h3 id="需求是从哪里来的？目标客户是谁？"><a href="#需求是从哪里来的？目标客户是谁？" class="headerlink" title="需求是从哪里来的？目标客户是谁？"></a>需求是从哪里来的？目标客户是谁？</h3><h3 id="有多少人有这样的需求？这个需求紧迫吗？"><a href="#有多少人有这样的需求？这个需求紧迫吗？" class="headerlink" title="有多少人有这样的需求？这个需求紧迫吗？"></a>有多少人有这样的需求？这个需求紧迫吗？</h3><h3 id="他们的痛是什么？场景是什么？（用产品之前-之后）"><a href="#他们的痛是什么？场景是什么？（用产品之前-之后）" class="headerlink" title="他们的痛是什么？场景是什么？（用产品之前/之后）"></a>他们的痛是什么？场景是什么？（用产品之前/之后）</h3><h2 id="1："><a href="#1：" class="headerlink" title="+1："></a>+1：</h2><h3 id="解决之后在网站数据上会有什么表现？"><a href="#解决之后在网站数据上会有什么表现？" class="headerlink" title="解决之后在网站数据上会有什么表现？"></a>解决之后在网站数据上会有什么表现？</h3><p>前3个问题能够帮我们切入问题的本质，引发更多的思考，后一个问题让我们思考到底要什么样的结果，如何衡量。</p>
-<h3 id="第一问：需求从哪里来，目标客户是谁"><a href="#第一问：需求从哪里来，目标客户是谁" class="headerlink" title="第一问：需求从哪里来，目标客户是谁"></a>第一问：需求从哪里来，目标客户是谁</h3><p>这个问题要一分为二，先说“需求从哪里来”，个人感觉这是最强大一个问题，直接把半数以上不靠谱的需求都枪毙了：到底是我们想做，还是客户想要？我们常常发现很多的需求是我们想要，或者我们觉得客户想要。比如“我们做一个财务管理的软件，就可以帮小企业把钱都管起来了，现在他们记账太混乱了”。可是当产品出来了，我们访问小企业的时候，大部分人不觉得这是个问题：“我们这么小的企业，弄个本子记记就行了”“我们已经请了兼职的会计，她都能搞定的。”这个项目其实还有点小插曲：做财务软件其实是大老板的战略规划，我们常常碰到这样的项目，基于集团的战略，我们决定向某个方向进军，可是做的时候呢，我们很容易把“行动方向”变成了“行动计划”。比如这个项目，老板要的是一个财务方面的产品，但我们在执行的时候，直接就变成了一个财务软件，但说不定某种“财务服务”才是客户需要的呢？</p>
-<p>再来说说“目标客户是谁”，这是个老生常谈了，但还是很关键，我们最常犯的毛病就是把目标客户群给笼统化，扩大化了：最近我们在做一个推荐物流的项目，就是让阿里巴巴的诚信通客户来网上用德邦/新邦物流的时候能享受VIP价格，比他自己寄更便宜。这里的目标客户是谁？“所有诚信通的企业”当然是最正确的回答，但没有用，不能解决问题。接下来就要问：“谁最需要这样的推荐物流的服务？”当然是一年物流发得多的人。什么样的人物流发得多？生意好的人。如何判断生意好？网站交易量/浏览量大的人。BINGO,我们发现了要做好推荐物流应该和交易及浏览挂钩，优先对这部分人进行营销和服务。这时候就可以开始指导实践了，一大堆相关的想法开始蹦出来：是否给成交额在**以上的客户提供额外的优惠？是否对客户网站成交之后进行针对性引导？是否在客户成交之后根据其所在地精准推荐物流线路？……你看，好问题带来好想法！当然前面“生意好的人”不是唯一的答案，也有可能是“发货东西比较重，比较大的客户”，那后面推出的可能就是特定的行业做精准的营销和服务，比如五金行业。</p>
-<h3 id="第二问：有多少人有这样的需求？这个需求紧迫吗？"><a href="#第二问：有多少人有这样的需求？这个需求紧迫吗？" class="headerlink" title="第二问：有多少人有这样的需求？这个需求紧迫吗？"></a>第二问：有多少人有这样的需求？这个需求紧迫吗？</h3><p>这也是个很牛的问题，有多少人有这样的需求意味着市场的容量，紧迫程度意味着解决需求的价值。容量+价值=有没有意义做。二者缺一不可。之前我们做的网店管理的工具就是这样的情况，的确很多人都有这样的需求，也愿意来使用以节省时间，但是对他来说扩大生意，找到新的客户才是最迫切的，因此，虽然付费的人很多，但注定我们无法在这上面收很高的费用，因为我们带来的价值是“省时间”，而小企业的时间不值钱（与此相关，iamsujie同期的一篇文章）。最近有个做英语培训学校的同学和我在聊天，说他发现其实他们的学生出国前都需要购置很多东西，他希望开办一个网站来告诉学生需要买哪些东西，同时可以在他的网站买。这些学生出国准备的资讯虽然是需要的，但决不是最迫切的。有多少人愿意为此买单不太好说。</p>
-<p>如何了解市场容量和紧迫性呢？一般来说，紧迫性是我们通过深访就可以得到，比如我们去找10个小老板聊聊，就会有个直观的感觉，有多少人觉得财务管理很迫切。（当然这里要注意自己不要带着主观意愿去和他们诱导式地聊，否则听到的就只是我们想听的结果。）市场容量就复杂了，在线调研之类的常常容易使那些最有需求的人来填问卷，从而给我们错误的结论。采用随机抽样后的访谈要相对好一些，如果一个人听到你的来意之后不愿跟你多聊，基本上这事他不太需要。</p>
-<h3 id="第三问：他们的痛是什么？场景是什么（用产品之前-之后）"><a href="#第三问：他们的痛是什么？场景是什么（用产品之前-之后）" class="headerlink" title="第三问：他们的痛是什么？场景是什么（用产品之前/之后）"></a>第三问：他们的痛是什么？场景是什么（用产品之前/之后）</h3><p>这一问是从战略到执行落地的关键一环，一件事情靠不靠谱其实光看方向是看不出来的，个人的感觉是“没有靠谱的方向，只有靠谱的做法。”而做法从哪里来呢？其实就是这里谈到的两个问题：</p>
-<h4 id="1-客户的问题的场景我们是不是真的找到了？（用产品之前的场景）"><a href="#1-客户的问题的场景我们是不是真的找到了？（用产品之前的场景）" class="headerlink" title="1. 客户的问题的场景我们是不是真的找到了？（用产品之前的场景）"></a>1. 客户的问题的场景我们是不是真的找到了？（用产品之前的场景）</h4><h4 id="2-我们为产品设定的使用场景是否真的会发生？（用产品之后的场景）"><a href="#2-我们为产品设定的使用场景是否真的会发生？（用产品之后的场景）" class="headerlink" title="2. 我们为产品设定的使用场景是否真的会发生？（用产品之后的场景）"></a>2. 我们为产品设定的使用场景是否真的会发生？（用产品之后的场景）</h4><p>这让我想起阿里巴巴最近在做的B2C业务：无名良品，简单的说就是阿里巴巴把B2B的供应商引入到淘宝，开辟一块独立的市场，从工厂直接向消费者提供产品。我们的出发点是B2B的供应商多（都？）是工厂，因此会比淘宝的卖家拥有更好的货源，能够给消费者提供更好的商品。在这件事情中，最终的客户是消费者，用这个问题来问一下的话，我们要问“消费者的痛是什么？”现在消费者来到淘宝，愿意花时间淘便宜货，喜欢讨价还价的就去集市，想要快速买到质量有保证的货的就去商城。“痛点”在哪？能想到的有“他们想要买工厂的一手货源，不想买经销商的”，“他们想买外贸尾单”，“他们想要更高质量的服务”。定位在不同的痛点会延伸出后续不同的做法。从目前来看，无名良品还是定位在“厂货”和“外贸尾单”。那么买家能否在淘宝买到“厂货”和“尾单”呢？搜一下你就会发现，大把的存在，且真伪难辨。那么无名良品能分辨吗？目前不能。那要去分辨吗？也许，但得先问问上一个问题：目前有多少人在淘宝上想找工厂货和外贸货但是不满意，才能决定有没有意义把它作为核心策略。如果我们还无法明确定位客户目前的痛的时候，客户的痛解决以后的场景自然无从谈起。所以虽然我不了解目前无名良品的运营状况，但我想作为我自己也是一个消费者，我始终会问一个问题：我到了淘宝，什么情况下该去无名良品买东西呢？求解…</p>
-<p>又想起一个例子，最近在和淘宝的同事讨论淘宝开超市的事，简单来说就是淘宝在上海开一家网上超市，卖传统超市里的商品。这里我们也来拿这两个问题套一套：</p>
-<p>问：“客户的痛是什么？”</p>
-<p>答：“现在在淘宝买不到一箱可乐，一大卷卫生纸，或是一箱方便面”</p>
-<p>问：“有人想在淘宝上买这些东西吗？”</p>
-<p>答：“我也想啊”</p>
-<p>问：“为什么不买呢？”</p>
-<p>答：“运费太贵了，另外没有一家店能买到上述的三样东西” OK，客户的痛出来了，那我们应该给客户提供什么样的价值也顿时明确了（使用后的场景）：让客户能够在一家店用比较低的运费买到上述生活日用品。</p>
-<h3 id="1：解决之后在网站数据上会有什么表现？"><a href="#1：解决之后在网站数据上会有什么表现？" class="headerlink" title="+1：解决之后在网站数据上会有什么表现？"></a>+1：解决之后在网站数据上会有什么表现？</h3><p>我们认为自己是在为客户提供价值，那总得用点啥来衡量价值有没有被认可，提供了多大的价值。比如：搜索优化了，那客户在搜索后列表页面点击率应该会提升，首页优化了，那首页点击率应该会上升。付款流程优化了，付款成功的人会上升。这个问题会逼我们去思考到底我们的客户价值到底是什么？什么是我们想要的结果，从而制订出有意义的KPI。大到一个部门，小到一个功能，都是这样。</p>
-<p>最近我们在做一个网页呼叫的功能，让买家在网站上可以免费给卖家打电话，而不用担心长途费。这样的功能能得到认可吗？当然，付费用户数是一个很好的指标，但它跟太多的因素有关，那有什么标准能帮我们清晰地看到我们提供了多大的价值吗？我们找到了一个指标：每天接通的电话数，包括总数和人均。逻辑是这个产品的价值就是买家的呼叫，如果有买家愿意打这电话，就意味着产生了价值，所以通过关注这个指标，我们开始关注：“为什么买家没有打电话”，是因为“按钮不够明显”，还是“本来到卖家商铺的买家就太少”，还是“打电话的流程中还有很多担忧（比如资费）”，还是“买家本来就不喜欢打电话”。于是我们开始做几件事：“多布点，把按钮做得更明显”，“针对询盘多的卖家优先开通，推广”，“针对客户担忧比较多的问题在流程中做重点说明”。这个问题逼我们去思考如何提供并传递客户价值。试想如果我们的关注重点如果是“付费客户数”，也许我们关心的就更多的是付款流程，订购流程，打包出售之类的东西了。</p>
-<hr>
+<h3 id="POJO"><a href="#POJO" class="headerlink" title="POJO"></a>POJO</h3><p>全称是Plain Ordinary Java Object / Pure Old Java Object，普通的Java对象。    </p>
+<p>POJO是旧的JavaBean意思，那么什么是新的JavaBean，就是EJB，因为EJB2.0以前规范对JavaBean要求很多，搞得很复杂，这样大家怀念起旧的Javabean了，当时Spring推出正好符合这种要求。</p>
+<p>现在EJB3以后，都是POJO了。</p>
 <blockquote>
-<p><em>来源：2011年 <a href="https://www.douban.com/group/topic/19005924/" target="_blank" rel="noopener">https://www.douban.com/group/topic/19005924/</a></em></p>
+<p>JavaBean –&gt;POJO —&gt; EJB 2 —&gt; Spring —-&gt;EJB3/Spring  </p>
+<p>这是大概一个历史路径，POJO的特点是不继承或实现任何非业务类或接口，这样，我们开发的业务POJO就不依赖任何框架，而以前EJB2的Enterprise JavaBean是指定JavaBean需要继承实现EJBHome等用于分布式的接口。</p>
+<p>POJO后来延伸为一种非侵入性代名词，也就是说：选择技术框架或开发框架，不能让别人基于你框架开发的JavaBean依赖你的框架，要实现这种目的，需要通过DI依赖注入 AOP等等技术才能实现。</p>
+</blockquote>
+<p>POJO的内在含义是指那些没有从任何类继承、也没有实现任何接口，更没有被其它框架侵入的java对象。  </p>
+<p>理想地讲，一个POJO是一个不受任何限制的Java对象（除了Java语言规范）。  </p>
+<p>例如一个POJO<strong>不</strong>应该是：</p>
+<ul>
+<li>扩展预定的类，如       public class Foo extends javax.servlet.http.HttpServlet { …</li>
+<li>实现预定的接口，如   public class Bar implements javax.ejb.EntityBean { …</li>
+<li>包含预定的标注，如   @javax.ejb.Entity public class Baz{ …<br>然而，因为技术上的困难及其他原因，许多兼容POJO风格的软件产品或框架事实上仍然要求使用预定的标注，譬如用于更方便的持久化。</li>
+</ul>
+<p>使用POJO名称是为了避免和EJB混淆起来, 而且简称比较直接。其中有一些属性及其getter、setter方法的类，没有业务逻辑，有时可以作为VO(value-object)或dto(Data Transform Object)来使用。当然,如果你有一个简单的运算属性也是可以的，但不允许有业务方法。</p>
+<p>POJO对象有时也被称为Data对象，大量应用于表现现实中的对象。如果项目中使用了Hibernate框架，有一个关联的xml文件，使对象与数据库中的表对应，对象的属性与表中的字段相对应。</p>
+<p>POJO的格式用于数据的临时传递，它只能装在数据，作为数据存储的载体，而不具有业务逻辑处理的能力。    </p>
+<p>POJO类的作用是方便程序员使用数据库中的数据表，对于程序员来说，可以很方便的将POJO类当作对象来进行使用，也可以方便的调用其get，set方法。但不允许有业务方法,也不能携带有connection之类的方法，即不包含业务逻辑或持久逻辑等。</p>
+<h3 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a>JavaBean</h3><p>Sun公司的定义，JavaBean是一个可重复使用的软件组件。实际上 JavaBean 是一种Java类，通过封装属性和方法成为具有某种功能或者处理某个业务的对象，简称bean。</p>
+<p>JavaBean 是一种JAVA语言写成的可重用组件。它的方法命名，构造及行为必须符合特定的约定： </p>
+<ul>
+<li>这个类必须有一个公共的缺省构造函数。</li>
+<li>这个类的属性使用getter和setter来访问，其他方法遵从标准命名规范。</li>
+<li>这个类应是可序列化的。 </li>
+<li>因为这些要求主要是靠约定而不是靠实现接口，所以许多开发者把JavaBean看作遵从特定命名约定的POJO。</li>
+</ul>
+<p>JavaBean的任务就是: “Write once, run anywhere, reuse everywhere”，即“一次性编写，任何地方执行，任何地方重用”。  </p>
+<p>JavaBean可分为两种：一种是有用户界面（UI，User Interface）的JavaBean；还有一种是没有用户界面，主要负责处理事务（如数据运算，操纵数据库）的JavaBean。JSP通常访问的是后一种JavaBean。  </p>
+<p><strong>简而言之，POJO 其实是比 JavaBean 更纯净的简单类或接口。<br>POJO 严格地遵守简单对象的概念，而一些 JavaBean 中往往会封装一些简单逻辑。<br>当一个 POJO 可序列化，有一个无参的构造函数，使用 getter 和 setter 方法来访问属性时，他就是一个 JavaBean。<br>JavaBean 虽然数据的获取与 POJO 一样，但是 JavaBean 当中可以有其它的方法。</strong></p>
+<h4 id="错误的认识"><a href="#错误的认识" class="headerlink" title="错误的认识"></a>错误的认识</h4><p>POJO是这样的一种“纯粹的”JavaBean，在它里面除了JavaBean规范的方法和属性没有别的东西，即private属性以及对这个属性方法的public的get和set方法。我们会发现这样的JavaBean很“单纯”，它只能装载数据，作为数据存储的载体，而不具有业务逻辑处理的能力。</p>
+<h4 id="真正的意思"><a href="#真正的意思" class="headerlink" title="真正的意思"></a>真正的意思</h4><p>POJO = “Plain Old Java Object”，<br>是MartinFowler等发明的一个术语，用来表示普通的Java对象，不是JavaBean, EntityBean 或者 SessionBean。POJO不担当任何特殊的角色，也不实现任何特殊的Java框架的接口如，EJB，JDBC等等。<br>即POJO是一个简单的普通的Java对象，它不包含业务逻辑或持久逻辑等，但不是JavaBean、EntityBean等，不具有任何特殊角色和不继承或不实现任何其它Java框架的类或接口。  </p>
+<p>下面是摘自Martin Fowler个人网站的一句话：<br>“We wondered why people were so against using regular objects in their systems and concluded that it was because simple objects lacked a fancy name. So we gave them one, and it’s caught on very nicely.”－－Martin Fowler  </p>
+<p>我们疑惑为什么人们不喜欢在他们的系统中使用普通的对象，我们得到的结论是——普通的对象缺少一个响亮的名字，因此我们给它们起了一个，并且取得了很好的效果。——Martin Fowler</p>
+<blockquote>
+<p><em>参考：</em><br><em><a href="https://baike.baidu.com/item/POJO/3311958" target="_blank" rel="noopener">https://baike.baidu.com/item/POJO/3311958</a></em><br><em><a href="https://blog.csdn.net/tiantangdizhibuxiang/article/details/81784873" target="_blank" rel="noopener">https://blog.csdn.net/tiantangdizhibuxiang/article/details/81784873</a></em></p>
 </blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://tracenote.com/2020/08/27/20200827Thinkin3plus1/" data-id="ckiddkd0i000oqsgqbn71igip" class="article-share-link">Share</a>
+      <a data-url="http://tracenote.com/2020/11/25/20201126JavaPojoBean/" data-id="ckiddkd1v0036qsgq1yebviwz" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PO/">PO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
 
     </footer>
   </div>
@@ -163,19 +148,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/08/28/20200828readingNote/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/25/20201125JavaBODOVO/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          速读笔记-2020.8.28
+          Java - DO,DTO,BO,AO,VO 区别
         
       </div>
     </a>
   
   
-    <a href="/2020/08/26/20200826vueHandlingEdgeCases/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/24/20201124varNameGender/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Vue 学习笔记（十三）：处理边界情况</div>
+      <div class="article-nav-title">变量命名：性别 gender</div>
     </a>
   
 </nav>
