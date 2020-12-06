@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://tracenote.com/2020/11/25/20201126JavaPojoBean/</loc>
-    <lastmod>2020-12-06</lastmod>
-  </url>
-  <url>
-    <loc>http://tracenote.com/2020/11/25/20201125JavaBODOVO/</loc>
+    <loc>http://tracenote.com/2020/11/26/20201126JavaPojoBean/</loc>
     <lastmod>2020-12-06</lastmod>
   </url>
   <url>
     <loc>http://tracenote.com/2020/11/24/20201124varNameGender/</loc>
+    <lastmod>2020-12-06</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2020/11/25/20201125JavaBODOVO/</loc>
     <lastmod>2020-12-06</lastmod>
   </url>
   <url>
@@ -765,19 +765,19 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
-    <lastmod>2017-12-10</lastmod>
-  </url>
-  <url>
     <loc>http://tracenote.com/2017/08/28/appiumSwipe/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
     <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
+    <lastmod>2017-12-10</lastmod>
+  </url>
+  <url>
+    <loc>http://tracenote.com/2017/08/18/betterHistory/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
@@ -793,11 +793,11 @@
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     <lastmod>2017-12-10</lastmod>
   </url>
 </urlset> 
