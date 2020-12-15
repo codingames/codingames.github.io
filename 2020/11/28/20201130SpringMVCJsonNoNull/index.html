@@ -3,18 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>Tag: spring boot | tracenote</title>
+  <title>SpringMVC - Json 不返回 null 字段 [简记] | tracenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tracenote">
-<meta property="og:url" content="http://tracenote.com/tags/spring-boot/index.html">
+  <meta name="description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
+<meta name="keywords" content="Java,SpringMVC,DB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMVC - Json 不返回 null 字段 [简记]">
+<meta property="og:url" content="http://tracenote.com/2020/11/28/20201130SpringMVCJsonNoNull/index.html">
 <meta property="og:site_name" content="tracenote">
-<meta property="og:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta property="og:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
 <meta property="og:locale" content="utf-8">
+<meta property="og:updated_time" content="2020-12-15T15:49:45.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tracenote">
-<meta name="twitter:description" content="宅、游戏、IT、互联网、产品、开发、测试等等空想与实践备忘及分享。">
+<meta name="twitter:title" content="SpringMVC - Json 不返回 null 字段 [简记]">
+<meta name="twitter:description" content="继续后端服务系列：    为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web] SpringMVC：支持 Json 返回和请求 SpringMVC：web.xml 中 contextConfigLocation 作用 Java 混乱的日志体系 SpringMVC：配置 Log Log4j 2, 按级别打印到不同文件 Spring - 使用 AOP 为 Service 统一打日">
   
     <link rel="alternate" href="/atom.xml" title="tracenote" type="application/atom+xml">
   
@@ -65,39 +67,89 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/12/03/IntellijSpringBootHelloWorld/" class="archive-article-date">
-  <time datetime="2017-12-03T12:30:00.000Z" itemprop="datePublished">Dec 3</time>
+        <section id="main"><article id="post-20201130SpringMVCJsonNoNull" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/28/20201130SpringMVCJsonNoNull/" class="article-date">
+  <time datetime="2020-11-28T00:00:00.000Z" itemprop="datePublished">2020-11-28</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/03/IntellijSpringBootHelloWorld/">IntelliJ IDEA创建Spring Boot的Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      SpringMVC - Json 不返回 null 字段 [简记]
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>继续后端服务系列：  </p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/AMbJrFyWGXQ0P0bofCMt_A" target="_blank" rel="noopener">为前端学习搭建一个基于 SpringMVC 后端服务 [Java Web]</a></li>
+<li><a href="https://mp.weixin.qq.com/s/S0rlRv8Fv4dQSbLVc_9A0g" target="_blank" rel="noopener">SpringMVC：支持 Json 返回和请求</a></li>
+<li><a href="https://mp.weixin.qq.com/s/60YJJtEknUkmw9kHhfi33g" target="_blank" rel="noopener">SpringMVC：web.xml 中 contextConfigLocation 作用</a></li>
+<li><a href="https://mp.weixin.qq.com/s/ioGEJUKkt3-hUJf577y5kQ" target="_blank" rel="noopener">Java 混乱的日志体系</a></li>
+<li><a href="https://mp.weixin.qq.com/s/paurUC1v8iNppcYILMcY7g" target="_blank" rel="noopener">SpringMVC：配置 Log</a></li>
+<li><a href="https://mp.weixin.qq.com/s/w3QlRqfosDwTc6xe8BxHHg" target="_blank" rel="noopener">Log4j 2, 按级别打印到不同文件</a></li>
+<li><a href="https://mp.weixin.qq.com/s/wb_YuwATHPTbZbSa6bnl_A" target="_blank" rel="noopener">Spring - 使用 AOP 为 Service 统一打日志</a></li>
+<li><a href="https://mp.weixin.qq.com/s/i-gvBxyTMmsQA18VYArAaA" target="_blank" rel="noopener">[Java Web]拦截器 Interceptor 和过滤器 Filter 的区别</a></li>
+<li><a href="https://mp.weixin.qq.com/s/7yaWrS_L4bETGVFgr6fOSg" target="_blank" rel="noopener">SpringMVC - 使用 Filter 统一打请求日志</a></li>
+<li><a href="https://mp.weixin.qq.com/s/eBllLVWm-PL25EHAUwfPXA" target="_blank" rel="noopener">SpringMVC - web.xml 版本踩坑</a></li>
+<li><a href="https://mp.weixin.qq.com/s/1zGgCHK0GrZNtxQn49e4LA" target="_blank" rel="noopener">SpringMVC - 使用切面打请求返回参数日志</a></li>
+<li><a href="https://mp.weixin.qq.com/s/H0DRpbabkImcael_fChNtw" target="_blank" rel="noopener">SpringMVC：从零接入 MyBatis</a></li>
+</ul>
+<p>spring mvc 使用 jackson 包处理，默认返回 null 字段</p>
+<a id="more"></a>
+<p>如</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"measures"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"metric"</span>: <span class="literal">null</span>,</span><br><span class="line">            <span class="attr">"periods"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"index"</span>: <span class="number">2</span>,</span><br><span class="line">                    <span class="attr">"value"</span>: <span class="string">"0.0"</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"component"</span>: <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>省去这些 null 字段返回：</p>
+<p>spring xml 配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"objectMapper"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.fasterxml.jackson.databind.ObjectMapper"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"serializationInclusion"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">value</span> <span class="attr">type</span>=<span class="string">"com.fasterxml.jackson.annotation.JsonInclude.Include"</span>&gt;</span>NON_NULL<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"measures"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"periods"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"index"</span>: <span class="number">2</span>,</span><br><span class="line">                    <span class="attr">"value"</span>: <span class="string">"0.0"</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://tracenote.com/2020/11/28/20201130SpringMVCJsonNoNull/" data-id="ckiq5wydg003aa6gq8nm443wp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DB/">DB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringMVC/">SpringMVC</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/29/20201129vueJsonDiff/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vue 学习笔记（四十三）：Vue JSON diff
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/28/20201128SpringMVCMabatis/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SpringMVC - 从零接入 MyBatis</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
