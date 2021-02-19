@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/12/01/20201201rootSonyDptRp1/</loc>
+    
+    <lastmod>2021-02-19T15:38:53.834Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/11/30/20201130SpringMVCJsonNoNull/</loc>
     
     <lastmod>2021-02-19T15:19:21.727Z</lastmod>
@@ -730,13 +737,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2020/10/08/20210101rootSonyDptRp1/</loc>
-    
-    <lastmod>2020-10-08T17:00:39.620Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2020/10/09/20201009blogHexoplantuml/</loc>
     
     <lastmod>2020-10-08T16:59:52.236Z</lastmod>
@@ -1367,13 +1367,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1381,7 +1374,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
+    <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1389,6 +1382,13 @@
   
   <url>
     <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/05/22/appiumAndroidIssues/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1451,14 +1451,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
