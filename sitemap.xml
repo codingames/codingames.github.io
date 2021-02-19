@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tracenote.com/2020/11/30/20201130SpringMVCJsonNoNull/</loc>
+    
+    <lastmod>2021-02-19T15:19:21.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2020/12/22/20201222MackBookBattery/</loc>
+    
+    <lastmod>2021-01-31T16:45:56.477Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2021/01/17/20210117aboutInternetFinance/</loc>
     
-    <lastmod>2021-01-17T17:15:20.466Z</lastmod>
+    <lastmod>2021-01-17T17:34:19.346Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>http://tracenote.com/2020/12/31/20201231LearnFromMedia/</loc>
     
     <lastmod>2020-12-31T15:21:20.063Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/12/22/20201222MackBookBattery/</loc>
-    
-    <lastmod>2020-12-26T18:48:08.896Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tracenote.com/2020/11/28/20201130SpringMVCJsonNoNull/</loc>
-    
-    <lastmod>2020-12-15T15:49:45.217Z</lastmod>
     
   </url>
   
@@ -730,6 +730,13 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2020/10/08/20210101rootSonyDptRp1/</loc>
+    
+    <lastmod>2020-10-08T17:00:39.620Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2020/10/09/20201009blogHexoplantuml/</loc>
     
     <lastmod>2020-10-08T16:59:52.236Z</lastmod>
@@ -1360,13 +1367,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/10/28/androidBuild/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1374,7 +1374,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    <loc>http://tracenote.com/2017/08/11/adbdevicesinfo/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1388,7 +1388,21 @@
   </url>
   
   <url>
+    <loc>http://tracenote.com/2017/09/07/appiumAdb/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tracenote.com/2017/10/17/appiumIssues/</loc>
+    
+    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1402,7 +1416,7 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/06/01/appiumNotes/</loc>
+    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
@@ -1423,13 +1437,6 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/26/appiumXcode9/</loc>
-    
-    <lastmod>2017-12-10T15:57:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://tracenote.com/2017/03/16/helloworld/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
@@ -1444,14 +1451,14 @@
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
+    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://tracenote.com/2017/09/07/linuxGrepColorIssue/</loc>
+    <loc>http://tracenote.com/2017/09/18/jsonpGet/</loc>
     
     <lastmod>2017-12-10T15:57:47.000Z</lastmod>
     
